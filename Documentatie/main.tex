@@ -1,0 +1,32 @@
+\documentclass[12pt,oneside]{report}
+
+\usepackage[utf8]{inputenc}  % suport pentru diacritice
+\usepackage{graphicx}
+
+\renewcommand{\contentsname}{Cuprins}
+\renewcommand{\figurename}{Figura}
+\renewcommand{\tablename}{Tabelul}
+\renewcommand{\bibname}{Bibliografie}
+
+\begin{document}
+
+% Coperta lucrării de licenţă
+\input {capitole/coperta.tex}
+
+% Prima pagină a lucrării de licenţă
+\input {capitole/pagina_titlu.tex}
+
+% Declaraţie standard privind originalitatea lucrării de licență
+\input{capitole/declaratie_standard_originalitate.tex}
+
+% Declaraţie standard privind drepturile de utilizare a lucrării şi codului sursă
+\input{capitole/declaratie_standard_consintamant.tex}
+
+% Capitole 
+\tableofcontents
+
+% Bibliografie 
+
+\input{capitole/bibliografie.tex}	
+
+\end{document}
