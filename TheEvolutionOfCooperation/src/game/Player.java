@@ -1,66 +1,72 @@
 package game;
 
-import genetic.Action;
-
-import java.util.ArrayDeque;
-import java.util.Deque;
+import java.util.ArrayList;
+import java.util.List;
 
 public abstract class Player {
 
     private double score;
-    private Deque<Action> lastThreeActions;
-    private Deque<Action> otherPlayerLastThreeActions;
+    private List<Action> actionHistory;
+    private List<Action> opponentActionHistory;
 
     Player() {
         this.score = 0;
-        this.lastThreeActions = new ArrayDeque<>(3);
-        this.otherPlayerLastThreeActions = new ArrayDeque<>(3);
+        this.actionHistory = new ArrayList<>();
+        this.opponentActionHistory = new ArrayList<>();
     }
 
     public abstract Action getNextAction();
 
     public abstract String getPlayerType();
 
-    public void updateScore(double valueToBeAdded) {
+    void updateScore(double valueToBeAdded) {
         this.score += valueToBeAdded;
     }
 
-    public double getScore() {
+    double getScore() {
         return this.score;
     }
 
-    public void addOwnActionToDeque(Action action) {
-        lastThreeActions.add(action);
-        if (lastThreeActions.size() > 3) {
-            lastThreeActions.pop();
-        }
+    void registerActionToHistory (Action action) {
+        actionHistory.add(action);
         System.out.println("Player "+ getPlayerType() + " made the following move: \"" + action +"\"" );
-        System.out.println(lastThreeActions.toString());
+        System.out.println(actionHistory.toString());
     }
 
     public Action getLastAction() {
-        if (lastThreeActions != null || !lastThreeActions.isEmpty()) {
-            return lastThreeActions.peekLast();
+        if (actionHistory != null && !actionHistory.isEmpty()) {
+            return actionHistory.get(actionHistory.size() - 1);
         }
         else {
             return null;
         }
     }
 
-    public void addOtherPlayerActionToDeque(Action action) {
-        otherPlayerLastThreeActions.add(action);
-        if (otherPlayerLastThreeActions.size() > 3) {
-            otherPlayerLastThreeActions.pop();
-        }
+    void registerOpponentActionToHistory(Action action) {
+        opponentActionHistory.add(action);
     }
 
-    public Action getOtherPlayerLastAction() {
-        if (otherPlayerLastThreeActions != null || !lastThreeActions.isEmpty()) {
-            return otherPlayerLastThreeActions.peekLast();
+    Action getLastActionOfOpponent() {
+        if (opponentActionHistory != null && !opponentActionHistory.isEmpty()) {
+            return opponentActionHistory.get(opponentActionHistory.size() - 1);
         }
         else {
             return null;
         }
     }
+
+    List<Action> getLastTwoActionsOfOpponent() {
+        if (opponentActionHistory != null && opponentActionHistory.size() >= 2) {
+            int historySize = opponentActionHistory.size();
+            List<Action> historySample = new ArrayList<>();
+            historySample.add(opponentActionHistory.get(historySize - 2));
+            historySample.add(opponentActionHistory.get(historySize - 1));
+            return historySample;
+        }
+        else {
+            return null;
+        }
+    }
+
 
 }

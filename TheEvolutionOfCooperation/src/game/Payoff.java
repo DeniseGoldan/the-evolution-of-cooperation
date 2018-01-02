@@ -2,10 +2,10 @@ package game;
 
 public enum Payoff {
 
-    TEMPTATION(5),     // Temptation to defect -- player defects, the other cooperates
-    SUCKER(0),         // Sucker's payoff -- player cooperates, the other defects
-    REWARD(3),         // Reward for mutual cooperation
-    PUNISHMENT(1);     // Punishment for mutual defection
+    Temptation(5),     // Temptation to defect -- player defects, the other cooperates
+    SuckerPayoff(0),   // Sucker's payoff -- player cooperates, the other defects
+    Reward(3),         // Reward for mutual cooperation
+    Punishment(1);     // Punishment for mutual defection
 
     // Cooperation === "helping the other player"
 

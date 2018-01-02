@@ -1,6 +1,6 @@
 package utility;
 
-import genetic.Action;
+import game.Action;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,9 +12,9 @@ public class GeneIndexToActionListMapper {
         String bitString = getBinaryStringCorrespondingToGeneIndex(geneIndex);
         for (Character c: bitString.toCharArray()) {
             if(c == '0'){
-                actionsFromLastThreeMoves.add(Action.C);
+                actionsFromLastThreeMoves.add(Action.Cooperate);
             } else {
-                actionsFromLastThreeMoves.add(Action.D);
+                actionsFromLastThreeMoves.add(Action.Defect);
             }
         }
         System.out.println(actionsFromLastThreeMoves);

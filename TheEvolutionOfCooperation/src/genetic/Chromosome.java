@@ -1,5 +1,7 @@
 package genetic;
 
+import game.Action;
+
 import java.util.Arrays;
 import java.util.Random;
 
@@ -25,9 +27,9 @@ public class Chromosome {
         for (int geneIndex = 0; geneIndex < LENGTH; geneIndex ++) {
             Random random = new Random();
             if (random.nextBoolean()) {
-                genes[geneIndex] = Action.C;
+                genes[geneIndex] = Action.Cooperate;
             } else {
-                genes[geneIndex] = Action.D;
+                genes[geneIndex] = Action.Defect;
             }
         }
     }

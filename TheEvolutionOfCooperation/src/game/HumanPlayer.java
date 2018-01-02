@@ -1,7 +1,5 @@
 package game;
 
-import genetic.Action;
-
 import java.util.Scanner;
 
 public class HumanPlayer extends Player {
@@ -10,12 +8,12 @@ public class HumanPlayer extends Player {
     public Action getNextAction() {
         Scanner reader = new Scanner(System.in);  // Reading from System.in
         while (true){
-            System.out.println("Type \"C\" to cooperate and \"D\" to defect: ");
+            System.out.println("Type \"Cooperate\" to cooperate and \"Defect\" to defect: ");
             String userInput = reader.next(); // Scans the next token of the input as an int.
-            if (userInput.equals("C")) {
-                return Action.C;
-            } else if (userInput.equals("D")) {
-                return Action.D;
+            if (userInput.equals("Cooperate")) {
+                return Action.Cooperate;
+            } else if (userInput.equals("Defect")) {
+                return Action.Defect;
             } else {
                 System.out.println("Try again... " + userInput +  " is not a valid choice.");
             }
@@ -24,6 +22,6 @@ public class HumanPlayer extends Player {
 
     @Override
     public String getPlayerType() {
-        return "Human";
+        return "HumanPlayer";
     }
 }
