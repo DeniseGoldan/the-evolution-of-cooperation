@@ -15,7 +15,7 @@ public abstract class Player {
         this.opponentActionHistory = new ArrayList<>();
     }
 
-    public abstract Action getNextAction();
+    public abstract Action chooseAction();
 
     public abstract String getPlayerType();
 
@@ -33,7 +33,7 @@ public abstract class Player {
         System.out.println(actionHistory.toString());
     }
 
-    public Action getLastAction() {
+    public Action getActionFromLastMatch() {
         if (actionHistory != null && !actionHistory.isEmpty()) {
             return actionHistory.get(actionHistory.size() - 1);
         }
@@ -46,7 +46,7 @@ public abstract class Player {
         opponentActionHistory.add(action);
     }
 
-    Action getLastActionOfOpponent() {
+    Action getOpponentLastMatchAction() {
         if (opponentActionHistory != null && !opponentActionHistory.isEmpty()) {
             return opponentActionHistory.get(opponentActionHistory.size() - 1);
         }
@@ -55,7 +55,7 @@ public abstract class Player {
         }
     }
 
-    List<Action> getLastTwoActionsOfOpponent() {
+    List<Action> getOpponentActionsFromLastTwoMatches() {
         if (opponentActionHistory != null && opponentActionHistory.size() >= 2) {
             int historySize = opponentActionHistory.size();
             List<Action> historySample = new ArrayList<>();

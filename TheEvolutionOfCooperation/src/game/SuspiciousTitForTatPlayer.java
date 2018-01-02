@@ -7,8 +7,8 @@ package game;
 public class SuspiciousTitForTatPlayer extends Player {
 
     @Override
-    public Action getNextAction() {
-        Action actionToPerform = getLastActionOfOpponent();
+    public Action chooseAction() {
+        Action actionToPerform = getOpponentLastMatchAction();
         if (actionToPerform == null) {
             return Action.Defect;
         } else {

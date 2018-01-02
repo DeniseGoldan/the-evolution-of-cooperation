@@ -28,8 +28,8 @@ public class Match {
     private void initiateGame() {
         for (double currentRoundNumber = 1; currentRoundNumber <= numberOfRounds; currentRoundNumber++){
 
-            Action actionOfFirstPlayer = firstPlayer.getNextAction();
-            Action actionOfSecondPlayer = secondPlayer.getNextAction();
+            Action actionOfFirstPlayer = firstPlayer.chooseAction();
+            Action actionOfSecondPlayer = secondPlayer.chooseAction();
 
             firstPlayer.registerActionToHistory(actionOfFirstPlayer);
             secondPlayer.registerActionToHistory(actionOfSecondPlayer);

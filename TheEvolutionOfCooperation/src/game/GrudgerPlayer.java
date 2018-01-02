@@ -9,8 +9,8 @@ public class GrudgerPlayer extends Player {
     private boolean hasTheOpponentDefected = false;
 
     @Override
-    public Action getNextAction() {
-        if (getLastActionOfOpponent() == Action.Defect) {
+    public Action chooseAction() {
+        if (getOpponentLastMatchAction() == Action.Defect) {
             hasTheOpponentDefected = true;
         }
         if (hasTheOpponentDefected) {
@@ -22,7 +22,7 @@ public class GrudgerPlayer extends Player {
 
     @Override
     public String getPlayerType() {
-        return "GrudgerPlayer";
+        return "Grudger";
     }
 
 }

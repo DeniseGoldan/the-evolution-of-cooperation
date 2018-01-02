@@ -11,9 +11,9 @@ public class TitForTwoTatsPlayer extends Player {
     private boolean opponentHasDefectedTwoTimesInARow = false;
 
     @Override
-    public Action getNextAction() {
+    public Action chooseAction() {
 
-        List<Action> lastTWoActionsOfOpponent = getLastTwoActionsOfOpponent();
+        List<Action> lastTWoActionsOfOpponent = getOpponentActionsFromLastTwoMatches();
         if(lastTWoActionsOfOpponent != null && !lastTWoActionsOfOpponent.isEmpty()) {
             if(lastTWoActionsOfOpponent.get(0) == lastTWoActionsOfOpponent.get(1)
                     && lastTWoActionsOfOpponent.get(0) == Action.Defect) {
@@ -24,7 +24,7 @@ public class TitForTwoTatsPlayer extends Player {
         if (opponentHasDefectedTwoTimesInARow) {
             return Action.Defect;
         } else {
-            Action actionToPerform = getLastActionOfOpponent();
+            Action actionToPerform = getOpponentLastMatchAction();
             if (actionToPerform == null) {
                 return Action.Cooperate;
             } else {

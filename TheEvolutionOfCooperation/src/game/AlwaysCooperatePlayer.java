@@ -6,7 +6,7 @@ package game;
 public class AlwaysCooperatePlayer extends Player {
 
     @Override
-    public Action getNextAction() {
+    public Action chooseAction() {
         return Action.Cooperate;
     }
 

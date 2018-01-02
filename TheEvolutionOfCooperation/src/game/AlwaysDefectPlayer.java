@@ -6,8 +6,8 @@ package game;
 public class AlwaysDefectPlayer extends Player {
 
     @Override
-    public Action getNextAction() {
-        return Action.Cooperate;
+    public Action chooseAction() {
+        return Action.Defect;
     }
 
     @Override

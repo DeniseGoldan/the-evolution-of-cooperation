@@ -26,4 +26,5 @@ public enum Action {
         }
         return Action.Cooperate;
     }
+
 }
