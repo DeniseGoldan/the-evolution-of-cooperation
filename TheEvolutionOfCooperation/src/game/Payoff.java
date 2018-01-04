@@ -11,13 +11,13 @@ public enum Payoff {
 
     // The greater the score, the better
 
-    private double scoreValue;
+    private long scoreValue;
 
-    Payoff(double value) {
+    Payoff(long value) {
         this.scoreValue = value;
     }
 
-    public double getScoreValue() {
+    public long getScoreValue() {
         return this.scoreValue;
     }
 }

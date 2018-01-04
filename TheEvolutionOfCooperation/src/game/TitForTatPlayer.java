@@ -7,8 +7,8 @@ package game;
 public class TitForTatPlayer extends Player {
 
     @Override
-    public Action chooseAction() {
-        Action actionToPerform = getOpponentLastMatchAction();
+    public Action chooseAction(long iteration) {
+        Action actionToPerform = getOpponentActionFromLastMatch();
         if (actionToPerform == null) {
             return Action.Cooperate;
         } else {

@@ -25,19 +25,19 @@ public class SuspiciousTitForTatPlayerTest {
 
     @Test
     public void WHEN_choosing_first_action_THEN_defect() {
-        assertEquals(Action.Defect, player.chooseAction());
+        assertEquals(Action.Defect, player.chooseAction(0));
     }
 
     @Test
     public void GIVEN_opponent_last_match_action_is_cooperate_WHEN_making_action_THEN_cooperate() {
         player.registerOpponentActionToHistory(Action.Cooperate);
-        assertEquals(Action.Cooperate, player.chooseAction());
+        assertEquals(Action.Cooperate, player.chooseAction(1));
     }
 
     @Test
     public void GIVEN_opponent_last_match_action_is_defect_WHEN_making_action_THEN_defect() {
         player.registerOpponentActionToHistory(Action.Defect);
-        assertEquals(Action.Defect, player.chooseAction());
+        assertEquals(Action.Defect, player.chooseAction(1));
     }
 
     @Test

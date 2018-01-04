@@ -25,19 +25,19 @@ public class AlwaysCooperatePlayerTest {
 
     @Test
     public void WHEN_choosing_first_action_THEN_cooperate() {
-        assertEquals(Action.Cooperate, player.chooseAction());
+        assertEquals(Action.Cooperate, player.chooseAction(0));
     }
 
     @Test
     public void GIVEN_last_opponent_game_action_is_cooperate_WHEN_choosing_action_THEN_cooperate() {
         player.registerOpponentActionToHistory(Action.Cooperate);
-        assertEquals(Action.Cooperate, player.chooseAction());
+        assertEquals(Action.Cooperate, player.chooseAction(0));
     }
 
     @Test
     public void GIVEN_last_opponent_game_action_is_defect_WHEN_choosing_action_THEN_cooperate() {
         player.registerOpponentActionToHistory(Action.Defect);
-        assertEquals(Action.Cooperate, player.chooseAction());
+        assertEquals(Action.Cooperate, player.chooseAction(0));
     }
 
     @Test

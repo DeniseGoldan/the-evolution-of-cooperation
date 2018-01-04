@@ -22,27 +22,27 @@ public class GrudgerPlayerTest {
 
     @Test
     public void WHEN_choosing_first_action_THEN_cooperate() {
-        assertEquals(Action.Cooperate, player.chooseAction());
+        assertEquals(Action.Cooperate, player.chooseAction(0));
     }
 
     @Test
-    public void GIVEN_opponent_last_action_is_defect_WHEN_making_action_THEN_defect() {
+    public void GIVEN_opponent_last_action_is_defect_WHEN_choosing_action_THEN_defect() {
         player.registerOpponentActionToHistory(Action.Defect);
-        assertEquals(Action.Defect, player.chooseAction());
+        assertEquals(Action.Defect, player.chooseAction(1));
     }
 
     @Test
-    public void GIVEN_opponent_never_defected_WHEN_making_action_THEN_cooperate() {
+    public void GIVEN_opponent_always_cooperated_WHEN_choosing_action_THEN_cooperate() {
         player.registerOpponentActionToHistory(Action.Cooperate);
-        assertEquals(Action.Cooperate, player.chooseAction());
+        assertEquals(Action.Cooperate, player.chooseAction(1));
     }
 
     @Test
-    public void GIVEN_opponent_last_match_action_is_cooperate_but_defected_before_WHEN_making_action_THEN_cooperate() {
+    public void GIVEN_opponent_last_match_action_is_cooperate_but_defected_before_WHEN_choosing_action_THEN_cooperate() {
         player.registerOpponentActionToHistory(Action.Defect);
-        player.registerActionToHistory(player.chooseAction());
+        player.registerActionToHistory(player.chooseAction(1));
         player.registerOpponentActionToHistory(Action.Cooperate);
-        assertEquals(Action.Defect, player.chooseAction());
+        assertEquals(Action.Defect, player.chooseAction(2));
     }
 
 

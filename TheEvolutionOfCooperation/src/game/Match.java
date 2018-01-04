@@ -1,35 +1,29 @@
 package game;
 
+import genetic.Chromosome;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-
 public class Match {
 
-    final Logger logger = LoggerFactory.getLogger(Match.class);
-
+    private final Logger logger = LoggerFactory.getLogger(Match.class);
     private Player firstPlayer;
     private Player secondPlayer;
     private double numberOfRounds;
 
     Match(Player firstPlayer, Player secondPlayer, double numberOfRounds) {
-        List<Player> players = new ArrayList<>(2);
-        players.add(firstPlayer);
-        players.add(secondPlayer);
-        Collections.shuffle(players);
-        this.firstPlayer = players.get(0);
-        this.secondPlayer = players.get(1);
+        this.firstPlayer = firstPlayer;
+        this.secondPlayer = secondPlayer;
         this.numberOfRounds = numberOfRounds;
     }
 
     private void initiateGame() {
-        for (double currentRoundNumber = 1; currentRoundNumber <= numberOfRounds; currentRoundNumber++){
+        for (long currentRoundNumber = 0; currentRoundNumber < numberOfRounds; currentRoundNumber++){
 
-            Action actionOfFirstPlayer = firstPlayer.chooseAction();
-            Action actionOfSecondPlayer = secondPlayer.chooseAction();
+            System.out.println("Current round index: " + currentRoundNumber);
+
+            Action actionOfFirstPlayer = firstPlayer.chooseAction(currentRoundNumber);
+            Action actionOfSecondPlayer = secondPlayer.chooseAction(currentRoundNumber);
 
             firstPlayer.registerActionToHistory(actionOfFirstPlayer);
             secondPlayer.registerActionToHistory(actionOfSecondPlayer);
@@ -59,8 +53,8 @@ public class Match {
 
     public static void main(String[] args) {
         Match demo = new Match(
-                new TitForTatPlayer(),
-                new TitForTatPlayer(),
+                new Chromosome(),
+                new HumanPlayer(),
                 10);
         demo.initiateGame();
     }

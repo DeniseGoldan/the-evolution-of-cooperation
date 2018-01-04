@@ -25,14 +25,14 @@ public class PavlovPlayerTest {
 
     @Test
     public void WHEN_choosing_first_action_THEN_cooperate() {
-        assertEquals(player.chooseAction(), Action.Cooperate);
+        assertEquals(player.chooseAction(0), Action.Cooperate);
     }
 
     @Test
     public void GIVEN_payoff_from_last_match_is_reward_WHEN_choosing_action_THEN_repeat_last_action() {
         player.registerActionToHistory(Action.Cooperate);
         player.registerOpponentActionToHistory(Action.Cooperate);
-        assertEquals(player.chooseAction(), player.getActionFromLastMatch());
+        assertEquals(player.chooseAction(1), player.getActionFromLastMatch());
         assertEquals(player.getActionFromLastMatch(), Action.Cooperate);
     }
 
@@ -40,7 +40,7 @@ public class PavlovPlayerTest {
     public void GIVEN_payoff_from_last_match_is_temptation_WHEN_choosing_action_THEN_repeat_last_action() {
         player.registerActionToHistory(Action.Defect);
         player.registerOpponentActionToHistory(Action.Cooperate);
-        assertEquals(player.chooseAction(), player.getActionFromLastMatch());
+        assertEquals(player.chooseAction(1), player.getActionFromLastMatch());
         assertEquals(player.getActionFromLastMatch(), Action.Defect);
     }
 

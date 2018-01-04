@@ -6,7 +6,7 @@ package game;
 public class AlwaysDefectPlayer extends Player {
 
     @Override
-    public Action chooseAction() {
+    public Action chooseAction(long iteration) {
         return Action.Defect;
     }
 

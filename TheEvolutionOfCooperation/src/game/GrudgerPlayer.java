@@ -9,8 +9,8 @@ public class GrudgerPlayer extends Player {
     private boolean hasTheOpponentDefected = false;
 
     @Override
-    public Action chooseAction() {
-        if (getOpponentLastMatchAction() == Action.Defect) {
+    public Action chooseAction(long iteration) {
+        if (getOpponentActionFromLastMatch() == Action.Defect) {
             hasTheOpponentDefected = true;
         }
         if (hasTheOpponentDefected) {

@@ -7,9 +7,9 @@ package game;
 public class PavlovPlayer extends Player {
 
     @Override
-    public Action chooseAction() {
+    public Action chooseAction(long iteration) {
         Action lastAction = getActionFromLastMatch();
-        Action lastActionOfOpponent = getOpponentLastMatchAction();
+        Action lastActionOfOpponent = getOpponentActionFromLastMatch();
         if (lastAction != null) {
             if (lastActionOfOpponent == Action.Cooperate) {
                 return lastAction;

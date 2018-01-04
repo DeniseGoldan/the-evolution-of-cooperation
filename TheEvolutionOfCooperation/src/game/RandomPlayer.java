@@ -8,7 +8,7 @@ import java.util.Random;
 public class RandomPlayer extends Player {
 
     @Override
-    public Action chooseAction() {
+    public Action chooseAction(long iteration) {
         Random random = new Random();
         if (random.nextBoolean()) {
             return Action.Cooperate;

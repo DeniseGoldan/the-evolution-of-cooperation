@@ -2,26 +2,30 @@ package game;
 
 public enum Action {
 
-    Cooperate("Cooperate"),
-    Defect("Defect");
+    Cooperate(0),
+    Defect(1);
 
-    private String name;
+    private int binaryValue;
 
     @Override
     public String toString(){
-        return this.name;
+        if (this.binaryValue == 0) {
+            return "Cooperate";
+        } else {
+            return "Defect";
+        }
     }
 
-    Action (String actionName) {
-        this.name = actionName;
+    Action (int binaryValue) {
+        this.binaryValue = binaryValue;
     }
 
-    public String getName() {
-        return this.name;
+    public int getBinaryValue() {
+        return this.binaryValue;
     }
 
     public Action getOppositeAction(){
-        if (name.equals("Cooperate")) {
+        if (this.binaryValue == 0) {
             return Action.Defect;
         }
         return Action.Cooperate;

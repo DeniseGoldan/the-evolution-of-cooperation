@@ -1,0 +1,66 @@
+###################################################################################################
+# THE GENETIC ALGORITHM AND THE PRISONER'S DILEMMA * STUDENT PAPER Benjamin Hosp, Roanoke College #
+###################################################################################################
+
+when two players play this game repeatedly, cooperation
+becomes possible among rational players
+
+Eachnplayer selects his or her move in secret, and then compares it with his or her opponent's move, according to this table (Coveney and Highfield, 223-4):
+
+Game theory tells us that each player will see that he or she is better off defecting and assume that the other player will come to the
+same conclusion. Therefore, rational players of the Prisoner's Dilemma will always defect. (Poundstone, 105) However, when two players
+play this game repeatedly, cooperation becomes possible among rational players. It is still in each player's short-term best interest to defect, but the threat of retaliation from the other player and the promise of increased gains through future cooperation can lead the players to cooperate.
+
+In this paper, we will examine a method called the genetic algorithm for using a computer
+to derive strategies for the IPD. The genetic algorithm is applicable to many problems, but this
+paper will demonstrate that it does have some limitations.
+
+LIMITARILE ALGORITMULUI GENETIC
+
+The first thing to do is to devise a way to express any solution to the problem as a string of bits, which we can refer to as a "chromosome." We will also need a function F(s) which will give a solution s a score expressing how well it solves the problem.
+
+For n generations:
+	For each member p i of the population:
+		Calculate and store F(p i ).
+	Reproduce the best members of the population, with better solutions earning more
+	reproductions than poorer solutions, so that we maintain a constant population
+	size. This creates a set of children. Discard the current population, and treat
+	the children as the new population.
+
+
+Axelrod noted that any IPD strategy that could remember the last three turns could be
+represented by seventy bits: sixty-four to tell the strategy what to do based on those last three
+turns (because there are four payoffs and three turns of memory, so the number of permutations
+are 4^3 =64), and six more to represent the initial assumptions about both players' last three
+moves before actual play begins. The function F in this case was the total number of points a
+strategy would accumulate after playing an IPD with either a list of human-designed strategies
+or with each other member of the population.
+
+############################################################################################################
+# Evolving New Strategies - The Evolution of Strategies in the Iterated Prisoner's Dilemma, Robert Axelrod #
+# Adapted from Robert Axelrod, "The Evolution of Strategies in the Iterated Prisoner's			   #
+# Dilemma," in Lawrence Davis (ed.),Genetic Algorithms and Simulated Annealing,				   #
+# (London: Pitman, and Los Altos, CA: Morgan Kaufman, 1987), pp. 32-41.					   #
+############################################################################################################
+
+To get the strategy started at the beginning of the game, it is also necessary to
+specify its initial premises about the three hypothetical moves which preceded the start
+of the game.
+
+#################################################################################################
+# Using Genetic Algorithms to Develop Strategies for the Prisoners Dilemma			#
+# Adnan Haider, Department of Economics, Pakistan Institute of Development Economics, Islamabad #
+#################################################################################################
+
+3. Genetic Algorithms
+Genetic Algorithms are search algorithms based on the mechanics of natural selection
+and natural genetics. John Holland at the University of Michigan originally developed
+them. They usually work by beginning with an initial population of random solutions to a
+given problem. The success of these solutions is then evaluated according to a specially
+designed fitness function. A form of  ̳natural selection‘ is then performed whereby
+solutions with higher fitness scores have a greater probability of being selected. The
+selected solutions are then  ̳mated‘ using genetic operators such as crossover and
+mutation. The children produced from this mating go on to form the next generation. The
+theory is that as fitter genetic material is propagated from generation to generation the
+solutions will converge towards an optimal solution. This research utilizes Genetic
+Algorithms to develop successful strategies for the Prisoner's Dilemma.
