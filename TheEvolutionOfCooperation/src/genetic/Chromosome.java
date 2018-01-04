@@ -11,11 +11,12 @@ import java.util.Random;
 /**
  * The population is a list of "candidate solutions" (chromosomes that store the solution,
  * also known as strategy, in our case). Each chromosome represents an individual of the population.
- * Chromosomes have a fixed length in this case, 71. The gene is a unit of information, stored inside a chromosome.
+ * Chromosomes have a fixed length- in this case, 71.
+ * The gene is a unit of information, stored inside a chromosome.
  */
 public class Chromosome extends Player {
 
-    private static final int LENGTH = 70;
+    private static final int LENGTH = 71;
     private List<Action> genes;
 
     public Chromosome() {
@@ -49,17 +50,24 @@ public class Chromosome extends Player {
                 return genes.get(6);
             }
         } else {
-            // "compute" history of the last three matches
-            List<Action> history = getActionHistory().subList((int)iteration-3, (int)iteration);
-            List<Action> opponentHistory = getOpponentActionHistory().subList((int)iteration-3, (int)iteration);
-            List<Action> lastThreeMatchesHistory = new ArrayList<>();
-            for (int index = 0; index < 3; index ++) {
-                lastThreeMatchesHistory.add(history.get(index));
-                lastThreeMatchesHistory.add(opponentHistory.get(index));
-            }
-            printGenes();
-            return NextActionHelper.getActionCorrespondingToHistory(this.genes, lastThreeMatchesHistory);
+            List<Action> lastThreeMatchesHistory = getBothHistoriesFromLastThreeMatches((int) iteration);
+            return NextActionHelper.referToHistoryAndChooseAction(this.genes, lastThreeMatchesHistory);
         }
+    }
+
+    /**
+     * The result is in the order "Your first move", "Opponent's first Move",
+     "Your second move", "Opponent's second Move", "Your third move", "Opponent's third Move".
+     */
+    private List<Action> getBothHistoriesFromLastThreeMatches(int iteration) {
+        List<Action> history = getActionHistory().subList(iteration -3, iteration);
+        List<Action> opponentHistory = getOpponentActionHistory().subList(iteration -3, iteration);
+        List<Action> lastThreeMatchesHistory = new ArrayList<>();
+        for (int index = 0; index < 3; index ++) {
+            lastThreeMatchesHistory.add(history.get(index));
+            lastThreeMatchesHistory.add(opponentHistory.get(index));
+        }
+        return lastThreeMatchesHistory;
     }
 
     @Override

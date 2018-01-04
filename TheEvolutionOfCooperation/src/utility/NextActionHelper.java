@@ -1,40 +1,31 @@
 package utility;
 
 import game.Action;
-import genetic.Chromosome;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class NextActionHelper {
 
-    public static Action getActionCorrespondingToHistory(List<Action> genes, List<Action> actualComputedHistory) {
+    private final static int PASS_HISTORY_OFFSET = 7;
+
+    /**
+     * Add PASS_HISTORY_OFFSET in order to skip the first seven "genes" that represent the decisions for the
+     * chromosome to make in the first 3 iterations. The history "CC-CC-CC" can be found at index 7,
+     * "CC-CC-CD" at index 8 and so on. The history "DD-DD-DD" can be found at index 70.
+     */
+    public static Action referToHistoryAndChooseAction(List<Action> genes, List<Action> lastThreeMatches) {
+        int actionIndexInGenes = getGeneIndexForThreeLastMatchesHistory(lastThreeMatches);
+        return genes.get(actionIndexInGenes);
+    }
+
+    static int getGeneIndexForThreeLastMatchesHistory(List<Action> lastThreeMatches) {
         int actionIndexInGenes = 0;
-        for (int index = 0; index <= 5; index++) {
-            actionIndexInGenes += Math.pow(2, index) * actualComputedHistory.get(index).getBinaryValue();
+        for (int index = 5; index >= 0; index--) {
+            actionIndexInGenes += Math.pow(2, index) * lastThreeMatches.get(5 - index).getBinaryValue();
         }
+        actionIndexInGenes += PASS_HISTORY_OFFSET;
         System.out.println("action index = "+ actionIndexInGenes);
-        // add 7 to index, in order to ignore history part of the chromosome
-        // the element on position with index 7 is CC-CC-CC
-        return genes.get(actionIndexInGenes + 7);
+        return actionIndexInGenes;
     }
 
-    public static void main(String[] args) throws Exception {
-        Chromosome chromosome = new Chromosome();
-        chromosome.printGenes();
-        List<Action> actualComputedHistory = new ArrayList<>();
-
-        actualComputedHistory.add(Action.Cooperate);
-        actualComputedHistory.add(Action.Cooperate);
-
-        actualComputedHistory.add(Action.Cooperate);
-        actualComputedHistory.add(Action.Cooperate);
-
-        actualComputedHistory.add(Action.Cooperate);
-        actualComputedHistory.add(Action.Cooperate);
-
-        System.out.println(
-                NextActionHelper
-                        .getActionCorrespondingToHistory(chromosome.getGenes(), actualComputedHistory));
-    }
 }

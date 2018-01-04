@@ -20,7 +20,7 @@ public class Match {
     private void initiateGame() {
         for (long currentRoundNumber = 0; currentRoundNumber < numberOfRounds; currentRoundNumber++){
 
-            System.out.println("Current round index: " + currentRoundNumber);
+            System.out.println("\nCurrent round index: " + currentRoundNumber);
 
             Action actionOfFirstPlayer = firstPlayer.chooseAction(currentRoundNumber);
             Action actionOfSecondPlayer = secondPlayer.chooseAction(currentRoundNumber);
@@ -45,8 +45,8 @@ public class Match {
                 secondPlayer.updateScore(Payoff.Punishment.getScoreValue());
             }
 
-            logger.info("First: " + firstPlayer.getScore());
-            logger.info("Second: " + secondPlayer.getScore());
+            logger.info("First: " + firstPlayer.getScore() + " [ "+ firstPlayer.getPlayerType()+" ]");
+            logger.info("Second: " + secondPlayer.getScore() + " [ "+ secondPlayer.getPlayerType()+" ]");
 
         }
     }
