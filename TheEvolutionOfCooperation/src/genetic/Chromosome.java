@@ -7,6 +7,7 @@ import utility.NextActionHelper;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 /**
  * The population is a list of "candidate solutions" (chromosomes that store the solution,
@@ -95,6 +96,30 @@ public class Chromosome extends Player {
 
     public List<Action> getGenes() {
         return genes;
+    }
+
+    public void mutate(double mutationProbability) {
+        ThreadLocalRandom random = ThreadLocalRandom.current();
+        double randomNumber = random.nextDouble(0, 1);
+        if (randomNumber < mutationProbability) {
+            int index = random.nextInt(0, LENGTH);
+            mutateGeneFromIndex(index);
+        }
+    }
+
+    private void mutateGeneFromIndex(int index) {
+        List<Action> result = new ArrayList<>();
+        for (int i = 0; i < LENGTH; i++ ) {
+            if (i != index) {
+                result.add(genes.get(i));
+            } else {
+                result.add(genes.get(i).getOppositeAction());
+            }
+        }
+        System.out.println("Mutation index = "+ index +".");
+        System.out.println("Before: " + genes);
+        System.out.println("After: " + genes);
+        genes = result;
     }
 
 }

@@ -11,16 +11,16 @@ public class Match {
     private Player secondPlayer;
     private double numberOfRounds;
 
-    Match(Player firstPlayer, Player secondPlayer, double numberOfRounds) {
+    public Match(Player firstPlayer, Player secondPlayer, double numberOfRounds) {
         this.firstPlayer = firstPlayer;
         this.secondPlayer = secondPlayer;
         this.numberOfRounds = numberOfRounds;
     }
 
-    private void initiateGame() {
+    public void playMatch() {
         for (long currentRoundNumber = 0; currentRoundNumber < numberOfRounds; currentRoundNumber++){
 
-            System.out.println("\nCurrent round index: " + currentRoundNumber);
+//            System.out.println("\nCurrent round index: " + currentRoundNumber);
 
             Action actionOfFirstPlayer = firstPlayer.chooseAction(currentRoundNumber);
             Action actionOfSecondPlayer = secondPlayer.chooseAction(currentRoundNumber);
@@ -46,7 +46,7 @@ public class Match {
             }
 
             logger.info("First: " + firstPlayer.getScore() + " [ "+ firstPlayer.getPlayerType()+" ]");
-            logger.info("Second: " + secondPlayer.getScore() + " [ "+ secondPlayer.getPlayerType()+" ]");
+            logger.info("Second: " + secondPlayer.getScore() + " [ "+ secondPlayer.getPlayerType()+" ]\n");
 
         }
     }
@@ -56,7 +56,7 @@ public class Match {
                 new Chromosome(),
                 new HumanPlayer(),
                 10);
-        demo.initiateGame();
+        demo.playMatch();
     }
 
 }

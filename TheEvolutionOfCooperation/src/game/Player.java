@@ -8,13 +8,14 @@ import java.util.List;
 
 public abstract class Player {
 
+    private static final int INITIAL_SCORE = 0;
     private final Logger logger = LoggerFactory.getLogger(Player.class);
     private long score;
     private final List<Action> actionHistory;
     private final List<Action> opponentActionHistory;
 
     protected Player() {
-        this.score = 0;
+        this.score = INITIAL_SCORE;
         this.actionHistory = new ArrayList<>();
         this.opponentActionHistory = new ArrayList<>();
     }
@@ -27,7 +28,9 @@ public abstract class Player {
         this.score += valueToBeAdded;
     }
 
-    long getScore() {
+    public void resetScore() { this.score = INITIAL_SCORE; }
+
+    public long getScore() {
         return this.score;
     }
 
@@ -49,8 +52,8 @@ public abstract class Player {
 
     void registerActionToHistory (Action action) {
         actionHistory.add(action);
-        logger.info("Player \"" + getPlayerType() + "\" made the following action: \"" + action +"\"." );
-        logger.info("His history is: " + actionHistory.toString());
+//        logger.info("Player \"" + getPlayerType() + "\" made the following action: \"" + action +"\"." );
+//        logger.info("His history is: " + actionHistory.toString());
     }
 
     void registerOpponentActionToHistory(Action action) {
