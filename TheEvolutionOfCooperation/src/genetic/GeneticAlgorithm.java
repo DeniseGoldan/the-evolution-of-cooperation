@@ -8,15 +8,22 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class GeneticAlgorithm {
 
-    private int populationSize = 10;
-    private double numberOfGenerations = 15;
+    private int populationSize = 20;
+    private double numberOfGenerations = 50;
     private double crossoverProbability = 0.8;
     private double mutationProbability = 0.0001;
     private List<Chromosome> population = new ArrayList<>();
+    private Chromosome bestChromosome = new Chromosome();
 
     public static void main(String[] args) {
         GeneticAlgorithm geneticAlgorithm = new GeneticAlgorithm();
-        geneticAlgorithm.runGeneticAlgorithm();
+        System.out.println(geneticAlgorithm.buildStrategy().getGenes());
+    }
+
+    public Chromosome buildStrategy(){
+        runGeneticAlgorithm();
+        bestChromosome.resetScore();
+        return bestChromosome;
     }
 
     public void runGeneticAlgorithm() {
@@ -113,10 +120,10 @@ public class GeneticAlgorithm {
         for (Player player:population) {
             if (player.getScore() > max_score){
                 max_score = player.getScore();
+                bestChromosome = (Chromosome) player;
             }
             fitnessList.add(player.getScore());
         }
-        System.out.println("MAX SCORE: " + max_score);
         return fitnessList;
     }
 

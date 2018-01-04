@@ -1,6 +1,6 @@
 package game;
 
-import genetic.Chromosome;
+import genetic.GeneticAlgorithm;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -52,9 +52,11 @@ public class Match {
     }
 
     public static void main(String[] args) {
+        GeneticAlgorithm geneticAlgorithm = new GeneticAlgorithm();
+        System.out.println(geneticAlgorithm.buildStrategy().getGenes());
         Match demo = new Match(
-                new Chromosome(),
-                new HumanPlayer(),
+                geneticAlgorithm.buildStrategy(),
+                new TitForTatPlayer(),
                 10);
         demo.playMatch();
     }
