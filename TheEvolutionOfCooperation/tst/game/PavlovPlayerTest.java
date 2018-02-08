@@ -1,7 +1,5 @@
 package game;
 
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
@@ -11,17 +9,7 @@ import static org.junit.Assert.assertEquals;
 @RunWith(JUnit4.class)
 public class PavlovPlayerTest {
 
-    private PavlovPlayer player;
-
-    @Before
-    public void setUp() {
-        player = new PavlovPlayer();
-    }
-
-    @After
-    public void tearDown() {
-        player = null;
-    }
+    private PavlovPlayer player = new PavlovPlayer();
 
     @Test
     public void WHEN_choosing_first_action_THEN_cooperate() {

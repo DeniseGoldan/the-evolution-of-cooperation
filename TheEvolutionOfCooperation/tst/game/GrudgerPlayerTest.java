@@ -1,24 +1,12 @@
 package game;
 
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
 public class GrudgerPlayerTest {
 
-    private GrudgerPlayer player;
-
-    @Before
-    public void setUp() {
-        player = new GrudgerPlayer();
-    }
-
-    @After
-    public void tearDown() {
-        player = null;
-    }
+    private GrudgerPlayer player = new GrudgerPlayer();
 
     @Test
     public void WHEN_choosing_first_action_THEN_cooperate() {

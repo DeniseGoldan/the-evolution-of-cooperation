@@ -1,6 +1,7 @@
 package genetic;
 
 import game.Player;
+import game.ClassicTournament;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,10 +9,10 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class GeneticAlgorithm {
 
-    private int populationSize = 20;
-    private double numberOfGenerations = 50;
+    private int populationSize = 25;
+    private double numberOfGenerations = 1000;
     private double crossoverProbability = 0.8;
-    private double mutationProbability = 0.0001;
+    private double mutationProbability = 0.25;
     private List<Chromosome> population = new ArrayList<>();
     private Chromosome bestChromosome = new Chromosome();
 
@@ -113,7 +114,7 @@ public class GeneticAlgorithm {
 
         List<Player> players = new ArrayList<>();
         players.addAll(population);
-        Tournament tournament = new Tournament(players);
+        ClassicTournament tournament = new ClassicTournament(players);
 
         tournament.playTournament();
 

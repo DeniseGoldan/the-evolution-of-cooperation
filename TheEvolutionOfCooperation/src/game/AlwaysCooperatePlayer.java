@@ -1,7 +1,7 @@
 package game;
 
 /**
- * The strategy is cooperate all the time.
+ * The strategy is to cooperate all the time.
  */
 public class AlwaysCooperatePlayer extends Player {
 
