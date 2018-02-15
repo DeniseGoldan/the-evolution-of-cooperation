@@ -1,0 +1,43 @@
+ce reprezita aceasta dilema a prizonerului?
+- prezentare "poveste"
+- prezentare caz simplu 
+- prezentarea cazului in care se inereaza
+
+Un meci intre 2 jucatori este reprezentat de un numar de runde. Fiecare runda este alcatuita din alegerea independenta a urmatoarei miscari de catre fiecare participant al rundei si adaugarea castigului pentru aceasta miscare la scorul total al jucatorilor. Daca la o anumita runda ambii au cooperat, scorul ambilor jucatori va creste cu o valoare ce poarta denumirea de "Reward payoff". Daca ambii tradeaza, vor primi "Punishment payoff". Daca unul coopereaza, dar celalalt tradeaza, cel care a cooperat primeste "Sucker's payoff" si celalalt este rasptatit cu "Temptation payoff".
+
+Ce este un algoritm genetic?
+
+Algoritmii genetici si au fost creati in incercarea de a imita procesele specifice evolutiei naturale. Din natura, sunt preluate unele idei:
+- populatia este formata din indivizi care concureaza pentru resurse si pentru sansa de a-si impartasi materialul genetic 
+- indivizii valorosi vor produce mai multi urmasi decat cei care sunt mai putin valorosi
+
+
+Evolutia este o modalitate de a cauta "solutii" intr-un numar foarte mare de posibilitati. 
+
+Propusi de John Holland in 1970, au fost adaptati pentru a rezolva probleme de optimizare.
+
+- cine a creat acesti algoritmi
+- cum se face un asemenea algoritm (caz general)
+
+- terminologie de specialitate
+-- psudocod
+
+The Algorithms
+
+randomly initialize population(t)
+determine fitness of population(t)
+repeat
+	select parents from population(t)
+	perform crossover on parents creating population(t+1)
+	perform mutation of population(t+1)
+	determine fitness of population(t+1)
+until best individual is good enough
+
+- cum se face un asemenea algoritm pentru aceasta problema?
+- care sunt limitarile unui algoritm genetic aplicat pe acasta problema?
+
+Prin utilizarea unui algoritm genetic, pot obtine o copie a celui mai bun individ din toate generatiile care au participat la antrenare. In alte cuvinte, acest cromozom contine strategia care a obtinut cel mai bun scor. Pentru crearea acestui individ, este nevoie de ajustarea mai multor parametri si optiuni, dintre care mentionez: rata mutatiei, rata incrucisarii, tipul selectiei populatiei (populatia difera usor de la generatie la generatie, selectandu-se doar anumiti indivizi si in anumite proportii). Cromozomul are capacitatea de a-si formula urmatoarea miscare bazandu-se pe istoricul ultimelor 3 runde. Din acest motiv este important ca un meci sa fie format din mai multe runde. Asadar, numarul de runde reprezinta si acesta un parametru pentru antrenarea cromozomilor. 
+
+
+-- CUM AM IMPLEMENTAT EU ACEASTA PROBLEMA
+

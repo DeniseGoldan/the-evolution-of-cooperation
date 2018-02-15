@@ -8,6 +8,9 @@
 \renewcommand{\tablename}{Tabelul}
 \renewcommand{\bibname}{Bibliografie}
 
+% pentru ca numerotarea sectiunilor din capitole sa nu fie precedate de indexul capitolelor
+\renewcommand{\thesection}{\arabic{section}}
+
 \begin{document}
 
 % Coperta lucrării de licenţă
@@ -24,6 +27,12 @@
 
 % Capitole 
 \tableofcontents
+
+% Algoritm genetic
+\setcounter{section}{0}
+\chapter*{Algoritm genetic}
+\addcontentsline{toc}{chapter}{Algoritm genetic}
+\input{capitole/algoritm_genetic.tex}
 
 % Bibliografie 
 
