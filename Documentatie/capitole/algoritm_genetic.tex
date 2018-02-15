@@ -1,18 +1,19 @@
-\section{ Aparitia notiunii de algoritm genetic }
+\section{Aparitia notiunii de algoritm genetic}
 
-\begin{center}
-	\textit{Computer programs that "evolve" in ways that resemble natural selection can solve complex problems even their creators do not fully understand. }
-\end{center}
-by John H. Holland 
+Algorimii genetici\footnote{Adaptare dupa \textit{"Genetic Algorithms: An Overview"}, Melanie Mitchell.} au fost introdusi de catre John Holland in 1960 si dezvoltati, ulterior, alaturi de colegii de la Universitatea din Michigan, intre anii 1960 si 1970. Holland urmarea intelegerea fenomenului de "adaptare" intalnit in natura si implementarea unor mecanisme adaptive care sa fie utilizate in practica, in contextul programarii. Cartea publicata de acesta in 1975, \textit{"Adaptation in Natural and Artificial Systems"} (Holland, 1975/1992) prezinta algoritmii genetici drept abstractizari ale evolutiei biologice, si ofera un cadru teoretic pentru dezvoltarea acestora. Algoritmii genetici ai lui Holland sunt metode de a trece de la o populatie de "cromozomi" (e.g., siruri de "biti" care reprezinta solutii candidat pentu o problema) la o noua populatie, prin folosirea "selectiei", alaturi de operatorii insiprati din genetica: incrucisare, mutatie, inversiune. Cea din urma este rar folosita in practica.
 
-Propusi de John Holland, profesor la Universitatea din Michigan.
+\begin{quote} 
+	\textit{"Computer programs that "evolve" in ways that resemble natural selection can solve complex problems even their creators do not fully understand."}
+	\begin{flushright}
+		by John H. Holland 
+	\end{flushright}
+\end{quote}
 
 Algoritmii genetici au fost creati in incercarea de a imita procese specifice evolutiei naturale, cum ar fi lupta pentru supravietuire si mostenirea materialului genetic. Putem privi evolutia drept strategia abordata de speciile biologice pentru a cauta "solutii" cat mai potrivite, adaptate conditiilor schimbatoare, intr-un numar foarte mare de posibilitati. Aceasta abordare poate fi utilizata in rezolvarea problemelor de optimizare, atunci cand metodele clasice exhaustive nu se dovedesc eficiente.
 
-\cite{introduction_by_melanie_mitchell}
-Notiunea de "algoritm genetic" nu este definita in mod riguros, insa toate metodele ce poarta aceasta denumire au in comun urmatoarele: populatia este formata din cromozomi, selectiz este facuta pe baza rezultatelor functiei de optimizat, incrucisarea a doi \textit{cromozomi parinti} produce 2 \textit{cromozomi copii}, mutatia se aplica \textit{cromozomilor copii}\cite{introduction_by_melanie_mitchell}.
+Notiunea de "algoritm genetic" nu este definita in mod riguros\cite{introduction_by_melanie_mitchell}, insa toate metodele ce poarta aceasta denumire au in comun urmatoarele: populatia este formata din cromozomi, selectiz este facuta pe baza rezultatelor functiei de optimizat, incrucisarea a doi \textit{cromozomi parinti} produce 2 \textit{cromozomi copii}, mutatia se aplica \textit{cromozomilor copii}.
 
-\section{Terminologie de specialitate}
+\section{Terminologie}
 
 \begin{itemize}
 	
@@ -28,62 +29,27 @@ Notiunea de "algoritm genetic" nu este definita in mod riguros, insa toate metod
 	
 	\item Pentru explorarea spatiului de solutii, indivizii selectati sufera modificari. Sunt supusi \textbf{incrucisarilor} si \textbf{mutatiilor}.
 	
+	\item Incrucisarea combina genele a doi \textit{cromozomi parinti}, rezultand doi \textbf{mostenitori}. Exista mai multe variante: cu un punct de taiere, ales aleator (in care un mostenitor este alcatuit dintr-o portiune de cromozom de la primul parinte si o portiune de la al doilea), cu mai multe puncte de taiere si uniforma (unde fiecare gena este selectata probabilit de la unul din cei 2 \textit{cromozomi parinti}).
+	
+	\item Mutatia altereaza gene alese arbitrar dintr-un cromozom. Numarul de gene afectate poate varia.
+	
 \end{itemize}
 
-Operatori genetici
+\section{Pseudocod}
 
-Mutatia 
-
-Incrucisarea
-
-Explorare si exploatare
-
-Cautarea solutiei optimale apeleaza la doua mecanisme, denumite explorare si exploatare. 
-Explorarea inseamna tendinta de a cauta solutii noi in spatiul e solutii. Pentru asta apelam la operatorii genetici. Exploatarea inseamna rafinarea solutiilor obtinute in urma explorarii, pentru care solosim diverse tehnici de selectie.
-
-
-Algoritmul modifica in mod repetat populatia de solutii candidat. Se urmareste ca populatia sa evolueze catre obtinerea solutiiei optimale.
-
-Over successive generations, the population "evolves" toward an optimal solution.
-
-Procesul de evolutie este simulat iterand printr-o succesiune de generatii, unde, aplicand criteriu de selectie asupra opulatiei curente, se obtine viitoarea generatie. Criteriul de selectie este astfel formulat incat sunt favorizati acei candidati care au rezultate mai bune ale functiei de optimizat, deoarece indivizii care se adapteaza cel mai bine mediului au sanse mai mari de supravietuire. Asupra acestei poulatii selectate se aplica operatori genetici, mutatia si incrucisarea.
-Populatia
-
-
-
-
-evolutia este simulata printr-o succesiune de generatii ale unei populatii de solutii candidat;
-o solutie candidat poarta numele de cromozom si este reprezentata ca un sir de gene;
-gena este informatia atomica dintr-un cromozom;
-pozitia pe care o ocupa o gena se numeste locus;
-toate valorile posibile pentru o gena formeaza setul de alele ale genei;
-populatia evolueaza prin aplicarea operatorilor genetici: mutatia si incrucisarea;
-cromozomul asupra caruia se aplica un operator genetic se numeste parinte iar cromozomul rezultat se numeste descendent;
-selectia este procedura prin care sunt alesi cromozomii ce vor supravietui in generatia urmatoare; indivizilor mai bine adaptati li se vor da sanse mai mari;
-gradul de adaptare la mediu este masurat de functia de optimizat;
-solutia returnata de un algoritm genetic este cel mai bun individ din ultima generatie.
-
-
-Pseudocod
-
+\begin{verbatim}
 initializeaza cu valori aleatorii populatia initiala
 calculeaza valoarea functiei de optimizat pentru indivizii populatiei 
 cat timp nu s-a indeplinit conditia de oprire
-	aplica o metoda de selectie, pentru a crea populatia
-	aplica operatorul genetic incrucisare, cu o anumita probabilitate
-	aplica operatorul genetic mulatie, cu o anumita probabilitate
-	calculeaza valoarea functiei de optimizat pentru indivizii populatiei
-	
+    aplica o metoda de selectie, pentru a crea populatia
+    aplica operatorul genetic incrucisare, cu o anumita probabilitate
+    aplica operatorul genetic mutaatie, cu o anumita probabilitate
+calculeaza valoarea functiei de optimizat pentru indivizii populatiei
+\end{verbatim}
+
 Conditia de oprire poate fi atingerea unui numar de iteratii stabilit initial. De asemenea, se poate stabili ca algoritmul sa se opreasca atunci cand nu se mai inregistreaza imbunatatiri in ceea ce priveste calitatea solutiilor furnizate. 
 
-
-solutia returnata de un algoritm genetic este cel mai bun individ din ultima generatie 
-
-- cum se face un asemenea algoritm pentru aceasta problema?
-- care sunt limitarile unui algoritm genetic aplicat pe acasta problema?
-
-Prin utilizarea unui algoritm genetic, pot obtine o copie a celui mai bun individ din toate generatiile care au participat la antrenare. In alte cuvinte, acest cromozom contine strategia care a obtinut cel mai bun scor. Pentru crearea acestui individ, este nevoie de ajustarea mai multor parametri si optiuni, dintre care mentionez: rata mutatiei, rata incrucisarii, tipul selectiei populatiei (populatia difera usor de la generatie la generatie, selectandu-se doar anumiti indivizi si in anumite proportii). Cromozomul are capacitatea de a-si formula urmatoarea miscare bazandu-se pe istoricul ultimelor 3 runde. Din acest motiv este important ca un meci sa fie format din mai multe runde. Asadar, numarul de runde reprezinta si acesta un parametru pentru antrenarea cromozomilor. 
-
+Solutia returnata de un algoritm genetic reprezinta cel mai bun individ intalnit in evolutia populatiei. 
 
 \hfill \break
 \hfill \break

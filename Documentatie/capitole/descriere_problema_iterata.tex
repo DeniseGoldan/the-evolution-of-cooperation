@@ -1,0 +1,36 @@
+\section{Dilema prizonierului}
+
+Dilema prizonierului\footnote{Adaptare dupa \textit{"Prisoner's Dilemma: Game Theory"}, Merrill M. Flood, Melvin Dresher, Albert W. Tucker, Framing Device, Experimental Economics} reprezinta o problema tratata in teoria jocurilor. A fost formulata de catre Merrill Flood and Melvin Dresher, angajati ai companiei RAND Corporation\footnote{https://www.rand.org/}, in 1950. Denumirea a fost data de  Albert W. Tucker, de la Universitatea Princeton, care a formalizat jocul si a introdus notiunea de rasplata (engl. "payoff"). Enuntul clasic al problemei este urmatorul: doi suspecti sunt arestati de catre politie. Politistii nu au suficiente dovezi pentru a condamna suspectii asa ca ii duc in camere separate si le propun aceeasi oferta amandurora. Daca unul dintre suspecti depune marturie pentru urmarirea penala impotriva celuilalt suspect si celalalt tainuieste faptele, cel care a tradat este eliberat si cel care a tainuit primeste o pedeapsa de 10 ani de inchisoare. Daca ambii suspecti nu marturisesc, ambii ajung in puscarie pentru jumatate de an. Daca se tradeaza reciproc, fiecare primeste o pedeapsa de 5 ani. Suspectii au de ales intre a trada si a tainui faptele. 
+
+Putem formaliza aceasta forma prin urmatoarea matrice a recompenselor:
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{lccll}
+		\cline{2-3}
+		\multicolumn{1}{l|}{} & \multicolumn{1}{c|}{\textbf{B tainuietse}} & \multicolumn{1}{c|}{\textbf{B marturiseste}} &  &  \\ \cline{1-3}
+		\multicolumn{1}{|c|}{\textbf{A tainuieste}} & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}A: "Reward"\\ B: "Reward"\end{tabular}} & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}A: "Sucker's payoff"\\ B: "Temptation"\end{tabular}} &  &  \\ \cline{1-3}
+		\multicolumn{1}{|c|}{\textbf{A marturiseste}} & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}A: "Temptation"\\ B: "Sucker's payoff\end{tabular}} & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}A: "Punishment"\\ B: "Punishment"\end{tabular}} &  &  \\ \cline{1-3}
+		& \multicolumn{1}{l}{} & \multicolumn{1}{l}{} &  & 
+	\end{tabular}
+	\caption{Matricea recompenselor pentru dilema prizonierului}
+	\label{my-label}
+\end{table}
+
+Termenii care apar in tabel sunt urmatorii:
+
+\begin{itemize}
+	\item \textbf{Temptation}: recompensa obtinuta de amandoi atunci cand tainuiesc faptele
+	\item \textbf{Reward}: recompensa pentru cand cei doi "suspecti", A si B, aleg sa tainuiasca
+	\item \textbf{Punishment}: pedeapsa obtinuta de cei doi suspecti atunci cand se tradeaza reciproc
+	\item \textbf{Sucker's payoff}: pedeapsa pentru cel care a tainuit atunci cand celalalt l-a tradat
+\end{itemize}
+
+Intre acesti termeni, se respecta urmatorul lant de inegalitati:
+
+\begin{center}
+	 \textbf{Temptation} \textgreater \textbf{Reward} \textgreater \textbf{Punishment} \textgreater \textbf{Sucker's payoff}
+\end{center}
+
+\section {Problema iterata a prizonierului}
+

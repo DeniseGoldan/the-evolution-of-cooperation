@@ -1,3 +1,8 @@
-\contentsline {chapter}{Algoritm genetic}{6}
-\contentsline {section}{\numberline {1} Aparitia notiunii de algoritm genetic }{6}
-\contentsline {section}{\numberline {2}Terminologie de specialitate}{6}
+\contentsline {chapter}{Problema iterata a prizonierului}{6}
+\contentsline {section}{\numberline {1}Dilema prizonierului}{6}
+\contentsline {section}{\numberline {2}Problema iterata a prizonierului}{7}
+\contentsline {chapter}{Algoritm genetic}{8}
+\contentsline {section}{\numberline {1}Aparitia notiunii de algoritm genetic}{8}
+\contentsline {section}{\numberline {2}Terminologie}{9}
+\contentsline {section}{\numberline {3}Pseudocod}{10}
+\contentsline {chapter}{Dezvoltarea unei strategii folosind un algoritm genetic}{11}

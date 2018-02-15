@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.12.27)  15 FEB 2018 15:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.12.27)  15 FEB 2018 18:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -365,38 +365,43 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 ))
 \Gin@req@height=\dimen103
 \Gin@req@width=\dimen104
-) (./main.aux
-
-LaTeX Warning: Label `introduction_by_melanie_mitchell' multiply defined.
-
 )
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count89
+\float@exts=\toks17
+\float@box=\box26
+\@float@everytoks=\toks18
+\@floatcapt=\box27
+) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
- (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count89
+\scratchcounter=\count90
 \scratchdimen=\dimen105
-\scratchbox=\box26
-\nofMPsegments=\count90
-\nofMParguments=\count91
-\everyMPshowfont=\toks17
-\MPscratchCnt=\count92
+\scratchbox=\box28
+\nofMPsegments=\count91
+\nofMParguments=\count92
+\everyMPshowfont=\toks19
+\MPscratchCnt=\count93
 \MPscratchDim=\dimen106
-\MPnumerator=\count93
-\makeMPintoPDFobject=\count94
-\everyMPtoPDFconversion=\toks18
+\MPnumerator=\count94
+\makeMPintoPDFobject=\count95
+\everyMPtoPDFconversion=\toks20
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -520,19 +525,61 @@ LaTeX Font Info:    External font `cmex10' loaded for size
  [5
 
 
-] (./capitole/algoritm_genetic.tex [6
+] (./capitole/descriere_problema_iterata.tex
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 3.
+ [6
 
-] [7]
-Underfull \hbox (badness 10000) in paragraph at lines 88--90
+]
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 32.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
+File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 32.
+) [7]
+(./capitole/algoritm_genetic.tex [8
+
+] [9]
+Overfull \hbox (36.07521pt too wide) in paragraph at lines 48--48
+[]\OT1/cmtt/m/n/12 calculeaza valoarea functiei de optimizat pentru indivizii p
+opulatiei[] 
+ []
+
+
+Overfull \hbox (36.07521pt too wide) in paragraph at lines 48--48
+[]    \OT1/cmtt/m/n/12 aplica operatorul genetic incrucisare, cu o anumita prob
+abilitate[] 
+ []
+
+
+Overfull \hbox (17.5502pt too wide) in paragraph at lines 48--48
+[]    \OT1/cmtt/m/n/12 aplica operatorul genetic mutaatie, cu o anumita probabi
+litate[] 
+ []
+
+
+Overfull \hbox (36.07521pt too wide) in paragraph at lines 48--48
+[]\OT1/cmtt/m/n/12 calculeaza valoarea functiei de optimizat pentru indivizii p
+opulatiei[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 54--56
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 88--90
+Underfull \hbox (badness 10000) in paragraph at lines 54--56
 
  []
 
-[8] [9]) (./capitole/bibliografie.tex
+[10]) (./capitole/dezvoltare_strategie_algoritm_genetic.tex)
+(./capitole/bibliografie.tex [11
+
+
+]
 Underfull \hbox (badness 2837) in paragraph at lines 25--29
 []\OT1/cmr/m/n/12 Albert Ein-stein. \OT1/cmr/m/it/12 Zur Elek-tro-dy-namik be-w
 egter K^^?orper\OT1/cmr/m/n/12 . (Ger-man)
@@ -544,35 +591,34 @@ Underfull \hbox (badness 1721) in paragraph at lines 25--29
 \OT1/cmr/m/n/12 ]. An-nalen der Physik,
  []
 
-) [10
+) [12
 
-
-] (./main.aux)
-
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
+] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 1870 strings out of 494953
- 25006 string characters out of 6180976
- 80603 words of memory out of 5000000
- 5120 multiletter control sequences out of 15000+600000
- 10946 words of font info for 38 fonts, out of 8000000 for 9000
+ 1957 strings out of 494953
+ 26375 string characters out of 6180976
+ 81942 words of memory out of 5000000
+ 5193 multiletter control sequences out of 15000+600000
+ 11292 words of font info for 39 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 37i,6n,23p,831b,209s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmtt12.pfb>
-Output written on main.pdf (10 pages, 106994 bytes).
+ 37i,13n,23p,1252b,279s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmtt12.pfb>
+Output written on main.pdf (12 pages, 156733 bytes).
 PDF statistics:
- 76 PDF objects out of 1000 (max. 8388607)
- 52 compressed objects within 1 object stream
+ 98 PDF objects out of 1000 (max. 8388607)
+ 68 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
