@@ -11,7 +11,7 @@ public class TitForTatPlayer extends Player {
 
     @Override
     public Action chooseAction(long iteration) {
-        Action actionToPerform = getOpponentActionFromLastMatch();
+        Action actionToPerform = getOpponentActionFromLastRound();
         if (actionToPerform == null) {
             return Action.Cooperate;
         } else {

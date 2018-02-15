@@ -25,33 +25,33 @@ public class Chromosome extends Player {
     }
 
     @Override
-    public Action chooseAction(long iteration) {
-        if (iteration == 0) {
+    public Action chooseAction(long roundNumber) {
+        if (roundNumber == 0) {
             return genes.get(0);
-        } else if (iteration == 1) {
-            Action opponentActionFromLastMatch = getOpponentActionFromLastMatch();
-            if (opponentActionFromLastMatch == Action.Cooperate) {
+        } else if (roundNumber == 1) {
+            Action opponentActionFromLastRound = getOpponentActionFromLastRound();
+            if (opponentActionFromLastRound == Action.Cooperate) {
                 return genes.get(1);
             } else {
                 return genes.get(2);
             }
-        } else if (iteration == 2) {
-            List<Action> opponentActionFromLastTwoMatches = getOpponentActionsFromLastTwoMatches();
-            if (opponentActionFromLastTwoMatches.get(0) == Action.Cooperate
-                    && opponentActionFromLastTwoMatches.get(1) == Action.Cooperate){
+        } else if (roundNumber == 2) {
+            List<Action> opponentActionFromLastTwoRounds = getOpponentActionsFromLastTwoRounds();
+            if (opponentActionFromLastTwoRounds.get(0) == Action.Cooperate
+                    && opponentActionFromLastTwoRounds.get(1) == Action.Cooperate){
                 return genes.get(3);
-            } else if (opponentActionFromLastTwoMatches.get(0) == Action.Cooperate
-                    && opponentActionFromLastTwoMatches.get(1) == Action.Defect) {
+            } else if (opponentActionFromLastTwoRounds.get(0) == Action.Cooperate
+                    && opponentActionFromLastTwoRounds.get(1) == Action.Defect) {
                 return genes.get(4);
-            } else if (opponentActionFromLastTwoMatches.get(0) == Action.Defect
-                    && opponentActionFromLastTwoMatches.get(1) == Action.Cooperate) {
+            } else if (opponentActionFromLastTwoRounds.get(0) == Action.Defect
+                    && opponentActionFromLastTwoRounds.get(1) == Action.Cooperate) {
                 return genes.get(5);
             } else {
                 return genes.get(6);
             }
         } else {
-            List<Action> lastThreeMatchesHistory = getBothHistoriesFromLastThreeMatches((int) iteration);
-            return NextActionHelper.referToHistoryAndChooseAction(this.genes, lastThreeMatchesHistory);
+            List<Action> lastThreeRoundsHistory = getBothHistoriesFromLastThreeRounds((int) roundNumber);
+            return NextActionHelper.referToHistoryAndChooseAction(this.genes, lastThreeRoundsHistory);
         }
     }
 
@@ -59,7 +59,7 @@ public class Chromosome extends Player {
      * The result is in the order "Your first move", "Opponent's first Move",
      "Your second move", "Opponent's second Move", "Your third move", "Opponent's third Move".
      */
-    private List<Action> getBothHistoriesFromLastThreeMatches(int iteration) {
+    private List<Action> getBothHistoriesFromLastThreeRounds(int iteration) {
         List<Action> history = getActionHistory().subList(iteration -3, iteration);
         List<Action> opponentHistory = getOpponentActionHistory().subList(iteration -3, iteration);
         List<Action> lastThreeMatchesHistory = new ArrayList<>();

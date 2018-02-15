@@ -74,7 +74,7 @@ public class PlayerTest {
 
     @Test
     public void GIVEN_empty_opponentActionHistory_WHEN_calling_getActionFromLastMatch_THEN_return_null() {
-        assertEquals(null, player.getOpponentActionFromLastMatch());
+        assertEquals(null, player.getOpponentActionFromLastRound());
     }
 
     @Test
@@ -89,7 +89,7 @@ public class PlayerTest {
     public void player_can_access_opponent_action_from_last_match() throws Exception {
         Action expected = Action.Defect;
         player.registerOpponentActionToHistory(expected);
-        assertEquals(expected, player.getOpponentActionFromLastMatch());
+        assertEquals(expected, player.getOpponentActionFromLastRound());
     }
 
     @Test
@@ -99,19 +99,19 @@ public class PlayerTest {
         expected.add(Action.Cooperate);
         player.registerOpponentActionToHistory(Action.Defect);
         player.registerOpponentActionToHistory(Action.Cooperate);
-        assertEquals(expected.get(0), player.getOpponentActionsFromLastTwoMatches().get(0));
-        assertEquals(expected.get(1), player.getOpponentActionsFromLastTwoMatches().get(1));
+        assertEquals(expected.get(0), player.getOpponentActionsFromLastTwoRounds().get(0));
+        assertEquals(expected.get(1), player.getOpponentActionsFromLastTwoRounds().get(1));
     }
 
     @Test
     public void GIVEN_opponentHistory_size_is_0_WHEN_calling_getOpponentActionsFromLastTwoMatches_THEN_return_empty_list() {
-        assertEquals(new ArrayList<Action>(), player.getOpponentActionsFromLastTwoMatches());
+        assertEquals(new ArrayList<Action>(), player.getOpponentActionsFromLastTwoRounds());
     }
 
     @Test
     public void GIVEN_opponentHistory_size_is_1_WHEN_calling_getOpponentActionsFromLastTwoMatches_THEN_return_empty_list() {
         player.registerOpponentActionToHistory(Action.Defect);
-        assertEquals(new ArrayList<Action>(), player.getOpponentActionsFromLastTwoMatches());
+        assertEquals(new ArrayList<Action>(), player.getOpponentActionsFromLastTwoRounds());
     }
 
     @Test

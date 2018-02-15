@@ -9,8 +9,8 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class GeneticAlgorithm {
 
-    private int populationSize = 25;
-    private double numberOfGenerations = 1000;
+    private int populationSize = 10;
+    private double numberOfGenerations = 100;
     private double crossoverProbability = 0.8;
     private double mutationProbability = 0.25;
     private List<Chromosome> population = new ArrayList<>();

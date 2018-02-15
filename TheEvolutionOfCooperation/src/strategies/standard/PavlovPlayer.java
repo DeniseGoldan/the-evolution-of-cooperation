@@ -12,7 +12,7 @@ public class PavlovPlayer extends Player {
     @Override
     public Action chooseAction(long iteration) {
         Action lastAction = getActionFromLastMatch();
-        Action lastActionOfOpponent = getOpponentActionFromLastMatch();
+        Action lastActionOfOpponent = getOpponentActionFromLastRound();
         if (lastAction != null) {
             if (lastActionOfOpponent == Action.Cooperate) {
                 return lastAction;

@@ -1,5 +1,6 @@
 package competitions;
 
+import strategies.genetic.GeneticAlgorithm;
 import strategies.player.Player;
 import strategies.standard.AlwaysCooperatePlayer;
 import strategies.standard.AlwaysDefectPlayer;
@@ -24,7 +25,7 @@ public class TournamentWithElimination extends Tournament {
 
     @Override
     public void playTournament() {
-        resetScoreAndNumberOfMatches();
+        resetScoreAndNumberOfMatchesCounter();
         int currentRoundNumber = 0;
         while(!areAllPlayersOfTheSameType()) {
             printPlayerTypeCounter();
@@ -94,6 +95,7 @@ public class TournamentWithElimination extends Tournament {
         players.add(new TitForTatPlayer());
         players.add(new AlwaysDefectPlayer());
         players.add(new SuspiciousTitForTatPlayer());
+        players.add(new GeneticAlgorithm().buildStrategy());
 
         TournamentWithElimination tournament = new TournamentWithElimination(
                         players,

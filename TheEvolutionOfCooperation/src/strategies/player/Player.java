@@ -68,7 +68,7 @@ public abstract class Player {
         }
     }
 
-    public Action getOpponentActionFromLastMatch() {
+    public Action getOpponentActionFromLastRound() {
         if (!opponentActionHistory.isEmpty()) {
             return opponentActionHistory.get(opponentActionHistory.size() - 1);
         }
@@ -77,7 +77,7 @@ public abstract class Player {
         }
     }
 
-    public List<Action> getOpponentActionsFromLastTwoMatches() {
+    public List<Action> getOpponentActionsFromLastTwoRounds() {
         if (opponentActionHistory.size() >= 2) {
             int historySize = opponentActionHistory.size();
             List<Action> historySample = new ArrayList<>();
@@ -91,7 +91,7 @@ public abstract class Player {
     }
 
     protected boolean hasTheOpponentDefectedLastTwoMatches() {
-        List<Action> lastTWoActionsOfOpponent = getOpponentActionsFromLastTwoMatches();
+        List<Action> lastTWoActionsOfOpponent = getOpponentActionsFromLastTwoRounds();
         if(lastTWoActionsOfOpponent != null && !lastTWoActionsOfOpponent.isEmpty()) {
             if(lastTWoActionsOfOpponent.get(0) == lastTWoActionsOfOpponent.get(1)
                     && lastTWoActionsOfOpponent.get(0).equals(Action.Defect)) {

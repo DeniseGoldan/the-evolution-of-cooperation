@@ -33,7 +33,7 @@ public abstract class Tournament {
         }
     }
 
-    void resetScoreAndNumberOfMatches() {
+    void resetScoreAndNumberOfMatchesCounter() {
         this.players.forEach(Player::resetScore);
         this.numberOfMatchesPlayed = 0;
     }

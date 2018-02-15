@@ -13,7 +13,7 @@ public class GrudgerPlayer extends Player {
 
     @Override
     public Action chooseAction(long iteration) {
-        if (getOpponentActionFromLastMatch() == Action.Defect) {
+        if (getOpponentActionFromLastRound() == Action.Defect) {
             hasTheOpponentDefected = true;
         }
         if (hasTheOpponentDefected) {
