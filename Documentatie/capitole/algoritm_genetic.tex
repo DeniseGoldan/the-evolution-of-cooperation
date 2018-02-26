@@ -1,6 +1,8 @@
-\section{Aparitia notiunii de algoritm genetic}
+\section{Apariția noțiunii de algoritm genetic} 
+ 
+Algorimii genetici\footnote{Adaptare după textit{"Genetic Algorithms: An Overview"}, Melanie Mitchell.} au fost introduși de către John Holland în 1960 și dezvoltați, ulterior, alături de colegii de la Universitatea din Michigan, între anii 1960 și 1970. Holland urmărea înțelegerea fenomenului de "adaptare" întâlnit în natură și implementarea unor mecanisme adaptive care să fie utilizate în practică, în contextul programării. Cartea publicată de acesta în 1975, \textit{"Adaptation în Natural and Artificial Systems"} (Holland, 1975/1992) prezintă algoritmii genetici drept abstractizări ale evoluției biologice, și oferă un cadru teoretic pentru dezvoltarea acestora.
 
-Algorimii genetici\footnote{Adaptare dupa \textit{"Genetic Algorithms: An Overview"}, Melanie Mitchell.} au fost introdusi de catre John Holland in 1960 si dezvoltati, ulterior, alaturi de colegii de la Universitatea din Michigan, intre anii 1960 si 1970. Holland urmarea intelegerea fenomenului de "adaptare" intalnit in natura si implementarea unor mecanisme adaptive care sa fie utilizate in practica, in contextul programarii. Cartea publicata de acesta in 1975, \textit{"Adaptation in Natural and Artificial Systems"} (Holland, 1975/1992) prezinta algoritmii genetici drept abstractizari ale evolutiei biologice, si ofera un cadru teoretic pentru dezvoltarea acestora. Algoritmii genetici ai lui Holland sunt metode de a trece de la o populatie de "cromozomi" (e.g., siruri de "biti" care reprezinta solutii candidat pentu o problema) la o noua populatie, prin folosirea "selectiei", alaturi de operatorii insiprati din genetica: incrucisare, mutatie, inversiune. Cea din urma este rar folosita in practica.
+Algoritmii genetici ai lui Holland sunt metode de a trece de la o populație de "cromozomi" (e.g., șiruri de "biți" care reprezintă soluții candidat pentu o problemă) la o nouă populație, prin folosirea "selecției", alături de operatorii insiprati din genetică: încrucișare, mutație, inversiune. Cea din urmă este rar folosită în practică.
 
 \begin{quote} 
 	\textit{"Computer programs that "evolve" in ways that resemble natural selection can solve complex problems even their creators do not fully understand."}
@@ -9,47 +11,47 @@ Algorimii genetici\footnote{Adaptare dupa \textit{"Genetic Algorithms: An Overvi
 	\end{flushright}
 \end{quote}
 
-Algoritmii genetici au fost creati in incercarea de a imita procese specifice evolutiei naturale, cum ar fi lupta pentru supravietuire si mostenirea materialului genetic. Putem privi evolutia drept strategia abordata de speciile biologice pentru a cauta "solutii" cat mai potrivite, adaptate conditiilor schimbatoare, intr-un numar foarte mare de posibilitati. Aceasta abordare poate fi utilizata in rezolvarea problemelor de optimizare, atunci cand metodele clasice exhaustive nu se dovedesc eficiente.
-
-Notiunea de "algoritm genetic" nu este definita in mod riguros\cite{introduction_by_melanie_mitchell}, insa toate metodele ce poarta aceasta denumire au in comun urmatoarele: populatia este formata din cromozomi, selectiz este facuta pe baza rezultatelor functiei de optimizat, incrucisarea a doi \textit{cromozomi parinti} produce 2 \textit{cromozomi copii}, mutatia se aplica \textit{cromozomilor copii}.
+Algoritmii genetici au fost creați în încercarea de a imita procese specifice evoluției naturale, cum ar fi lupta pentru supraviețuire și moștenirea materialului genetic. Putem privi evoluția drept strategia abordată de speciile biologice pentru a căuta "soluții" cât mai potrivite, adaptate condițiilor schimbătoare, într-un număr foarte mare de posibilități. Această abordare poate fi utilizată în rezolvarea problemelor de optimizare, atunci când metodele clasice exhaustive nu se dovedesc eficiente. 
+ 
+Noțiunea de "algoritm genetic" nu este definită în mod riguros\cite{introduction_by_melanie_mitchell}, însă toate metodele ce poartă această denumire au în comun următoarele: populația este formată din cromozomi, selecţia este făcută pe baza rezultatelor funcției de optimizat, încrucișarea a doi \textit{cromozomi părinți} produce 2 \textit{cromozomi copii}, mutația se aplică \textit{cromozomilor copii}. 
 
 \section{Terminologie}
 
 \begin{itemize}
 	
-	\item Solutiile candidat sunt adesea codificate in forma unor siruri de biti si se mai numesc \textbf{cromozomi} sau \textbf{indivizi} ai populatiei. Fiecare bit este echivalentul unei gene.
-	
-	\item Genele sunt informatiile stocate de catre cromozomi.
-	
-	\item \textbf{Populatia}, care va fi urmarita in procesul sau evolutiv, este alcatuita din mai multi cromozomi.
-	
-	\item Fiecare \textbf{generatie} marcheaza cate o etapa din evolutia populatiei initiale.
-	
-	\item Pentru a trece de la o generatie la alta, apelam la notiunea de \textbf{reproducere}. In alcatuirea urmatoarei generatii, se porneste de la populatia actuala, pe care o supunem unui proces de \textbf{selectie}. Pentru a face analogia cu fenomenul de supravietuire a celor mai adapati indivizi, masuram cromozomii cu ajutorul unei functii de optimizat. O valoare ridicata a acestei functii este interpretata ca o buna adaptare la mediu a individului. 
-	
-	\item Pentru explorarea spatiului de solutii, indivizii selectati sufera modificari. Sunt supusi \textbf{incrucisarilor} si \textbf{mutatiilor}.
-	
-	\item Incrucisarea combina genele a doi \textit{cromozomi parinti}, rezultand doi \textbf{mostenitori}. Exista mai multe variante: cu un punct de taiere, ales aleator (in care un mostenitor este alcatuit dintr-o portiune de cromozom de la primul parinte si o portiune de la al doilea), cu mai multe puncte de taiere si uniforma (unde fiecare gena este selectata probabilit de la unul din cei 2 \textit{cromozomi parinti}).
-	
-	\item Mutatia altereaza gene alese arbitrar dintr-un cromozom. Numarul de gene afectate poate varia.
+	 \item Soluțiile candidat sunt adesea codificate în forma unor șiruri de biți și se mai numesc \textbf{cromozomi} sau \textbf{indivizi} ai populației. Fiecare bit este echivalentul unei gene. 
+	 
+	 \item Genele sunt informațiile stocate de către cromozomi. 
+	 
+	 \item \textbf{Populația}, care va fi urmărită în procesul său evolutiv, este alcătuită din mai mulți cromozomi. 
+	 
+	 \item Fiecare \textbf{generație} marchează câte o etapă din evoluția populației inițiale. 
+	 
+	 \item Pentru a trece de la o generație la alta, apelăm la noțiunea de \textbf{reproducere}. În alcătuirea următoarei generații, se pornește de la populația actuală, pe care o supunem unui proces de \textbf{selecție}. Pentru a face analogia cu fenomenul de supraviețuire a celor mai adaptați indivizi, măsurăm cromozomii cu ajutorul unei \textbf{funcții de optimizat}. O valoare ridicată a acestei funcții este interpretată ca o bună adaptare la mediu a individului.  
+	 
+	 \item Pentru explorarea spațiului de soluții, indivizii selectați suferă modificări. Sunt supuși \textbf{încrucișărilor} și \textbf{mutațiilor}. 
+	 
+	 \item Încrucișarea combină genele a doi \textit{cromozomi părinți}, rezultând doi \textbf{moștenitori}. Există mai multe variante: cu un punct de tăiere, ales aleator (în care un moștenitor este alcătuit dintr-o porțiune de cromozom de la primul părinte și o porțiune de la al doilea), cu mai multe puncte de tăiere și uniformă (unde fiecare genă este selectată probabilist de la unul din cei 2 \textit{cromozomi părinți}). 
+	 
+	 \item Mutația alterează gene alese arbitrar dintr-un cromozom. Numărul de gene afectate poate varia. 
 	
 \end{itemize}
 
 \section{Pseudocod}
 
 \begin{verbatim}
-initializeaza cu valori aleatorii populatia initiala
-calculeaza valoarea functiei de optimizat pentru indivizii populatiei 
-cat timp nu s-a indeplinit conditia de oprire
-    aplica o metoda de selectie, pentru a crea populatia
-    aplica operatorul genetic incrucisare, cu o anumita probabilitate
-    aplica operatorul genetic mutaatie, cu o anumita probabilitate
-calculeaza valoarea functiei de optimizat pentru indivizii populatiei
+inițializează cu valori aleatorii populația inițială 
+calculează valoarea funcției de optimizat pentru indivizii populației  
+cât timp nu s-a îndeplinit condiția de oprire 
+    aplică o metodă de selecție, pentru a crea populația 
+    aplică operatorul genetic încrucișare, cu o anumită probabilitate 
+    aplică operatorul genetic mutaatie, cu o anumită probabilitate 
+    calculează valoarea funcției de optimizat pentru indivizii populației 
 \end{verbatim}
 
-Conditia de oprire poate fi atingerea unui numar de iteratii stabilit initial. De asemenea, se poate stabili ca algoritmul sa se opreasca atunci cand nu se mai inregistreaza imbunatatiri in ceea ce priveste calitatea solutiilor furnizate. 
-
-Solutia returnata de un algoritm genetic reprezinta cel mai bun individ intalnit in evolutia populatiei. 
+Condiția de oprire poate fi atingerea unui număr de iterații stabilit inițial. De asemenea, se poate stabili ca algoritmul să se oprească atunci când nu se mai înregistrează îmbunătățiri în ceea ce privește calitatea soluțiilor furnizate.  
+ 
+Soluția returnată de un algoritm genetic reprezintă cel mai bun individ întâlnit în evoluția populației.  
 
 \hfill \break
 \hfill \break

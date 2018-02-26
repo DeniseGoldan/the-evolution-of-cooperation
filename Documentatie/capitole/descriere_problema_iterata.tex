@@ -1,36 +1,59 @@
 \section{Dilema prizonierului}
 
-Dilema prizonierului\footnote{Adaptare dupa \textit{"Prisoner's Dilemma: Game Theory"}, Merrill M. Flood, Melvin Dresher, Albert W. Tucker, Framing Device, Experimental Economics} reprezinta o problema tratata in teoria jocurilor. A fost formulata de catre Merrill Flood and Melvin Dresher, angajati ai companiei RAND Corporation\footnote{https://www.rand.org/}, in 1950. Denumirea a fost data de  Albert W. Tucker, de la Universitatea Princeton, care a formalizat jocul si a introdus notiunea de rasplata (engl. "payoff"). Enuntul clasic al problemei este urmatorul: doi suspecti sunt arestati de catre politie. Politistii nu au suficiente dovezi pentru a condamna suspectii asa ca ii duc in camere separate si le propun aceeasi oferta amandurora. Daca unul dintre suspecti depune marturie pentru urmarirea penala impotriva celuilalt suspect si celalalt tainuieste faptele, cel care a tradat este eliberat si cel care a tainuit primeste o pedeapsa de 10 ani de inchisoare. Daca ambii suspecti nu marturisesc, ambii ajung in puscarie pentru jumatate de an. Daca se tradeaza reciproc, fiecare primeste o pedeapsa de 5 ani. Suspectii au de ales intre a trada si a tainui faptele. 
-
-Putem formaliza aceasta forma prin urmatoarea matrice a recompenselor:
+Dilema prizonierului\footnote{Adaptare după \textit{"Prisoner's Dilemma: Game Theory"}, Merrill M. Flood, Melvin Dresher, Albert W. Tucker, Framing Device, Experimental Economics} reprezintă o problemă tratată în teoria jocurilor. A fost formulată de către Merrill Flood and Melvin Dresher, angajați ai companiei RAND Corporation\footnote{https://www.rand.org/}, în 1950. Denumirea a fost dată de  Albert W. Tucker, de la Universitatea Princeton, care a formalizat jocul și a introdus noțiunea de răsplată (engl. "payoff").
+ 
+Enunțul clasic al problemei este următorul: doi suspecți sunt arestați de către poliție. Polițiștii nu au suficiente dovezi pentru a condamna suspecții așa că îi duc în camere separate și le propun aceeași ofertă amândurora. Dacă unul dintre suspecți depune mărturie pentru urmărirea penală împotriva celuilalt suspect și celălalt tăinuiește faptele, cel care a trădat este eliberat și cel care a tăinuit primește o pedeapsă de 10 ani de închisoare. Dacă ambii suspecți nu mărturisesc, ambii ajung în pușcarie pentru jumătate de an. Dacă se trădează reciproc, fiecare primește o pedeapsă de 5 ani. Suspecții au de ales între a trăda și a tăinui faptele.  
+  
+Putem formaliza această formă prin următoarea matrice a recompenselor\footnote{Preluat din https://plato.stanford.edu/entries/prisoner-dilemma/}: 
 
 \begin{table}[H]
 	\centering
 	\begin{tabular}{lccll}
 		\cline{2-3}
-		\multicolumn{1}{l|}{} & \multicolumn{1}{c|}{\textbf{B tainuietse}} & \multicolumn{1}{c|}{\textbf{B marturiseste}} &  &  \\ \cline{1-3}
-		\multicolumn{1}{|c|}{\textbf{A tainuieste}} & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}A: "Reward"\\ B: "Reward"\end{tabular}} & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}A: "Sucker's payoff"\\ B: "Temptation"\end{tabular}} &  &  \\ \cline{1-3}
-		\multicolumn{1}{|c|}{\textbf{A marturiseste}} & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}A: "Temptation"\\ B: "Sucker's payoff\end{tabular}} & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}A: "Punishment"\\ B: "Punishment"\end{tabular}} &  &  \\ \cline{1-3}
+		\multicolumn{1}{l|}{} & \multicolumn{1}{c|}{\textbf{B tăinuiește}} & \multicolumn{1}{c|}{\textbf{B mărturiseşte}} &  &  \\ \cline{1-3}
+		\multicolumn{1}{|c|}{\textbf{A tăinuiește}} & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}A: "Reward"\\ B: "Reward"\end{tabular}} & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}A: "Sucker's payoff"\\ B: "Temptation"\end{tabular}} &  &  \\ \cline{1-3}
+		\multicolumn{1}{|c|}{\textbf{A mărturiseşte}} & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}A: "Temptation"\\ B: "Sucker's payoff\end{tabular}} & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}A: "Punishment"\\ B: "Punishment"\end{tabular}} &  &  \\ \cline{1-3}
 		& \multicolumn{1}{l}{} & \multicolumn{1}{l}{} &  & 
 	\end{tabular}
 	\caption{Matricea recompenselor pentru dilema prizonierului}
 	\label{my-label}
 \end{table}
 
-Termenii care apar in tabel sunt urmatorii:
+Termenii care apar în tabel sunt următorii: 
+ 
+\begin{itemize} 
+	\item \textbf{Temptation}: recompensa obținută de jucatorul ce mărturisește atunci când celalalt tăinuieste faptele 
+	\item \textbf{Reward}: recompensa pentru când cei doi "suspecți", A și B, aleg să tăinuiască 
+	\item \textbf{Punishment}: pedeapsa obținută de cei doi suspecți atunci când se trădează reciproc 
+	\item \textbf{Sucker's payoff}: pedeapsa pentru cel care a tăinuit atunci când celălalt l-a trădat 
+\end{itemize} 
+ 
+Între acești termeni, se respectă următorul lanț de inegalități: 
+ 
+\begin{center} 
+	\textbf{Temptation} \textgreater \textbf{Reward} \textgreater \textbf{Punishment} \textgreater \textbf{Sucker's payoff} 
+\end{center} 
+ 
+\section {Problema iterată a prizonierului} 
 
-\begin{itemize}
-	\item \textbf{Temptation}: recompensa obtinuta de amandoi atunci cand tainuiesc faptele
-	\item \textbf{Reward}: recompensa pentru cand cei doi "suspecti", A si B, aleg sa tainuiasca
-	\item \textbf{Punishment}: pedeapsa obtinuta de cei doi suspecti atunci cand se tradeaza reciproc
-	\item \textbf{Sucker's payoff}: pedeapsa pentru cel care a tainuit atunci cand celalalt l-a tradat
-\end{itemize}
+În teoria jocurilor, problema iterată a prizonierului este catalogat drept joc cu suma nenulă \footnote{Numim joc de suma nenula jocul în care suma câstigurilor este diferita de zero.} (engl. "non-zero-sum game").
 
-Intre acesti termeni, se respecta urmatorul lant de inegalitati:
+-- daca se cunoaste numarul de iteratii, o startegie buna e sa tradezi la ultimul meci. Repetand rationamentul, se poate trada si la penulimul joc. ......
 
-\begin{center}
-	 \textbf{Temptation} \textgreater \textbf{Reward} \textgreater \textbf{Punishment} \textgreater \textbf{Sucker's payoff}
-\end{center}
+\section {Strategii pentru problema iterată a prizonierului}
 
-\section {Problema iterata a prizonierului}
+Considerând acest scenariu drept un joc, folosim termenul de cooperare (engl. "cooperation") pentru a descrie situația când unul dintre suspecți tăinuiește faptele. Mărturisirea faptelor de către un suspect va fi numită trădare (engl. "defection"). 
+
+\begin{itemize}  
+	\item \textbf{Always cooperate}: Jucătorul cooperează la fiecare rundă a jocului, indiferent de strategia aplicată de celălalt jucător. 
+	\item \textbf{Always defect}: Jucătorul trădează la fiecare rundă a jocului. 
+	\item \textbf{Grudger}: Această strategie presupune cooperarea la fiecare rundă, până la prima trădare din partea celuilalt jucător. Așadar, adoptând această strategie, dacă oponentul trădează chiar și o singură dată, următoarele mișcări, până la final de joc, vor fi de trădare. 
+	\item \textbf{Pavlov}: Se alege cooperarea la prima rundă. Dacă la runda anterioară jucătorul a fost recompensat cu "Temptation"\footnote{"Temptation" este recompensa obținută de jucatorul ce trădează atunci când oponentul cooperează.} sau "Reward"\footnote{"Reward" reprezintă recompensa primita de ambii jucători atunci când cooperează.}, acesta repetă ultima mișcare. În celălalt caz, alege mișcarea opusă. 
+	\item \textbf{Random}: Se alege la întâmplare următoarea acțiune. 
+	\item \textbf{Tit-For-Tat}: Se alege cooperarea la prima rundă. De la runda a doua, jocuatorul ce alege această strategie repetă ultima mișcare a oponentului. 
+	\item \textbf{Suspicious Tit-For-Tat}: Diferența dintre această strategie și \textbf{Tit-For-Tat} este că la prima mișcare se alege trădarea. 
+	\item \textbf{Tit-For-Two-Tats}:  Jucătorul cooperează de fiecare dată, făcând excepție acele cazuri în care jucătorul este trădat de două ori consecutiv. 
+\end{itemize}  
+
+
 
