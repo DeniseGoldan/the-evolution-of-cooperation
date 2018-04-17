@@ -1,7 +1,7 @@
 package strategies.genetic;
 
-import strategies.player.Action;
-import strategies.player.Player;
+import player.Action;
+import player.Player;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,7 +16,7 @@ import java.util.concurrent.ThreadLocalRandom;
  */
 public class Chromosome extends Player {
 
-    private static final int LENGTH = 71;
+    private final int NUMBER_OF_GENES = 71;
     private List<Action> genes;
 
     public Chromosome() {
@@ -76,7 +76,7 @@ public class Chromosome extends Player {
     }
 
     private void initializeGenesRandomly() {
-        for (int geneIndex = 0; geneIndex < LENGTH; geneIndex ++) {
+        for (int geneIndex = 0; geneIndex < NUMBER_OF_GENES; geneIndex ++) {
             Random random = new Random();
             if (random.nextBoolean()) {
                 genes.add(Action.Cooperate);
@@ -87,7 +87,7 @@ public class Chromosome extends Player {
     }
 
     public void printGenes() {
-        for (int index = 0; index < LENGTH; index++) {
+        for (int index = 0; index < NUMBER_OF_GENES; index++) {
             System.out.println(index+"."+genes.get(index));
         }
         System.out.println();
@@ -101,14 +101,14 @@ public class Chromosome extends Player {
         ThreadLocalRandom random = ThreadLocalRandom.current();
         double randomNumber = random.nextDouble(0, 1);
         if (randomNumber < mutationProbability) {
-            int index = random.nextInt(0, LENGTH);
+            int index = random.nextInt(0, NUMBER_OF_GENES);
             mutateGeneFromIndex(index);
         }
     }
 
     private void mutateGeneFromIndex(int index) {
         List<Action> result = new ArrayList<>();
-        for (int i = 0; i < LENGTH; i++ ) {
+        for (int i = 0; i < NUMBER_OF_GENES; i++ ) {
             if (i != index) {
                 result.add(genes.get(i));
             } else {
@@ -121,4 +121,11 @@ public class Chromosome extends Player {
         genes = result;
     }
 
+    public int getNumberOfGenes() {
+        return NUMBER_OF_GENES;
+    }
+
+    public void setGenes(List<Action> genes) {
+        this.genes = genes;
+    }
 }

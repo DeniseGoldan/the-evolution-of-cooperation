@@ -4,8 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
-import strategies.player.Action;
-import strategies.standard.AlwaysCooperatePlayer;
+import player.Action;
 
 import static org.junit.Assert.assertEquals;
 

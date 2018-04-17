@@ -1,7 +1,7 @@
 package strategies.standard;
 
-import strategies.player.Action;
-import strategies.player.Player;
+import player.Action;
+import player.Player;
 
 /**
  * The strategy is to defect on the first move,

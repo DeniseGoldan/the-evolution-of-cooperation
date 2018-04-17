@@ -1,7 +1,7 @@
 package competitions;
 
 import strategies.genetic.GeneticAlgorithm;
-import strategies.player.Player;
+import player.Player;
 import strategies.standard.AlwaysCooperatePlayer;
 import strategies.standard.AlwaysDefectPlayer;
 import strategies.standard.SuspiciousTitForTatPlayer;

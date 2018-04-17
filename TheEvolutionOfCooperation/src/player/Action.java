@@ -1,4 +1,4 @@
-package strategies.player;
+package player;
 
 public enum Action {
 

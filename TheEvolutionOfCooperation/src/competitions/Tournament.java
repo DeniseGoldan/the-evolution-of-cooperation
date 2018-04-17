@@ -1,6 +1,6 @@
 package competitions;
 
-import strategies.player.Player;
+import player.Player;
 
 import java.util.ArrayList;
 import java.util.List;

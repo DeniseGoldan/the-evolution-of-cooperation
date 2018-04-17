@@ -1,4 +1,4 @@
-package strategies.player;
+package player;
 
 /**
  * Cooperation can be seen as the act of helping the other player.

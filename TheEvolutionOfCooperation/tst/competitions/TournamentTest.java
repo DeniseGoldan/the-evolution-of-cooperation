@@ -2,7 +2,7 @@ package competitions;
 
 import org.junit.Before;
 import org.junit.Test;
-import strategies.player.Player;
+import player.Player;
 import strategies.standard.AlwaysCooperatePlayer;
 
 import java.util.ArrayList;

@@ -1,10 +1,8 @@
 package competitions;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import strategies.player.Action;
-import strategies.player.Payoff;
-import strategies.player.Player;
+import player.Action;
+import player.Payoff;
+import player.Player;
 
 /**
  * A match MUST have a number of rounds greater than 1, because the chromosome of the genetic
@@ -14,7 +12,6 @@ import strategies.player.Player;
  */
 public class Match {
 
-    private final Logger logger = LoggerFactory.getLogger(Match.class);
     private Player firstPlayer;
     private Player secondPlayer;
     private long numberOfRounds;
@@ -51,9 +48,6 @@ public class Match {
                 firstPlayer.updateScore(Payoff.Punishment.getScoreValue());
                 secondPlayer.updateScore(Payoff.Punishment.getScoreValue());
             }
-
-            logger.info("First: " + firstPlayer.getScore() + " [ " + firstPlayer.getPlayerType() + " ]");
-            logger.info("Second: " + secondPlayer.getScore() + " [ " + secondPlayer.getPlayerType() + " ]\n");
 
         }
     }

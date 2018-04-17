@@ -1,6 +1,6 @@
 package strategies.genetic;
 
-import strategies.player.Action;
+import player.Action;
 
 import java.util.List;
 

@@ -1,12 +1,12 @@
 package strategies.standard;
 
-import strategies.player.Action;
-import strategies.player.Player;
+import player.Action;
+import player.Player;
 
 import java.util.Random;
 
-import static strategies.player.Action.Cooperate;
-import static strategies.player.Action.Defect;
+import static player.Action.Cooperate;
+import static player.Action.Defect;
 
 /**
  * The strategy is to perform random actions.

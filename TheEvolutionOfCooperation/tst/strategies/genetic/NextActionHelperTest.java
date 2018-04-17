@@ -1,7 +1,6 @@
 package strategies.genetic;
 
-import strategies.genetic.NextActionHelper;
-import strategies.player.Action;
+import player.Action;
 import org.junit.Test;
 
 import java.util.ArrayList;

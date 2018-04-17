@@ -1,4 +1,4 @@
-package strategies.player;
+package player;
 
 import org.junit.Test;
 

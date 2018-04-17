@@ -1,7 +1,7 @@
 package strategies.standard;
 
-import strategies.player.Action;
-import strategies.player.Player;
+import player.Action;
+import player.Player;
 
 /**
  * The strategy is to cooperate on the first move,

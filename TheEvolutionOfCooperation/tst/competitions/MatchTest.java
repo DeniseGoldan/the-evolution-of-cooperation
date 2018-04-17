@@ -1,8 +1,8 @@
 package competitions;
 
 import org.junit.Test;
-import strategies.player.Payoff;
-import strategies.player.Player;
+import player.Payoff;
+import player.Player;
 import strategies.standard.AlwaysCooperatePlayer;
 import strategies.standard.AlwaysDefectPlayer;
 

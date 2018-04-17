@@ -2,8 +2,7 @@ package strategies.standard;
 
 import org.junit.Assert;
 import org.junit.Test;
-import strategies.player.Action;
-import strategies.standard.GrudgerPlayer;
+import player.Action;
 
 import static org.junit.Assert.assertEquals;
 
