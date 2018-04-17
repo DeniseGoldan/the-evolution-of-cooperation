@@ -24,7 +24,6 @@ public class NextActionHelper {
             actionIndexInGenes += Math.pow(2, index) * lastThreeMatches.get(5 - index).getBinaryValue();
         }
         actionIndexInGenes += PASS_HISTORY_OFFSET;
-        System.out.println("action index = "+ actionIndexInGenes);
         return actionIndexInGenes;
     }
 

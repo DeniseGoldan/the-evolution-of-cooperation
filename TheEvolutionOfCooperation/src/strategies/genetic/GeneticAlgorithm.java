@@ -16,7 +16,7 @@ import java.util.concurrent.ThreadLocalRandom;
 public class GeneticAlgorithm {
 
     private int populationSize = 14;
-    private double numberOfGenerations = 15;
+    private int numberOfGenerations = 5;
     private double crossoverProbability = 0.3;
     private double mutationProbability = 0.25;
     private List<Chromosome> population = new ArrayList<>();
@@ -200,7 +200,6 @@ public class GeneticAlgorithm {
                 bestScore = player.getScore();
                 logger.info("Found a better chromosome, with a score of " + bestScore + ".");
             }
-
             fitnessList.add(player.getScore());
         }
         return fitnessList;
@@ -229,5 +228,29 @@ public class GeneticAlgorithm {
     public GeneticAlgorithm withNumberOfRoundsPerMatch(long desiredNumberOfRoundsPerMatch) {
         numberOfRoundsPerMatch = desiredNumberOfRoundsPerMatch;
         return this;
+    }
+
+    public int getPopulationSize() {
+        return populationSize;
+    }
+
+    public double getNumberOfGenerations() {
+        return numberOfGenerations;
+    }
+
+    public double getCrossoverProbability() {
+        return crossoverProbability;
+    }
+
+    public double getMutationProbability() {
+        return mutationProbability;
+    }
+
+    public long getBestScore() {
+        return bestScore;
+    }
+
+    public long getNumberOfRoundsPerMatch() {
+        return numberOfRoundsPerMatch;
     }
 }

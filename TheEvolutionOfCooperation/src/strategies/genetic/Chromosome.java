@@ -115,9 +115,6 @@ public class Chromosome extends Player {
                 result.add(genes.get(i).getOppositeAction());
             }
         }
-        System.out.println("Mutation index = "+ index +".");
-        System.out.println("Before: " + genes);
-        System.out.println("After: " + genes);
         genes = result;
     }
 
