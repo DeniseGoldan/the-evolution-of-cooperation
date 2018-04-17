@@ -5,13 +5,20 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 import player.Action;
+import strategies.genetic.Chromosome;
 
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-class StrategyReader {
+public class StrategyReader {
+
+    public static Chromosome getChromosomeWithStrategyFromFile(String filepath) throws IOException, ParseException {
+        Chromosome chromosome = new Chromosome();
+        chromosome.setGenes(getStrategyFromJsonFile(filepath));
+        return chromosome;
+    }
 
     @SuppressWarnings("unchecked")
     static List<Action> getStrategyFromJsonFile(String filepath) throws IOException, ParseException {

@@ -45,13 +45,12 @@ public class StrategyWriter {
         jsonObject.put(JsonFileColumnName.CrossoverProbability.getColumnName(), geneticAlgorithm.getCrossoverProbability());
         jsonObject.put(JsonFileColumnName.MutationProbability.getColumnName(), geneticAlgorithm.getMutationProbability());
         jsonObject.put(JsonFileColumnName.NumberOfRoundsPerMatch.getColumnName(), geneticAlgorithm.getNumberOfRoundsPerMatch());
-        jsonObject.put(JsonFileColumnName.FitnessScore.getColumnName(), geneticAlgorithm.getBestScore());
+        jsonObject.put(JsonFileColumnName.FitnessScore.getColumnName(), geneticAlgorithm.getBestChromosomeFitnessScore());
     }
 
     private static File createNewJsonFile() throws IOException {
         String path = "src/resources/strategy_" + System.currentTimeMillis() + ".json";
         File newFile = new File(path);
-//        newFile.mkdirs();
         newFile.createNewFile();
         return newFile;
     }

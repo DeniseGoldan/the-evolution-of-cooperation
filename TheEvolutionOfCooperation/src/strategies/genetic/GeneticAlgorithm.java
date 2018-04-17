@@ -21,7 +21,7 @@ public class GeneticAlgorithm {
     private double mutationProbability = 0.25;
     private List<Chromosome> population = new ArrayList<>();
     private Chromosome bestChromosome = new Chromosome();
-    private long bestScore = 0;
+    private long bestChromosomeFitnessScore = 0;
     private long numberOfRoundsPerMatch = 10;
     private final Logger logger = LoggerFactory.getLogger(GeneticAlgorithm.class);
 
@@ -195,10 +195,10 @@ public class GeneticAlgorithm {
             ClassicTournament tournament = new ClassicTournament(players, this.numberOfRoundsPerMatch);
             tournament.playTournament();
 
-            if (player.getScore() > bestScore) {
+            if (player.getScore() > bestChromosomeFitnessScore) {
                 bestChromosome = (Chromosome) player;
-                bestScore = player.getScore();
-                logger.info("Found a better chromosome, with a score of " + bestScore + ".");
+                bestChromosomeFitnessScore = player.getScore();
+                logger.info("Found a better chromosome, with a score of " + bestChromosomeFitnessScore + ".");
             }
             fitnessList.add(player.getScore());
         }
@@ -246,8 +246,8 @@ public class GeneticAlgorithm {
         return mutationProbability;
     }
 
-    public long getBestScore() {
-        return bestScore;
+    public long getBestChromosomeFitnessScore() {
+        return bestChromosomeFitnessScore;
     }
 
     public long getNumberOfRoundsPerMatch() {
