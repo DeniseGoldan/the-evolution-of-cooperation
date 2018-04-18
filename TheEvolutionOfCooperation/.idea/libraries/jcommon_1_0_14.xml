@@ -1,8 +1,6 @@
 <component name="libraryTable">
   <library name="jcommon-1.0.14">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/libs/jcommon-1.0.14.jar!/" />
-    </CLASSES>
+    <CLASSES />
     <JAVADOC />
     <SOURCES />
   </library>
