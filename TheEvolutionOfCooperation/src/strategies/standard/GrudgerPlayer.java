@@ -24,8 +24,6 @@ public class GrudgerPlayer extends Player {
     }
 
     @Override
-    public String getPlayerType() {
-        return "Grudger";
-    }
+    public String getPlayerType() { return "Grudger"; }
 
 }

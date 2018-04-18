@@ -19,4 +19,5 @@ enum JsonFileColumnName {
     public String getColumnName() {
         return this.columnName;
     }
+
 }

@@ -25,7 +25,6 @@ public class PavlovPlayer extends Player {
     }
 
     @Override
-    public String getPlayerType() {
-        return "Pavlov";
-    }
+    public String getPlayerType() { return "Pavlov"; }
+
 }

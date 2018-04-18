@@ -20,8 +20,6 @@ public class SuspiciousTitForTatPlayer extends Player {
     }
 
     @Override
-    public String getPlayerType() {
-        return "Suspicious Tit-For-Tat";
-    }
+    public String getPlayerType() { return "Suspicious Tit-For-Tat"; }
 
 }

@@ -4,7 +4,7 @@ import player.Action;
 
 import java.util.List;
 
-public class NextActionHelper {
+class NextActionHelper {
 
     private final static int PASS_HISTORY_OFFSET = 7;
 
@@ -13,7 +13,7 @@ public class NextActionHelper {
      * chromosome to make in the first 3 iterations. The history "CC-CC-CC" can be found at index 7,
      * "CC-CC-CD" at index 8 and so on. The history "DD-DD-DD" can be found at index 70.
      */
-    public static Action referToHistoryAndChooseAction(List<Action> genes, List<Action> lastThreeMatches) {
+    static Action referToHistoryAndChooseAction(List<Action> genes, List<Action> lastThreeMatches) {
         int actionIndexInGenes = getGeneIndexForThreeLastMatchesHistory(lastThreeMatches);
         return genes.get(actionIndexInGenes);
     }

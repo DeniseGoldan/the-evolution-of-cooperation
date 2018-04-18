@@ -14,7 +14,7 @@ import java.util.List;
 
 public class StrategyReader {
 
-    public static Chromosome getChromosomeWithStrategyFromFile(String filepath) throws IOException, ParseException {
+    public static Chromosome getChromosomeWithStrategyFromJsonFile(String filepath) throws IOException, ParseException {
         Chromosome chromosome = new Chromosome();
         chromosome.setGenes(getStrategyFromJsonFile(filepath));
         return chromosome;

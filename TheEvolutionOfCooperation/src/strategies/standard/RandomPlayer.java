@@ -24,7 +24,6 @@ public class RandomPlayer extends Player {
     }
 
     @Override
-    public String getPlayerType() {
-        return "Random";
-    }
+    public String getPlayerType() { return "Random"; }
+
 }

@@ -31,7 +31,7 @@ public class GeneticAlgorithm {
         return bestChromosome;
     }
 
-    public void runGeneticAlgorithm() {
+    private void runGeneticAlgorithm() {
         initializePopulationRandomly();
         for (int generation = 0; generation < numberOfGenerations; generation++) {
             logger.info("Currently changing genes from generation number " + generation + ".");
@@ -146,7 +146,7 @@ public class GeneticAlgorithm {
      * In order to later on select an individual j, I will randomly choose a double r such that q[j]< r <= q[j+1],
      * where r in [0, 1].
      */
-    public List<Double> getMergedSelectionProbability(List<Long> populationFitness) {
+    private List<Double> getMergedSelectionProbability(List<Long> populationFitness) {
         List<Double> mergedSelectionProbability = new ArrayList<>(populationFitness.size());
         List<Double> individualSelectionProbability = getIndividualSelectionProbability(populationFitness);
         mergedSelectionProbability.add(0.0);
@@ -156,7 +156,7 @@ public class GeneticAlgorithm {
         return mergedSelectionProbability;
     }
 
-    public List<Double> getIndividualSelectionProbability(List<Long> populationFitness) {
+    private List<Double> getIndividualSelectionProbability(List<Long> populationFitness) {
         double totalFitness = getTotalFitness(populationFitness);
         List<Double> individualSelectionProbability = new ArrayList<>(populationSize);
         for (int i = 0; i < populationFitness.size(); i++) {
@@ -165,7 +165,7 @@ public class GeneticAlgorithm {
         return individualSelectionProbability;
     }
 
-    public double getTotalFitness(List<Long> populationFitness) {
+    private double getTotalFitness(List<Long> populationFitness) {
         double result = 0;
         for (int i = 0; i < populationFitness.size(); i++) {
             result += populationFitness.get(i);

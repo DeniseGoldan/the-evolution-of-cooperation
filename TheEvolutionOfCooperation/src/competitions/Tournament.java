@@ -7,7 +7,7 @@ import java.util.List;
 
 public abstract class Tournament {
 
-    protected List<Player> players;
+    List<Player> players;
     private long numberOfMatchesPlayed;
     private long numberOfRounds;
 
@@ -38,11 +38,11 @@ public abstract class Tournament {
         this.numberOfMatchesPlayed = 0;
     }
 
-    public long getNumberOfMatchesPlayed() {
+    long getNumberOfMatchesPlayed() {
         return numberOfMatchesPlayed;
     }
 
-    public List<Player> getPlayers() {
+    List<Player> getPlayers() {
         return new ArrayList<>(players);
     }
 }

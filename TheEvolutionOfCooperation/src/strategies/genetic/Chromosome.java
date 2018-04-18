@@ -97,7 +97,7 @@ public class Chromosome extends Player {
         return genes;
     }
 
-    public void mutate(double mutationProbability) {
+    void mutate(double mutationProbability) {
         ThreadLocalRandom random = ThreadLocalRandom.current();
         double randomNumber = random.nextDouble(0, 1);
         if (randomNumber < mutationProbability) {
@@ -118,7 +118,7 @@ public class Chromosome extends Player {
         genes = result;
     }
 
-    public int getNumberOfGenes() {
+    int getNumberOfGenes() {
         return NUMBER_OF_GENES;
     }
 

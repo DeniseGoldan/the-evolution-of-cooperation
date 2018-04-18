@@ -9,13 +9,9 @@ import player.Player;
 public class AlwaysDefectPlayer extends Player {
 
     @Override
-    public Action chooseAction(long iteration) {
-        return Action.Defect;
-    }
+    public Action chooseAction(long iteration) { return Action.Defect; }
 
     @Override
-    public String getPlayerType() {
-        return "Always Defect";
-    }
+    public String getPlayerType() { return "Always Defect"; }
 
 }

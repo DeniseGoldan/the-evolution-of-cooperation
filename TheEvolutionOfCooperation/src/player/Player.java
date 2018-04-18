@@ -1,14 +1,10 @@
 package player;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Player {
 
-    private final Logger logger = LoggerFactory.getLogger(Player.class);
     private long score;
     private final List<Action> actionHistory;
     private final List<Action> opponentActionHistory;
@@ -33,7 +29,7 @@ public abstract class Player {
         return this.score;
     }
 
-    public List<Action> getActionHistory() {
+    protected List<Action> getActionHistory() {
         ArrayList<Action> copy = new ArrayList<>();
         if (!actionHistory.isEmpty()){
             copy.addAll(actionHistory);
@@ -41,7 +37,7 @@ public abstract class Player {
         return copy;
     }
 
-    public List<Action> getOpponentActionHistory() {
+    protected List<Action> getOpponentActionHistory() {
         ArrayList<Action> copy = new ArrayList<>();
         if (!opponentActionHistory.isEmpty()){
             copy.addAll(opponentActionHistory);
@@ -51,8 +47,6 @@ public abstract class Player {
 
     public void registerActionToHistory(Action action) {
         actionHistory.add(action);
-//        logger.info("Player \"" + getPlayerType() + "\" made the following action: \"" + action +"\"." );
-//        logger.info("His history is: " + actionHistory.toString());
     }
 
     public void registerOpponentActionToHistory(Action action) {
@@ -68,7 +62,7 @@ public abstract class Player {
         }
     }
 
-    public Action getOpponentActionFromLastRound() {
+    protected Action getOpponentActionFromLastRound() {
         if (!opponentActionHistory.isEmpty()) {
             return opponentActionHistory.get(opponentActionHistory.size() - 1);
         }
@@ -77,7 +71,7 @@ public abstract class Player {
         }
     }
 
-    public List<Action> getOpponentActionsFromLastTwoRounds() {
+    protected List<Action> getOpponentActionsFromLastTwoRounds() {
         if (opponentActionHistory.size() >= 2) {
             int historySize = opponentActionHistory.size();
             List<Action> historySample = new ArrayList<>();

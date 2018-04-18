@@ -19,8 +19,6 @@ public class TitForTwoTatsPlayer extends Player {
     }
 
     @Override
-    public String getPlayerType() {
-        return "Tit-For-Two-Tats";
-    }
+    public String getPlayerType() { return "Tit-For-Two-Tats"; }
 
 }
