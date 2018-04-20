@@ -1,11 +1,14 @@
 package competitions;
 
+import factory.StrategyReader;
 import javafx.scene.chart.XYChart;
+import org.json.simple.parser.ParseException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import player.Player;
 import strategies.standard.*;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -21,29 +24,32 @@ public class TournamentWithElimination extends Tournament {
         super(players, numberOfRoundsPerMatch);
         assert percentOfPlayersToEliminate > 0 && percentOfPlayersToEliminate < 100;
         assert numberOfRoundsPerMatch > 0;
-//        this.numberOfPlayersToEliminate = percentOfPlayersToEliminate * players.size() / 100;
-        this.numberOfPlayersToEliminate = 5;
+        this.numberOfPlayersToEliminate = percentOfPlayersToEliminate * players.size() / 100;
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException, ParseException {
 
         List<Player> players = new ArrayList<>();
 
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 2; i++) {
             players.add(new TitForTatPlayer());
+        }
+
+        for (int i = 0; i < 3; i++) {
+            players.add(new AlwaysCooperatePlayer());
         }
 
         for (int i = 0; i < 20; i++) {
             players.add(new AlwaysDefectPlayer());
         }
 
-        TournamentWithElimination tournament = new TournamentWithElimination(players, 100, 5);
+        TournamentWithElimination tournament = new TournamentWithElimination(players, 25, 5);
         tournament.playTournament();
     }
 
 
     @Override
-    public void playTournament() {
+    public void playTournament() throws IOException, ParseException {
         resetScoreAndNumberOfMatchesCounter();
         int currentRoundNumber = 0;
 
@@ -66,7 +72,7 @@ public class TournamentWithElimination extends Tournament {
     }
 
     @SuppressWarnings("unchecked")
-    public Map<String, XYChart.Series> playTournamentAndGenerateSets() {
+    public Map<String, XYChart.Series> playTournamentAndGenerateSets() throws IOException, ParseException {
 
         resetScoreAndNumberOfMatchesCounter();
         int currentRoundNumber = 0;
@@ -89,8 +95,6 @@ public class TournamentWithElimination extends Tournament {
                 logger.info("There are " + typeCounter.get(playerType) + " players of type \"" + playerType + "\".");
             }
             resetScoreAndPlayAllPlayersCombinations();
-            reshapePopulation();
-            currentRoundNumber++;
             for (Player player : players) {
                 System.out.println(player.getPlayerType()
                         + "  has a score of  "
@@ -98,6 +102,8 @@ public class TournamentWithElimination extends Tournament {
                         + " points. "
                 );
             }
+            reshapePopulation();
+            currentRoundNumber++;
         }
 
         logger.info("Round number " + currentRoundNumber + ".");
@@ -118,9 +124,9 @@ public class TournamentWithElimination extends Tournament {
 
     /**
      * Eliminate worst percentOfPlayersToEliminate players and complete the population by
-     * duplicating the best percentOfPlayersToEliminate players.
+     * duplicating the best percentOfPlayersToEliminate players.s
      */
-    private void reshapePopulation() {
+    private void reshapePopulation() throws IOException, ParseException {
         players.sort((o1, o2) -> (-1) * Long.compare(o1.getScore(), o2.getScore()));
         List<Player> newGeneration = new ArrayList<>();
         for (int i = 0; i < players.size() - numberOfPlayersToEliminate; i++) {
@@ -146,7 +152,7 @@ public class TournamentWithElimination extends Tournament {
         return true;
     }
 
-    private Player getNewPlayerOfType(String type) {
+    private Player getNewPlayerOfType(String type) throws IOException, ParseException {
         Player playerToAdd = null;
         switch(type){
             case "Tit-For-Tat": playerToAdd = new TitForTatPlayer(); break;
@@ -156,6 +162,7 @@ public class TournamentWithElimination extends Tournament {
             case "Suspicious Tit-For-Tat": playerToAdd = new SuspiciousTitForTatPlayer(); break;
             case "Tit-For-Two-Tats": playerToAdd = new TitForTwoTatsPlayer(); break;
             case "Random": playerToAdd = new RandomPlayer(); break;
+            case "Chromosome": playerToAdd = StrategyReader.getChromosomeWithStrategyFromJsonFile("src/resources/chromosome_strategies/strategy_1524227692965.json"); break;
             default: throw new RuntimeException("This player type is not registered!");
         }
         return playerToAdd;

@@ -28,9 +28,11 @@ class Match {
      * the move they made, based on the move the other player has made.
      */
     void playMatch() {
-        // before a match, all players must release old history...
+
+        // before a match, all players must release old matches history
         firstPlayer.resetPersonalAndOpponentHistory();
         secondPlayer.resetPersonalAndOpponentHistory();
+
         for (long roundNumber = 0; roundNumber < this.numberOfRounds; roundNumber++) {
 
             Action actionOfFirstPlayer = firstPlayer.chooseAction(roundNumber);

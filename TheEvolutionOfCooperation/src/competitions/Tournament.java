@@ -1,7 +1,9 @@
 package competitions;
 
+import org.json.simple.parser.ParseException;
 import player.Player;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,11 +22,13 @@ public abstract class Tournament {
         this.numberOfRounds = numberOfRounds;
     }
 
-    public abstract void playTournament();
+    public abstract void playTournament() throws IOException, ParseException;
 
     void resetScoreAndPlayAllPlayersCombinations() {
+
         resetScoreAndNumberOfMatchesCounter();
         int numberOfPlayers = players.size();
+
         for (int firstPlayerIndex = 0; firstPlayerIndex < numberOfPlayers - 1; firstPlayerIndex++) {
             for (int secondPlayerIndex = firstPlayerIndex + 1; secondPlayerIndex < numberOfPlayers; secondPlayerIndex++) {
 
@@ -41,9 +45,7 @@ public abstract class Tournament {
         this.numberOfMatchesPlayed = 0;
     }
 
-    long getNumberOfMatchesPlayed() {
-        return numberOfMatchesPlayed;
-    }
+    long getNumberOfMatchesPlayed() { return numberOfMatchesPlayed; }
 
     List<Player> getPlayers() {
         return new ArrayList<>(players);

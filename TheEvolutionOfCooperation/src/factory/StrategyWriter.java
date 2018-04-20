@@ -18,7 +18,6 @@ public class StrategyWriter {
         populateJsonWithStrategyData(geneticAlgorithm, jsonToDumpInFile, encodedStrategy);
         File newFile = createNewJsonFile();
         dumpJsonToFile(jsonToDumpInFile, newFile);
-
     }
 
     private static void dumpJsonToFile(JSONObject jsonToDumpInFile, File newFile) throws IOException {
@@ -49,7 +48,7 @@ public class StrategyWriter {
     }
 
     private static File createNewJsonFile() throws IOException {
-        String path = "src/resources/strategy_" + System.currentTimeMillis() + ".json";
+        String path = "src/resources/chromosome_strategies/strategy_" + System.currentTimeMillis() + ".json";
         File newFile = new File(path);
         newFile.createNewFile();
         return newFile;
