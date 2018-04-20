@@ -31,7 +31,7 @@ public class TournamentTest {
     @Test
     public void WHEN_playing_all_combinations_THEN_number_of_matches_is_the_number_of_combinations() {
         tournament.resetScoreAndNumberOfMatchesCounter();
-        tournament.playAllPlayersCombinations();
+        tournament.resetScoreAndPlayAllPlayersCombinations();
         long numberOfPlayers = tournament.getPlayers().size();
         long expected;
         if (numberOfPlayers % 2 == 0) {
@@ -45,7 +45,7 @@ public class TournamentTest {
 
     @Test
     public void WHEN_resetScoreAndNumberOfMatches_THEN_reset_score(){
-        tournament.playAllPlayersCombinations();
+        tournament.resetScoreAndPlayAllPlayersCombinations();
         tournament.resetScoreAndNumberOfMatchesCounter();
         for (Player player : tournament.getPlayers()) {
             assertEquals(0, player.getScore());
@@ -54,7 +54,7 @@ public class TournamentTest {
 
     @Test
     public void WHEN_resetScoreAndNumberOfMatches_THEN_reset_match_counter(){
-        tournament.playAllPlayersCombinations();
+        tournament.resetScoreAndPlayAllPlayersCombinations();
         tournament.resetScoreAndNumberOfMatchesCounter();
         assertEquals(0, tournament.getNumberOfMatchesPlayed());
     }

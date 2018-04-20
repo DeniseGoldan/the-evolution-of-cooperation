@@ -28,7 +28,9 @@ class Match {
      * the move they made, based on the move the other player has made.
      */
     void playMatch() {
-
+        // before a match, all players must release old history...
+        firstPlayer.resetPersonalAndOpponentHistory();
+        secondPlayer.resetPersonalAndOpponentHistory();
         for (long roundNumber = 0; roundNumber < this.numberOfRounds; roundNumber++) {
 
             Action actionOfFirstPlayer = firstPlayer.chooseAction(roundNumber);
@@ -43,6 +45,7 @@ class Match {
             updateBothPlayersScore(actionOfFirstPlayer, actionOfSecondPlayer);
 
         }
+//        System.out.println();
     }
 
     /**
@@ -64,6 +67,13 @@ class Match {
             firstPlayer.updateScore(Payoff.Punishment.getScoreValue());
             secondPlayer.updateScore(Payoff.Punishment.getScoreValue());
         }
+//        System.out.println("First player, " + firstPlayer.getPlayerType() + ": " + firstPlayer.getScore() + " " + actionOfFirstPlayer);
+//        System.out.println("Second player, " + secondPlayer.getPlayerType() + ": " + secondPlayer.getScore() + " " + actionOfSecondPlayer);
     }
+
+//    public static void main(String[] args) {
+//        Match match = new Match(new AlwaysDefectPlayer(), new TitForTatPlayer(), 10);
+//        match.playMatch();
+//    }
 
 }

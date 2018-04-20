@@ -6,8 +6,8 @@ import java.util.List;
 public abstract class Player {
 
     private long score;
-    private final List<Action> actionHistory;
-    private final List<Action> opponentActionHistory;
+    private List<Action> actionHistory;
+    private List<Action> opponentActionHistory;
 
     protected Player() {
         this.score = 0;
@@ -95,4 +95,8 @@ public abstract class Player {
         return false;
     }
 
+    public void resetPersonalAndOpponentHistory() {
+        this.actionHistory = new ArrayList<>();
+        this.opponentActionHistory = new ArrayList<>();
+    }
 }

@@ -4,7 +4,9 @@ import javafx.scene.chart.XYChart;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import player.Player;
+import strategies.standard.*;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -12,15 +14,33 @@ import java.util.Map;
 public class TournamentWithElimination extends Tournament {
 
     private int numberOfPlayersToEliminate;
-    private final int MAX_ROUNDS = 100;
+    private final int MAX_ROUNDS = 10;
     private final Logger logger = LoggerFactory.getLogger(TournamentWithElimination.class);
 
     public TournamentWithElimination(List<Player> players, int percentOfPlayersToEliminate, int numberOfRoundsPerMatch) {
         super(players, numberOfRoundsPerMatch);
         assert percentOfPlayersToEliminate > 0 && percentOfPlayersToEliminate < 100;
         assert numberOfRoundsPerMatch > 0;
-        this.numberOfPlayersToEliminate = percentOfPlayersToEliminate * players.size() / 100;
+//        this.numberOfPlayersToEliminate = percentOfPlayersToEliminate * players.size() / 100;
+        this.numberOfPlayersToEliminate = 5;
     }
+
+    public static void main(String[] args) {
+
+        List<Player> players = new ArrayList<>();
+
+        for (int i = 0; i < 5; i++) {
+            players.add(new TitForTatPlayer());
+        }
+
+        for (int i = 0; i < 20; i++) {
+            players.add(new AlwaysDefectPlayer());
+        }
+
+        TournamentWithElimination tournament = new TournamentWithElimination(players, 100, 5);
+        tournament.playTournament();
+    }
+
 
     @Override
     public void playTournament() {
@@ -28,21 +48,20 @@ public class TournamentWithElimination extends Tournament {
         int currentRoundNumber = 0;
 
         while (!areAllPlayersOfTheSameType() && currentRoundNumber < MAX_ROUNDS) {
-            logger.info("Round #" + currentRoundNumber + ".");
+
+            logger.info("");
+            logger.info("Round #" + currentRoundNumber + " will start with:");
             logPlayerTypeCounter();
 
-            System.out.println();
-            playAllPlayersCombinations();
+            resetScoreAndPlayAllPlayersCombinations();
 
             for (Player player : players) {
-                System.out.println(player.getPlayerType()
-                        + "  has a score of  "
-                        + player.getScore()
-                        + " points. "
-                );
+                logger.info(player.toString() +"  has a score of  " + player.getScore() + " points. ");
             }
+
             reshapePopulation();
             currentRoundNumber++;
+
         }
     }
 
@@ -63,22 +82,36 @@ public class TournamentWithElimination extends Tournament {
         }
 
         while (!areAllPlayersOfTheSameType() && currentRoundNumber < MAX_ROUNDS) {
-            logger.info("Round number " + currentRoundNumber +".");
+            logger.info("Round number " + currentRoundNumber + ".");
             Map<String, Integer> typeCounter = getNumberOfPlayersPerType();
             for (String playerType : typeCounter.keySet()) {
                 seriesPerPlayer.get(playerType).getData().add(new XYChart.Data(currentRoundNumber, typeCounter.get(playerType)));
                 logger.info("There are " + typeCounter.get(playerType) + " players of type \"" + playerType + "\".");
             }
-            playAllPlayersCombinations();
+            resetScoreAndPlayAllPlayersCombinations();
             reshapePopulation();
             currentRoundNumber++;
+            for (Player player : players) {
+                System.out.println(player.getPlayerType()
+                        + "  has a score of  "
+                        + player.getScore()
+                        + " points. "
+                );
+            }
         }
 
-        logger.info("Round number " + currentRoundNumber +".");
+        logger.info("Round number " + currentRoundNumber + ".");
         Map<String, Integer> typeCounter = getNumberOfPlayersPerType();
         for (String playerType : typeCounter.keySet()) {
             seriesPerPlayer.get(playerType).getData().add(new XYChart.Data(currentRoundNumber, typeCounter.get(playerType)));
             logger.info("There are " + typeCounter.get(playerType) + " players of type \"" + playerType + "\".");
+        }
+        for (Player player : players) {
+            System.out.println(player.getPlayerType()
+                    + "  has a score of  "
+                    + player.getScore()
+                    + " points. "
+            );
         }
         return seriesPerPlayer;
     }
@@ -89,9 +122,50 @@ public class TournamentWithElimination extends Tournament {
      */
     private void reshapePopulation() {
         players.sort((o1, o2) -> (-1) * Long.compare(o1.getScore(), o2.getScore()));
-        List<Player> newGeneration = players.subList(0, players.size() - numberOfPlayersToEliminate);
-        newGeneration.addAll(players.subList(0, numberOfPlayersToEliminate));
+        List<Player> newGeneration = new ArrayList<>();
+        for (int i = 0; i < players.size() - numberOfPlayersToEliminate; i++) {
+            Player player = players.get(i);
+            String type = player.getPlayerType();
+            newGeneration.add(getNewPlayerOfType(type));
+        }
+        for (int i = 0; i < numberOfPlayersToEliminate; i++) {
+            Player player = players.get(i);
+            String type = player.getPlayerType();
+            newGeneration.add(getNewPlayerOfType(type));
+        }
         this.players = newGeneration;
+    }
+
+    private boolean areAllPlayersOfTheSameType() {
+        String firstPlayerType = players.get(0).getPlayerType();
+        for (Player player : players) {
+            if (!player.getPlayerType().equals(firstPlayerType)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private Player getNewPlayerOfType(String type) {
+        Player playerToAdd = null;
+        switch(type){
+            case "Tit-For-Tat": playerToAdd = new TitForTatPlayer(); break;
+            case "Always Defect": playerToAdd = new AlwaysDefectPlayer(); break;
+            case "Always Cooperate": playerToAdd = new AlwaysCooperatePlayer(); break;
+            case "Grudger": playerToAdd = new GrudgerPlayer(); break;
+            case "Suspicious Tit-For-Tat": playerToAdd = new SuspiciousTitForTatPlayer(); break;
+            case "Tit-For-Two-Tats": playerToAdd = new TitForTwoTatsPlayer(); break;
+            case "Random": playerToAdd = new RandomPlayer(); break;
+            default: throw new RuntimeException("This player type is not registered!");
+        }
+        return playerToAdd;
+    }
+
+    private void logPlayerTypeCounter() {
+        Map<String, Integer> typeCounter = getNumberOfPlayersPerType();
+        for (String type : typeCounter.keySet()) {
+            logger.info(type + " count = " + typeCounter.get(type));
+        }
     }
 
     private Map<String, Integer> getNumberOfPlayersPerType() {
@@ -106,25 +180,6 @@ public class TournamentWithElimination extends Tournament {
             }
         }
         return typeCounter;
-    }
-
-    private void logPlayerTypeCounter() {
-        Map<String, Integer> typeCounter = getNumberOfPlayersPerType();
-        for (String type : typeCounter.keySet()) {
-            String key = type;
-            Integer value = typeCounter.get(key);
-            logger.info(key + " count = " + value);
-        }
-    }
-
-    private boolean areAllPlayersOfTheSameType() {
-        String firstPlayerType = players.get(0).getPlayerType();
-        for (Player player : players) {
-            if (!player.getPlayerType().equals(firstPlayerType)) {
-                return false;
-            }
-        }
-        return true;
     }
 
 }

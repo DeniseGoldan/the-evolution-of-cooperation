@@ -20,7 +20,7 @@ public class ClassicTournament extends Tournament {
     @Override
     public void playTournament() {
         resetScoreAndNumberOfMatchesCounter();
-        playAllPlayersCombinations();
+        resetScoreAndPlayAllPlayersCombinations();
     }
 
 }

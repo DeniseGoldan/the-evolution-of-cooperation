@@ -7,7 +7,7 @@ import java.util.List;
 
 public abstract class Tournament {
 
-    List<Player> players;
+    protected List<Player> players;
     private long numberOfMatchesPlayed;
     private long numberOfRounds;
 
@@ -22,13 +22,16 @@ public abstract class Tournament {
 
     public abstract void playTournament();
 
-    void playAllPlayersCombinations() {
+    void resetScoreAndPlayAllPlayersCombinations() {
+        resetScoreAndNumberOfMatchesCounter();
         int numberOfPlayers = players.size();
-        for (int firstPlayerIndex = 0; firstPlayerIndex < numberOfPlayers; firstPlayerIndex++) {
+        for (int firstPlayerIndex = 0; firstPlayerIndex < numberOfPlayers - 1; firstPlayerIndex++) {
             for (int secondPlayerIndex = firstPlayerIndex + 1; secondPlayerIndex < numberOfPlayers; secondPlayerIndex++) {
+
                 Match match = new Match(players.get(firstPlayerIndex), players.get(secondPlayerIndex), numberOfRounds);
                 match.playMatch();
                 numberOfMatchesPlayed++;
+
             }
         }
     }

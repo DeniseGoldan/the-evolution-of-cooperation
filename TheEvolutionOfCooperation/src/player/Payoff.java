@@ -2,7 +2,7 @@ package player;
 
 /**
  * Cooperation can be seen as the act of helping the other player.
- * The greater the payoff, the better.
+ * The greater the payoff, the better. 5 0 3 1
  */
 public enum Payoff {
 

@@ -1,7 +1,6 @@
 package charts;
 
 import competitions.TournamentWithElimination;
-import factory.StrategyReader;
 import javafx.application.Application;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.scene.Scene;
@@ -12,15 +11,14 @@ import javafx.scene.image.WritableImage;
 import javafx.stage.Stage;
 import org.json.simple.parser.ParseException;
 import player.Player;
-import strategies.genetic.Chromosome;
 import strategies.standard.AlwaysCooperatePlayer;
+import strategies.standard.AlwaysDefectPlayer;
+import strategies.standard.TitForTatPlayer;
 
 import javax.imageio.ImageIO;
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class TournamentEvolutionLineChart extends Application {
 
@@ -31,7 +29,7 @@ public class TournamentEvolutionLineChart extends Application {
     private static final int WIDTH = 800;
     private static final int HEIGHT = 500;
     private static final int PERCENT_OF_PLAYERS_TO_ELIMINATE = 25;
-    private static final int NUMBER_OF_ROUNDS_PER_MATCH = 15;
+    private static final int NUMBER_OF_ROUNDS_PER_MATCH = 10;
 
     public static void main(String[] args) {
         launch(args);
@@ -74,8 +72,8 @@ public class TournamentEvolutionLineChart extends Application {
         yAxis.setLabel(Y_AXIS_LABEL);
         xAxis.setAutoRanging(false);
         yAxis.setAutoRanging(false);
-        xAxis.setUpperBound(20);
-        yAxis.setUpperBound(15);
+        xAxis.setUpperBound(30);
+        yAxis.setUpperBound(30);
         xAxis.setLowerBound(0);
         yAxis.setLowerBound(0);
         xAxis.setTickUnit(1);
@@ -86,23 +84,30 @@ public class TournamentEvolutionLineChart extends Application {
     private List<Player> buildTournamentPlayersList() throws IOException, ParseException {
         List<Player> players = new ArrayList<>();
 
-        players.add(new AlwaysCooperatePlayer());
-        players.add(new AlwaysCooperatePlayer());
-        players.add(new AlwaysCooperatePlayer());
-        players.add(new AlwaysCooperatePlayer());
-        players.add(new AlwaysCooperatePlayer());
-        players.add(new AlwaysCooperatePlayer());
-
-
-        Chromosome firstChromosome = StrategyReader.getChromosomeWithStrategyFromJsonFile("src/resources/chromosome_strategies/strategy_1523972359871.json");
-        Chromosome secondChromosome = StrategyReader.getChromosomeWithStrategyFromJsonFile("src/resources/chromosome_strategies/strategy_1523972359871.json");
-        Chromosome thirdChromosome = StrategyReader.getChromosomeWithStrategyFromJsonFile("src/resources/chromosome_strategies/strategy_1523972359871.json");
-        Chromosome fourthChromosome = StrategyReader.getChromosomeWithStrategyFromJsonFile("src/resources/chromosome_strategies/strategy_1523972359871.json");
-
-        players.add(firstChromosome);
-        players.add(secondChromosome);
-        players.add(thirdChromosome);
-        players.add(fourthChromosome);
+        for (int i = 0; i < 5; i++) {
+            players.add(new TitForTatPlayer());
+        }
+        for (int i = 0; i < 15; i++) {
+            players.add(new AlwaysCooperatePlayer());
+        }
+        for (int i = 0; i < 5; i++) {
+            players.add(new AlwaysDefectPlayer());
+        }
+        Collections.shuffle(players);
+//        players.add(new AlwaysCooperatePlayer());
+//        players.add(new AlwaysCooperatePlayer());
+//        players.add(new AlwaysCooperatePlayer());
+//        players.add(new AlwaysCooperatePlayer());
+//
+//        Chromosome firstChromosome = StrategyReader.getChromosomeWithStrategyFromJsonFile("src/resources/chromosome_strategies/strategy_1523972359871.json");
+//        Chromosome secondChromosome = StrategyReader.getChromosomeWithStrategyFromJsonFile("src/resources/chromosome_strategies/strategy_1523972359871.json");
+//        Chromosome thirdChromosome = StrategyReader.getChromosomeWithStrategyFromJsonFile("src/resources/chromosome_strategies/strategy_1523972359871.json");
+//        Chromosome fourthChromosome = StrategyReader.getChromosomeWithStrategyFromJsonFile("src/resources/chromosome_strategies/strategy_1523972359871.json");
+//
+//        players.add(firstChromosome);
+//        players.add(secondChromosome);
+//        players.add(thirdChromosome);
+//        players.add(fourthChromosome);
 
         return players;
     }
