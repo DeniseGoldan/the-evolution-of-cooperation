@@ -10,13 +10,14 @@ import static factory.StrategyWriter.populateNewFileWithStrategyData;
 public class StrategiesFactory {
 
     public static void main(String[] args) throws IOException, ParseException {
+
         GeneticAlgorithm geneticAlgorithm = new GeneticAlgorithm()
                 .withCrossoverProbability(0.3)
                 .withMutationProbability(0.5)
-                .withNumberOfGenerations(100)
+                .withNumberOfGenerations(1000)
                 .withNumberOfRoundsPerMatch(20)
-                .withPopulationSize(25);
+                .withPopulationSize(10);
         populateNewFileWithStrategyData(geneticAlgorithm);
-//        System.out.println(StrategyReader.getStrategyFromJsonFile("src/resources/strategy_1523972359871.json"));
     }
+
 }

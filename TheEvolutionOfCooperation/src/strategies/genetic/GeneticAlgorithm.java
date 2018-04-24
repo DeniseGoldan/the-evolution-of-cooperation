@@ -1,12 +1,14 @@
 package strategies.genetic;
 
 import competitions.ClassicTournament;
+import factory.FitnessConfigurationReader;
+import org.json.simple.parser.ParseException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import player.Action;
 import player.Player;
-import strategies.standard.*;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -16,7 +18,7 @@ import java.util.concurrent.ThreadLocalRandom;
 public class GeneticAlgorithm {
 
     private int populationSize = 14;
-    private int numberOfGenerations = 5;
+    private int numberOfGenerations = 15;
     private double crossoverProbability = 0.3;
     private double mutationProbability = 0.25;
     private List<Chromosome> population = new ArrayList<>();
@@ -25,13 +27,18 @@ public class GeneticAlgorithm {
     private long numberOfRoundsPerMatch = 10;
     private final Logger logger = LoggerFactory.getLogger(GeneticAlgorithm.class);
 
-    public Chromosome buildStrategy() {
+    public static void main(String[] args) throws IOException, ParseException {
+        GeneticAlgorithm a = new GeneticAlgorithm();
+        a.buildStrategy().printGenes();
+    }
+
+    public Chromosome buildStrategy() throws IOException, ParseException {
         runGeneticAlgorithm();
         bestChromosome.resetScore();
         return bestChromosome;
     }
 
-    private void runGeneticAlgorithm() {
+    private void runGeneticAlgorithm() throws IOException, ParseException {
         initializePopulationRandomly();
         for (int generation = 0; generation < numberOfGenerations; generation++) {
             logger.info("Currently changing genes from generation number " + generation + ".");
@@ -122,7 +129,7 @@ public class GeneticAlgorithm {
         }
     }
 
-    private List<Chromosome> rouletteWheelPool() {
+    private List<Chromosome> rouletteWheelPool() throws IOException, ParseException {
         List<Chromosome> selectedChromosomes = new ArrayList<>();
         List<Long> populationFitness = getPopulationFitnessListAndUpdateBestChromosome(population);
         List<Double> mergedSelectionProbability = getMergedSelectionProbability(populationFitness);
@@ -132,7 +139,7 @@ public class GeneticAlgorithm {
             double randomNumber = random.nextDouble(0, 1);
             for (int chromosomeIndex = 0; chromosomeIndex < population.size(); chromosomeIndex++) {
                 if (mergedSelectionProbability.get(chromosomeIndex) < randomNumber && randomNumber <= mergedSelectionProbability.get(chromosomeIndex + 1)) {
-                    selectedChromosomes.add(population.get(chromosomeIndex));
+                    selectedChromosomes.add(new Chromosome(population.get(chromosomeIndex)));
                 }
             }
         }
@@ -159,48 +166,55 @@ public class GeneticAlgorithm {
     private List<Double> getIndividualSelectionProbability(List<Long> populationFitness) {
         double totalFitness = getTotalFitness(populationFitness);
         List<Double> individualSelectionProbability = new ArrayList<>(populationSize);
-        for (int i = 0; i < populationFitness.size(); i++) {
-            individualSelectionProbability.add(populationFitness.get(i) / totalFitness);
+        for (Long currentFitnessValue : populationFitness) {
+            individualSelectionProbability.add(currentFitnessValue / totalFitness);
         }
         return individualSelectionProbability;
     }
 
     private double getTotalFitness(List<Long> populationFitness) {
         double result = 0;
-        for (int i = 0; i < populationFitness.size(); i++) {
-            result += populationFitness.get(i);
+        for (Long currentFitnessValue : populationFitness) {
+            result += currentFitnessValue;
         }
         return result;
     }
 
-    private List<Long> getPopulationFitnessListAndUpdateBestChromosome(List<Chromosome> population) {
+    private List<Long> getPopulationFitnessListAndUpdateBestChromosome(List<Chromosome> population) throws IOException, ParseException {
 
         List<Long> fitnessList = new ArrayList<>();
 
-        List<Player> enemies = new ArrayList<>();
-        enemies.add(new RandomPlayer());
-        enemies.add(new GrudgerPlayer());
-        enemies.add(new AlwaysCooperatePlayer());
-        enemies.add(new AlwaysDefectPlayer());
-        enemies.add(new PavlovPlayer());
-        enemies.addAll(population);
+        List<Player> enemies = FitnessConfigurationReader.getPlayerListFromConfigurationFile();
 
-        for (Player player : population) {
+        System.out.println(enemies.size());
 
-            List<Player> players = new ArrayList<>();
-            players.addAll(enemies);
-            players.add(player);
-            players.forEach(Player::resetScore);
+        for (Player currentChromosome : population) {
 
-            ClassicTournament tournament = new ClassicTournament(players, this.numberOfRoundsPerMatch);
+            List<Player> classicTournamentPlayers = new ArrayList<>();
+            classicTournamentPlayers.addAll(enemies);
+            classicTournamentPlayers.add(currentChromosome);
+            classicTournamentPlayers.forEach(Player::resetScore);
+
+            ClassicTournament tournament = new ClassicTournament(
+                    classicTournamentPlayers,
+                    this.numberOfRoundsPerMatch
+            );
             tournament.playTournament();
 
-            if (player.getScore() > bestChromosomeFitnessScore) {
-                bestChromosome = (Chromosome) player;
-                bestChromosomeFitnessScore = player.getScore();
+            if (currentChromosome.getScore() > bestChromosomeFitnessScore) {
+                bestChromosome = (Chromosome) currentChromosome;
+                bestChromosomeFitnessScore = currentChromosome.getScore();
                 logger.info("Found a better chromosome, with a score of " + bestChromosomeFitnessScore + ".");
             }
-            fitnessList.add(player.getScore());
+
+            fitnessList.add(currentChromosome.getScore());
+
+            System.out.println("player size:" + classicTournamentPlayers.size());
+            for (Player someone:classicTournamentPlayers) {
+                System.out.println(someone.getPlayerType() +" " + someone.getScore());
+            }
+
+            System.out.println("\n");
         }
         return fitnessList;
     }
@@ -230,27 +244,16 @@ public class GeneticAlgorithm {
         return this;
     }
 
-    public int getPopulationSize() {
-        return populationSize;
-    }
+    public int getPopulationSize() { return populationSize; }
 
-    public double getNumberOfGenerations() {
-        return numberOfGenerations;
-    }
+    public double getNumberOfGenerations() { return numberOfGenerations; }
 
-    public double getCrossoverProbability() {
-        return crossoverProbability;
-    }
+    public double getCrossoverProbability() { return crossoverProbability; }
 
-    public double getMutationProbability() {
-        return mutationProbability;
-    }
+    public double getMutationProbability() { return mutationProbability; }
 
-    public long getBestChromosomeFitnessScore() {
-        return bestChromosomeFitnessScore;
-    }
+    public long getBestChromosomeFitnessScore() { return bestChromosomeFitnessScore; }
 
-    public long getNumberOfRoundsPerMatch() {
-        return numberOfRoundsPerMatch;
-    }
+    public long getNumberOfRoundsPerMatch() { return numberOfRoundsPerMatch; }
+
 }

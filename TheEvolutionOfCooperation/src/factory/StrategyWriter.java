@@ -2,6 +2,7 @@ package factory;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
+import org.json.simple.parser.ParseException;
 import player.Action;
 import strategies.genetic.GeneticAlgorithm;
 
@@ -12,7 +13,7 @@ import java.util.List;
 
 public class StrategyWriter {
 
-    static void populateNewFileWithStrategyData(GeneticAlgorithm geneticAlgorithm) throws IOException {
+    static void populateNewFileWithStrategyData(GeneticAlgorithm geneticAlgorithm) throws IOException, ParseException {
         JSONObject jsonToDumpInFile = new JSONObject();
         JSONArray encodedStrategy = buildEncodedStrategyJsonArray(geneticAlgorithm);
         populateJsonWithStrategyData(geneticAlgorithm, jsonToDumpInFile, encodedStrategy);
@@ -27,7 +28,7 @@ public class StrategyWriter {
     }
 
     @SuppressWarnings("unchecked")
-    private static JSONArray buildEncodedStrategyJsonArray(GeneticAlgorithm geneticAlgorithm) {
+    private static JSONArray buildEncodedStrategyJsonArray(GeneticAlgorithm geneticAlgorithm) throws IOException, ParseException {
         List<Action> genes = geneticAlgorithm.buildStrategy().getGenes();
         JSONArray encodedStrategy = new JSONArray();
         for (Action currentAction : genes) {
@@ -38,13 +39,13 @@ public class StrategyWriter {
 
     @SuppressWarnings("unchecked")
     private static void populateJsonWithStrategyData(GeneticAlgorithm geneticAlgorithm, JSONObject jsonObject, JSONArray encodedStrategy) {
-        jsonObject.put(JsonFileColumnName.EncodedStrategy.getColumnName(), encodedStrategy);
-        jsonObject.put(JsonFileColumnName.PopulationSize.getColumnName(), geneticAlgorithm.getPopulationSize());
-        jsonObject.put(JsonFileColumnName.NumberOfGenerations.getColumnName(), geneticAlgorithm.getNumberOfGenerations());
-        jsonObject.put(JsonFileColumnName.CrossoverProbability.getColumnName(), geneticAlgorithm.getCrossoverProbability());
-        jsonObject.put(JsonFileColumnName.MutationProbability.getColumnName(), geneticAlgorithm.getMutationProbability());
-        jsonObject.put(JsonFileColumnName.NumberOfRoundsPerMatch.getColumnName(), geneticAlgorithm.getNumberOfRoundsPerMatch());
-        jsonObject.put(JsonFileColumnName.FitnessScore.getColumnName(), geneticAlgorithm.getBestChromosomeFitnessScore());
+        jsonObject.put(StrategyJsonFileColumnName.EncodedStrategy.getColumnName(), encodedStrategy);
+        jsonObject.put(StrategyJsonFileColumnName.PopulationSize.getColumnName(), geneticAlgorithm.getPopulationSize());
+        jsonObject.put(StrategyJsonFileColumnName.NumberOfGenerations.getColumnName(), geneticAlgorithm.getNumberOfGenerations());
+        jsonObject.put(StrategyJsonFileColumnName.CrossoverProbability.getColumnName(), geneticAlgorithm.getCrossoverProbability());
+        jsonObject.put(StrategyJsonFileColumnName.MutationProbability.getColumnName(), geneticAlgorithm.getMutationProbability());
+        jsonObject.put(StrategyJsonFileColumnName.NumberOfRoundsPerMatch.getColumnName(), geneticAlgorithm.getNumberOfRoundsPerMatch());
+        jsonObject.put(StrategyJsonFileColumnName.FitnessScore.getColumnName(), geneticAlgorithm.getBestChromosomeFitnessScore());
     }
 
     private static File createNewJsonFile() throws IOException {

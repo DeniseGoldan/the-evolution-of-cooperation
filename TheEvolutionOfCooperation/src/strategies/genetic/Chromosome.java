@@ -24,6 +24,10 @@ public class Chromosome extends Player {
         initializeGenesRandomly();
     }
 
+    Chromosome(Chromosome chromosome) {
+        setGenes(chromosome.getGenes());
+    }
+
     @Override
     public Action chooseAction(long roundNumber) {
         if (roundNumber == 0) {
@@ -86,16 +90,14 @@ public class Chromosome extends Player {
         }
     }
 
-    public void printGenes() {
+    void printGenes() {
         for (int index = 0; index < NUMBER_OF_GENES; index++) {
             System.out.println(index+"."+genes.get(index));
         }
         System.out.println();
     }
 
-    public List<Action> getGenes() {
-        return genes;
-    }
+    public List<Action> getGenes() { return genes; }
 
     void mutate(double mutationProbability) {
         ThreadLocalRandom random = ThreadLocalRandom.current();
@@ -118,11 +120,8 @@ public class Chromosome extends Player {
         genes = result;
     }
 
-    int getNumberOfGenes() {
-        return NUMBER_OF_GENES;
-    }
+    int getNumberOfGenes() { return NUMBER_OF_GENES; }
 
-    public void setGenes(List<Action> genes) {
-        this.genes = genes;
-    }
+    public void setGenes(List<Action> genes) { this.genes = genes; }
+
 }

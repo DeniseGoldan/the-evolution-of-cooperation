@@ -1,6 +1,6 @@
 package factory;
 
-enum JsonFileColumnName {
+enum StrategyJsonFileColumnName {
 
     PopulationSize("population size"),
     NumberOfGenerations("number of generations"),
@@ -12,7 +12,7 @@ enum JsonFileColumnName {
 
     private String columnName;
 
-    JsonFileColumnName(String value) {
+    StrategyJsonFileColumnName(String value) {
         this.columnName = value;
     }
 

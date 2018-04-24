@@ -40,7 +40,7 @@ public class StrategyReader {
         JSONParser parser = new JSONParser();
         Object object = parser.parse(new FileReader(filepath));
         JSONObject loadedJson = (JSONObject) object;
-        return (JSONArray) loadedJson.get(JsonFileColumnName.EncodedStrategy.getColumnName());
+        return (JSONArray) loadedJson.get(StrategyJsonFileColumnName.EncodedStrategy.getColumnName());
     }
 
 }

@@ -1,5 +1,10 @@
 package player;
 
+import factory.StrategyReader;
+import org.json.simple.parser.ParseException;
+import strategies.standard.*;
+
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -99,4 +104,21 @@ public abstract class Player {
         this.actionHistory = new ArrayList<>();
         this.opponentActionHistory = new ArrayList<>();
     }
+
+    public static Player getNewPlayerOfType(String type) throws IOException, ParseException {
+        Player playerToAdd = null;
+        switch(type){
+            case "Tit-For-Tat": playerToAdd = new TitForTatPlayer(); break;
+            case "Always Defect": playerToAdd = new AlwaysDefectPlayer(); break;
+            case "Always Cooperate": playerToAdd = new AlwaysCooperatePlayer(); break;
+            case "Grudger": playerToAdd = new GrudgerPlayer(); break;
+            case "Suspicious Tit-For-Tat": playerToAdd = new SuspiciousTitForTatPlayer(); break;
+            case "Tit-For-Two-Tats": playerToAdd = new TitForTwoTatsPlayer(); break;
+            case "Random": playerToAdd = new RandomPlayer(); break;
+            case "Chromosome": playerToAdd = StrategyReader.getChromosomeWithStrategyFromJsonFile("src/resources/chromosome_strategies/strategy_1524227692965.json"); break;
+            default: throw new RuntimeException("This player type is not registered!");
+        }
+        return playerToAdd;
+    }
+
 }

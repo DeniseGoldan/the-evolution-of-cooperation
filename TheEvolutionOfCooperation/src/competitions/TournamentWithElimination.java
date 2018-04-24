@@ -1,12 +1,13 @@
 package competitions;
 
-import factory.StrategyReader;
 import javafx.scene.chart.XYChart;
 import org.json.simple.parser.ParseException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import player.Player;
-import strategies.standard.*;
+import strategies.standard.AlwaysCooperatePlayer;
+import strategies.standard.AlwaysDefectPlayer;
+import strategies.standard.TitForTatPlayer;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -132,12 +133,12 @@ public class TournamentWithElimination extends Tournament {
         for (int i = 0; i < players.size() - numberOfPlayersToEliminate; i++) {
             Player player = players.get(i);
             String type = player.getPlayerType();
-            newGeneration.add(getNewPlayerOfType(type));
+            newGeneration.add(Player.getNewPlayerOfType(type));
         }
         for (int i = 0; i < numberOfPlayersToEliminate; i++) {
             Player player = players.get(i);
             String type = player.getPlayerType();
-            newGeneration.add(getNewPlayerOfType(type));
+            newGeneration.add(Player.getNewPlayerOfType(type));
         }
         this.players = newGeneration;
     }
@@ -150,22 +151,6 @@ public class TournamentWithElimination extends Tournament {
             }
         }
         return true;
-    }
-
-    private Player getNewPlayerOfType(String type) throws IOException, ParseException {
-        Player playerToAdd = null;
-        switch(type){
-            case "Tit-For-Tat": playerToAdd = new TitForTatPlayer(); break;
-            case "Always Defect": playerToAdd = new AlwaysDefectPlayer(); break;
-            case "Always Cooperate": playerToAdd = new AlwaysCooperatePlayer(); break;
-            case "Grudger": playerToAdd = new GrudgerPlayer(); break;
-            case "Suspicious Tit-For-Tat": playerToAdd = new SuspiciousTitForTatPlayer(); break;
-            case "Tit-For-Two-Tats": playerToAdd = new TitForTwoTatsPlayer(); break;
-            case "Random": playerToAdd = new RandomPlayer(); break;
-            case "Chromosome": playerToAdd = StrategyReader.getChromosomeWithStrategyFromJsonFile("src/resources/chromosome_strategies/strategy_1524227692965.json"); break;
-            default: throw new RuntimeException("This player type is not registered!");
-        }
-        return playerToAdd;
     }
 
     private void logPlayerTypeCounter() {
