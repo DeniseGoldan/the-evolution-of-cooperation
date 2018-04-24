@@ -5,9 +5,6 @@ import org.json.simple.parser.ParseException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import player.Player;
-import strategies.standard.AlwaysCooperatePlayer;
-import strategies.standard.AlwaysDefectPlayer;
-import strategies.standard.TitForTatPlayer;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -27,27 +24,6 @@ public class TournamentWithElimination extends Tournament {
         assert numberOfRoundsPerMatch > 0;
         this.numberOfPlayersToEliminate = percentOfPlayersToEliminate * players.size() / 100;
     }
-
-    public static void main(String[] args) throws IOException, ParseException {
-
-        List<Player> players = new ArrayList<>();
-
-        for (int i = 0; i < 2; i++) {
-            players.add(new TitForTatPlayer());
-        }
-
-        for (int i = 0; i < 3; i++) {
-            players.add(new AlwaysCooperatePlayer());
-        }
-
-        for (int i = 0; i < 20; i++) {
-            players.add(new AlwaysDefectPlayer());
-        }
-
-        TournamentWithElimination tournament = new TournamentWithElimination(players, 25, 5);
-        tournament.playTournament();
-    }
-
 
     @Override
     public void playTournament() throws IOException, ParseException {

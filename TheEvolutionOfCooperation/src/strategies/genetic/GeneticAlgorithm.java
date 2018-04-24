@@ -1,7 +1,8 @@
 package strategies.genetic;
 
 import competitions.ClassicTournament;
-import factory.FitnessConfigurationReader;
+import factory.FilePath;
+import factory.PopulationConfigReader;
 import org.json.simple.parser.ParseException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -184,7 +185,7 @@ public class GeneticAlgorithm {
 
         List<Long> fitnessList = new ArrayList<>();
 
-        List<Player> enemies = FitnessConfigurationReader.getPlayerListFromConfigurationFile();
+        List<Player> enemies = PopulationConfigReader.getPlayersFromConfigFile(FilePath.TrainingPhase.getPath());
 
         System.out.println(enemies.size());
 

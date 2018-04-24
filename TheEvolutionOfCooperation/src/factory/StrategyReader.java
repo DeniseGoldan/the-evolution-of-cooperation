@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import static factory.StrategyJsonFileColumnName.*;
+import static factory.StrategyJsonColumnName.*;
 
 public class StrategyReader {
 

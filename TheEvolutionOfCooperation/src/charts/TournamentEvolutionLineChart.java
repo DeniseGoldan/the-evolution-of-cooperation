@@ -1,6 +1,8 @@
 package charts;
 
 import competitions.TournamentWithElimination;
+import factory.FilePath;
+import factory.PopulationConfigReader;
 import javafx.application.Application;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.scene.Scene;
@@ -13,14 +15,10 @@ import org.json.simple.parser.ParseException;
 import player.Player;
 import strategies.genetic.Chromosome;
 import strategies.genetic.InvestigatedChromosome;
-import strategies.standard.AlwaysCooperatePlayer;
-import strategies.standard.AlwaysDefectPlayer;
-import strategies.standard.TitForTatPlayer;
 
 import javax.imageio.ImageIO;
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -33,8 +31,8 @@ public class TournamentEvolutionLineChart extends Application {
     private static final String APPLICATION_TITLE = "Line Chart";
     private static final String X_AXIS_LABEL = "Round number";
     private static final String Y_AXIS_LABEL = "Number of players";
-    private static final int WIDTH = 800;
-    private static final int HEIGHT = 400;
+    private static final int WIDTH = 900;
+    private static final int HEIGHT = 500;
     private static final int PERCENT_OF_PLAYERS_TO_ELIMINATE = 25;
     private static final int NUMBER_OF_ROUNDS_PER_MATCH = 10;
 
@@ -90,17 +88,8 @@ public class TournamentEvolutionLineChart extends Application {
     }
 
     private List<Player> buildTournamentPlayersList() throws IOException, ParseException {
-        List<Player> players = new ArrayList<>();
 
-        for (int i = 0; i < 4; i++) {
-            players.add(new TitForTatPlayer());
-        }
-        for (int i = 0; i < 14; i++) {
-            players.add(new AlwaysCooperatePlayer());
-        }
-        for (int i = 0; i < 1; i++) {
-            players.add(new AlwaysDefectPlayer());
-        }
+        List<Player> players = PopulationConfigReader.getPlayersFromConfigFile(FilePath.TestingPhase.getPath());
 
         Chromosome a = getChromosomeWithStrategyFromJsonFile(CHROMOSOME_UNDER_TEST_FILE_PATH);
         Chromosome b = getChromosomeWithStrategyFromJsonFile(CHROMOSOME_UNDER_TEST_FILE_PATH);

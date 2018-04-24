@@ -7,7 +7,7 @@ import java.io.IOException;
 
 import static factory.StrategyWriter.populateNewFileWithStrategyData;
 
-public class StrategiesFactory {
+public class ChromosomeStrategyFactory {
 
     public static void main(String[] args) throws IOException, ParseException {
 

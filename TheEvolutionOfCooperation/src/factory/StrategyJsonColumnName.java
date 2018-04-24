@@ -1,6 +1,6 @@
 package factory;
 
-enum StrategyJsonFileColumnName {
+enum StrategyJsonColumnName {
 
     PopulationSize("population size"),
     NumberOfGenerations("number of generations"),
@@ -9,11 +9,11 @@ enum StrategyJsonFileColumnName {
     NumberOfRoundsPerMatch("number of rounds per match"),
     FitnessScore("fitness score"),
     EncodedStrategy("encoded strategy"),
-    FitnessConfiguration("players from the classic tournament");
+    TrainingPopulationConfiguration("players from the classic tournament");
 
     private String columnName;
 
-    StrategyJsonFileColumnName(String value) {
+    StrategyJsonColumnName(String value) {
         this.columnName = value;
     }
 

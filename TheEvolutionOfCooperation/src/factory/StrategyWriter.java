@@ -39,14 +39,14 @@ public class StrategyWriter {
 
     @SuppressWarnings("unchecked")
     private static void populateJsonWithStrategyData(GeneticAlgorithm geneticAlgorithm, JSONObject jsonObject, JSONArray encodedStrategy) throws IOException, ParseException {
-        jsonObject.put(StrategyJsonFileColumnName.EncodedStrategy.getColumnName(), encodedStrategy);
-        jsonObject.put(StrategyJsonFileColumnName.PopulationSize.getColumnName(), geneticAlgorithm.getPopulationSize());
-        jsonObject.put(StrategyJsonFileColumnName.NumberOfGenerations.getColumnName(), geneticAlgorithm.getNumberOfGenerations());
-        jsonObject.put(StrategyJsonFileColumnName.CrossoverProbability.getColumnName(), geneticAlgorithm.getCrossoverProbability());
-        jsonObject.put(StrategyJsonFileColumnName.MutationProbability.getColumnName(), geneticAlgorithm.getMutationProbability());
-        jsonObject.put(StrategyJsonFileColumnName.NumberOfRoundsPerMatch.getColumnName(), geneticAlgorithm.getNumberOfRoundsPerMatch());
-        jsonObject.put(StrategyJsonFileColumnName.FitnessScore.getColumnName(), geneticAlgorithm.getBestChromosomeFitnessScore());
-        jsonObject.put(StrategyJsonFileColumnName.FitnessConfiguration.getColumnName(), FitnessConfigurationReader.getJsonObjectFromConfigFile());
+        jsonObject.put(StrategyJsonColumnName.EncodedStrategy.getColumnName(), encodedStrategy);
+        jsonObject.put(StrategyJsonColumnName.PopulationSize.getColumnName(), geneticAlgorithm.getPopulationSize());
+        jsonObject.put(StrategyJsonColumnName.NumberOfGenerations.getColumnName(), geneticAlgorithm.getNumberOfGenerations());
+        jsonObject.put(StrategyJsonColumnName.CrossoverProbability.getColumnName(), geneticAlgorithm.getCrossoverProbability());
+        jsonObject.put(StrategyJsonColumnName.MutationProbability.getColumnName(), geneticAlgorithm.getMutationProbability());
+        jsonObject.put(StrategyJsonColumnName.NumberOfRoundsPerMatch.getColumnName(), geneticAlgorithm.getNumberOfRoundsPerMatch());
+        jsonObject.put(StrategyJsonColumnName.FitnessScore.getColumnName(), geneticAlgorithm.getBestChromosomeFitnessScore());
+        jsonObject.put(StrategyJsonColumnName.TrainingPopulationConfiguration.getColumnName(), PopulationConfigReader.getJsonObjectFromConfigFile(FilePath.TrainingPhase.getPath()));
     }
 
     private static File createNewJsonFileInANewDirectory() throws IOException {

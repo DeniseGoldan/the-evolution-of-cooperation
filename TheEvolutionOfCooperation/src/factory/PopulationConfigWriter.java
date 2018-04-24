@@ -11,7 +11,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.HashMap;
 
-public class FitnessConfigurationWriter {
+public class PopulationConfigWriter {
 
     @SuppressWarnings("unchecked")
     public static void main(String[] args) throws IOException {
@@ -20,7 +20,7 @@ public class FitnessConfigurationWriter {
         for (Player player: playerCountByType.keySet()) {
             jsonObject.put(player.getPlayerType(), playerCountByType.get(player));
         }
-        dumpJsonToFile(jsonObject, new File("src/factory/fitness.config.json"));
+        dumpJsonToFile(jsonObject, new File("src/factory/training.config.json"));
     }
 
     private static HashMap<Player, Integer> designCountByPlayerType() {
