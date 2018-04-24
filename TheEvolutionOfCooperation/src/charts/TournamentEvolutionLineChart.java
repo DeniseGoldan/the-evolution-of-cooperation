@@ -1,7 +1,6 @@
 package charts;
 
 import competitions.TournamentWithElimination;
-import factory.StrategyReader;
 import javafx.application.Application;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.scene.Scene;
@@ -13,6 +12,7 @@ import javafx.stage.Stage;
 import org.json.simple.parser.ParseException;
 import player.Player;
 import strategies.genetic.Chromosome;
+import strategies.genetic.InvestigatedChromosome;
 import strategies.standard.AlwaysCooperatePlayer;
 import strategies.standard.AlwaysDefectPlayer;
 import strategies.standard.TitForTatPlayer;
@@ -23,6 +23,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+
+import static factory.StrategyReader.getChromosomeWithStrategyFromJsonFile;
+import static strategies.genetic.InvestigatedChromosome.CHROMOSOME_UNDER_TEST_FILE_PATH;
 
 public class TournamentEvolutionLineChart extends Application {
 
@@ -64,6 +67,7 @@ public class TournamentEvolutionLineChart extends Application {
 
         for (String playerType : seriesPerPlayer.keySet()) {
             lineChart.getData().add(seriesPerPlayer.get(playerType));
+            System.out.println("something");
         }
 
         return scene;
@@ -91,19 +95,19 @@ public class TournamentEvolutionLineChart extends Application {
         for (int i = 0; i < 4; i++) {
             players.add(new TitForTatPlayer());
         }
-        for (int i = 0; i < 8; i++) {
+        for (int i = 0; i < 14; i++) {
             players.add(new AlwaysCooperatePlayer());
         }
-        for (int i = 0; i < 7; i++) {
+        for (int i = 0; i < 1; i++) {
             players.add(new AlwaysDefectPlayer());
         }
-        Chromosome a = StrategyReader.getChromosomeWithStrategyFromJsonFile("src/resources/chromosome_strategies/strategy_1524227692965.json");
-        Chromosome b = StrategyReader.getChromosomeWithStrategyFromJsonFile("src/resources/chromosome_strategies/strategy_1524227692965.json");
-        Chromosome c = StrategyReader.getChromosomeWithStrategyFromJsonFile("src/resources/chromosome_strategies/strategy_1524227692965.json");
-        Chromosome d = StrategyReader.getChromosomeWithStrategyFromJsonFile("src/resources/chromosome_strategies/strategy_1524227692965.json");
-        Chromosome e = StrategyReader.getChromosomeWithStrategyFromJsonFile("src/resources/chromosome_strategies/strategy_1524227692965.json");
-        Chromosome f = StrategyReader.getChromosomeWithStrategyFromJsonFile("src/resources/chromosome_strategies/strategy_1524227692965.json");
 
+        Chromosome a = getChromosomeWithStrategyFromJsonFile(CHROMOSOME_UNDER_TEST_FILE_PATH);
+        Chromosome b = getChromosomeWithStrategyFromJsonFile(CHROMOSOME_UNDER_TEST_FILE_PATH);
+        Chromosome c = getChromosomeWithStrategyFromJsonFile(CHROMOSOME_UNDER_TEST_FILE_PATH);
+        Chromosome d = getChromosomeWithStrategyFromJsonFile(CHROMOSOME_UNDER_TEST_FILE_PATH);
+        Chromosome e = getChromosomeWithStrategyFromJsonFile(CHROMOSOME_UNDER_TEST_FILE_PATH);
+        Chromosome f = getChromosomeWithStrategyFromJsonFile(CHROMOSOME_UNDER_TEST_FILE_PATH);
 
         players.add(a);
         players.add(b);
@@ -111,8 +115,6 @@ public class TournamentEvolutionLineChart extends Application {
         players.add(d);
         players.add(e);
         players.add(f);
-
-
 
         return players;
     }
@@ -123,8 +125,12 @@ public class TournamentEvolutionLineChart extends Application {
         ImageIO.write(SwingFXUtils.fromFXImage(image, null), "png", pngFile);
     }
 
-    private static File createPngFile() throws IOException {
-        String path = "src/resources/line_charts/chart_" + System.currentTimeMillis() + ".png";
+    private File createPngFile() throws IOException {
+        String root = "src/resources/from.epoch."
+                + InvestigatedChromosome.STRATEGY_CREATION_EPOCH_STRING
+                + "/";
+        String currentEpochString = String.valueOf(System.currentTimeMillis());
+        String path = root + "chart.from.epoch." + currentEpochString + ".png";
         File newFile = new File(path);
         newFile.createNewFile();
         return newFile;

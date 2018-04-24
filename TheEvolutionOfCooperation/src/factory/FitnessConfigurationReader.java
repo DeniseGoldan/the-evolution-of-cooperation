@@ -30,7 +30,7 @@ public class FitnessConfigurationReader {
         return players;
     }
 
-    public static JSONObject getJsonObjectFromConfigFile() throws IOException, ParseException {
+    static JSONObject getJsonObjectFromConfigFile() throws IOException, ParseException {
         JSONParser parser = new JSONParser();
         Object parsingResultObject = parser.parse(new FileReader(CONFIG_FILE_PATH));
         return (JSONObject) parsingResultObject;

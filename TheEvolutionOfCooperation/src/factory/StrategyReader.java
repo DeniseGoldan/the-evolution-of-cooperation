@@ -12,6 +12,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import static factory.StrategyJsonFileColumnName.*;
+
 public class StrategyReader {
 
     public static Chromosome getChromosomeWithStrategyFromJsonFile(String filepath) throws IOException, ParseException {
@@ -40,7 +42,7 @@ public class StrategyReader {
         JSONParser parser = new JSONParser();
         Object object = parser.parse(new FileReader(filepath));
         JSONObject loadedJson = (JSONObject) object;
-        return (JSONArray) loadedJson.get(StrategyJsonFileColumnName.EncodedStrategy.getColumnName());
+        return (JSONArray) loadedJson.get(EncodedStrategy.getColumnName());
     }
 
 }

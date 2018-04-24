@@ -13,7 +13,7 @@ public class StrategiesFactory {
 
         GeneticAlgorithm geneticAlgorithm = new GeneticAlgorithm()
                 .withCrossoverProbability(0.3)
-                .withMutationProbability(0.5)
+                .withMutationProbability(0.75)
                 .withNumberOfGenerations(1000)
                 .withNumberOfRoundsPerMatch(20)
                 .withPopulationSize(10);

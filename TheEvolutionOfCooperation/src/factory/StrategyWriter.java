@@ -17,7 +17,7 @@ public class StrategyWriter {
         JSONObject jsonToDumpInFile = new JSONObject();
         JSONArray encodedStrategy = buildEncodedStrategyJsonArray(geneticAlgorithm);
         populateJsonWithStrategyData(geneticAlgorithm, jsonToDumpInFile, encodedStrategy);
-        File newFile = createNewJsonFile();
+        File newFile = createNewJsonFileInANewDirectory();
         dumpJsonToFile(jsonToDumpInFile, newFile);
     }
 
@@ -49,11 +49,16 @@ public class StrategyWriter {
         jsonObject.put(StrategyJsonFileColumnName.FitnessConfiguration.getColumnName(), FitnessConfigurationReader.getJsonObjectFromConfigFile());
     }
 
-    private static File createNewJsonFile() throws IOException {
-        String path = "src/resources/chromosome/strategies/strategy_" + System.currentTimeMillis() + ".json";
-        File newFile = new File(path);
-        newFile.createNewFile();
-        return newFile;
+    private static File createNewJsonFileInANewDirectory() throws IOException {
+        String epoch = String.valueOf(System.currentTimeMillis());
+        String rootPath =  "src/resources/";
+        String parentDirectoryPath = rootPath + "/from.epoch." + epoch;
+        String jsonFilePath = parentDirectoryPath + "/strategy.json";
+        File newDirectory = new File(parentDirectoryPath);
+        newDirectory.mkdir();
+        File newJsonFile = new File(jsonFilePath);
+        newJsonFile.createNewFile();
+        return newJsonFile;
     }
 
 }

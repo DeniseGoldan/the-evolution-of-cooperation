@@ -8,6 +8,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import static strategies.genetic.InvestigatedChromosome.CHROMOSOME_UNDER_TEST_FILE_PATH;
+
 public abstract class Player {
 
     private long score;
@@ -115,7 +117,7 @@ public abstract class Player {
             case "Suspicious Tit-For-Tat": playerToAdd = new SuspiciousTitForTatPlayer(); break;
             case "Tit-For-Two-Tats": playerToAdd = new TitForTwoTatsPlayer(); break;
             case "Random": playerToAdd = new RandomPlayer(); break;
-            case "Chromosome": playerToAdd = StrategyReader.getChromosomeWithStrategyFromJsonFile("src/resources/chromosome_strategies/strategy_1524227692965.json"); break;
+            case "Chromosome": playerToAdd = StrategyReader.getChromosomeWithStrategyFromJsonFile(CHROMOSOME_UNDER_TEST_FILE_PATH); break;
             default: throw new RuntimeException("This player type is not registered!");
         }
         return playerToAdd;
