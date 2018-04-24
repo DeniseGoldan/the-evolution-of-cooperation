@@ -8,7 +8,8 @@ enum StrategyJsonFileColumnName {
     MutationProbability("mutation probability"),
     NumberOfRoundsPerMatch("number of rounds per match"),
     FitnessScore("fitness score"),
-    EncodedStrategy("encoded strategy");
+    EncodedStrategy("encoded strategy"),
+    FitnessConfiguration("players from the classic tournament");
 
     private String columnName;
 

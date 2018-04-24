@@ -38,7 +38,7 @@ public class StrategyWriter {
     }
 
     @SuppressWarnings("unchecked")
-    private static void populateJsonWithStrategyData(GeneticAlgorithm geneticAlgorithm, JSONObject jsonObject, JSONArray encodedStrategy) {
+    private static void populateJsonWithStrategyData(GeneticAlgorithm geneticAlgorithm, JSONObject jsonObject, JSONArray encodedStrategy) throws IOException, ParseException {
         jsonObject.put(StrategyJsonFileColumnName.EncodedStrategy.getColumnName(), encodedStrategy);
         jsonObject.put(StrategyJsonFileColumnName.PopulationSize.getColumnName(), geneticAlgorithm.getPopulationSize());
         jsonObject.put(StrategyJsonFileColumnName.NumberOfGenerations.getColumnName(), geneticAlgorithm.getNumberOfGenerations());
@@ -46,10 +46,11 @@ public class StrategyWriter {
         jsonObject.put(StrategyJsonFileColumnName.MutationProbability.getColumnName(), geneticAlgorithm.getMutationProbability());
         jsonObject.put(StrategyJsonFileColumnName.NumberOfRoundsPerMatch.getColumnName(), geneticAlgorithm.getNumberOfRoundsPerMatch());
         jsonObject.put(StrategyJsonFileColumnName.FitnessScore.getColumnName(), geneticAlgorithm.getBestChromosomeFitnessScore());
+        jsonObject.put(StrategyJsonFileColumnName.FitnessConfiguration.getColumnName(), FitnessConfigurationReader.getJsonObjectFromConfigFile());
     }
 
     private static File createNewJsonFile() throws IOException {
-        String path = "src/resources/chromosome_strategies/strategy_" + System.currentTimeMillis() + ".json";
+        String path = "src/resources/chromosome/strategies/strategy_" + System.currentTimeMillis() + ".json";
         File newFile = new File(path);
         newFile.createNewFile();
         return newFile;

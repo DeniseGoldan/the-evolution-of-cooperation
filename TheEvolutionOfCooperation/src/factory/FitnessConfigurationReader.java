@@ -19,9 +19,7 @@ public class FitnessConfigurationReader {
     }
 
     public static List<Player> getPlayerListFromConfigurationFile() throws IOException, ParseException {
-        JSONParser parser = new JSONParser();
-        Object parsingResultObject = parser.parse(new FileReader(CONFIG_FILE_PATH));
-        JSONObject jsonObject = (JSONObject) parsingResultObject;
+        JSONObject jsonObject = getJsonObjectFromConfigFile();
         List<Player> players = new ArrayList<>();
         for (Object playerType : jsonObject.keySet()) {
             Long count = (Long) jsonObject.get(playerType);
@@ -30,6 +28,12 @@ public class FitnessConfigurationReader {
             }
         }
         return players;
+    }
+
+    public static JSONObject getJsonObjectFromConfigFile() throws IOException, ParseException {
+        JSONParser parser = new JSONParser();
+        Object parsingResultObject = parser.parse(new FileReader(CONFIG_FILE_PATH));
+        return (JSONObject) parsingResultObject;
     }
 
 }
