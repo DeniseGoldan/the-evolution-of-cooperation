@@ -54,7 +54,7 @@ Strategiile lui Axelrod se bazau pe istoricul ultimelor trei runde. Pentru acest
 	Cazul 64: \textbf{TT TT TT}\\
 \end{center}
 
-Ca și în  ipoteza în care jucătorii memorează doar istoricul ultimei runde, putem reprezenta aceste cazuri într-un șir de caractere de lungime 64. Vom folosi un șir de caractere de lungime 71, pentru a reține și ce mișcări ar trebui făcute în primele runde, când încă nu există un istoric care să cuprinde ultimele trei runde. Cele 7 poziții de la începutul șirului de caractere au următoarele semnificații:\\
+Ca și în  ipoteza în care jucătorii memorează doar istoricul ultimei runde, putem reprezenta aceste cazuri într-un șir de caractere de lungime 64. Vom folosi un șir de caractere de lungime 71, pentru a reține și ce mișcări ar trebui făcute în primele runde, când încă nu există un istoric care să cuprindă ultimele trei runde. Cele 7 poziții de la începutul șirului de caractere au următoarele semnificații:\\
 
 \begin{enumerate}
 	
@@ -68,15 +68,15 @@ Ca și în  ipoteza în care jucătorii memorează doar istoricul ultimei runde,
 	
 	\item \textbf{Poziția numărul 5}: mișcarea pentru cea de a treia rundă, dacă pentru primele două runde, istoricul oponentului este \textbf{CT};
 	
-	\item \textbf{Poziția numărul 6}: mișcarea pentru cea de a două rundă, dacă pentru primele două runde, istoricul oponentului este \textbf{TC};
+	\item \textbf{Poziția numărul 6}: mișcarea pentru cea de a treia rundă, dacă pentru primele două runde, istoricul oponentului este \textbf{TC};
 	
-	\item \textbf{Poziția numărul 7}: mișcarea pentru cea de a două rundă, dacă la primele două runde oponentul a avut mișcările \textbf{TT}.
+	\item \textbf{Poziția numărul 7}: mișcarea pentru cea de a treia rundă, dacă la primele două runde oponentul a avut mișcările \textbf{TT}.
 	
 \end{enumerate}
 
 \subsection{Dimensiunea spațiului de căutare}
 
-Având 71 de poziții pe care le putem ocupa cu cele două caractere- \textbf{C} sau \textbf{T}-, putem genera $2^71$ șiruri de caractere distincte. Acest număr reprezintă numărul tuturor strategiilor pe care îl putem avea, în contextul în care cunoaștem istoricum ultimelor trei runde ale jocului.  
+Având 71 de poziții pe care le putem ocupa cu cele două caractere- \textbf{C} sau \textbf{T}-, putem genera $2^{71}$ șiruri de caractere distincte. Acest număr reprezintă numărul tuturor strategiilor pe care îl putem avea, în contextul în care cunoaștem istoricul ultimelor trei runde ale jocului.  
 
 Spațiul de căutare este, în concluzie, mult prea mare pentru a caută exhaustiv cea mai bună strategie.
 
@@ -91,14 +91,6 @@ Prin utilizarea unui algoritm genetic, pot obține o copie a celui mai bun indiv
 Pentru crearea acestui individ, este nevoie de ajustarea mai multor parametri și opțiuni, dintre care menționez: ratamutației, rata încrucisării, tipul selecției populației (populația diferă ușor de la generație la generație, selectandu-se doar anumiți indivizi și în anumite proporții). Cromozomul are capacitatea de a-și formulă următoarea mișcare bazându-se pe istoricul ultimelor trei runde. Din acest motiv este important ca un meci să fie format din mai multe runde. Așadar, numărul de runde reprezintă și acesta un parametru pentru antrenarea cromozomilor. 
 
 -- OBSERVAȚII CLARE OBȚINUTE ÎN URMĂ UNOR EXPERIMENTE legat de modul în care parametrii influențează calitatea soluțiilor
-
-- De implementat: încrucișarea cu 1 punct de tăiere, cu 2 puncte de tăiere
-
-- De implementat: de schimbat funcția fitness
-
-- De implementat: altă metodă de selecție? + / -
-
-- De implementat: salvarea celor mai bune soluții (schimbare parametri, salvare soluții foarte bune)
 
 \section {Elemente legate de implementarea algoritmului genetic}
 

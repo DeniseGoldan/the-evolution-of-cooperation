@@ -1,19 +1,21 @@
 \section{Apariția noțiunii de algoritm genetic} 
  
-Algorimii genetici\footnote{Adaptare după \textit{"Genetic Algorithms: An Overview"}, Melanie Mitchell, 1995.} au fost introduși de către John Holland în 1960 și dezvoltați, ulterior, alături de colegii de la Universitatea din Michigan, între anii 1960 și 1970. Holland urmărea înțelegerea fenomenului de "adaptare" întâlnit în natură și implementarea unor mecanisme adaptive care să fie utilizate în practică, în contextul programării. Cartea publicată de acesta în 1975, \textit{"Adaptation în Natural and Artificial Systems"} (Holland, 1975/1992) prezintă algoritmii genetici drept abstractizări ale evoluției biologice, și oferă un cadru teoretic pentru dezvoltarea acestora.
+Algorimii genetici\footnote{Adaptare după \textit{Genetic Algorithms: An Overview}, Melanie Mitchell, 1995.} au fost introduși de către John Holland în 1960 și dezvoltați, ulterior, alături de colegii de la Universitatea din Michigan, între anii 1960 și 1970. Holland urmărea înțelegerea fenomenului de adaptare întâlnit în natură și implementarea unor mecanisme adaptive care să fie utilizate în practică, în contextul programării. Cartea publicată de acesta în 1975, \textit{Adaptation în Natural and Artificial Systems} (Holland, 1975/1992) prezintă algoritmii genetici drept abstractizări ale evoluției biologice și oferă un cadru teoretic pentru dezvoltarea acestora.
 
-Algoritmii genetici ai lui Holland sunt metode de a trece de la o populație de "cromozomi" (e.g., șiruri de "biți" care reprezintă soluții candidat pentu o problemă) la o nouă populație, prin folosirea "selecției", alături de operatorii insiprati din genetică: încrucișare, mutație, inversiune. Cea din urmă este rar folosită în practică.
+Algoritmii genetici ai lui Holland sunt metode de a trece de la o populație de cromozomi (e.g., șiruri de biți care reprezintă soluții candidat pentu o problemă) la o nouă populație, prin folosirea selecției, alături de operatorii inspirați din genetică: încrucișare, mutație, inversiune. Cea din urmă este rar folosită în practică.
+
+TODO: DE AFLAT CUM SE IMPLEMENTEAZA, TOTUSI, INVERSIUNEA \\
 
 \begin{quote} 
-	\textit{"Computer programs that "evolve" in ways that resemble natural selection can solve complex problems even their creators do not fully understand."}
+	\textit{Computer programs that "evolve" in ways that resemble natural selection can solve complex problems even their creators do not fully understand.}
 	\begin{flushright}
-		by John H. Holland 
+		John H. Holland 
 	\end{flushright}
 \end{quote}
 
-Algoritmii genetici au fost creați în încercarea de a imita procese specifice evoluției naturale, cum ar fi lupta pentru supraviețuire și moștenirea materialului genetic. Putem privi evoluția drept strategia abordată de speciile biologice pentru a căuta "soluții" cât mai potrivite, adaptate condițiilor schimbătoare, într-un număr foarte mare de posibilități. Această abordare poate fi utilizată în rezolvarea problemelor de optimizare, atunci când metodele clasice exhaustive nu se dovedesc eficiente. 
+Algoritmii genetici au fost creați în încercarea de a imita procese specifice evoluției naturale, cum ar fi lupta pentru supraviețuire și moștenirea materialului genetic. Putem privi evoluția drept strategia abordată de speciile biologice pentru a căuta soluții cât mai potrivite, adaptate condițiilor schimbătoare, într-un număr foarte mare de posibilități. Această abordare poate fi utilizată în rezolvarea problemelor de optimizare, atunci când metodele clasice exhaustive nu se dovedesc eficiente. 
  
-Noțiunea de "algoritm genetic" nu este definită în mod riguros\cite{introduction_by_melanie_mitchell}, însă toate metodele ce poartă această denumire au în comun următoarele: populația este formată din cromozomi, selecţia este făcută pe baza rezultatelor funcției de optimizat, încrucișarea a doi \textit{cromozomi părinți} produce 2 \textit{cromozomi copii}, mutația se aplică \textit{cromozomilor copii}. 
+Noțiunea de algoritm genetic nu este definită în mod riguros\cite{introduction_by_melanie_mitchell}, însă toate metodele ce poartă această denumire au în comun următoarele: populația este formată din cromozomi, selecţia este făcută pe baza rezultatelor funcției de optimizat, încrucișarea a doi \textit{cromozomi părinți} produce doi \textit{cromozomi copii}, mutația se aplică \textit{cromozomilor copii}. 
 
 \section{Terminologie}
 
@@ -45,7 +47,7 @@ calculează valoarea funcției de optimizat pentru indivizii populației
 cât timp nu s-a îndeplinit condiția de oprire 
     aplică o metodă de selecție, pentru a crea populația 
     aplică operatorul genetic încrucișare, cu o anumită probabilitate 
-    aplică operatorul genetic mutaatie, cu o anumită probabilitate 
+    aplică operatorul genetic mutație, cu o anumită probabilitate 
     calculează valoarea funcției de optimizat pentru indivizii populației 
 \end{verbatim}
 

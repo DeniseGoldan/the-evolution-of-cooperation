@@ -20,14 +20,17 @@ public class PopulationConfigWriter {
         for (Player player: playerCountByType.keySet()) {
             jsonObject.put(player.getPlayerType(), playerCountByType.get(player));
         }
-        dumpJsonToFile(jsonObject, new File("src/factory/training.config.json"));
+        dumpJsonToFile(jsonObject, new File(FilePath.TrainingPhase.getPath()));
     }
 
     private static HashMap<Player, Integer> designCountByPlayerType() {
+
         HashMap<Player, Integer> playerCountByType = new HashMap<>();
+
         playerCountByType.put(new GrudgerPlayer(), 2);
         playerCountByType.put(new AlwaysCooperatePlayer(), 2);
         playerCountByType.put(new AlwaysDefectPlayer(), 1);
+
         return playerCountByType;
     }
 

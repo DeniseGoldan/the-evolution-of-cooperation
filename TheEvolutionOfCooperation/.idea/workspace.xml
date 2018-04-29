@@ -21,7 +21,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TournamentEvolutionLineChart.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ChromosomeStrategyFactory.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/factory/ChromosomeStrategyFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TournamentEvolutionLineChart.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/charts/TournamentEvolutionLineChart.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="458">
@@ -33,22 +43,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="training.config.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/factory/training.config.json">
+      <file leaf-file-name="StrategyWriter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/factory/StrategyWriter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="3" column="23" lean-forward="false" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="testing.config.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/factory/testing.config.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="3" column="23" lean-forward="false" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
-              <folding />
+            <state relative-caret-position="864">
+              <caret line="48" column="178" lean-forward="false" selection-start-line="48" selection-start-column="178" selection-end-line="48" selection-end-column="178" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -57,6 +59,19 @@
         <entry file="file://$PROJECT_DIR$/src/resources/from.epoch.1524593015820/chart.from.epoch.1524595170014.png">
           <provider selected="true" editor-type-id="images">
             <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PopulationConfigWriter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/factory/PopulationConfigWriter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" column="18" lean-forward="false" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="18" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#361#391#0" expanded="true" />
+              </folding>
+            </state>
           </provider>
         </entry>
       </file>
@@ -88,18 +103,6 @@
         <entry file="file://$PROJECT_DIR$/src/resources/from.epoch.1524593015820/chart.from.epoch.1524595357941.png">
           <provider selected="true" editor-type-id="images">
             <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StrategyReader.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/factory/StrategyReader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="18" column="29" lean-forward="false" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
           </provider>
         </entry>
       </file>
@@ -141,7 +144,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/charts/LineChartSample.java" />
         <option value="$PROJECT_DIR$/src/charts/Dummy.java" />
         <option value="$PROJECT_DIR$/src/competitions/ClassicTournament.java" />
         <option value="$PROJECT_DIR$/tst/competitions/TournamentTest.java" />
@@ -192,6 +194,7 @@
         <option value="$PROJECT_DIR$/src/factory/testing.config.json" />
         <option value="$PROJECT_DIR$/src/charts/TournamentEvolutionLineChart.java" />
         <option value="$PROJECT_DIR$/src/competitions/TournamentWithElimination.java" />
+        <option value="$PROJECT_DIR$/src/factory/PopulationConfigWriter.java" />
       </list>
     </option>
   </component>
@@ -272,35 +275,7 @@
               <item name="TheEvolutionOfCooperation" type="b2602c69:ProjectViewProjectNode" />
               <item name="TheEvolutionOfCooperation" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="from.epoch.1524592982132" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TheEvolutionOfCooperation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TheEvolutionOfCooperation" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="from.epoch.1524593015820" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TheEvolutionOfCooperation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TheEvolutionOfCooperation" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="from.epoch.1524593099897" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TheEvolutionOfCooperation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TheEvolutionOfCooperation" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="strategies" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TheEvolutionOfCooperation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TheEvolutionOfCooperation" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="strategies" type="462c0819:PsiDirectoryNode" />
-              <item name="genetic" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TheEvolutionOfCooperation" type="b2602c69:ProjectViewProjectNode" />
@@ -622,7 +597,7 @@
       <workItem from="1524146772706" duration="351000" />
       <workItem from="1524211210887" duration="17156000" />
       <workItem from="1524569172899" duration="12756000" />
-      <workItem from="1524593297693" duration="2224000" />
+      <workItem from="1524593297693" duration="2975000" />
     </task>
     <servers />
   </component>
@@ -659,11 +634,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="148027000" />
+    <option name="totallyTimeSpent" value="148778000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-4" width="1311" height="780" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -677,7 +651,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23453018" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29182583" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -841,37 +815,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/factory/ChromosomeStrategyFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="19" column="39" lean-forward="false" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/factory/StrategyWriter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="48" column="178" lean-forward="false" selection-start-line="48" selection-start-column="178" selection-end-line="48" selection-end-column="178" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/factory/StrategyJsonColumnName.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
           <caret line="2" column="22" lean-forward="false" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/factory/PopulationConfigWriter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="27" column="51" lean-forward="false" selection-start-line="27" selection-start-column="51" selection-end-line="27" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -961,6 +909,35 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/factory/StrategyWriter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="864">
+          <caret line="48" column="178" lean-forward="false" selection-start-line="48" selection-start-column="178" selection-end-line="48" selection-end-column="178" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/factory/PopulationConfigWriter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="18" lean-forward="false" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#361#391#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/factory/ChromosomeStrategyFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
