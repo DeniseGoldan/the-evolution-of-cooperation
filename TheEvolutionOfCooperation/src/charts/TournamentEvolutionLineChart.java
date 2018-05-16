@@ -35,14 +35,18 @@ public class TournamentEvolutionLineChart extends Application {
     private static final int HEIGHT = 500;
     private static final int PERCENT_OF_PLAYERS_TO_ELIMINATE = 25;
     private static final int NUMBER_OF_ROUNDS_PER_MATCH = 10;
+    private static final int X_AXIS_UPPER_BOUND = 10;
+    private static final int Y_AXIS_UPPER_BOUND = 30;
+    private static final int X_AXIS_TICK_UNIT = 1;
+    private static final int Y_AXIS_TICK_UNIT = 5;
 
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         launch(args);
     }
 
     @SuppressWarnings("unchecked")
     @Override
-    public void start(Stage stage) throws IOException, ParseException {
+    public void start(final Stage stage) throws IOException, ParseException {
 
         stage.setTitle(APPLICATION_TITLE);
         Scene scene = buildLineChartScene();
@@ -78,12 +82,12 @@ public class TournamentEvolutionLineChart extends Application {
         yAxis.setLabel(Y_AXIS_LABEL);
         xAxis.setAutoRanging(false);
         yAxis.setAutoRanging(false);
-        xAxis.setUpperBound(10);
-        yAxis.setUpperBound(30);
+        xAxis.setUpperBound(X_AXIS_UPPER_BOUND);
+        yAxis.setUpperBound(Y_AXIS_UPPER_BOUND);
         xAxis.setLowerBound(0);
         yAxis.setLowerBound(0);
-        xAxis.setTickUnit(1);
-        yAxis.setTickUnit(5);
+        xAxis.setTickUnit(X_AXIS_TICK_UNIT);
+        yAxis.setTickUnit(Y_AXIS_TICK_UNIT);
         return new LineChart<>(xAxis, yAxis);
     }
 
@@ -108,7 +112,7 @@ public class TournamentEvolutionLineChart extends Application {
         return players;
     }
 
-    private void saveLineChartSceneAsPng(Scene scene) throws IOException {
+    private void saveLineChartSceneAsPng(final Scene scene) throws IOException {
         WritableImage image = scene.snapshot(null);
         File pngFile = createPngFile();
         ImageIO.write(SwingFXUtils.fromFXImage(image, null), "png", pngFile);

@@ -9,7 +9,7 @@ import static factory.StrategyWriter.populateNewFileWithStrategyData;
 
 public class ChromosomeStrategyFactory {
 
-    public static void main(String[] args) throws IOException, ParseException {
+    public static void main(final String[] args) throws IOException, ParseException {
 
         GeneticAlgorithm geneticAlgorithm = new GeneticAlgorithm()
                 .withCrossoverProbability(0.3)

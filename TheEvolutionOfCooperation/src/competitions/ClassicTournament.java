@@ -13,7 +13,7 @@ import java.util.List;
  */
 public class ClassicTournament extends Tournament {
 
-    public ClassicTournament(List<Player> players, long numberOfRoundsPerMatch) {
+    public ClassicTournament(final List<Player> players, final long numberOfRoundsPerMatch) {
         super(players, numberOfRoundsPerMatch);
     }
 

@@ -16,7 +16,7 @@ class Match {
     private Player secondPlayer;
     private long numberOfRounds;
 
-    Match(Player firstPlayer, Player secondPlayer, long numberOfRounds) {
+    Match(final Player firstPlayer, final Player secondPlayer, final long numberOfRounds) {
         this.firstPlayer = firstPlayer;
         this.secondPlayer = secondPlayer;
         this.numberOfRounds = numberOfRounds;
@@ -47,15 +47,16 @@ class Match {
             updateBothPlayersScore(actionOfFirstPlayer, actionOfSecondPlayer);
 
         }
-//        System.out.println();
     }
 
     /**
      * Based on the moves chosen in the current round, the players will be rewarded with a score.
      * There are 4 possible combinations for the moves chosen by the players and each combination grants them
      * a corresponding payoff.
+     * @param actionOfFirstPlayer is the move made in the current round by one of the players
+     * @param actionOfSecondPlayer is the move made in the current round by the other
      */
-    private void updateBothPlayersScore(Action actionOfFirstPlayer, Action actionOfSecondPlayer) {
+    private void updateBothPlayersScore(final Action actionOfFirstPlayer, final Action actionOfSecondPlayer) {
         if (actionOfFirstPlayer == Action.Cooperate && actionOfSecondPlayer == Action.Cooperate) {
             firstPlayer.updateScore(Payoff.Reward.getScoreValue());
             secondPlayer.updateScore(Payoff.Reward.getScoreValue());
@@ -69,13 +70,6 @@ class Match {
             firstPlayer.updateScore(Payoff.Punishment.getScoreValue());
             secondPlayer.updateScore(Payoff.Punishment.getScoreValue());
         }
-//        System.out.println("First player, " + firstPlayer.getPlayerType() + ": " + firstPlayer.getScore() + " " + actionOfFirstPlayer);
-//        System.out.println("Second player, " + secondPlayer.getPlayerType() + ": " + secondPlayer.getScore() + " " + actionOfSecondPlayer);
     }
-
-//    public static void main(String[] args) {
-//        Match match = new Match(new AlwaysDefectPlayer(), new TitForTatPlayer(), 10);
-//        match.playMatch();
-//    }
 
 }

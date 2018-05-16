@@ -12,7 +12,7 @@ import java.util.List;
 
 public class PopulationConfigReader {
 
-    public static List<Player> getPlayersFromConfigFile(String filePath) throws IOException, ParseException {
+    public static List<Player> getPlayersFromConfigFile(final String filePath) throws IOException, ParseException {
         JSONObject jsonObject = getJsonObjectFromConfigFile(filePath);
         List<Player> players = new ArrayList<>();
         for (Object playerType : jsonObject.keySet()) {
@@ -24,7 +24,7 @@ public class PopulationConfigReader {
         return players;
     }
 
-    static JSONObject getJsonObjectFromConfigFile(String filePath) throws IOException, ParseException {
+    static JSONObject getJsonObjectFromConfigFile(final String filePath) throws IOException, ParseException {
         JSONParser parser = new JSONParser();
         Object parsingResultObject = parser.parse(new FileReader(filePath));
         return (JSONObject) parsingResultObject;
