@@ -28,24 +28,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Tournament.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/competitions/Tournament.java">
+      <file leaf-file-name="Match.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/competitions/Match.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="39" column="31" lean-forward="false" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="31" />
-              <folding>
-                <element signature="e#1623#1624#0" expanded="true" />
-                <element signature="e#1670#1671#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="748">
+              <caret line="83" column="0" lean-forward="true" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Match.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/competitions/Match.java">
+      <file leaf-file-name="TournamentWithElimination.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/competitions/TournamentWithElimination.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="466">
-              <caret line="53" column="55" lean-forward="false" selection-start-line="53" selection-start-column="55" selection-end-line="53" selection-end-column="55" />
+            <state relative-caret-position="232">
+              <caret line="140" column="109" lean-forward="false" selection-start-line="140" selection-start-column="109" selection-end-line="140" selection-end-column="109" />
               <folding />
             </state>
           </provider>
@@ -61,31 +58,51 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Action.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/player/Action.java">
+      <file leaf-file-name="PavlovPlayer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/strategies/standard/PavlovPlayer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+            <state relative-caret-position="144">
+              <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="training.config.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/factory/training.config.json">
+      <file leaf-file-name="RandomPlayer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/strategies/standard/RandomPlayer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="3" column="23" lean-forward="false" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+            <state relative-caret-position="216">
+              <caret line="18" column="35" lean-forward="true" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TournamentWithElimination.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/competitions/TournamentWithElimination.java">
+      <file leaf-file-name="SuspiciousTitForTatPlayer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/strategies/standard/SuspiciousTitForTatPlayer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1602">
-              <caret line="73" column="51" lean-forward="false" selection-start-line="73" selection-start-column="12" selection-end-line="73" selection-end-column="51" />
+            <state relative-caret-position="144">
+              <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TitForTatPlayer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/strategies/standard/TitForTatPlayer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TitForTwoTatsPlayer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/strategies/standard/TitForTwoTatsPlayer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -101,37 +118,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AlwaysCooperatePlayer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/strategies/standard/AlwaysCooperatePlayer.java">
+      <file leaf-file-name="AlwaysDefectPlayer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/strategies/standard/AlwaysDefectPlayer.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="126">
               <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GrudgerPlayerTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tst/strategies/standard/GrudgerPlayerTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TournamentEvolutionLineChart.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/charts/TournamentEvolutionLineChart.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-418">
-              <caret line="85" column="28" lean-forward="true" selection-start-line="85" selection-start-column="8" selection-end-line="85" selection-end-column="28" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1235#1236#0" expanded="true" />
-                <element signature="e#1263#1264#0" expanded="true" />
-                <element signature="e#1600#1630#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -165,9 +157,9 @@
       <find>1d057a39</find>
       <find>408</find>
       <find>GrudgerPlayer@4501b7af</find>
-      <find>numberOfRounds</find>
       <find>GrudgerPlayer</find>
       <find>Grudger</find>
+      <find>numberOfRounds</find>
     </findStrings>
   </component>
   <component name="GradleLocalSettings">
@@ -224,11 +216,11 @@
         <option value="$PROJECT_DIR$/src/factory/FilePath.java" />
         <option value="$PROJECT_DIR$/src/factory/PopulationConfigReader.java" />
         <option value="$PROJECT_DIR$/src/charts/TournamentEvolutionLineChart.java" />
-        <option value="$PROJECT_DIR$/src/competitions/TournamentWithElimination.java" />
         <option value="$PROJECT_DIR$/src/competitions/Tournament.java" />
         <option value="$PROJECT_DIR$/src/player/Player.java" />
-        <option value="$PROJECT_DIR$/src/competitions/Match.java" />
         <option value="$PROJECT_DIR$/src/strategies/standard/GrudgerPlayer.java" />
+        <option value="$PROJECT_DIR$/src/competitions/Match.java" />
+        <option value="$PROJECT_DIR$/src/competitions/TournamentWithElimination.java" />
       </list>
     </option>
   </component>
@@ -301,27 +293,14 @@
               <item name="TheEvolutionOfCooperation" type="b2602c69:ProjectViewProjectNode" />
               <item name="TheEvolutionOfCooperation" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TheEvolutionOfCooperation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TheEvolutionOfCooperation" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="from.epoch.1524592982132" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TheEvolutionOfCooperation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TheEvolutionOfCooperation" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="from.epoch.1524593015820" type="462c0819:PsiDirectoryNode" />
+              <item name="strategies" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TheEvolutionOfCooperation" type="b2602c69:ProjectViewProjectNode" />
               <item name="TheEvolutionOfCooperation" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="strategies" type="462c0819:PsiDirectoryNode" />
+              <item name="genetic" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TheEvolutionOfCooperation" type="b2602c69:ProjectViewProjectNode" />
@@ -681,7 +660,7 @@
       <workItem from="1526467905853" duration="519000" />
       <workItem from="1526472958824" duration="4588000" />
       <workItem from="1526648431021" duration="603000" />
-      <workItem from="1527665307890" duration="14367000" />
+      <workItem from="1527665307890" duration="16424000" />
     </task>
     <servers />
   </component>
@@ -718,7 +697,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="170322000" />
+    <option name="totallyTimeSpent" value="172379000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="63" y="-4" width="1303" height="772" extended-state="6" />
@@ -739,7 +718,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20843278" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25775656" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4870968" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -776,12 +755,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/resources/chromosome/strategies/strategy_1524571076141.json" />
-    <entry file="file://$PROJECT_DIR$/src/resources/chromosome/strategies/strategy_1524571165254.json" />
-    <entry file="file://$PROJECT_DIR$/src/resources/chromosome/strategies/strategy_1524571499103.json" />
-    <entry file="file://$PROJECT_DIR$/src/resources/chromosome/strategies/strategy_1524575483868.json" />
-    <entry file="file://$PROJECT_DIR$/src/resources/chromosome/strategies/strategy_1524575530464.json" />
-    <entry file="file://$PROJECT_DIR$/src/factory/chromosome.under.test.txt" />
     <entry file="file://$PROJECT_DIR$/src/strategies/genetic/NextActionHelper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -912,7 +885,7 @@
         <state relative-caret-position="252">
           <caret line="14" column="31" lean-forward="false" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -938,7 +911,7 @@
         <state relative-caret-position="162">
           <caret line="24" column="4" lean-forward="true" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
           <folding>
-            <element signature="e#696#726#0" expanded="true" />
+            <element signature="e#696#726#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1018,18 +991,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/competitions/Match.java">
+    <entry file="file://$PROJECT_DIR$/src/factory/training.config.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="466">
-          <caret line="53" column="55" lean-forward="false" selection-start-line="53" selection-start-column="55" selection-end-line="53" selection-end-column="55" />
+        <state relative-caret-position="54">
+          <caret line="3" column="23" lean-forward="false" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/player/Player.java">
+    <entry file="file://$PROJECT_DIR$/src/strategies/standard/SuspiciousTitForTatPlayer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="98" column="34" lean-forward="false" selection-start-line="98" selection-start-column="13" selection-end-line="98" selection-end-column="34" />
+        <state relative-caret-position="144">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/strategies/standard/TitForTatPlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/strategies/standard/TitForTwoTatsPlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1042,18 +1031,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/factory/training.config.json">
+    <entry file="file://$PROJECT_DIR$/src/strategies/standard/AlwaysDefectPlayer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="23" lean-forward="false" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+        <state relative-caret-position="126">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/strategies/standard/PavlovPlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/strategies/standard/RandomPlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="18" column="35" lean-forward="true" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/player/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="98" column="34" lean-forward="false" selection-start-line="98" selection-start-column="13" selection-end-line="98" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/competitions/Match.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="83" column="0" lean-forward="true" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/competitions/TournamentWithElimination.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1602">
-          <caret line="73" column="51" lean-forward="false" selection-start-line="73" selection-start-column="12" selection-end-line="73" selection-end-column="51" />
+        <state relative-caret-position="232">
+          <caret line="140" column="109" lean-forward="false" selection-start-line="140" selection-start-column="109" selection-end-line="140" selection-end-column="109" />
           <folding />
         </state>
       </provider>

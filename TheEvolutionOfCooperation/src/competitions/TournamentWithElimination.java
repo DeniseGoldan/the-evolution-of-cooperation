@@ -11,14 +11,11 @@ import strategies.standard.GrudgerPlayer;
 import strategies.standard.TitForTatPlayer;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class TournamentWithElimination extends Tournament {
 
-    private final int MAX_ROUNDS = 1;
+    private final int MAX_ROUNDS = 2;
     private final Logger logger = LoggerFactory.getLogger(TournamentWithElimination.class);
     private int numberOfPlayersToEliminate;
 
@@ -37,15 +34,15 @@ public class TournamentWithElimination extends Tournament {
             players.add(new TitForTatPlayer());
         }
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 2; i++) {
             players.add(new AlwaysDefectPlayer());
         }
 
-        for (int i = 0; i < 2; i++) {
+        for (int i = 0; i < 8; i++) {
             players.add(new GrudgerPlayer());
         }
 
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 5; i++) {
             players.add(new AlwaysCooperatePlayer());
         }
 
@@ -137,8 +134,11 @@ public class TournamentWithElimination extends Tournament {
     /**
      * Eliminate worst percentOfPlayersToEliminate players and complete the population by
      * duplicating the best percentOfPlayersToEliminate players.
+     * The list of players is shuffled so that in case you have to pick from 2 players
+     * that have the same score, you make a random choice.
      */
     private void reshapePopulation() throws IOException, ParseException {
+        Collections.shuffle(players); // in order to pick randomly one out of two players with the same score
         players.sort((o1, o2) -> (-1) * Long.compare(o1.getScore(), o2.getScore()));
         List<Player> newGeneration = new ArrayList<>();
         for (int i = 0; i < players.size() - numberOfPlayersToEliminate; i++) {

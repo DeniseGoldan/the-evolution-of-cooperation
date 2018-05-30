@@ -1,7 +1,5 @@
 package competitions;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import player.Action;
 import player.Payoff;
 import player.Player;
@@ -50,8 +48,6 @@ class Match {
 
         }
 
-        firstPlayer.resetPersonalAndOpponentHistory();
-        secondPlayer.resetPersonalAndOpponentHistory();
     }
 
     /**
@@ -76,15 +72,14 @@ class Match {
             firstPlayer.updateScore(Payoff.Punishment.getScoreValue());
             secondPlayer.updateScore(Payoff.Punishment.getScoreValue());
         }
-        logger.info(" ");
-        logger.info("First player, " + firstPlayer + ": " + firstPlayer.getScore() + " " + actionOfFirstPlayer);
-        logger.info(firstPlayer.getActionHistory().toString());
-        logger.info("Second player, " + secondPlayer + ": " + secondPlayer.getScore() + " " + actionOfSecondPlayer);
-        logger.info(secondPlayer.getActionHistory().toString());
+//        logger.info(" ");
+//        logger.info("First player, " + firstPlayer + ": " + firstPlayer.getScore() + " " + actionOfFirstPlayer);
+//        logger.info(firstPlayer.getActionHistory().toString());
+//        logger.info("Second player, " + secondPlayer + ": " + secondPlayer.getScore() + " " + actionOfSecondPlayer);
+//        logger.info(secondPlayer.getActionHistory().toString());
 
     }
 
-    private final Logger logger = LoggerFactory.getLogger(Match.class);
-
+//    private final Logger logger = LoggerFactory.getLogger(Match.class);
 
 }
