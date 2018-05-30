@@ -32,7 +32,11 @@ public abstract class Tournament {
         for (int firstPlayerIndex = 0; firstPlayerIndex < numberOfPlayers - 1; firstPlayerIndex++) {
             for (int secondPlayerIndex = firstPlayerIndex + 1; secondPlayerIndex < numberOfPlayers; secondPlayerIndex++) {
 
-                Match match = new Match(players.get(firstPlayerIndex), players.get(secondPlayerIndex), numberOfRounds);
+                Match match = new Match(
+                        players.get(firstPlayerIndex),
+                        players.get(secondPlayerIndex),
+                        numberOfRounds
+                );
                 match.playMatch();
                 numberOfMatchesPlayed++;
 

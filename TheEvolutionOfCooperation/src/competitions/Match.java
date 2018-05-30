@@ -1,5 +1,7 @@
 package competitions;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import player.Action;
 import player.Payoff;
 import player.Player;
@@ -47,13 +49,17 @@ class Match {
             updateBothPlayersScore(actionOfFirstPlayer, actionOfSecondPlayer);
 
         }
+
+        firstPlayer.resetPersonalAndOpponentHistory();
+        secondPlayer.resetPersonalAndOpponentHistory();
     }
 
     /**
      * Based on the moves chosen in the current round, the players will be rewarded with a score.
      * There are 4 possible combinations for the moves chosen by the players and each combination grants them
      * a corresponding payoff.
-     * @param actionOfFirstPlayer is the move made in the current round by one of the players
+     *
+     * @param actionOfFirstPlayer  is the move made in the current round by one of the players
      * @param actionOfSecondPlayer is the move made in the current round by the other
      */
     private void updateBothPlayersScore(final Action actionOfFirstPlayer, final Action actionOfSecondPlayer) {
@@ -70,6 +76,15 @@ class Match {
             firstPlayer.updateScore(Payoff.Punishment.getScoreValue());
             secondPlayer.updateScore(Payoff.Punishment.getScoreValue());
         }
+        logger.info(" ");
+        logger.info("First player, " + firstPlayer + ": " + firstPlayer.getScore() + " " + actionOfFirstPlayer);
+        logger.info(firstPlayer.getActionHistory().toString());
+        logger.info("Second player, " + secondPlayer + ": " + secondPlayer.getScore() + " " + actionOfSecondPlayer);
+        logger.info(secondPlayer.getActionHistory().toString());
+
     }
+
+    private final Logger logger = LoggerFactory.getLogger(Match.class);
+
 
 }

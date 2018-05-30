@@ -26,17 +26,13 @@ public abstract class Player {
 
     public abstract String getPlayerType();
 
-    public void updateScore(long valueToBeAdded) {
-        this.score += valueToBeAdded;
-    }
+    public void updateScore(long valueToBeAdded) { this.score += valueToBeAdded; }
 
     public void resetScore() { this.score = 0; }
 
-    public long getScore() {
-        return this.score;
-    }
+    public long getScore() { return this.score; }
 
-    protected List<Action> getActionHistory() {
+    public List<Action> getActionHistory() {
         ArrayList<Action> copy = new ArrayList<>();
         if (!actionHistory.isEmpty()){
             copy.addAll(actionHistory);
@@ -52,13 +48,9 @@ public abstract class Player {
         return copy;
     }
 
-    public void registerActionToHistory(Action action) {
-        actionHistory.add(action);
-    }
+    public void registerActionToHistory(Action action) { actionHistory.add(action); }
 
-    public void registerOpponentActionToHistory(Action action) {
-        opponentActionHistory.add(action);
-    }
+    public void registerOpponentActionToHistory(Action action) { opponentActionHistory.add(action); }
 
     public Action getActionFromLastMatch() {
         if (!actionHistory.isEmpty()) {
@@ -103,12 +95,12 @@ public abstract class Player {
     }
 
     public void resetPersonalAndOpponentHistory() {
-        this.actionHistory = new ArrayList<>();
-        this.opponentActionHistory = new ArrayList<>();
+        this.actionHistory.clear();
+        this.opponentActionHistory.clear();
     }
 
     public static Player getNewPlayerOfType(String type) throws IOException, ParseException {
-        Player playerToAdd = null;
+        Player playerToAdd;
         switch(type){
             case "Tit-For-Tat": playerToAdd = new TitForTatPlayer(); break;
             case "Always Defect": playerToAdd = new AlwaysDefectPlayer(); break;
