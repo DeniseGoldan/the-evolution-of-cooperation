@@ -45,7 +45,7 @@ public class StrategyWriter {
         jsonObject.put(StrategyJsonColumnName.CrossoverProbability.getColumnName(), geneticAlgorithm.getCrossoverProbability());
         jsonObject.put(StrategyJsonColumnName.MutationProbability.getColumnName(), geneticAlgorithm.getMutationProbability());
         jsonObject.put(StrategyJsonColumnName.NumberOfRoundsPerMatch.getColumnName(), geneticAlgorithm.getNumberOfRoundsPerMatch());
-        jsonObject.put(StrategyJsonColumnName.FitnessScore.getColumnName(), geneticAlgorithm.getBestChromosomeFitnessScore());
+        jsonObject.put(StrategyJsonColumnName.MeanFitnessScore.getColumnName(), geneticAlgorithm.getBestChromosomeMeanFitnessScore());
         jsonObject.put(StrategyJsonColumnName.TrainingPopulationConfiguration.getColumnName(), PopulationConfigReader.getJsonObjectFromConfigFile(FilePath.TrainingPhase.getPath()));
     }
 

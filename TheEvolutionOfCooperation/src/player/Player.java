@@ -22,19 +22,67 @@ public abstract class Player {
         this.opponentActionHistory = new ArrayList<>();
     }
 
+    public static Player getNewPlayerOfType(String type) throws IOException, ParseException {
+        Player playerToAdd;
+        switch (type) {
+            case "Tit-For-Tat":
+                playerToAdd = new TitForTatPlayer();
+                break;
+            case "Always Defect":
+                playerToAdd = new AlwaysDefectPlayer();
+                break;
+            case "Always Cooperate":
+                playerToAdd = new AlwaysCooperatePlayer();
+                break;
+            case "Grudger":
+                playerToAdd = new GrudgerPlayer();
+                break;
+            case "Suspicious Tit-For-Tat":
+                playerToAdd = new SuspiciousTitForTatPlayer();
+                break;
+            case "Tit-For-Two-Tats":
+                playerToAdd = new TitForTwoTatsPlayer();
+                break;
+            case "Random":
+                playerToAdd = new RandomPlayer();
+                break;
+            case "Pavlov":
+                playerToAdd = new PavlovPlayer();
+                break;
+            case "Chromosome":
+                playerToAdd = StrategyReader
+                        .getChromosomeWithStrategyFromJsonFile(
+                                CHROMOSOME_UNDER_TEST_FILE_PATH
+                        );
+                break;
+
+            default:
+                throw new RuntimeException(
+                        "This player type, " + type + ", is not registered!"
+                );
+        }
+        return playerToAdd;
+    }
+
     public abstract Action chooseAction(long iteration);
 
     public abstract String getPlayerType();
 
-    public void updateScore(long valueToBeAdded) { this.score += valueToBeAdded; }
+    public void updateScore(long valueToBeAdded) {
+        this.score += valueToBeAdded;
+    }
 
-    public void resetScore() { this.score = 0; }
+    public void resetScore() {
+        this.score = 0;
+    }
 
-    public long getScore() { return this.score; }
+    public long getScore() {
+        return this.score;
+    }
 
-    public List<Action> getActionHistory() {
+    protected List<Action> getActionHistory() {
         ArrayList<Action> copy = new ArrayList<>();
-        if (!actionHistory.isEmpty()){
+        if (!actionHistory.isEmpty()) {
             copy.addAll(actionHistory);
         }
         return copy;
@@ -42,21 +90,24 @@ public abstract class Player {
 
     protected List<Action> getOpponentActionHistory() {
         ArrayList<Action> copy = new ArrayList<>();
-        if (!opponentActionHistory.isEmpty()){
+        if (!opponentActionHistory.isEmpty()) {
             copy.addAll(opponentActionHistory);
         }
         return copy;
     }
 
-    public void registerActionToHistory(Action action) { actionHistory.add(action); }
+    public void registerActionToHistory(Action action) {
+        actionHistory.add(action);
+    }
 
-    public void registerOpponentActionToHistory(Action action) { opponentActionHistory.add(action); }
+    public void registerOpponentActionToHistory(Action action) {
+        opponentActionHistory.add(action);
+    }
 
     public Action getActionFromLastMatch() {
         if (!actionHistory.isEmpty()) {
             return actionHistory.get(actionHistory.size() - 1);
-        }
-        else {
+        } else {
             return null;
         }
     }
@@ -64,8 +115,7 @@ public abstract class Player {
     protected Action getOpponentActionFromLastRound() {
         if (!opponentActionHistory.isEmpty()) {
             return opponentActionHistory.get(opponentActionHistory.size() - 1);
-        }
-        else {
+        } else {
             return null;
         }
     }
@@ -77,16 +127,15 @@ public abstract class Player {
             historySample.add(opponentActionHistory.get(historySize - 2));
             historySample.add(opponentActionHistory.get(historySize - 1));
             return historySample;
-        }
-        else {
+        } else {
             return new ArrayList<>();
         }
     }
 
     protected boolean hasTheOpponentDefectedLastTwoMatches() {
         List<Action> lastTWoActionsOfOpponent = getOpponentActionsFromLastTwoRounds();
-        if(lastTWoActionsOfOpponent != null && !lastTWoActionsOfOpponent.isEmpty()) {
-            if(lastTWoActionsOfOpponent.get(0) == lastTWoActionsOfOpponent.get(1)
+        if (lastTWoActionsOfOpponent != null && !lastTWoActionsOfOpponent.isEmpty()) {
+            if (lastTWoActionsOfOpponent.get(0) == lastTWoActionsOfOpponent.get(1)
                     && lastTWoActionsOfOpponent.get(0).equals(Action.Defect)) {
                 return true;
             }
@@ -97,22 +146,6 @@ public abstract class Player {
     public void resetPersonalAndOpponentHistory() {
         this.actionHistory.clear();
         this.opponentActionHistory.clear();
-    }
-
-    public static Player getNewPlayerOfType(String type) throws IOException, ParseException {
-        Player playerToAdd;
-        switch(type){
-            case "Tit-For-Tat": playerToAdd = new TitForTatPlayer(); break;
-            case "Always Defect": playerToAdd = new AlwaysDefectPlayer(); break;
-            case "Always Cooperate": playerToAdd = new AlwaysCooperatePlayer(); break;
-            case "Grudger": playerToAdd = new GrudgerPlayer(); break;
-            case "Suspicious Tit-For-Tat": playerToAdd = new SuspiciousTitForTatPlayer(); break;
-            case "Tit-For-Two-Tats": playerToAdd = new TitForTwoTatsPlayer(); break;
-            case "Random": playerToAdd = new RandomPlayer(); break;
-            case "Chromosome": playerToAdd = StrategyReader.getChromosomeWithStrategyFromJsonFile(CHROMOSOME_UNDER_TEST_FILE_PATH); break;
-            default: throw new RuntimeException("This player type is not registered!");
-        }
-        return playerToAdd;
     }
 
 }

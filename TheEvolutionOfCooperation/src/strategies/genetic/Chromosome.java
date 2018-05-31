@@ -24,9 +24,7 @@ public class Chromosome extends Player {
         initializeGenesRandomly();
     }
 
-    Chromosome(Chromosome chromosome) {
-        setGenes(chromosome.getGenes());
-    }
+    Chromosome(Chromosome chromosome) { setGenes(chromosome.getGenes()); }
 
     @Override
     public Action chooseAction(long roundNumber) {
@@ -75,9 +73,7 @@ public class Chromosome extends Player {
     }
 
     @Override
-    public String getPlayerType() {
-        return "Chromosome";
-    }
+    public String getPlayerType() { return "Chromosome"; }
 
     private void initializeGenesRandomly() {
         for (int geneIndex = 0; geneIndex < NUMBER_OF_GENES; geneIndex ++) {

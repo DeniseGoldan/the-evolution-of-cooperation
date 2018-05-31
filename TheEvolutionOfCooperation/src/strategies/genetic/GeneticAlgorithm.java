@@ -18,19 +18,21 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class GeneticAlgorithm {
 
+    private final Logger logger = LoggerFactory.getLogger(GeneticAlgorithm.class);
     private int populationSize = 14;
     private int numberOfGenerations = 15;
     private double crossoverProbability = 0.3;
     private double mutationProbability = 0.25;
     private List<Chromosome> population = new ArrayList<>();
     private Chromosome bestChromosome = new Chromosome();
-    private long bestChromosomeFitnessScore = 0;
+    private double bestChromosomeMeanFitnessScore = 0;
     private long numberOfRoundsPerMatch = 10;
-    private final Logger logger = LoggerFactory.getLogger(GeneticAlgorithm.class);
+
+    private static final int NUMBER_OF_TRIES = 100;
 
     public static void main(String[] args) throws IOException, ParseException {
-        GeneticAlgorithm a = new GeneticAlgorithm();
-        a.buildStrategy().printGenes();
+        GeneticAlgorithm algorithm = new GeneticAlgorithm();
+        algorithm.buildStrategy().printGenes();
     }
 
     public Chromosome buildStrategy() throws IOException, ParseException {
@@ -39,14 +41,23 @@ public class GeneticAlgorithm {
         return bestChromosome;
     }
 
+    /**
+     * Given a configuration, restart the search for the best chromosome NUMBER_OF_TRIES times
+     */
     private void runGeneticAlgorithm() throws IOException, ParseException {
-        initializePopulationRandomly();
-        for (int generation = 0; generation < numberOfGenerations; generation++) {
-            logger.info("Currently changing genes from generation number " + generation + ".");
-            population = rouletteWheelPool();
-            applyCrossover();
-            applyMutation();
+
+        for (int tryIndex = 0; tryIndex < NUMBER_OF_TRIES; tryIndex++) {
+
+            initializePopulationRandomly();
+            for (int generation = 0; generation < numberOfGenerations; generation++) {
+                logger.info("Currently changing genes from generation number " + generation + ".");
+                population = rouletteWheelPool();
+                applyCrossover();
+                applyMutation();
+            }
+
         }
+
     }
 
     private void applyMutation() {
@@ -187,9 +198,9 @@ public class GeneticAlgorithm {
 
         List<Player> enemies = PopulationConfigReader.getPlayersFromConfigFile(FilePath.TrainingPhase.getPath());
 
-        System.out.println(enemies.size());
-
         for (Player currentChromosome : population) {
+
+            //logger.info("Preparing classic tournament for the current chromosome...");
 
             List<Player> classicTournamentPlayers = new ArrayList<>();
             classicTournamentPlayers.addAll(enemies);
@@ -202,20 +213,26 @@ public class GeneticAlgorithm {
             );
             tournament.playTournament();
 
-            if (currentChromosome.getScore() > bestChromosomeFitnessScore) {
+            //logger.info("Finished classic tournament for current chromosome...");
+
+            if (currentChromosome.getScore() > bestChromosomeMeanFitnessScore * numberOfRoundsPerMatch * enemies.size()) {
                 bestChromosome = (Chromosome) currentChromosome;
-                bestChromosomeFitnessScore = currentChromosome.getScore();
-                logger.info("Found a better chromosome, with a score of " + bestChromosomeFitnessScore + ".");
+                bestChromosomeMeanFitnessScore =
+                        currentChromosome.getScore() * 1.0
+                        /numberOfRoundsPerMatch
+                        /enemies.size();
+                logger.info("Found a better chromosome, with a score of "
+                        + bestChromosomeMeanFitnessScore
+                        + "...");
             }
 
             fitnessList.add(currentChromosome.getScore());
 
-            System.out.println("player size:" + classicTournamentPlayers.size());
-            for (Player someone:classicTournamentPlayers) {
-                System.out.println(someone.getPlayerType() +" " + someone.getScore());
-            }
-
-            System.out.println("\n");
+//            logger.info("----- Classic tournament results -----");
+//            for (Player player : classicTournamentPlayers) {
+//                logger.info(" " + player.getScore() + " " + player.getPlayerType());
+//            }
+//            logger.info("");
         }
         return fitnessList;
     }
@@ -245,16 +262,28 @@ public class GeneticAlgorithm {
         return this;
     }
 
-    public int getPopulationSize() { return populationSize; }
+    public int getPopulationSize() {
+        return populationSize;
+    }
 
-    public double getNumberOfGenerations() { return numberOfGenerations; }
+    public int getNumberOfGenerations() {
+        return numberOfGenerations;
+    }
 
-    public double getCrossoverProbability() { return crossoverProbability; }
+    public double getCrossoverProbability() {
+        return crossoverProbability;
+    }
 
-    public double getMutationProbability() { return mutationProbability; }
+    public double getMutationProbability() {
+        return mutationProbability;
+    }
 
-    public long getBestChromosomeFitnessScore() { return bestChromosomeFitnessScore; }
+    public double getBestChromosomeMeanFitnessScore() {
+        return bestChromosomeMeanFitnessScore;
+    }
 
-    public long getNumberOfRoundsPerMatch() { return numberOfRoundsPerMatch; }
+    public long getNumberOfRoundsPerMatch() {
+        return numberOfRoundsPerMatch;
+    }
 
 }

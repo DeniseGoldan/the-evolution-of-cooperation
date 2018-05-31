@@ -7,7 +7,7 @@ enum StrategyJsonColumnName {
     CrossoverProbability("crossover probability"),
     MutationProbability("mutation probability"),
     NumberOfRoundsPerMatch("number of rounds per match"),
-    FitnessScore("fitness score"),
+    MeanFitnessScore("mean of fitness score"),
     EncodedStrategy("encoded strategy"),
     TrainingPopulationConfiguration("players from the classic tournament");
 
