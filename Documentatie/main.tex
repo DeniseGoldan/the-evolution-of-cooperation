@@ -5,8 +5,21 @@
 \usepackage{booktabs}
 \usepackage{graphicx}
 \usepackage{float}
+\usepackage{listings, xcolor}	% pentru exemplificarea json-urilor
 
-\setlength{\parindent}{4em}
+\usepackage{indentfirst}
+\setlength{\parindent}{5em}
+\setlength{\parskip}{0.4em}
+
+\definecolor{background}{HTML}{EEEEEE}
+
+\lstset{
+	string=[s]{"}{"},
+	stringstyle=\color{blue},
+	comment=[l]{:},
+	commentstyle=\color{black},
+	backgroundcolor=\color{background}
+}								% configuratia jsonurilor exemplificate
 
 \renewcommand{\contentsname}{Cuprins}
 \renewcommand{\figurename}{Figura}

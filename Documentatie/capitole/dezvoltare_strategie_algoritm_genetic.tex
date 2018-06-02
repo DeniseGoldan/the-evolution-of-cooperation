@@ -1,6 +1,14 @@
-\section{Modelarea unui algoritm genetic pentru problema iterată a prizonierului}
+\section{Tehnologii folosite}
 
-\subsection{Reprezentarea soluției}
+Ca și limbaj de programare, am ales să implementez soluția problemei folosind limbajul \textbf{Java}, care are o suită performantă de biblioteci. 
+
+Pentru ca procesul de obținere a unei noi strategii să fie vizibil prin loguri, am apelat la biblioteca \textbf{SLF4J}\cite{slf4j}\footnote{Abrevierea provine de la Simple Logging Facade for Java.}. 
+
+Pentru partea de vizualizarea a datelor, pentru a vedea cum evoluează strategiile pe parcursul unui turneu cu eliminare, am apelat la biblioteca integrată \textbf{JavaFX}\cite{javaFX}. 
+
+Pentru manipulatea fișierelor json, am folosit biblioteca \textbf{json-simple}\cite{json-simple}.  
+
+\section{Reprezentarea soluției}
 
 În urma organizării celor două turnee, Axelrod a decis să cerceteze dezvoltarea unei strategii pentru problema iterata a prizonierului, folosindu-se de algoritmii genetici introduși de Holland. 
 
@@ -74,43 +82,48 @@ Ca și în  ipoteza în care jucătorii memorează doar istoricul ultimei runde,
 	
 \end{enumerate}
 
-\subsection{Dimensiunea spațiului de căutare}
+\section{Dimensiunea spațiului de căutare}
 
 Având 71 de poziții pe care le putem ocupa cu cele două caractere- \textbf{C} sau \textbf{T}-, putem genera $2^{71}$ șiruri de caractere distincte. Acest număr reprezintă numărul tuturor strategiilor pe care îl putem avea, în contextul în care cunoaștem istoricul ultimelor trei runde ale jocului.  
 
 Spațiul de căutare este, în concluzie, mult prea mare pentru a caută exhaustiv cea mai bună strategie.
 
-\subsection{Funcția de optimizat}
+\section{Funcția de optimizat}
 
 Axelrod a alcătuit un set de opt strategii cu care să concureze fiecare strategie a algoritmului genetic, în vederea calculării unei funcții de optimizat. Acest set de strategii nu include strategia \textbf{Tit-for-Tat}. Valoarea funcției de optimizat este dată de media scorurilor obținute în urma meciurilor jucate cu fiecare dintre ele opt strategii.
 
-\subsection {Parametrii algoritmului genetic}
+\section {Parametrii algoritmului genetic}
 
 Prin utilizarea unui algoritm genetic, pot obține o copie a celui mai bun individ din toate generațiile care au participat la antrenare. În alte cuvinte, acest cromozom conține strategia care a obținut cea mai bună valoare a funcției de optimizat. 
 
 Pentru crearea acestui individ, este nevoie de ajustarea mai multor parametri și opțiuni, dintre care menționez: rata mutației, rata încrucisării, tipul selecției populației \footnote{Populația diferă ușor de la generație la generație, selectandu-se doar anumiți indivizi și în anumite proporții}. Cromozomul are capacitatea de a-și formula următoarea mișcare bazându-se pe istoricul ultimelor trei runde. Din acest motiv, este important ca un meci să fie format din mai multe runde. Așadar, numărul de runde reprezintă și acesta un parametru pentru antrenarea cromozomilor. 
 
-\section {Elemente legate de implementarea solutiei}
+\section{Configurația unui algoritm genetic}
 
--- CUM AM IMPLEMENTAT EU ACEASTĂ PROBLEMA
+Numim \textbf{configurație a algorimului genetic} un cumul de perechi cheie-valoare, unde cheia reprezintă numele unui parametru, iar valoarea reprezintă valoarea pe care alegem să o atribuim parametrului.
 
-\subsection{Tehnologii folosite}
+Parametrii despre care discutăm sunt: dimensiunea populației de antrenare, numărul de generații, rata mutației, rata încrucișării, configurația populației de antrenament, numărul de runde jucate în fiecare meci\footnote{Pentru a calcula valoarea funcției de cost pentru un cromozom, acesta va participa într-un turneu clasic alături de o populație de antrenament, alcătuită din diverse strategii standard. Cromozomul va juca un meci format dintr-un număr de runde cu fiecare din membrii populației de antrenament. Valoarea funcției de cost va fi dată de scorul obținut la final de turneu și este calculată drept suma scoruruilor obținute de cromozom la fiecare meci.}.  
 
-Ca și limbaj de programare, am ales să implementez soluția problemei folosind limbajul \textbf{Java}\cite{java}, care are o suită performantă de biblioteci. 
- 
-Pentru ca procesul de obținere a unei noi strategii să fie vizibil prin loguri, am apelat la biblioteca \textbf{SLF4J}\cite{slf4j}\footnote{Abrevierea provine de la Simple Logging Facade for Java.}. 
- 
-Pentru partea de vizualizarea a datelor, pentru a vedea cum evoluează strategiile pe parcursul unui turneu cu eliminare, am apelat la biblioteca integrată \textbf{JavaFX}\cite{javaFX}. 
+\section{Populația de antrenament și de test}
 
-Pentru manipulatea fișierelor json, am folosit biblioteca \textbf{json-simple}\cite{json-simple}.  
+Avem nevoie de două fișiere de configurare pentru stabilirea populației de antrenament și de test. În cadrul proiectului, se regăsesc sub denumirea de \textbf{testing.config.json} și \textbf{training.config.json}. Fișierele pot fi ușor manipulate prin clase specializate în citirea și scrierea lor. În fiecare din aceste două fișiere se vor găsi numele unor strategii standard, alături de numărul de indivizi din acel tip de strategie. 
 
--- UȘURINȚA CU CARE SE POATE CREA O NOUĂ STRATEGIE
+Exemplul de mai jos conține definiția unei populații formate din câte un jucător din umatoarele strategii: \textbf{Always Cooperate}, \textbf{Always Defect}, \textbf{Grudger}, \textbf{Pavlov}, \textbf{Tit-For-Tat}, \textbf{Suspicious Tit-For-Tat}, \textbf{Tit-For-Two-Tats}\footnote{Pentru detalii despre tactica abordată de fiecare strategie, a se vedea secțiunea 4.2 Strategii analizate}.
 
--- UNIT TESTS
+Exemplu: 
 
-\subsection{Implementarea algoritmului genetic}
+\begin{lstlisting}
+	{
+		"Always Cooperate": 1,
+		"Always Defect": 1,
+		"Grudger": 1,
+		"Pavlov": 1,
+		"Tit-For-Tat": 1,
+		"Suspicious Tit-For-Tat": 1,
+		"Tit-For-Two-Tats": 1
+	}
+\end{lstlisting}
 
-Avem nevoie de 2 fișiere de configurare pentru stabilirea populației de antrenament și de test. În cadrul proiectului, se regăsesc sub denumirea de \textbf{testing.config.json} și \textbf{training.config.json}. Fișierele pot fi ușor manipulate prin clase specializate în citirea și scrierea lor.  
  
 Toate strategiile dezvoltate prin intermediul algoritmului genetic sunt salvate într-un director de resurse, în fișiere în format json, alături de datele relevante pentru dezvoltarea cromozomilor: 
 \begin{itemize}
@@ -124,7 +137,11 @@ Toate strategiile dezvoltate prin intermediul algoritmului genetic sunt salvate 
   	 \item[\textasteriskcentered] probabilitatea de mutație 
 \end{itemize} 
 
-Odată stabilită configurația parametrilor, se poate trece la inițializarea în mod aleator a cromozomilor și antrenarea lor.  
+Odată stabilite valorile parametrilor, se poate trece la inițializarea în mod aleator a cromozomilor și antrenarea lor. În final, vrem să obținem într-un fișier strategia cea mai bine adaptată la condițiile de antrenament. Procesul de inițializare și antrenare se repetă de un număr de ori pentru aceeasi configuratie a algoritmului genetic. Experimental, se poate observa că \textbf{restartarea algoritmului} poate duce la reținerea unor rezultate mai bune decât dacă am lăsa algoritmul să ruleze o singură dată.
+
+
+-- sa adaug poate o anexa care sa ateste acest lucru??  
+
 
 Timp de un număr de generații, cromozomii sunt supuși unor transformări: 
 \begin{itemize} 
@@ -133,19 +150,15 @@ Timp de un număr de generații, cromozomii sunt supuși unor transformări:
 	\item se aplică mutația 
 \end{itemize} 
 
-\subsubsection{Selectia}
-
 Procesul de selecție pe care am decis să îl implementez este selecția de tip ruletă \footnote{Engl. roulette wheel pool.}. Această selecție este un algoritm stocastic, în care indivizii sunt distribuiți pe niște segmente contigue. Lungimea segmentelor este direct proportională cu cât de bine este adaptat la mediu individul. Fiecare segment determină un interval. Se generează pe rând câte un număr aleator și este ales intervalul (care corespunde unui unic individ-practic se alege individul) la care aparține numărul. Individul selectat se adaugă în mulțimea ce va înlocui, la finalul selecției, generația actuală. Procesul seamănă cu învârtirea ruletei, unde fiecare felie a ruletei are mărimea direct proportională cu gradul de adecvare\footnote{Paragraf adaptat după Cursul de \textit{Tehnici de inteligentă computatională în electronică}, Prof.dr.ing. Gabriel Oltean, Universitatea Tehnică din Cluj-Napoca.}.  
 
---- DE ADAUGAT O IMAGINE   
+\includegraphics[
+	width=10cm,
+	height=6cm,
+	keepaspectratio
+]
+{imagini/roulette_wheel.png}\\
 
-\subsubsection{Incrucisarea si mutatia}
-
-
-\subsection {Limitările algoritmului genetic} -- poate ca urmare a turneelor sau ca urmare a mediei functiei fitness?...
+\section {Limitările algoritmului genetic} 
 
 - care sunt limitările unui algoritm genetic aplicat pe această problema?
-
--- schimbarea valorilor parametrilor
-
--- OBSERVAȚII CLARE OBȚINUTE ÎN URMĂ UNOR EXPERIMENTE legat de modul în care parametrii influențează calitatea soluțiilor

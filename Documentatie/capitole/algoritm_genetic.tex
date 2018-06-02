@@ -13,6 +13,8 @@ TODO: DE AFLAT CUM SE IMPLEMENTEAZA, TOTUSI, INVERSIUNEA \\
 	\end{flushright}
 \end{quote}
 
+\clearpage
+
 Algoritmii genetici au fost creați în încercarea de a imita procese specifice evoluției naturale, cum ar fi lupta pentru supraviețuire și moștenirea materialului genetic. Putem privi evoluția drept strategia abordată de speciile biologice pentru a căuta soluții cât mai potrivite, adaptate condițiilor schimbătoare, într-un număr foarte mare de posibilități. Această abordare poate fi utilizată în rezolvarea problemelor de optimizare, atunci când metodele clasice exhaustive nu se dovedesc eficiente. 
  
 Noțiunea de algoritm genetic nu este definită în mod riguros\cite{introduction_by_melanie_mitchell}, însă toate metodele ce poartă această denumire au în comun următoarele: populația este formată din cromozomi, selecţia este făcută pe baza rezultatelor funcției de optimizat, încrucișarea a doi \textit{cromozomi părinți} produce doi \textit{cromozomi copii}, mutația se aplică \textit{cromozomilor copii}. 
@@ -35,9 +37,32 @@ Noțiunea de algoritm genetic nu este definită în mod riguros\cite{introductio
 	 
 	 \item Încrucișarea combină genele a doi \textit{cromozomi părinți}, rezultând doi \textbf{moștenitori}. Există mai multe variante: cu un punct de tăiere, ales aleator (în care un moștenitor este alcătuit dintr-o porțiune de cromozom de la primul părinte și o porțiune de la al doilea), cu mai multe puncte de tăiere și uniformă (unde fiecare genă este selectată probabilist de la unul din cei 2 \textit{cromozomi părinți}). 
 	 
+	 \includegraphics[
+		 width=10cm,
+		 height=6cm,
+		 keepaspectratio
+	 ]
+	 {imagini/incrucisare.png}\\
+	 
 	 \item Mutația alterează gene alese arbitrar dintr-un cromozom. Numărul de gene afectate poate varia. 
+	 
+	 \includegraphics[
+		 width=10cm,
+		 height=6cm,
+		 keepaspectratio
+	 ]
+	 {imagini/mutatie.png}\\
 	
 \end{itemize}
+
+\section{Schema generala a unui algoritm genetic}
+
+\includegraphics[
+	width=10cm,
+	height=6cm,
+	keepaspectratio
+]
+{imagini/schema_algoritm_genetic.png}\\
 
 \section{Pseudocod}
 
@@ -54,8 +79,5 @@ cât timp nu s-a îndeplinit condiția de oprire
 Condiția de oprire poate fi atingerea unui număr de iterații stabilit inițial. De asemenea, se poate stabili ca algoritmul să se oprească atunci când nu se mai înregistrează îmbunătățiri în ceea ce privește calitatea soluțiilor furnizate.  
  
 Soluția returnată de un algoritm genetic reprezintă cel mai bun individ întâlnit în evoluția populației.  
-
-\hfill \break
-\hfill \break
 
 \clearpage
