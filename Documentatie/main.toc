@@ -2,7 +2,7 @@
 \contentsline {section}{\numberline {1}Dilema prizonierului}{7}
 \contentsline {section}{\numberline {2}Strategii pentru dilema prizonierului}{9}
 \contentsline {section}{\numberline {3}Problema iterat\IeC {\u a} a prizonierului}{10}
-\contentsline {section}{\numberline {4}Strategii pentru problema iterat\IeC {\u a} a prizonierului}{10}
+\contentsline {section}{\numberline {4}Strategii pentru problema iterat\IeC {\u a} a prizonierului}{11}
 \contentsline {subsection}{\numberline {4.1}Turneele lui Axelrod}{11}
 \contentsline {subsection}{\numberline {4.2}Strategii analizate}{12}
 \contentsline {chapter}{Algoritm genetic}{13}
