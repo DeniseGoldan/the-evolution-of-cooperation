@@ -4,8 +4,6 @@ Algorimii genetici\footnote{Adaptare după \textit{Genetic Algorithms: An Overvi
 
 Algoritmii genetici ai lui Holland sunt metode de a trece de la o populație de cromozomi (e.g., șiruri de biți care reprezintă soluții candidat pentu o problemă) la o nouă populație, prin folosirea selecției, alături de operatorii inspirați din genetică: încrucișare, mutație, inversiune. Cea din urmă este rar folosită în practică.
 
-TODO: DE AFLAT CUM SE IMPLEMENTEAZA, TOTUSI, INVERSIUNEA \\
-
 \begin{quote} 
 	\textit{Computer programs that "evolve" in ways that resemble natural selection can solve complex problems even their creators do not fully understand.}
 	\begin{flushright}
@@ -37,32 +35,46 @@ Noțiunea de algoritm genetic nu este definită în mod riguros\cite{introductio
 	 
 	 \item Încrucișarea combină genele a doi \textit{cromozomi părinți}, rezultând doi \textbf{moștenitori}. Există mai multe variante: cu un punct de tăiere, ales aleator (în care un moștenitor este alcătuit dintr-o porțiune de cromozom de la primul părinte și o porțiune de la al doilea), cu mai multe puncte de tăiere și uniformă (unde fiecare genă este selectată probabilist de la unul din cei 2 \textit{cromozomi părinți}). 
 	 
-	 \includegraphics[
-		 width=10cm,
-		 height=6cm,
-		 keepaspectratio
-	 ]
-	 {imagini/incrucisare.png}\\
+		\begin{figure}[H]
+		 	\centering
+		 	\includegraphics[
+			 	width=10cm,
+			 	height=6cm,
+			 	keepaspectratio
+		 	]{imagini/incrucisare.png}\\
+		 	\caption{\textit{Exemplu de încrucișare cu un singur punct de tăiere. Punctul de tăiere este marcat prin linia verticală punctată, între elementele de la indexul trei și patru din crmozomi.}}
+		 	\label{fig:incrucisare}
+		\end{figure}
 	 
 	 \item Mutația alterează gene alese arbitrar dintr-un cromozom. Numărul de gene afectate poate varia. 
 	 
-	 \includegraphics[
-		 width=10cm,
-		 height=6cm,
-		 keepaspectratio
-	 ]
-	 {imagini/mutatie.png}\\
-	
+		\begin{figure}[H]
+			\centering
+			\includegraphics[
+			width=10cm,
+			height=6cm,
+			keepaspectratio
+			]{imagini/mutatie.png}
+			\caption{\textit{Mutaţia are loc la poziţia cu indexul cinci din cromozomul părinte.}}
+			\label{fig:mutatie}
+		\end{figure}
+
+
 \end{itemize}
 
 \section{Schema generala a unui algoritm genetic}
 
-\includegraphics[
-	width=10cm,
-	height=6cm,
-	keepaspectratio
-]
-{imagini/schema_algoritm_genetic.png}\\
+\begin{figure}[H]
+	\centering
+	\includegraphics[
+		width=10cm,
+		height=6cm,
+		keepaspectratio
+	]{imagini/schema_algoritm_genetic.png}\\
+	\caption{\textit{ Schema prezintă componentele de bază ale unui algoritm genetic și legăturile dintre acestea.}}
+	\label{fig:schema_algoritm_genetic}
+\end{figure}
+
 \section{Pseudocod}
 
 \begin{verbatim}

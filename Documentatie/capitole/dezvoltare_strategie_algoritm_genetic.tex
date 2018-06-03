@@ -150,14 +150,34 @@ Timp de un număr de generații, cromozomii sunt supuși unor transformări:
 	\item se aplică mutația 
 \end{itemize} 
 
-Procesul de selecție pe care am decis să îl implementez este selecția de tip ruletă \footnote{Engl. roulette wheel pool.}. Această selecție este un algoritm stocastic, în care indivizii sunt distribuiți pe niște segmente contigue. Lungimea segmentelor este direct proportională cu cât de bine este adaptat la mediu individul. Fiecare segment determină un interval. Se generează pe rând câte un număr aleator și este ales intervalul (care corespunde unui unic individ-practic se alege individul) la care aparține numărul. Individul selectat se adaugă în mulțimea ce va înlocui, la finalul selecției, generația actuală. Procesul seamănă cu învârtirea ruletei, unde fiecare felie a ruletei are mărimea direct proportională cu gradul de adecvare\footnote{Paragraf adaptat după Cursul de \textit{Tehnici de inteligentă computatională în electronică}, Prof.dr.ing. Gabriel Oltean, Universitatea Tehnică din Cluj-Napoca.}.  
+Procesul de selecție pe care am decis să îl implementez este selecția de tip ruletă \footnote{Engl. roulette wheel pool.}. Această selecție este un algoritm stocastic, în care indivizii sunt distribuiți pe niște segmente contigue. Lungimea segmentelor este direct proportională cu cât de bine este adaptat la mediu individul. Fiecare segment determină un interval. Se generează pe rând câte un număr aleator și este ales intervalul (care corespunde unui unic individ-practic se alege individul) la care aparține numărul. Individul selectat se adaugă în mulțimea ce va înlocui, la finalul selecției, generația actuală. Procesul seamănă cu învârtirea ruletei, unde fiecare felie a ruletei are mărimea direct proportională cu gradul de adecvare\footnote{Paragraf adaptat după Cursul de \textit{Tehnici de inteligentă computatională în electronică}, Prof. dr.ing. Gabriel Oltean, Universitatea Tehnică din Cluj-Napoca \cite{curs_prof_gabriel_oltean_cluj}.}.  
 
-\includegraphics[
-	width=10cm,
-	height=6cm,
-	keepaspectratio
-]
-{imagini/roulette_wheel.png}\\
+\begin{figure}[H]
+	\centering
+	\includegraphics[	
+		width=14cm,
+		height=6cm,
+		keepaspectratio
+	]{imagini/probabilitati_selectie_ruleta.png}
+	\caption{\textit{Probabilități de selecție ale elementelor.}}
+	\label{fig:probabilitati_selectie_ruleta}
+\end{figure}
+		
+
+Figura \ref{fig:probabilitati_selectie_ruleta} reprezinta un exemplu de ruletă divizată în patru sectoare de arii proporționale cu probabilitățile de selecție\footnote{Adaptare după Cursul de \textit{Calcul neuronal și calcul evolutiv}, Prof. dr. Daniela Zaharie, Facultatea de Matematică si Informatică, Universitatea de Vest din Timişoara\cite{curs_daniela_zaharie}.}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[	
+		width=14cm,
+		height=6cm,
+		keepaspectratio
+	]{imagini/invartire_ruleta.png}
+	\caption{\textit{Rezultatul rotirii ruletei.}}
+	\label{fig:invartire_ruleta}
+\end{figure}
+
+Rezultatul din figura \ref{fig:invartire_ruleta} poate fi interpretat drept selectarea individului care corespunde categoriei etichetate cu verde (elementul numarul 4, ce a avut o probabilitate de selectie de 40\%).
 
 \section {Limitările algoritmului genetic} 
 

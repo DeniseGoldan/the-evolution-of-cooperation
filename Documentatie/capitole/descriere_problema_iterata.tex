@@ -1,10 +1,7 @@
 \section{Dilema prizonierului}
 
 Dilema prizonierului\footnote{Adaptare după \textit{Prisoner's Dilemma: Game Theory}, Merrill M. Flood, Melvin Dresher, Albert W. Tucker, Framing Device, Experimental Economics} reprezintă o problemă tratată în teoria jocurilor.
-\\
-\\
-TODO: UN PARAGRAF DESPRE IMPLICATII IN ALTE DOMENII \\
-\\
+
 A fost formulată în anul 1950 de către Merrill Flood și Melvin Dresher, angajați ai companiei RAND Corporation\footnote{https://www.rand.org/}. Denumirea- dilema prizonierului- este meritul lui Albert W. Tucker, de la Universitatea Princeton, care a formalizat jocul și a introdus noțiunea de răsplată (engl. payoff).
  
 Enunțul clasic al problemei este prezentat în paragraful următor: 
@@ -13,14 +10,17 @@ Enunțul clasic al problemei este prezentat în paragraful următor:
 	\textit{Doi suspecți sunt arestați de către poliție. Polițiștii nu au suficiente dovezi pentru a condamna suspecții așa că îi duc în camere separate și le propun aceeași ofertă amândurora. Dacă unul dintre suspecți depune mărturie pentru urmărirea penală împotriva celuilalt suspect și celălalt tăinuiește faptele, cel care a trădat este eliberat și cel care a tăinuit primește o pedeapsă de 10 ani de închisoare. Dacă ambii suspecți nu mărturisesc, ambii ajung în pușcarie pentru jumătate de an. Dacă se trădează reciproc, fiecare primește o pedeapsă de 5 ani. Suspecții au de ales între a trăda și a tăinui faptele.}
 \end{quote}
 
-\begin{center}	
+
+\begin{figure}[H]
+	\centering
 	\includegraphics[
 		width=15cm,
 		height=8cm,
 		keepaspectratio
-	]
-	{imagini/matrice.png}\\
-\end{center}
+	]{imagini/matrice.png}\\
+	\caption{\textit{Prezentare a celor patru posibilități descrise în scenariul anterior.}}
+	\label{fig:matrice_prezentare_scenarii}
+\end{figure}
 
 Putem formaliza aceast paragraf prin următoarea matrice a recompenselor, unde cei doi suspecți sunt numiți \textbf{A} și \textbf{B}\footnote{Preluat din https://plato.stanford.edu/entries/prisoner-dilemma/}. Se prezintă rezultatele obținute pentru fiecare combinație dintre tăinuire și marturisire \footnote{Considerăm că atunci când un suspect mărturisește, mărturia să îl incriminează pe celălalt suspect.}:  
 
@@ -56,8 +56,6 @@ Pentru a face trecerea de la pedeapsa cu închisoarea la ideea de joc, consider�
 \begin{center} 
 	\textbf{Temptation} \textgreater \textbf{Reward} \textgreater \textbf{Punishment} \textgreater \textbf{Sucker's payoff} 
 \end{center} 
-
-TODO: DE PUS INEGALITATEA INTR-O CASETA\\
 
 \section{Strategii pentru dilema prizonierului}
 

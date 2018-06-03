@@ -1,6 +1,6 @@
 \contentsline {chapter}{Problema iterat\IeC {\u a} a prizonierului}{7}
 \contentsline {section}{\numberline {1}Dilema prizonierului}{7}
-\contentsline {section}{\numberline {2}Strategii pentru dilema prizonierului}{9}
+\contentsline {section}{\numberline {2}Strategii pentru dilema prizonierului}{10}
 \contentsline {section}{\numberline {3}Problema iterat\IeC {\u a} a prizonierului}{10}
 \contentsline {section}{\numberline {4}Strategii pentru problema iterat\IeC {\u a} a prizonierului}{11}
 \contentsline {subsection}{\numberline {4.1}Turneele lui Axelrod}{11}
@@ -18,8 +18,8 @@
 \contentsline {section}{\numberline {5}Parametrii algoritmului genetic}{20}
 \contentsline {section}{\numberline {6}Configura\IeC {\textcommabelow t}ia unui algoritm genetic}{21}
 \contentsline {section}{\numberline {7}Popula\IeC {\textcommabelow t}ia de antrenament \IeC {\textcommabelow s}i de test}{21}
-\contentsline {section}{\numberline {8}Limit\IeC {\u a}rile algoritmului genetic}{23}
-\contentsline {chapter}{Turnee eliminatorii \IeC {\^\i }ntre strategii}{24}
-\contentsline {section}{\numberline {1}Termeni \IeC {\^\i }nt\IeC {\^a}lni\IeC {\c t}i}{24}
+\contentsline {section}{\numberline {8}Limit\IeC {\u a}rile algoritmului genetic}{24}
+\contentsline {chapter}{Turnee eliminatorii \IeC {\^\i }ntre strategii}{25}
+\contentsline {section}{\numberline {1}Termeni \IeC {\^\i }nt\IeC {\^a}lni\IeC {\c t}i}{25}
 \contentsline {section}{\numberline {2}Cum se modeleaz\IeC {\u a} un turneu}{25}
-\contentsline {section}{\numberline {3}Concluzii trase in urma finalizarii turneelor}{25}
+\contentsline {section}{\numberline {3}Concluzii trase in urma finalizarii turneelor}{26}
