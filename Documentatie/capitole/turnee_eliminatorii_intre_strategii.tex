@@ -2,16 +2,16 @@ Ne interesează să găsim \textit{cea mai bună strategie}. Pentru a compara î
  
 Până la a găsi cea mai bună strategie, trebuie, mai întâi, să vedem cum anume poate configurația unui algoritm genetic să influențeze calitatea soluției. De asemenea, vrem să vedem cum anume se comportă într-un mediu de test strategia propusă de algoritm. 
  
-Pentru a îndeplini aceste cerințe, am ales să supun cromozomii la un anumit tip de turneu, ce poartă denumirea de turneu cu eliminare.  
+Pentru a îndeplini aceste cerințe, am ales să supun cromozomii la un anumit tip de turneu, ce poartă denumirea de \textbf{turneu cu eliminare}.  
 
 \section {Termeni întâlniţi}
 O \textbf{rundă} este dată de alegerea, în mod secret, a mișcării următoare și actualizarea scorului în funcție de ce a pus și oponentul. 
 
 Un \textbf{meci} este jucat de către doi jucători. Este alcătuit dintr-un număr de runde. În fiecare rundă, fiecare jucător alege, în mod secret, ce mișcare va face. La final de rundă, scorul jucătorilor este actualizat cu o valoare dată de mișcarea făcută de fiecare, în funcție de ce a ales și oponentul să facă. 
 
-\section {Cum se modelează un turneu}
+\section {Cum se modelează un turneu cu eliminare}
  
-Un turneu cu eliminare pornește de la o populație de strategii în care, la fiecare iterație, fiecare individ joacă câte un meci cu ceilalți indivizi. Vom numi \textbf{rundă a turneului} secvența în care fiecare individ joacă câte un meci cu toți ceilalți indivizi. Pe parcursul meciurilor, câștigurile individuale se însumează într-un scor total. După ce se joacă toate combinările de doi jucători (toată runda), se elimină un procent din cei mai slabi jucători\footnote{Observație: în caz de egalitate a scorurilor între doi jucători, se elimină la întâmplare unul din cei doi} și se completează locurile eliberate cu stategii care au obținut printre cele mai bune scoruri. Se resetează scorul total al indivizilor și se repetă acești pași până când în turneu a rămas un singur tip de strategie, ori până când am atins un număr maxim de iterații. 
+Un turneu cu eliminare pornește de la o populație de strategii în care, la fiecare iterație, fiecare individ joacă câte un meci cu ceilalți indivizi. Vom numi \textbf{rundă a turneului} secvența în care fiecare individ joacă câte un meci cu toți ceilalți indivizi. Pe parcursul meciurilor, câștigurile individuale se însumează într-un scor total. După ce se joacă toate combinările de doi jucători (toată runda), se elimină un procent din cei mai slabi jucători\footnote{Observație: în caz de egalitate a scorurilor între doi jucători, se elimină la întâmplare unul din cei doi.} și se completează locurile eliberate cu stategii care au obținut printre cele mai bune scoruri. Se resetează scorul total al indivizilor și se repetă acești pași până când în turneu a rămas un singur tip de strategie, ori până când am atins un număr maxim de iterații. 
 \\\\
 \textit{Observație}: Când într-un turneu cu eliminare concurează doi indivizi ce au aceeași strategie deterministă, la finalul pasului când se termină toate combinările de doi jucători, cei doi indivizi vor avea exact același scor. Nu putem spune același lucru despre doi indivizi care folosesc strategia \textbf{Random}.
 \\\\

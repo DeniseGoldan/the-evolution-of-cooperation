@@ -7,9 +7,11 @@
 \usepackage{float}
 \usepackage{listings, xcolor}	% pentru exemplificarea json-urilor
 
-\usepackage{indentfirst}
-\setlength{\parindent}{5em}
-\setlength{\parskip}{0.1em}
+\newlength\tindent
+\setlength{\tindent}{\parindent}
+\setlength{\parindent}{0pt}
+\renewcommand{\indent}{\hspace*{\tindent}}
+\setlength{\parskip}{0.6em}
 
 \definecolor{background}{HTML}{EEEEEE}
 
