@@ -1,21 +1,21 @@
-\contentsline {chapter}{Problema iterat\IeC {\u a} a prizonierului}{7}
-\contentsline {section}{\numberline {1}Dilema prizonierului}{7}
-\contentsline {section}{\numberline {2}Strategii pentru dilema prizonierului}{10}
-\contentsline {section}{\numberline {3}Problema iterat\IeC {\u a} a prizonierului}{10}
-\contentsline {section}{\numberline {4}Strategii pentru problema iterat\IeC {\u a} a prizonierului}{11}
-\contentsline {subsection}{\numberline {4.1}Turneele lui Axelrod}{11}
-\contentsline {subsection}{\numberline {4.2}Strategii analizate}{13}
-\contentsline {chapter}{Algoritm genetic}{14}
-\contentsline {section}{\numberline {1}Apari\IeC {\textcommabelow t}ia no\IeC {\textcommabelow t}iunii de algoritm genetic}{14}
-\contentsline {section}{\numberline {2}Terminologie}{15}
-\contentsline {section}{\numberline {3}Schema generala a unui algoritm genetic}{17}
-\contentsline {section}{\numberline {4}Pseudocod}{17}
-\contentsline {chapter}{Dezvoltarea unei strategii folosind un algoritm genetic}{19}
+\contentsline {chapter}{Problema iterat\IeC {\u a} a prizonierului}{9}
+\contentsline {section}{\numberline {1}Enun\IeC {\c t}ul clasic al dilemei prizonierului}{9}
+\contentsline {subsection}{\numberline {1.1}Strategii pentru dilema prizonierului}{12}
+\contentsline {section}{\numberline {2}Varianta iterat\IeC {\u a} a dilemei prizonierului}{12}
+\contentsline {subsection}{\numberline {2.1}Strategii pentru problema iterat\IeC {\u a} a prizonierului}{13}
+\contentsline {subsubsection}{Turneele lui Axelrod}{13}
+\contentsline {subsubsection}{Strategii analizate}{14}
+\contentsline {chapter}{Algoritm genetic}{15}
+\contentsline {section}{\numberline {1}Apari\IeC {\textcommabelow t}ia no\IeC {\textcommabelow t}iunii de algoritm genetic}{15}
+\contentsline {section}{\numberline {2}Schema generala a unui algoritm genetic}{16}
+\contentsline {section}{\numberline {3}Pseudocod}{17}
+\contentsline {section}{\numberline {4}Terminologie}{17}
+\contentsline {chapter}{Dezvoltarea unei strategii pentru problema iterat\IeC {\u a} a prizonierului folosind un algoritm genetic}{19}
 \contentsline {section}{\numberline {1}Tehnologii folosite}{19}
 \contentsline {section}{\numberline {2}Reprezentarea solu\IeC {\textcommabelow t}iei}{19}
 \contentsline {section}{\numberline {3}Dimensiunea spa\IeC {\textcommabelow t}iului de c\IeC {\u a}utare}{22}
 \contentsline {section}{\numberline {4}Func\IeC {\textcommabelow t}ia de optimizat}{22}
-\contentsline {section}{\numberline {5}Parametrii algoritmului genetic}{22}
+\contentsline {section}{\numberline {5}Parametrii algoritmului genetic}{23}
 \contentsline {section}{\numberline {6}Configura\IeC {\textcommabelow t}ia unui algoritm genetic}{23}
 \contentsline {section}{\numberline {7}Popula\IeC {\textcommabelow t}ia de antrenament \IeC {\textcommabelow s}i de test}{23}
 \contentsline {section}{\numberline {8}Limit\IeC {\u a}rile algoritmului genetic}{27}

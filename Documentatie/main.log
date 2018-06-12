@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.12.27)  3 JUN 2018 12:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.12.27)  12 JUN 2018 13:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -444,36 +444,42 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 )
+(/usr/share/texlive/texmf-dist/tex/latex/tools/afterpage.sty
+Package: afterpage 2014/10/28 v1.08 After-Page Package (DPC)
+\AP@output=\toks21
+\AP@partial=\box30
+\AP@footins=\box31
+)
 \tindent=\skip45
  (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count102
 \scratchdimen=\dimen124
-\scratchbox=\box30
+\scratchbox=\box32
 \nofMPsegments=\count103
 \nofMParguments=\count104
-\everyMPshowfont=\toks21
+\everyMPshowfont=\toks22
 \MPscratchCnt=\count105
 \MPscratchDim=\dimen125
 \MPnumerator=\count106
 \makeMPintoPDFobject=\count107
-\everyMPtoPDFconversion=\toks22
+\everyMPtoPDFconversion=\toks23
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -535,13 +541,14 @@ File: imagini/sigla_fii.png Graphic file (type png)
 <use imagini/sigla_fii.png>
 Package pdftex.def Info: imagini/sigla_fii.png used on input line 13.
 (pdftex.def)             Requested size: 56.9063pt x 52.84155pt.
- [1
+) (./capitole/pagina_titlu.tex [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./imagini/sigla_fii.png>])
- (./capitole/pagina_titlu.tex [2
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./imagini/sigla_fii.png>] 
+[2] [3])
+(./capitole/declaratie_standard_originalitate.tex [4
 
-])
-(./capitole/declaratie_standard_originalitate.tex
+
+]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 6.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
@@ -564,10 +571,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 15--16
 
  []
 
-[3
-
-
-]) (./capitole/declaratie_standard_consintamant.tex
+[5]) (./capitole/declaratie_standard_consintamant.tex
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 3.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -589,26 +593,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--10
 
  []
 
-[4
+[6
 
 
-]) (./main.toc [5
+]) (./main.toc [7
 
 
 ])
 \tf@toc=\write3
 \openout3 = `main.toc'.
 
- [6] (./capitole/descriere_problema_iterata.tex
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 3.
-
-Overfull \hbox (0.90265pt too wide) in paragraph at lines 5--6
-\OT1/cmr/m/n/12 angaja[]i ai com-paniei RAND Cor-po-ra-tion[]. Denumirea- dilem
-a prizonierului-
- []
-
-<imagini/matrice.png, id=33, 1284.8pt x 722.7pt>
+ [8] (./capitole/descriere_problema_iterata.tex
+<imagini/matrice.png, id=40, 1284.8pt x 722.7pt>
 File: imagini/matrice.png Graphic file (type png)
  <use imagini/matrice.png>
 Package pdftex.def Info: imagini/matrice.png used on input line 20.
@@ -618,45 +614,37 @@ Overfull \hbox (14.65533pt too wide) in paragraph at lines 20--20
  [][] 
  []
 
-[7
+[9
 
-] [8 <./imagini/matrice.png (PNG copy)>]
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 57.
+] [10 <./imagini/matrice.png (PNG copy)>]
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 60.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 57.
- [9] [10]
-Overfull \hbox (27.87976pt too wide) in paragraph at lines 86--86
-[]\OT1/cmr/bx/n/17.28 Strategii pen-tru prob-lema it-erat^^Ua a pri-zonieru-
- []
-
-
-Overfull \hbox (19.48059pt too wide) in paragraph at lines 88--89
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 60.
+ [11]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 77.
+ [12]
+Overfull \hbox (19.48059pt too wide) in paragraph at lines 91--92
 \OT1/cmr/m/n/12 (engl. co-op-er-a-tion) pen-tru a de-scrie situa[]ia c^and unul
  din-tre suspec[]i \OT1/cmr/bx/n/12 t^^Uainuie[]te
  []
 
-[11] [12]
-Overfull \hbox (15.7371pt too wide) in paragraph at lines 116--117
+[13]
+Overfull \hbox (15.7371pt too wide) in paragraph at lines 115--116
 []\OT1/cmr/bx/n/12 Tit-For-Two-Tats\OT1/cmr/m/n/12 : Juc^^Uatorul coop-ereaz^^U
 a de fiecare dat^^Ua, f^^Uac^and excep[]ie
  []
 
-) [13
+) [14
 
 ] (./capitole/algoritm_genetic.tex
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <17.28> on input line 1.
-
-Overfull \hbox (11.33772pt too wide) in paragraph at lines 3--4
-\OT1/cmr/m/n/12 Algorimii ge-netici[] au fost introdu[]i de c^^Uatre John Hol-l
-and ^^^Pn 1960 []i dezvolta[]i,
- []
-
-[14
+ [15
 
 ]
 Overfull \hbox (6.81949pt too wide) in paragraph at lines 16--17
@@ -664,65 +652,61 @@ Overfull \hbox (6.81949pt too wide) in paragraph at lines 16--17
 mizare, atunci c^and metodele
  []
 
+<imagini/schema_algoritm_genetic.png, id=70, 1284.8pt x 722.7pt>
+File: imagini/schema_algoritm_genetic.png Graphic file (type png)
 
-Overfull \hbox (8.95613pt too wide) in paragraph at lines 30--31
+<use imagini/schema_algoritm_genetic.png>
+Package pdftex.def Info: imagini/schema_algoritm_genetic.png used on input line
+ 28.
+(pdftex.def)             Requested size: 284.5193pt x 160.0421pt.
+ [16
+
+ <./imagini/schema_algoritm_genetic.png>]
+Overfull \hbox (36.07521pt too wide) in paragraph at lines 45--45
+[]\OT1/cmtt/m/n/12 calculeaz^^Ua valoarea func[]iei de optimizat pentru indiviz
+ii popula[]iei[] 
+ []
+
+
+Overfull \hbox (11.3752pt too wide) in paragraph at lines 45--45
+[]\OT1/cmtt/m/n/12 aplic^^Ua operatorul genetic ^^^Pncruci[]are, cu o anumit^^U
+a probabilitate[] 
+ []
+
+
+Overfull \hbox (36.07521pt too wide) in paragraph at lines 45--45
+[]\OT1/cmtt/m/n/12 calculeaz^^Ua valoarea func[]iei de optimizat pentru indiviz
+ii popula[]iei[] 
+ []
+
+
+Overfull \hbox (8.95613pt too wide) in paragraph at lines 61--62
 []\OT1/cmr/m/n/12 Fiecare \OT1/cmr/bx/n/12 genera[]ie \OT1/cmr/m/n/12 marcheaz^
 ^Ua c^ate o etap^^Ua din evolu[]ia popula[]iei ini[]iale. 
  []
 
 
-Overfull \hbox (6.91533pt too wide) in paragraph at lines 34--35
+Overfull \hbox (6.91533pt too wide) in paragraph at lines 65--66
 []\OT1/cmr/m/n/12 Pentru ex-plo-rarea spa[]iului de solu[]ii, in-di-vizii selec
 ta[]i sufer^^Ua modific^^Uari.
  []
 
-[15
+[17
 
-] <imagini/incrucisare.png, id=71, 1284.8pt x 722.7pt>
+] <imagini/incrucisare.png, id=80, 1284.8pt x 722.7pt>
 File: imagini/incrucisare.png Graphic file (type png)
 
 <use imagini/incrucisare.png>
-Package pdftex.def Info: imagini/incrucisare.png used on input line 44.
-(pdftex.def)             Requested size: 284.5193pt x 160.0421pt.
- <imagini/mutatie.png, id=72, 1284.8pt x 722.7pt>
+Package pdftex.def Info: imagini/incrucisare.png used on input line 75.
+(pdftex.def)             Requested size: 227.60759pt x 128.02927pt.
+ <imagini/mutatie.png, id=81, 1284.8pt x 722.7pt>
 File: imagini/mutatie.png Graphic file (type png)
 
 <use imagini/mutatie.png>
-Package pdftex.def Info: imagini/mutatie.png used on input line 57.
-(pdftex.def)             Requested size: 284.5193pt x 160.0421pt.
- [16 <./imagini/incrucisare.png>]
-<imagini/schema_algoritm_genetic.png, id=77, 1284.8pt x 722.7pt>
-File: imagini/schema_algoritm_genetic.png Graphic file (type png)
-
-<use imagini/schema_algoritm_genetic.png>
-Package pdftex.def Info: imagini/schema_algoritm_genetic.png used on input line
- 73.
-(pdftex.def)             Requested size: 284.5193pt x 160.0421pt.
-
-Overfull \hbox (36.07521pt too wide) in paragraph at lines 88--88
-[]\OT1/cmtt/m/n/12 calculeaz^^Ua valoarea func[]iei de optimizat pentru indiviz
-ii popula[]iei[] 
- []
-
-[17 <./imagini/mutatie.png> <./imagini/schema_algoritm_genetic.png>]
-Overfull \hbox (36.07521pt too wide) in paragraph at lines 88--88
-[]    \OT1/cmtt/m/n/12 aplic^^Ua operatorul genetic ^^^Pncruci[]are, cu o anumi
-t^^Ua probabilitate[] 
- []
-
-
-Overfull \hbox (11.3752pt too wide) in paragraph at lines 88--88
-[]    \OT1/cmtt/m/n/12 aplic^^Ua operatorul genetic muta[]ie, cu o anumit^^Ua p
-robabilitate[] 
- []
-
-
-Overfull \hbox (60.77522pt too wide) in paragraph at lines 88--88
-[]    \OT1/cmtt/m/n/12 calculeaz^^Ua valoarea func[]iei de optimizat pentru ind
-ivizii popula[]iei[] 
- []
-
-[18]) (./capitole/dezvoltare_strategie_algoritm_genetic.tex
+Package pdftex.def Info: imagini/mutatie.png used on input line 88.
+(pdftex.def)             Requested size: 227.60759pt x 128.02927pt.
+ [18 <./imagini/incrucisare.png> <./imagini/mutatie.png>]) (./capitole/dezvolta
+re_strategie_algoritm_genetic.tex
 Overfull \hbox (0.94455pt too wide) in paragraph at lines 3--4
 \OT1/cmr/m/n/12 Ca []i lim-baj de pro-gra-mare, am ales s^^Ua im-ple-mentez sol
 u[]ia prob-le-mei folosind
@@ -746,41 +730,29 @@ Underfull \hbox (badness 10000) in paragraph at lines 65--66
 
  []
 
-
-Overfull \hbox (0.44475pt too wide) in paragraph at lines 71--72
-\OT1/cmr/m/n/12 rund^^Ua an-te-rioar^^Ua opo-nen-tul a co-op-erat (\OT1/cmr/bx/
-n/12 C \OT1/cmr/m/n/12 reprezint^^Ua is-toricul mi[]c^^Uarilor
- []
-
-[21]
-Overfull \hbox (4.60007pt too wide) in paragraph at lines 99--100
+[21] [22]
+Overfull \hbox (4.60007pt too wide) in paragraph at lines 102--103
 []\OT1/cmr/m/n/12 i op[]iuni, din-tre care men[]ionez: rata muta[]iei, rata ^^^
 Pncrucis^^Uarii, tipul selec[]iei
  []
 
-
-Overfull \hbox (3.83038pt too wide) in paragraph at lines 99--100
-\OT1/cmr/m/n/12 popula[]iei []. Cro-mo-zomul are ca-pac-i-tatea de a-[]i for-mu
-la urm^^Uatoarea mi[]care
- []
-
-[22] [23] [24]
-<imagini/probabilitati_selectie_ruleta.png, id=107, 1284.8pt x 722.7pt>
+[23] [24]
+<imagini/probabilitati_selectie_ruleta.png, id=106, 1284.8pt x 722.7pt>
 File: imagini/probabilitati_selectie_ruleta.png Graphic file (type png)
 
 <use imagini/probabilitati_selectie_ruleta.png>
 Package pdftex.def Info: imagini/probabilitati_selectie_ruleta.png used on inpu
-t line 161.
+t line 164.
 (pdftex.def)             Requested size: 303.4964pt x 170.71672pt.
  [25]
-<imagini/invartire_ruleta.png, id=112, 1284.8pt x 722.7pt>
+<imagini/invartire_ruleta.png, id=111, 1284.8pt x 722.7pt>
 File: imagini/invartire_ruleta.png Graphic file (type png)
 
 <use imagini/invartire_ruleta.png>
-Package pdftex.def Info: imagini/invartire_ruleta.png used on input line 175.
+Package pdftex.def Info: imagini/invartire_ruleta.png used on input line 178.
 (pdftex.def)             Requested size: 303.4964pt x 170.71672pt.
- [26 <./imagini/probabilitati_selectie_ruleta.png> <./imagini/invartire_ruleta.
-png>]) [27]
+) [26 <./imagini/probabilitati_selectie_ruleta.png> <./imagini/invartire_ruleta
+.png>] [27]
 (./capitole/turnee_eliminatorii_intre_strategii.tex
 Underfull \hbox (badness 10000) in paragraph at lines 14--19
 
@@ -794,50 +766,60 @@ Underfull \hbox (badness 10000) in paragraph at lines 14--19
 [28
 
 ]) (./capitole/bibliografie.tex [29]
-Underfull \hbox (badness 2111) in paragraph at lines 16--21
+Overfull \hbox (23.17772pt too wide) in paragraph at lines 14--15
+[]\OT1/cmtt/m/n/12 https://dictionary.cambridge.org/dictionary/english/round-ro
+bin 
+ []
+
+
+Underfull \hbox (badness 2111) in paragraph at lines 33--38
 []\OT1/cmr/m/n/12 Prof. dr. ing. Gabriel Oltean. \OT1/cmr/m/it/12 Cur-sul de Te
 hnici de inteligen[]^^Ua
  []
 
 
-Overfull \hbox (64.67374pt too wide) in paragraph at lines 16--21
+Overfull \hbox (64.67374pt too wide) in paragraph at lines 33--38
 \OT1/cmtt/m/n/12 http://www.bel.utcluj.ro/rom/dce/goltean/tice/10[]AlgoritmiGen
 etici.pdf 
  []
 
 [30
 
-]) [31] (./main.aux) ) 
+]
+Underfull \hbox (badness 10000) in paragraph at lines 77--79
+[]\OT1/cmtt/m/n/12 https://www.latex-project.org/about/
+ []
+
+) [31] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 4184 strings out of 494953
- 55455 string characters out of 6180976
- 120771 words of memory out of 5000000
- 7382 multiletter control sequences out of 15000+600000
- 13393 words of font info for 46 fonts, out of 8000000 for 9000
+ 4209 strings out of 494953
+ 55916 string characters out of 6180976
+ 122308 words of memory out of 5000000
+ 7405 multiletter control sequences out of 15000+600000
+ 12698 words of font info for 44 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 38i,14n,35p,1094b,1041s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy1
-0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on main.pdf (31 pages, 576485 bytes).
+ 38i,14n,35p,986b,1041s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+bx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
+Output written on main.pdf (31 pages, 559628 bytes).
 PDF statistics:
- 195 PDF objects out of 1000 (max. 8388607)
- 128 compressed objects within 2 object streams
+ 191 PDF objects out of 1000 (max. 8388607)
+ 125 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  36 words of extra memory for PDF output out of 10000 (max. 10000000)
 

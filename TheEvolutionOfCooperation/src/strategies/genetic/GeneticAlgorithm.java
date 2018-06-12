@@ -28,7 +28,7 @@ public class GeneticAlgorithm {
     private double bestChromosomeMeanFitnessScore = 0;
     private long numberOfRoundsPerMatch = 10;
 
-    private static final int NUMBER_OF_TRIES = 100;
+    private static final int NUMBER_OF_TRIES = 1000;
 
     public static void main(String[] args) throws IOException, ParseException {
         GeneticAlgorithm algorithm = new GeneticAlgorithm();

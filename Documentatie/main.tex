@@ -5,7 +5,14 @@
 \usepackage{booktabs}
 \usepackage{graphicx}
 \usepackage{float}
-\usepackage{listings, xcolor}	% pentru exemplificarea json-urilor
+\usepackage{listings, xcolor}	% pentru a da ca exemplu json-uri
+\usepackage{afterpage}			% pentru a adauga o pagina goala
+
+\newcommand\blankpage{   
+	\null
+	\thispagestyle{empty}
+	\addtocounter{page}{-1}
+	\newpage}
 
 \newlength\tindent
 \setlength{\tindent}{\parindent}
@@ -21,7 +28,7 @@
 	comment=[l]{:},
 	commentstyle=\color{black},
 	backgroundcolor=\color{background}
-}								% configuratia jsonurilor exemplificate
+}								% cum arata json-urilor date ca exemplu
 
 \renewcommand{\contentsname}{Cuprins}
 \renewcommand{\figurename}{Figura}
@@ -62,8 +69,8 @@
 
 % Dezvoltarea unei strategii folosind un algoritm genetic
 \setcounter{section}{0}
-\chapter*{Dezvoltarea unei strategii folosind un algoritm genetic}
-\addcontentsline{toc}{chapter}{Dezvoltarea unei strategii folosind un algoritm genetic}
+\chapter*{Dezvoltarea unei strategii pentru problema iterată a prizonierului folosind un algoritm genetic}
+\addcontentsline{toc}{chapter}{Dezvoltarea unei strategii pentru problema iterată a prizonierului folosind un algoritm genetic}
 \input{capitole/dezvoltare_strategie_algoritm_genetic.tex}
 
 % Turnee
