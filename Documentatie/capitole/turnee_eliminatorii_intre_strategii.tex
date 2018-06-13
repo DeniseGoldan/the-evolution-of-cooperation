@@ -19,6 +19,309 @@ Pentru a vedea clar modul în care evoluează strategiile în contextul acestui 
 
 \section {Concluzii trase in urma finalizarii turneelor}
 
--- schimbarea configuratiei algoritmului genrtic ++++ schimbarea configuratiei turneului
+\subsection{Numărul de runde al meciurilor din turneul cu eliminare}
 
--- OBSERVAȚII CLARE OBȚINUTE ÎN URMĂ UNOR EXPERIMENTE legat de modul în care parametrii influențează calitatea soluțiilor
+Când numărul de runde al merciurilor din turneul cu eliminare este mic, am observat că strategiile propuse de algoritmul genetic, cu mici excepții, nu reușesc să câștige. Numărul de cromozomi, în cele mai optimiste cazuri, înregistrează o creștere și apoi o descreștere până la 0 la final de turneu. 
+
+În exemplele de mai jos, configurația algoritmului genetic este următoarea: 
+
+- numărul de runde jucate în fiecare meci: 20\\
+- numărul de generații: 500\\
+- dimensiunea populației antrenate: 25\\
+- probabilitatea de încrucișare: 0.1\\
+- probabilitatea de mutație: 0.2\\
+- configurația populației de antrenament:\\
+\begin{center}
+	\begin{lstlisting}
+	{
+		"Always Cooperate": 1,
+		"Always Defect": 1,
+		"Grudger": 1,
+		"Pavlov": 1,
+		"Tit-For-Tat": 1,
+		"Suspicious Tit-For-Tat": 1,
+		"Tit-For-Two-Tats": 1
+	}
+\end{lstlisting}
+\end{center}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[	
+		width=16cm,
+		height=7.5cm,
+		keepaspectratio
+	]{imagini/chart_from_epoch_1528885395051.png}
+	\caption{\textit{Evoluția turneului cu eliminare când numărul de runde al meciurilor este 5.}}
+	\label{fig:evolutia_cand_numarul_de_runde_este_5}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[	
+		width=16cm,
+		height=7.5cm,
+		keepaspectratio
+	]{imagini/chart_from_epoch_1528885889300.png}
+	\caption{\textit{Evoluția turneului cu eliminare când numărul de runde al meciurilor este 15.}}
+	\label{fig:evolutia_cand_numarul_de_runde_este_5}
+\end{figure}
+
+Mărind cu 2 numărul de runde din fiecare meci, observăm că strategia propusă de algoritmul genetic câștigă. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[	
+		width=16cm,
+		height=7.5cm,
+		keepaspectratio
+	]{imagini/chart_from_epoch_1528885889300.png}
+	\caption{\textit{Evoluția turneului cu eliminare când numărul de runde al meciurilor este 17.}}
+	\label{fig:evolutia_cand_numarul_de_runde_este_5}
+\end{figure}
+
+Dacă numărul de runde al turneului cu eliminare este mai mare, strategia algoritmului genetic are șanse mai mari de câștig.  
+ 
+\subsection{Probabilitățile de mutație și de încrucișare}
+
+Valorile celor două probabilități nu trebuie să fie foarte mari, deoarece acestea ar putea duce la obținerea unor strategii cu mișcări aleatoare. 
+
+\subsection{Populatia de antrenament}
+
+Consider că o populație diversificată de antrenament poate simula condițiile din faza de testare. Din acest motiv am optat pentru ca aceasta să cuprindă fiecare strategie determinista prezentată la secțiunea de strategii standard (am omis strategia \textbf{Random}). Prezența strategiei \textbf{Random} în faza de antrenament nu ajută la interpretarea calității soluției. Sunt șanse ca acesta strategie nedeterministă să obțină un scor bun în faza de antrenament, însă să nu facă față în faza de testare. 
+
+Am pus câte un individ din fiecare strategie.  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

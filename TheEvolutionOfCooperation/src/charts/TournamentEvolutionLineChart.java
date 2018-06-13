@@ -142,7 +142,7 @@ public class TournamentEvolutionLineChart extends Application {
                 + "/";
 
         String currentEpochString = String.valueOf(System.currentTimeMillis());
-        String path = root + "chart.from.epoch." + currentEpochString + ".png";
+        String path = root + "chart_from_epoch_" + currentEpochString + ".png";
         File newFile = new File(path);
         newFile.createNewFile();
         return newFile;
@@ -150,14 +150,14 @@ public class TournamentEvolutionLineChart extends Application {
 
     private static class LineChartConfigurator {
 
-        static final String CHART_TITLE = "Tournament Evolution";
-        static final String APPLICATION_TITLE = "Line Chart";
-        static final String X_AXIS_LABEL = "Round number";
-        static final String Y_AXIS_LABEL = "Number of players";
+        static final String CHART_TITLE = "Evoluţia turneului cu eliminare";
+        static final String APPLICATION_TITLE = "Evoluţia turneului cu eliminare";
+        static final String X_AXIS_LABEL = "Numărul meciului";
+        static final String Y_AXIS_LABEL = "Număr de jucători";
         static final int WIDTH = 900;
         static final int HEIGHT = 500;
         static final int PERCENT_OF_PLAYERS_TO_ELIMINATE = 25;
-        static final int NUMBER_OF_ROUNDS_PER_MATCH = 100;
+        static final int NUMBER_OF_ROUNDS_PER_MATCH = 17;
         static final int X_AXIS_UPPER_BOUND = 10;
         static final int Y_AXIS_UPPER_BOUND = 30;
         static final int X_AXIS_TICK_UNIT = 1;

@@ -30,11 +30,6 @@ public class GeneticAlgorithm {
 
     private static final int NUMBER_OF_TRIES = 1000;
 
-    public static void main(String[] args) throws IOException, ParseException {
-        GeneticAlgorithm algorithm = new GeneticAlgorithm();
-        algorithm.buildStrategy().printGenes();
-    }
-
     public Chromosome buildStrategy() throws IOException, ParseException {
         runGeneticAlgorithm();
         bestChromosome.resetScore();

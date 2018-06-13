@@ -23,3 +23,6 @@
 \contentsline {section}{\numberline {1}Termeni \IeC {\^\i }nt\IeC {\^a}lni\IeC {\c t}i}{28}
 \contentsline {section}{\numberline {2}Cum se modeleaz\IeC {\u a} un turneu cu eliminare}{29}
 \contentsline {section}{\numberline {3}Concluzii trase in urma finalizarii turneelor}{29}
+\contentsline {subsection}{\numberline {3.1}Num\IeC {\u a}rul de runde al meciurilor din turneul cu eliminare}{29}
+\contentsline {subsection}{\numberline {3.2}Probabilit\IeC {\u a}\IeC {\textcommabelow t}ile de muta\IeC {\textcommabelow t}ie \IeC {\textcommabelow s}i de \IeC {\^\i }ncruci\IeC {\textcommabelow s}are}{32}
+\contentsline {subsection}{\numberline {3.3}Populatia de antrenament}{32}
