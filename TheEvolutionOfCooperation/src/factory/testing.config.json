@@ -1,6 +1,4 @@
 {
-  "Always Cooperate": 5,
-  "Always Defect": 5,
-  "Grudger": 5,
-  "Pavlov": 5
+  "Always Defect": 15,
+  "Tit-For-Tat": 5
 }

@@ -35,7 +35,9 @@ public class TournamentEvolutionLineChart extends Application {
 
     private final LineChartConfigurator configurator = new LineChartConfigurator();
 
-    public static void main(final String[] args) { launch(args); }
+    public static void main(final String[] args) {
+        launch(args);
+    }
 
     @SuppressWarnings("unchecked")
     @Override
@@ -83,31 +85,11 @@ public class TournamentEvolutionLineChart extends Application {
 
         List<Player> players = PopulationConfigReader.getPlayersFromConfigFile(FilePath.TestingPhase.getPath());
 
-        Chromosome a = getChromosomeWithStrategyFromJsonFile(CHROMOSOME_UNDER_TEST_FILE_PATH);
-        Chromosome b = getChromosomeWithStrategyFromJsonFile(CHROMOSOME_UNDER_TEST_FILE_PATH);
-        Chromosome c = getChromosomeWithStrategyFromJsonFile(CHROMOSOME_UNDER_TEST_FILE_PATH);
-        Chromosome d = getChromosomeWithStrategyFromJsonFile(CHROMOSOME_UNDER_TEST_FILE_PATH);
-        Chromosome e = getChromosomeWithStrategyFromJsonFile(CHROMOSOME_UNDER_TEST_FILE_PATH);
-//        Chromosome f = getChromosomeWithStrategyFromJsonFile(CHROMOSOME_UNDER_TEST_FILE_PATH);
-//        Chromosome aa = getChromosomeWithStrategyFromJsonFile(CHROMOSOME_UNDER_TEST_FILE_PATH);
-//        Chromosome bb = getChromosomeWithStrategyFromJsonFile(CHROMOSOME_UNDER_TEST_FILE_PATH);
-//        Chromosome cc = getChromosomeWithStrategyFromJsonFile(CHROMOSOME_UNDER_TEST_FILE_PATH);
-//        Chromosome dd = getChromosomeWithStrategyFromJsonFile(CHROMOSOME_UNDER_TEST_FILE_PATH);
-//        Chromosome ee = getChromosomeWithStrategyFromJsonFile(CHROMOSOME_UNDER_TEST_FILE_PATH);
-//        Chromosome ff = getChromosomeWithStrategyFromJsonFile(CHROMOSOME_UNDER_TEST_FILE_PATH);
-
-        players.add(a);
-        players.add(b);
-        players.add(c);
-        players.add(d);
-        players.add(e);
-//        players.add(f);
-//        players.add(aa);
-//        players.add(bb);
-//        players.add(cc);
-//        players.add(dd);
-//        players.add(ee);
-//        players.add(ff);
+        Chromosome chromosomeForTournament;
+        for (int i = 0; i < 5; i++) {
+            chromosomeForTournament = getChromosomeWithStrategyFromJsonFile(CHROMOSOME_UNDER_TEST_FILE_PATH);
+            players.add(chromosomeForTournament);
+        }
 
         return players;
     }
@@ -157,7 +139,7 @@ public class TournamentEvolutionLineChart extends Application {
         static final int WIDTH = 900;
         static final int HEIGHT = 500;
         static final int PERCENT_OF_PLAYERS_TO_ELIMINATE = 25;
-        static final int NUMBER_OF_ROUNDS_PER_MATCH = 17;
+        static final int NUMBER_OF_ROUNDS_PER_MATCH = 5;
         static final int X_AXIS_UPPER_BOUND = 10;
         static final int Y_AXIS_UPPER_BOUND = 30;
         static final int X_AXIS_TICK_UNIT = 1;

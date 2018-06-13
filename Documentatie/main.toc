@@ -18,11 +18,9 @@
 \contentsline {section}{\numberline {5}Parametrii algoritmului genetic}{23}
 \contentsline {section}{\numberline {6}Configura\IeC {\textcommabelow t}ia unui algoritm genetic}{23}
 \contentsline {section}{\numberline {7}Popula\IeC {\textcommabelow t}ia de antrenament \IeC {\textcommabelow s}i de test}{23}
-\contentsline {section}{\numberline {8}Limit\IeC {\u a}rile algoritmului genetic}{27}
-\contentsline {chapter}{Turnee eliminatorii \IeC {\^\i }ntre strategii}{28}
-\contentsline {section}{\numberline {1}Termeni \IeC {\^\i }nt\IeC {\^a}lni\IeC {\c t}i}{28}
-\contentsline {section}{\numberline {2}Cum se modeleaz\IeC {\u a} un turneu cu eliminare}{29}
+\contentsline {chapter}{Turnee eliminatorii \IeC {\^\i }ntre strategii}{27}
+\contentsline {section}{\numberline {1}Termeni \IeC {\^\i }nt\IeC {\^a}lni\IeC {\c t}i}{27}
+\contentsline {section}{\numberline {2}Cum este modelat un turneu cu eliminare}{28}
 \contentsline {section}{\numberline {3}Concluzii trase in urma finalizarii turneelor}{29}
 \contentsline {subsection}{\numberline {3.1}Num\IeC {\u a}rul de runde al meciurilor din turneul cu eliminare}{29}
-\contentsline {subsection}{\numberline {3.2}Probabilit\IeC {\u a}\IeC {\textcommabelow t}ile de muta\IeC {\textcommabelow t}ie \IeC {\textcommabelow s}i de \IeC {\^\i }ncruci\IeC {\textcommabelow s}are}{32}
-\contentsline {subsection}{\numberline {3.3}Populatia de antrenament}{32}
+\contentsline {subsection}{\numberline {3.2}Populatia de antrenament}{31}

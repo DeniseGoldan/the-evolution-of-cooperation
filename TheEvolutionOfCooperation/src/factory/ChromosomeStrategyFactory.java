@@ -12,8 +12,8 @@ public class ChromosomeStrategyFactory {
     public static void main(final String[] args) throws IOException, ParseException {
 
         GeneticAlgorithm geneticAlgorithm = new GeneticAlgorithm()
-                .withCrossoverProbability(0.3)
-                .withMutationProbability(0.3)
+                .withCrossoverProbability(0.2)
+                .withMutationProbability(0.5)
                 .withNumberOfGenerations(100)
                 .withNumberOfRoundsPerMatch(50)
                 .withPopulationSize(25);
