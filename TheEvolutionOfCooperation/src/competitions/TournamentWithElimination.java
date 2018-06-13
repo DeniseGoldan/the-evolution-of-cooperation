@@ -15,7 +15,7 @@ import java.util.*;
 
 public class TournamentWithElimination extends Tournament {
 
-    private final int MAX_ROUNDS = 2;
+    private final int MAX_ROUNDS = 30;
     private final Logger logger = LoggerFactory.getLogger(TournamentWithElimination.class);
     private int numberOfPlayersToEliminate;
 

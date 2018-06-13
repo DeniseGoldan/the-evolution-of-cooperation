@@ -28,50 +28,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="NextActionHelper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/strategies/genetic/NextActionHelper.java">
+      <file leaf-file-name="TournamentEvolutionLineChart.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/charts/TournamentEvolutionLineChart.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+            <state relative-caret-position="235">
+              <caret line="85" column="67" lean-forward="true" selection-start-line="85" selection-start-column="67" selection-end-line="85" selection-end-column="67" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StrategyMeaningExtractor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/strategies/StrategyMeaningExtractor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Action.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/player/Action.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="22" column="15" lean-forward="false" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="15" />
-              <folding>
-                <element signature="e#389#390#0" expanded="true" />
-                <element signature="e#428#429#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TournamentWithElimination.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/competitions/TournamentWithElimination.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2304">
-              <caret line="139" column="17" lean-forward="false" selection-start-line="139" selection-start-column="17" selection-end-line="139" selection-end-column="17" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
+      <file leaf-file-name="chart.from.epoch.1528809303323.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/resources/from.epoch.1528034622667/chart.from.epoch.1528809303323.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
@@ -85,53 +55,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="strategy.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/resources/from.epoch.1528036955574/strategy.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Chromosome.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/strategies/genetic/Chromosome.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="882">
-              <caret line="55" column="48" lean-forward="false" selection-start-line="55" selection-start-column="48" selection-end-line="55" selection-end-column="48" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StrategyReader.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/factory/StrategyReader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="18" column="66" lean-forward="false" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="66" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="strategy.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/resources/from.epoch.1528035856793/strategy.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-900">
-              <caret line="13" column="16" lean-forward="false" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Payoff.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/player/Payoff.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="10" column="18" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
-              <folding />
-            </state>
+      <file leaf-file-name="chart.from.epoch.1528877388990.png" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/resources/from.epoch.1528816343953/chart.from.epoch.1528877388990.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
@@ -184,11 +111,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/resources/chromosome/strategies/strategy_1524575530464.json" />
-        <option value="$PROJECT_DIR$/src/resources/chromosome/strategies/strategy_1524575589605.json" />
-        <option value="$PROJECT_DIR$/src/strategies/genetic/ChromosomeUtility.java" />
-        <option value="$PROJECT_DIR$/src/strategies/genetic/ChromosomeUnderTest.java" />
-        <option value="$PROJECT_DIR$/src/factory/StrategyReader.java" />
         <option value="$PROJECT_DIR$/src/factory/StrategiesFactory.java" />
         <option value="$PROJECT_DIR$/src/resources/from.epoch.1524592982132/strategy.json" />
         <option value="$PROJECT_DIR$/src/resources/from.epoch.1524593015820/strategy.json" />
@@ -197,17 +119,14 @@
         <option value="$PROJECT_DIR$/src/factory/FitnessConfigurationReader.java" />
         <option value="$PROJECT_DIR$/src/factory/StrategyWriter.java" />
         <option value="$PROJECT_DIR$/src/factory/StrategyJsonFileColumnName.java" />
-        <option value="$PROJECT_DIR$/src/factory/testing.config.json" />
         <option value="$PROJECT_DIR$/src/factory/PopulationConfigWriter.java" />
         <option value="$PROJECT_DIR$/src/charts/Dummy.java" />
         <option value="$PROJECT_DIR$/src/competitions/ClassicTournament.java" />
         <option value="$PROJECT_DIR$/src/factory/FilePath.java" />
         <option value="$PROJECT_DIR$/src/factory/PopulationConfigReader.java" />
-        <option value="$PROJECT_DIR$/src/charts/TournamentEvolutionLineChart.java" />
         <option value="$PROJECT_DIR$/src/competitions/Tournament.java" />
         <option value="$PROJECT_DIR$/src/strategies/standard/GrudgerPlayer.java" />
         <option value="$PROJECT_DIR$/src/competitions/Match.java" />
-        <option value="$PROJECT_DIR$/src/competitions/TournamentWithElimination.java" />
         <option value="$PROJECT_DIR$/src/strategies/genetic/Chromosome.java" />
         <option value="$PROJECT_DIR$/src/player/Player.java" />
         <option value="$PROJECT_DIR$/src/resources/from.epoch.1527750842866/strategy.json" />
@@ -230,11 +149,19 @@
         <option value="$PROJECT_DIR$/src/resources/from.epoch.1528034406397/strategy.json" />
         <option value="$PROJECT_DIR$/src/resources/from.epoch.1528034622667/strategy.json" />
         <option value="$PROJECT_DIR$/src/resources/from.epoch.1528035856793/strategy.json" />
-        <option value="$PROJECT_DIR$/src/factory/ChromosomeStrategyFactory.java" />
         <option value="$PROJECT_DIR$/src/strategies/genetic/NextActionHelper.java" />
         <option value="$PROJECT_DIR$/src/strategies/StrategyMeaningExtractor.java" />
-        <option value="$PROJECT_DIR$/src/strategies/genetic/InvestigatedChromosome.java" />
         <option value="$PROJECT_DIR$/src/resources/from.epoch.1528036955574/strategy.json" />
+        <option value="$PROJECT_DIR$/src/competitions/TournamentWithElimination.java" />
+        <option value="$PROJECT_DIR$/src/resources/from.epoch.1528813080932/strategy.json" />
+        <option value="$PROJECT_DIR$/src/resources/from.epoch.1528814175473/strategy.json" />
+        <option value="$PROJECT_DIR$/src/resources/from.epoch.1528814584612/strategy.json" />
+        <option value="$PROJECT_DIR$/src/resources/from.epoch.1528815761184/strategy.json" />
+        <option value="$PROJECT_DIR$/src/factory/ChromosomeStrategyFactory.java" />
+        <option value="$PROJECT_DIR$/src/resources/from.epoch.1528816343953/strategy.json" />
+        <option value="$PROJECT_DIR$/src/factory/testing.config.json" />
+        <option value="$PROJECT_DIR$/src/charts/TournamentEvolutionLineChart.java" />
+        <option value="$PROJECT_DIR$/src/strategies/genetic/InvestigatedChromosome.java" />
       </list>
     </option>
   </component>
@@ -291,24 +218,6 @@
               <item name="TheEvolutionOfCooperation" type="b2602c69:ProjectViewProjectNode" />
               <item name="TheEvolutionOfCooperation" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="competitions" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TheEvolutionOfCooperation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TheEvolutionOfCooperation" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="factory" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TheEvolutionOfCooperation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TheEvolutionOfCooperation" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="player" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TheEvolutionOfCooperation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TheEvolutionOfCooperation" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -316,34 +225,35 @@
               <item name="TheEvolutionOfCooperation" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="from.epoch.1528034622667" type="462c0819:PsiDirectoryNode" />
+              <item name="from.epoch.1528813080932" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TheEvolutionOfCooperation" type="b2602c69:ProjectViewProjectNode" />
               <item name="TheEvolutionOfCooperation" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="from.epoch.1528035856793" type="462c0819:PsiDirectoryNode" />
+              <item name="from.epoch.1528814175473" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TheEvolutionOfCooperation" type="b2602c69:ProjectViewProjectNode" />
               <item name="TheEvolutionOfCooperation" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="from.epoch.1528036955574" type="462c0819:PsiDirectoryNode" />
+              <item name="from.epoch.1528814584612" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TheEvolutionOfCooperation" type="b2602c69:ProjectViewProjectNode" />
               <item name="TheEvolutionOfCooperation" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="strategies" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="from.epoch.1528815761184" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TheEvolutionOfCooperation" type="b2602c69:ProjectViewProjectNode" />
               <item name="TheEvolutionOfCooperation" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="strategies" type="462c0819:PsiDirectoryNode" />
-              <item name="genetic" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="from.epoch.1528816343953" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TheEvolutionOfCooperation" type="b2602c69:ProjectViewProjectNode" />
@@ -410,7 +320,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ChromosomeStrategyFactory">
+  <component name="RunManager" selected="Application.TournamentEvolutionLineChart">
     <configuration name="ChromosomeStrategyFactory" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -615,9 +525,9 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.ChromosomeStrategyFactory" />
-        <item index="1" class="java.lang.String" itemvalue="Application.TournamentWithElimination" />
-        <item index="2" class="java.lang.String" itemvalue="Application.TournamentEvolutionLineChart" />
+        <item index="0" class="java.lang.String" itemvalue="Application.TournamentEvolutionLineChart" />
+        <item index="1" class="java.lang.String" itemvalue="Application.ChromosomeStrategyFactory" />
+        <item index="2" class="java.lang.String" itemvalue="Application.TournamentWithElimination" />
         <item index="3" class="java.lang.String" itemvalue="Application.Dummy" />
         <item index="4" class="java.lang.String" itemvalue="Application.StrategyWriter" />
       </list>
@@ -665,7 +575,7 @@
       <workItem from="1527665307890" duration="27566000" />
       <workItem from="1527855891589" duration="3906000" />
       <workItem from="1528033817799" duration="3764000" />
-      <workItem from="1528794600574" duration="1660000" />
+      <workItem from="1528794600574" duration="14998000" />
     </task>
     <servers />
   </component>
@@ -702,27 +612,27 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="192851000" />
+    <option name="totallyTimeSpent" value="206189000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="63" y="-4" width="1305" height="780" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="FindBugs-IDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934132" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32741934" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934132" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3935484" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38709676" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23150358" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2688942" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -734,7 +644,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32741934" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21458334" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4870968" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -760,115 +669,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/charts/Dummy.java" />
-    <entry file="jar://$PROJECT_DIR$/../../../Programs/jdk-9.0.1/lib/src.zip!/javafx.graphics/javafx/scene/Scene.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="102" column="77" lean-forward="false" selection-start-line="102" selection-start-column="72" selection-end-line="102" selection-end-column="77" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/factory/FilePath.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="23" column="47" lean-forward="false" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tst/strategies/standard/GrudgerPlayerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/strategies/standard/GrudgerPlayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/strategies/standard/AlwaysDefectPlayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/strategies/standard/RandomPlayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="18" column="35" lean-forward="true" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/strategies/standard/PavlovPlayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/strategies/standard/AlwaysCooperatePlayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/strategies/standard/SuspiciousTitForTatPlayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/strategies/standard/TitForTatPlayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/strategies/standard/TitForTwoTatsPlayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/from.epoch.1527750842866/strategy.json" />
-    <entry file="file://$PROJECT_DIR$/src/charts/TournamentEvolutionLineChart.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="85" column="68" lean-forward="true" selection-start-line="85" selection-start-column="68" selection-end-line="85" selection-end-column="68" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/from.epoch.1527751270326/strategy.json" />
-    <entry file="file://$PROJECT_DIR$/src/resources/from.epoch.1527751742319/strategy.json" />
-    <entry file="file://$PROJECT_DIR$/src/resources/from.epoch.1527751098766/strategy.json" />
-    <entry file="file://$PROJECT_DIR$/src/resources/from.epoch.1527754671803/strategy.json" />
-    <entry file="file://$PROJECT_DIR$/src/resources/from.epoch.1527754778785/strategy.json" />
-    <entry file="file://$PROJECT_DIR$/src/resources/from.epoch.1527755050454/strategy.json" />
-    <entry file="file://$PROJECT_DIR$/src/competitions/Tournament.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="29" column="45" lean-forward="false" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/from.epoch.1527756046045/strategy.json" />
-    <entry file="file://$PROJECT_DIR$/src/resources/from.epoch.1527755977267/strategy.json" />
-    <entry file="file://$PROJECT_DIR$/src/resources/from.epoch.1527758038670/strategy.json" />
-    <entry file="file://$PROJECT_DIR$/src/resources/from.epoch.1527758133069/strategy.json" />
     <entry file="file://$PROJECT_DIR$/src/resources/from.epoch.1527758231272/strategy.json" />
     <entry file="file://$PROJECT_DIR$/src/factory/StrategyJsonColumnName.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -904,31 +704,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/from.epoch.1527769665251/strategy.json" />
-    <entry file="file://$PROJECT_DIR$/src/factory/PopulationConfigWriter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="18" column="18" lean-forward="false" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/factory/testing.config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/factory/PopulationConfigReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/competitions/Match.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
@@ -945,29 +720,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/factory/training.config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="14" lean-forward="false" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/from.epoch.1528034406397/strategy.json" />
-    <entry file="file://$PROJECT_DIR$/src/resources/from.epoch.1528034622667/strategy.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-198">
-          <caret line="16" column="16" lean-forward="false" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/factory/ChromosomeStrategyFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="16" column="43" lean-forward="false" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/strategies/genetic/NextActionHelper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="468">
@@ -997,8 +750,8 @@
         <state relative-caret-position="360">
           <caret line="22" column="15" lean-forward="false" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="15" />
           <folding>
-            <element signature="e#389#390#0" expanded="true" />
-            <element signature="e#428#429#0" expanded="true" />
+            <element signature="e#389#390#0" expanded="false" />
+            <element signature="e#428#429#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1007,34 +760,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
           <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/competitions/TournamentWithElimination.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2304">
-          <caret line="139" column="17" lean-forward="false" selection-start-line="139" selection-start-column="17" selection-end-line="139" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/strategies/genetic/InvestigatedChromosome.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="78" lean-forward="false" selection-start-line="4" selection-start-column="78" selection-end-line="4" selection-end-column="78" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/from.epoch.1528036955574/strategy.json">
+    <entry file="file://$PROJECT_DIR$/src/player/Payoff.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        <state relative-caret-position="180">
+          <caret line="10" column="18" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
           <folding />
         </state>
       </provider>
@@ -1047,12 +780,226 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/player/Payoff.java">
+    <entry file="file://$PROJECT_DIR$/src/factory/PopulationConfigReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="18" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+        <state relative-caret-position="72">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/from.epoch.1528036955574/strategy.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-854">
+          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/competitions/TournamentWithElimination.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="17" column="8" lean-forward="false" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fitness.config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/factory/training.config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/from.epoch.1528814175473/strategy.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-926">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/from.epoch.1528814584612/strategy.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-908">
+          <caret line="13" column="16" lean-forward="false" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/from.epoch.1528034622667/chart.from.epoch.1528809537965.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/from.epoch.1528034622667/chart.from.epoch.1528810169190.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/from.epoch.1528034622667/chart.from.epoch.1528811080435.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/from.epoch.1528034622667/chart.from.epoch.1528810716923.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/from.epoch.1528035856793/chart.from.epoch.1528809512864.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/from.epoch.1528035856793/chart.from.epoch.1528810454934.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/from.epoch.1528035856793/chart.from.epoch.1528810676878.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/from.epoch.1528035856793/chart.from.epoch.1528810693664.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/from.epoch.1528036955574/chart.from.epoch.1528810492403.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/from.epoch.1528036955574/chart.from.epoch.1528810632593.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/from.epoch.1528036955574/chart.from.epoch.1528810650205.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/from.epoch.1528035856793/chart.from.epoch.1528809408573.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/from.epoch.1528036955574/chart.from.epoch.1528809463294.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/from.epoch.1528036955574/chart.from.epoch.1528810482851.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/from.epoch.1528036955574/chart.from.epoch.1528809493425.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/from.epoch.1528034622667/strategy.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="66" column="16" lean-forward="true" selection-start-line="66" selection-start-column="16" selection-end-line="66" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/from.epoch.1528034622667/chart.from.epoch.1528874068893.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/factory/PopulationConfigWriter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-58">
+          <caret line="15" column="4" lean-forward="true" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+          <folding>
+            <element signature="e#361#391#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/factory/ChromosomeStrategyFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="17" column="46" lean-forward="false" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/from.epoch.1528813080932/strategy.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="16" lean-forward="false" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/from.epoch.1528815761184/strategy.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="76" column="25" lean-forward="true" selection-start-line="76" selection-start-column="2" selection-end-line="76" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/from.epoch.1528816343953/strategy.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1058">
+          <caret line="6" column="16" lean-forward="true" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/factory/testing.config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/from.epoch.1528034622667/chart.from.epoch.1528809303323.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/charts/TournamentEvolutionLineChart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="85" column="67" lean-forward="true" selection-start-line="85" selection-start-column="67" selection-end-line="85" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/strategies/genetic/InvestigatedChromosome.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="78" lean-forward="false" selection-start-line="4" selection-start-column="78" selection-end-line="4" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/from.epoch.1528816343953/chart.from.epoch.1528877388990.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
   </component>
