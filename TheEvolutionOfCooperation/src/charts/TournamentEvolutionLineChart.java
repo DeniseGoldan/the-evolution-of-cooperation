@@ -3,6 +3,7 @@ package charts;
 import competitions.TournamentWithElimination;
 import factory.FilePath;
 import factory.PopulationConfigReader;
+import factory.StrategyReader;
 import javafx.application.Application;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.scene.Scene;
@@ -35,8 +36,9 @@ public class TournamentEvolutionLineChart extends Application {
 
     private final LineChartConfigurator configurator = new LineChartConfigurator();
 
-    public static void main(final String[] args) {
+    public static void main(final String[] args) throws IOException, ParseException {
         launch(args);
+        StrategyReader.printStrategyAndAssociatedHistory(CHROMOSOME_UNDER_TEST_FILE_PATH);
     }
 
     @SuppressWarnings("unchecked")
@@ -86,7 +88,7 @@ public class TournamentEvolutionLineChart extends Application {
         List<Player> players = PopulationConfigReader.getPlayersFromConfigFile(FilePath.TestingPhase.getPath());
 
         Chromosome chromosomeForTournament;
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 10; i++) {
             chromosomeForTournament = getChromosomeWithStrategyFromJsonFile(CHROMOSOME_UNDER_TEST_FILE_PATH);
             players.add(chromosomeForTournament);
         }
@@ -132,17 +134,22 @@ public class TournamentEvolutionLineChart extends Application {
 
     private static class LineChartConfigurator {
 
-        static final String CHART_TITLE = "Evoluţia turneului cu eliminare";
+        static final int NUMBER_OF_ROUNDS_PER_MATCH = 50;
+
         static final String APPLICATION_TITLE = "Evoluţia turneului cu eliminare";
-        static final String X_AXIS_LABEL = "Numărul meciului";
+
+        static final String X_AXIS_LABEL = "Numărul meciului"
+                + " (fiecare meci are "
+                + NUMBER_OF_ROUNDS_PER_MATCH
+                + " runde)";
+
         static final String Y_AXIS_LABEL = "Număr de jucători";
         static final int WIDTH = 900;
         static final int HEIGHT = 500;
         static final int PERCENT_OF_PLAYERS_TO_ELIMINATE = 25;
-        static final int NUMBER_OF_ROUNDS_PER_MATCH = 5;
-        static final int X_AXIS_UPPER_BOUND = 10;
-        static final int Y_AXIS_UPPER_BOUND = 30;
-        static final int X_AXIS_TICK_UNIT = 1;
+        static final int X_AXIS_UPPER_BOUND = 20;
+        static final int Y_AXIS_UPPER_BOUND = 20;
+        static final int X_AXIS_TICK_UNIT = 5;
         static final int Y_AXIS_TICK_UNIT = 5;
 
         /**
@@ -168,8 +175,6 @@ public class TournamentEvolutionLineChart extends Application {
             xAxis.setTickUnit(X_AXIS_TICK_UNIT);
             yAxis.setTickUnit(Y_AXIS_TICK_UNIT);
 
-            LineChart<Number, Number> lineChart = new LineChart<>(xAxis, yAxis);
-            lineChart.setTitle(CHART_TITLE);
             return new LineChart<>(xAxis, yAxis);
 
         }

@@ -22,6 +22,31 @@ public class StrategyReader {
         return chromosome;
     }
 
+    public static void printStrategyAndAssociatedHistory(String filepath) throws IOException, ParseException {
+        List<Action> genes = getStrategyFromJsonFile(filepath);
+        int geneIndex = 0;
+        String messageToPrint;
+        int offsetForMovesBeforeThreeRounds = 7;
+        for (Action gene : genes) {
+            messageToPrint = gene.toString();
+            if (geneIndex >= offsetForMovesBeforeThreeRounds) {
+                messageToPrint += " ";
+                messageToPrint = getBinaryRepresentationOfGeneMeaning(geneIndex, messageToPrint, offsetForMovesBeforeThreeRounds);
+            }
+            System.out.println(messageToPrint);
+            geneIndex++;
+        }
+    }
+
+    private static String getBinaryRepresentationOfGeneMeaning(int geneIndex, String messageToPrint, int offsetForMovesBeforeThreeRounds) {
+        String binaryRepresentation = Integer.toBinaryString(geneIndex - offsetForMovesBeforeThreeRounds);
+        binaryRepresentation = String.format("%6s", binaryRepresentation).replace(' ', 'C');
+        messageToPrint += binaryRepresentation
+                .replace('0', 'C')
+                .replace('1', 'D');
+        return messageToPrint;
+    }
+
     @SuppressWarnings("unchecked")
     static List<Action> getStrategyFromJsonFile(String filepath) throws IOException, ParseException {
 

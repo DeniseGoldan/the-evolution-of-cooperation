@@ -11,7 +11,7 @@ import java.util.*;
 
 public class TournamentWithElimination extends Tournament {
 
-    private final int MAX_ROUNDS = 50;
+    private final int MAX_NUMBER_OF_ITERATIONS = 100;
     private final Logger logger = LoggerFactory.getLogger(TournamentWithElimination.class);
     private int numberOfPlayersToEliminate;
 
@@ -27,7 +27,7 @@ public class TournamentWithElimination extends Tournament {
         resetScoreAndNumberOfMatchesCounter();
         int currentRoundNumber = 0;
 
-        while (!areAllPlayersOfTheSameType() && currentRoundNumber < MAX_ROUNDS) {
+        while (!areAllPlayersOfTheSameType() && currentRoundNumber < MAX_NUMBER_OF_ITERATIONS) {
 
             logger.info("");
             logger.info("Round #" + currentRoundNumber + " will start with:");
@@ -49,7 +49,7 @@ public class TournamentWithElimination extends Tournament {
     public Map<String, XYChart.Series> playTournamentAndGenerateSets() throws IOException, ParseException {
 
         resetScoreAndNumberOfMatchesCounter();
-        int currentRoundNumber = 0;
+        int currentIterationNumber = 0;
 
         Map<String, XYChart.Series> seriesPerPlayer = new HashMap<>();
         for (Player player : players) {
@@ -61,11 +61,11 @@ public class TournamentWithElimination extends Tournament {
             }
         }
 
-        while (!areAllPlayersOfTheSameType() && currentRoundNumber < MAX_ROUNDS) {
-            logger.info("Round number " + currentRoundNumber + ".");
+        while (!areAllPlayersOfTheSameType() && currentIterationNumber < MAX_NUMBER_OF_ITERATIONS) {
+            logger.info("Iteration number " + currentIterationNumber + ".");
             Map<String, Integer> typeCounter = getNumberOfPlayersPerType();
             for (String playerType : typeCounter.keySet()) {
-                seriesPerPlayer.get(playerType).getData().add(new XYChart.Data(currentRoundNumber, typeCounter.get(playerType)));
+                seriesPerPlayer.get(playerType).getData().add(new XYChart.Data(currentIterationNumber, typeCounter.get(playerType)));
                 logger.info("There are " + typeCounter.get(playerType) + " players of type \"" + playerType + "\".");
             }
             resetScoreAndPlayAllPlayersCombinations();
@@ -77,13 +77,13 @@ public class TournamentWithElimination extends Tournament {
                 );
             }
             reshapePopulation();
-            currentRoundNumber++;
+            currentIterationNumber++;
         }
 
-        logger.info("Round number " + currentRoundNumber + ".");
+        logger.info("Iteration number " + currentIterationNumber + ".");
         Map<String, Integer> typeCounter = getNumberOfPlayersPerType();
         for (String playerType : typeCounter.keySet()) {
-            seriesPerPlayer.get(playerType).getData().add(new XYChart.Data(currentRoundNumber, typeCounter.get(playerType)));
+            seriesPerPlayer.get(playerType).getData().add(new XYChart.Data(currentIterationNumber, typeCounter.get(playerType)));
             logger.info("There are " + typeCounter.get(playerType) + " players of type \"" + playerType + "\".");
         }
         for (Player player : players) {
