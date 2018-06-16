@@ -113,13 +113,41 @@ Dacă vrem ca în exemplu să includem un cromozom și facem astfel încât stra
 
 \subsection{Strategia \textbf{Random}}
  
-Am reușit să găsesc o soluție pentru a bate strategia \textbf{Random}. În cel mai rău caz s-a ajuns la remiză. Am ales o populație cu dimensiuni mici (15), un număr de generații mare (1000), valori mari și pentru mutație și încrucișare (în jurul valorii de 50\% pentru fiecare dintre cele două). Am ales ca populația de antrenament să fie alcătuită din copii ale strategiei Random. Numarul de runde l-am fixat la valoarea de 100.
+Strategia \textbf{Random} nu reprezintă o problemă pentru strategiile oferite de algoritmul genetic.
 
+Am antrenat o populație de dimensiune mică (15 indivizi) într-un număr de 1000 de generații, lansând valori mari ale mutației și încrucișării (50\% pentru ambii operatori genetici). Populația de antrenament este dată de un singur individ de tip \textbf{Random}. Am rulat două experimente în urma cărora am obținut două strategii: într-un experiment numărul de runde ale turneului clasic a fost mic (5 runde) iar în celălalt a avut o valoare mai mare (100 de runde).
 
+În cele mai nefavorabile cazuri s-a ajuns la remiză.
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[	
+	width=16cm,
+	height=7.5cm,
+	keepaspectratio
+	]{imagini/chart_from_epoch_1529163979087.png}
+	\caption{\textit{Exemplu de remiză.}}
+\end{figure}
 
+În rest se remarcă cum populația de cromozomi, în mare parte din evoluția sa, este în creștere și, la final, domină turneul cu eliminare.  
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[	
+	width=16cm,
+	height=7.5cm,
+	keepaspectratio
+	]{imagini/chart_from_epoch_1529164104597.png}
+\end{figure}
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[	
+	width=16cm,
+	height=7.5cm,
+	keepaspectratio
+	]{imagini/chart_from_epoch_1529164689818.png}
+\end{figure}
 
 
 

@@ -23,5 +23,5 @@
 \contentsline {section}{\numberline {2}Cum este modelat un turneu cu eliminare}{28}
 \contentsline {section}{\numberline {3}Concluzii trase in urma finalizarii turneelor}{28}
 \contentsline {subsection}{\numberline {3.1}Num\IeC {\u a}rul de runde al meciurilor din turneul cu eliminare}{29}
-\contentsline {subsection}{\numberline {3.2}Populatia de antrenament}{31}
+\contentsline {subsection}{\numberline {3.2}Relevan\IeC {\textcommabelow t}a popula\IeC {\textcommabelow t}iei de antrenament c\IeC {\^a}nd popula\IeC {\textcommabelow t}ia de testare e diversificat\IeC {\u a}}{31}
 \contentsline {subsection}{\numberline {3.3}Strategia \textbf {Random}}{33}

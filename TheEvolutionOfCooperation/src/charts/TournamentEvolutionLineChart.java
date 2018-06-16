@@ -134,7 +134,7 @@ public class TournamentEvolutionLineChart extends Application {
 
     private static class LineChartConfigurator {
 
-        static final int NUMBER_OF_ROUNDS_PER_MATCH = 50;
+        static final int NUMBER_OF_ROUNDS_PER_MATCH = 4;
 
         static final String APPLICATION_TITLE = "Evoluţia turneului cu eliminare";
 
@@ -144,11 +144,11 @@ public class TournamentEvolutionLineChart extends Application {
                 + " runde)";
 
         static final String Y_AXIS_LABEL = "Număr de jucători";
-        static final int WIDTH = 900;
-        static final int HEIGHT = 500;
+        static final int WIDTH = 540;
+        static final int HEIGHT = 300;
         static final int PERCENT_OF_PLAYERS_TO_ELIMINATE = 25;
         static final int X_AXIS_UPPER_BOUND = 20;
-        static final int Y_AXIS_UPPER_BOUND = 20;
+        static final int Y_AXIS_UPPER_BOUND = 25;
         static final int X_AXIS_TICK_UNIT = 5;
         static final int Y_AXIS_TICK_UNIT = 5;
 

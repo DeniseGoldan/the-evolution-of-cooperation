@@ -13,9 +13,9 @@ public class ChromosomeStrategyFactory {
 
         GeneticAlgorithm geneticAlgorithm = new GeneticAlgorithm()
                 .withCrossoverProbability(0.45)
-                .withMutationProbability(0.5)
+                .withMutationProbability(0.45)
                 .withNumberOfGenerations(1000)
-                .withNumberOfRoundsPerMatch(100)
+                .withNumberOfRoundsPerMatch(10)
                 .withPopulationSize(15);
         populateNewFileWithStrategyData(geneticAlgorithm);
     }
