@@ -130,23 +130,23 @@ Exemplu:
  
 Toate strategiile dezvoltate prin intermediul algoritmului genetic sunt salvate într-un director de resurse, în fișiere în format json, alături de datele relevante pentru dezvoltarea cromozomilor: 
 \begin{itemize}
-	 \item[\textasteriskcentered] strategia rezultată 
-  	 \item[\textasteriskcentered] o medie a scorului din turneul clasic 
-  	 \item[\textasteriskcentered] numărul de runde jucate în fiecare meci 
-  	 \item[\textasteriskcentered] configurația populației de antrenament (sub forma exemplificată mai sus)
-  	 \item[\textasteriskcentered] numărul de generații 
-  	 \item[\textasteriskcentered] dimensiunea populației antrenate
-  	 \item[\textasteriskcentered] probabilitatea de încrucișare 
-  	 \item[\textasteriskcentered] probabilitatea de mutație 
+	 \item[\textasteriskcentered] strategia rezultată;
+  	 \item[\textasteriskcentered] o medie a scorului din turneul clasic; 
+  	 \item[\textasteriskcentered] numărul de runde jucate în fiecare meci;
+  	 \item[\textasteriskcentered] configurația populației de antrenament (sub forma exemplificată mai sus);
+  	 \item[\textasteriskcentered] numărul de generații; 
+  	 \item[\textasteriskcentered] dimensiunea populației antrenate;
+  	 \item[\textasteriskcentered] probabilitatea de încrucișare; 
+  	 \item[\textasteriskcentered] probabilitatea de mutație. 
 \end{itemize} 
 
 Odată stabilite valorile parametrilor, se poate trece la inițializarea în mod aleator a cromozomilor și antrenarea lor. În final, vrem să obținem într-un fișier strategia cea mai bine adaptată la condițiile de antrenament. Procesul de inițializare și antrenare se repetă de un număr de ori pentru aceeasi configuratie a algoritmului genetic. Experimental, se poate observa că \textbf{restartarea algoritmului} poate duce la reținerea unor rezultate mai bune decât dacă am lăsa algoritmul să ruleze o singură dată.
 
 Timp de un număr de generații, cromozomii sunt supuși unor transformări: 
 \begin{itemize} 
-	\item se aplică un proces de selecție 
-	\item se aplică operatorul încrucișării 
-	\item se aplică mutația 
+	\item se aplică un proces de selecție; 
+	\item se aplică operatorul încrucișării;
+	\item se aplică mutația.
 \end{itemize} 
 
 Procesul de selecție pe care am decis să îl implementez este selecția de tip ruletă (engl. roulette wheel). Această selecție este un algoritm stocastic, în care indivizii sunt distribuiți pe niște segmente contigue. Lungimea segmentelor este direct proportională cu cât de bine este adaptat la mediu individul. Fiecare segment determină un interval. Se generează pe rând câte un număr aleator și este ales intervalul (care corespunde unui unic individ-practic se alege individul) la care aparține numărul. Individul selectat se adaugă în mulțimea ce va înlocui, la finalul selecției, generația actuală. Procesul seamănă cu învârtirea ruletei, unde fiecare felie a ruletei are mărimea direct proportională cu gradul de adecvare\cite{curs_prof_gabriel_oltean_cluj}.  

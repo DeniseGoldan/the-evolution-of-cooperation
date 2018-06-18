@@ -2,7 +2,7 @@ package strategies.genetic;
 
 public class InvestigatedChromosome {
 
-    public static final String STRATEGY_CREATION_EPOCH_STRING = "1529163099203";
+    public static final String STRATEGY_CREATION_EPOCH_STRING = "1529303072346";
 
     public static final String CHROMOSOME_UNDER_TEST_FILE_PATH =
             "src/resources/"

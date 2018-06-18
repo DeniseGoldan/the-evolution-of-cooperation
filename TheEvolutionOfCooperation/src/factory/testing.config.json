@@ -1,3 +1,6 @@
 {
-  "Random": 10
+  "Always Cooperate": 5,
+  "Always Defect": 5,
+  "Grudger": 5,
+  "Pavlov": 5
 }

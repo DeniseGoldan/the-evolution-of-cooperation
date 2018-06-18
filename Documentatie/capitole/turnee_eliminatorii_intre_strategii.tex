@@ -17,23 +17,67 @@ Un turneu cu eliminare pornește de la o populație de strategii în care, la fi
 \\\\
 Pentru a vedea clar modul în care evoluează strategiile în contextul acestui tip de turneu, am implementat o metodă grafică de vizualizare a datelor. Am ales să folosesc \textbf{line chart}-uri. Axa absciselor are drept legendă numărul de indivizi din fiecare strategie. Axa ordonatelor reprezintă indexul rundei turneului.
 
-În fiecare turneu cu eliminare pot participa 25 de jucători, câte 5 din fiecare strategie. La fiecare turneu cu eliminare sunt câte 5 jucători care urmează exact aceeași strategie obținută în urma rulării algoritmului genetic.
-
 \section {Concluzii trase in urma finalizarii turneelor}
 
-În contextul acestei probleme, nu putem vorbi despre optim local sau global, întrucât o strategie care are un fitness bun în faza de antrenare poate să își piardă relevanța în faza de testare.  
+În contextul acestei probleme, nu putem vorbi despre optim local sau global, întrucât un fitness cu o valoare bună obținut pentru un cromozom în faza de antrenare poate să își piardă relevanța în faza de testare datorită faptului că mediul de testare poate varia. În rândurile următoare prezint o serie de experimente\footnote{Fiecare experiment reprezintă rularea algoritmului genetic odată stabilită o configurație și trecerea soluției prin mai multe medii de testare, prin varierea configurației turneului cu eliminare.}.  
 
-\subsection{Numărul de runde al meciurilor din turneul cu eliminare}
+\subsection {Explorarea redusă a spațiului de căutare}  
+
+Am făcut un prim experiment în care configurația algoritmului genetic a dus la o explorare redusă a spațiului de căutare. Pentru aceasta, am ales valori mici pentru numărul de generații, pentru numărul de runde din turneul clasic și pentru probabilitățile operatorilor genetici.
+ 
+\textit{Observație}: Configurația algoritmului genetic și cea a turneului este trecută în Anexa numărul 1.
+
+Diagramele de mai jos atestă calitatea redusă a soluției obținute în urma experimentului. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[	
+	width=16cm,
+	height=7.5cm,
+	keepaspectratio
+	]{imagini/experiment_1_epoch_1529303072346/chart_from_epoch_1529303304972.png}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[	
+	width=16cm,
+	height=7.5cm,
+	keepaspectratio
+	]{imagini/experiment_1_epoch_1529303072346/chart_from_epoch_1529303340019.png}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[	
+	width=16cm,
+	height=7.5cm,
+	keepaspectratio
+	]{imagini/experiment_1_epoch_1529303072346/chart_from_epoch_1529303352244.png}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[	
+	width=16cm,
+	height=7.5cm,
+	keepaspectratio
+	]{imagini/experiment_1_epoch_1529303072346/chart_from_epoch_1529303371162.png}
+\end{figure}
+
+\subsection {Modul in care numărul de runde al meciurilor din turneul cu eliminare poate avantaja anumite strategii}
+
+Intr-un alt experiment, cel cu numarul 2, am surpins cum numarul de runde, modifcat cu o valoare foarte mic,a poate aduce avantajul unei stategii ale algoritmului genetic.
 
 Când numărul de runde al merciurilor din turneul cu eliminare este mic, am observat că strategiile propuse de algoritmul genetic, cu mici excepții, nu reușesc să câștige. Numărul de cromozomi, în cele mai optimiste cazuri, înregistrează o creștere și apoi o descreștere până la 0 la final de turneu. 
 
 În exemplele de mai jos, configurația algoritmului genetic este următoarea: 
 
-- numărul de runde jucate în fiecare meci: 20\\
-- numărul de generații: 500\\
-- dimensiunea populației antrenate: 25\\
-- probabilitatea de încrucișare: 0.1\\
-- probabilitatea de mutație: 0.2\\
+- numărul de runde jucate în fiecare meci: 20;\\
+- numărul de generații: 500;\\
+- dimensiunea populației antrenate: 25;\\
+- probabilitatea de încrucișare: 0.1;\\
+- probabilitatea de mutație: 0.2;\\
 - configurația populației de antrenament:\\
 \begin{center}
 	\begin{lstlisting}
