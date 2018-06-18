@@ -11,22 +11,30 @@ Un \textbf{meci} este jucat de către doi jucători. Este alcătuit dintr-un num
 
 \section {Cum este modelat un turneu cu eliminare}
  
-Un turneu cu eliminare pornește de la o populație de strategii în care, la fiecare iterație, fiecare individ joacă câte un meci cu ceilalți indivizi. Pe parcursul meciurilor, câștigurile individuale se însumează într-un scor total. După ce se joacă toate combinările de doi jucători (se ajunge la finalul iterației), se elimină un procent din cei mai slabi jucători.  Pentru a mai reduce din numărul parametrilor ale căror valori pot varia, am stabilit că procentul să fie de 25\%. În caz de egalitate a scorurilor între doi jucători, se elimină la întâmplare unul din cei doi. Se completează locurile eliberate cu stategii care au obținut printre cele mai bune scoruri. Se resetează scorul total al indivizilor și se repetă acești pași până când în turneu a rămas un singur tip de strategie, ori până când am atins un număr maxim de iterații, pe care l-am lăsat la valoarea de 10.  
+Un turneu cu eliminare pornește de la o populație de strategii în care, la fiecare iterație, fiecare individ joacă câte un meci cu ceilalți indivizi. Pe parcursul meciurilor, câștigurile individuale se însumează într-un scor total. După ce se joacă toate combinările de doi jucători (se ajunge la finalul iterației), se elimină un procent din cei mai slabi jucători.  Pentru a mai reduce din numărul parametrilor ale căror valori pot varia, am stabilit că procentul să fie de 25\%. În caz de egalitate a scorurilor între doi jucători, se elimină la întâmplare unul din cei doi. Se completează locurile eliberate cu stategii care au obținut printre cele mai bune scoruri. Se resetează scorul total al indivizilor și se repetă acești pași până când în turneu a rămas un singur tip de strategie, ori până când am atins un număr maxim de iterații.  
 \\\\
 \textit{Observație}: Când într-un turneu cu eliminare concurează doi indivizi ce au aceeași strategie deterministă, la finalul unei iterații, cei doi indivizi vor avea exact același scor. Nu putem spune același lucru despre doi indivizi care folosesc strategia \textbf{Random}.
 \\\\
 Pentru a vedea clar modul în care evoluează strategiile în contextul acestui tip de turneu, am implementat o metodă grafică de vizualizare a datelor. Am ales să folosesc \textbf{line chart}-uri. Axa absciselor are drept legendă numărul de indivizi din fiecare strategie. Axa ordonatelor reprezintă indexul rundei turneului.
 
-\section {Concluzii trase in urma finalizarii turneelor}
+\section {Concluzii trase în urma finalizării turneelor}
 
-În contextul acestei probleme, nu putem vorbi despre optim local sau global, întrucât un fitness cu o valoare bună obținut pentru un cromozom în faza de antrenare poate să își piardă relevanța în faza de testare datorită faptului că mediul de testare poate varia. În rândurile următoare prezint o serie de experimente\footnote{Fiecare experiment reprezintă rularea algoritmului genetic odată stabilită o configurație și trecerea soluției prin mai multe medii de testare, prin varierea configurației turneului cu eliminare.}.  
+Fiecare experiment este dat de stabilirea parametrilor configurației algoritmului genetic, urmată de rularea algoritmului genetic și trecerea soluției prin mai multe medii de testare, prin varierea configurației turneului cu eliminare.
 
-\subsection {Explorarea redusă a spațiului de căutare}  
+În contextul acestei probleme, nu putem vorbi despre optim local sau global, întrucât un fitness cu o valoare bună obținut pentru un cromozom în faza de antrenare poate să își piardă relevanța în faza de testare datorită faptului că mediul de testare poate varia. 
+
+În rândurile următoare prezint o serie de experimente.  
+
+\subsection {Explorarea redusă a spațiului de căutare} 
+
+\begin{center}
+	\underline{\textit{Experimentul 1}}
+\end{center}
+
+\textit{Configurația algoritmului genetic și cea a turneului cu eliminare este trecută în \textbf{Anexa numărul 1}}.\\
 
 Am făcut un prim experiment în care configurația algoritmului genetic a dus la o explorare redusă a spațiului de căutare. Pentru aceasta, am ales valori mici pentru numărul de generații, pentru numărul de runde din turneul clasic și pentru probabilitățile operatorilor genetici.
  
-\textit{Observație}: Configurația algoritmului genetic și cea a turneului este trecută în Anexa numărul 1.
-
 Diagramele de mai jos atestă calitatea redusă a soluției obținute în urma experimentului. 
 
 \begin{figure}[H]
@@ -36,6 +44,7 @@ Diagramele de mai jos atestă calitatea redusă a soluției obținute în urma e
 	height=7.5cm,
 	keepaspectratio
 	]{imagini/experiment_1_epoch_1529303072346/chart_from_epoch_1529303304972.png}
+	\caption{}
 \end{figure}
 
 \begin{figure}[H]
@@ -45,6 +54,7 @@ Diagramele de mai jos atestă calitatea redusă a soluției obținute în urma e
 	height=7.5cm,
 	keepaspectratio
 	]{imagini/experiment_1_epoch_1529303072346/chart_from_epoch_1529303340019.png}
+	\caption{}
 \end{figure}
 
 \begin{figure}[H]
@@ -54,6 +64,7 @@ Diagramele de mai jos atestă calitatea redusă a soluției obținute în urma e
 	height=7.5cm,
 	keepaspectratio
 	]{imagini/experiment_1_epoch_1529303072346/chart_from_epoch_1529303352244.png}
+	\caption{}
 \end{figure}
 
 \begin{figure}[H]
@@ -63,45 +74,27 @@ Diagramele de mai jos atestă calitatea redusă a soluției obținute în urma e
 	height=7.5cm,
 	keepaspectratio
 	]{imagini/experiment_1_epoch_1529303072346/chart_from_epoch_1529303371162.png}
+	\caption{}
 \end{figure}
 
-\subsection {Modul in care numărul de runde al meciurilor din turneul cu eliminare poate avantaja anumite strategii}
+\subsection {Numărul de runde al meciurilor din turneul cu eliminare}
 
-Intr-un alt experiment, cel cu numarul 2, am surpins cum numarul de runde, modifcat cu o valoare foarte mic,a poate aduce avantajul unei stategii ale algoritmului genetic.
-
-Când numărul de runde al merciurilor din turneul cu eliminare este mic, am observat că strategiile propuse de algoritmul genetic, cu mici excepții, nu reușesc să câștige. Numărul de cromozomi, în cele mai optimiste cazuri, înregistrează o creștere și apoi o descreștere până la 0 la final de turneu. 
-
-În exemplele de mai jos, configurația algoritmului genetic este următoarea: 
-
-- numărul de runde jucate în fiecare meci: 20;\\
-- numărul de generații: 500;\\
-- dimensiunea populației antrenate: 25;\\
-- probabilitatea de încrucișare: 0.1;\\
-- probabilitatea de mutație: 0.2;\\
-- configurația populației de antrenament:\\
 \begin{center}
-	\begin{lstlisting}
-	{
-		"Always Cooperate": 1,
-		"Always Defect": 1,
-		"Grudger": 1,
-		"Pavlov": 1,
-		"Tit-For-Tat": 1,
-		"Suspicious Tit-For-Tat": 1,
-		"Tit-For-Two-Tats": 1
-	}
-\end{lstlisting}
+	\underline{\textit{Experimentul 2}}
 \end{center}
 
+\textit{Configurația algoritmului genetic și cea a turneului cu eliminare este trecută în \textbf{Anexa numărul 2}}.\\
+
+Într-un alt experiment, am surpins cum numărul de runde, odată modificat cu o valoare foarte mică, a avantajat una din strategiile algoritmului genetic. 
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[	
-		width=16cm,
-		height=7.5cm,
-		keepaspectratio
-	]{imagini/chart_from_epoch_1528885395051.png}
-	\caption{\textit{Evoluția turneului cu eliminare când numărul de runde este 5.}}
-	\label{fig:evolutia_cand_numarul_de_runde_este_5}
+	width=16cm,
+	height=7.5cm,
+	keepaspectratio
+	]{imagini/experiment_2_epoch_1529309949939/chart_from_epoch_1529310422567.png}
+	\caption{}
 \end{figure}
 
 \begin{figure}[H]
@@ -110,56 +103,35 @@ Când numărul de runde al merciurilor din turneul cu eliminare este mic, am obs
 		width=16cm,
 		height=7.5cm,
 		keepaspectratio
-	]{imagini/chart_from_epoch_1528885889300.png}
-	\caption{\textit{Evoluția turneului cu eliminare când numărul de runde este 15.}}
-	\label{fig:evolutia_cand_numarul_de_runde_este_15}
+	]{imagini/experiment_2_epoch_1529309949939/chart_from_epoch_1529310399495.png}
+	\caption{}
 \end{figure}
 
-Mărind cu 2 numărul de runde din fiecare meci, observăm că strategia propusă de algoritmul genetic câștigă. 
+Mărind cu 1 numărul de runde din fiecare meci, observăm că strategia propusă de algoritmul genetic câștigă. 
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[	
-		width=16cm,
-		height=7.5cm,
-		keepaspectratio
-	]{imagini/chart_from_epoch_1528886329612.png}
-	\caption{\textit{Evoluția turneului cu eliminare când numărul de runde este 17.}}
-	\label{fig:evolutia_cand_numarul_de_runde_este_17}
+	width=16cm,
+	height=7.5cm,
+	keepaspectratio
+	]{imagini/experiment_2_epoch_1529309949939/chart_from_epoch_1529310386663.png}
+	\caption{}
 \end{figure}
-
-Dacă numărul de runde al turneului cu eliminare este mai mare și nu este prezentă strategia \textbf{Random}, strategia algoritmului genetic are șanse mai mari de câștig.
-
-\subsection{Relevanța populației de antrenament când populația de testare e diversificată}
-
-Consider că \textbf{o populație diversificată de antrenament} poate simula condițiile din faza de testare. Din acest motiv am optat pentru ca aceasta să cuprindă fiecare strategie deterministă prezentată la secțiunea de strategii standard (am omis strategia \textbf{Random}). Prezența strategiei \textbf{Random} în faza de antrenament nu ajută la interpretarea calității soluției. Sunt șanse ca acestă strategie nedeterministă să obțină un scor bun în faza de antrenament, însă să nu facă față în faza de testare. 
-
-Am pus câte un individ din fiecare strategie.
-
-Am încercat să antrenez strategiile în contextul în care populația de antrenament era alcătuită doar din \textbf{Always Cooperate}, sau doar din \textbf{Always Defect}, sau doar din Tit-For-Tat, însă aceste strategii nu s-au comportat într-un mod notabil în faza de testare cand .
-
-Un lucru ce se observă ușor este că strategia \textbf{Tit-For-Tat} reușește să câștige aproape de fiecare dată când la initiaizarea turneului cu eliminare toate strategiile au ponderi egale si numarul de runde este mare.
-
-Strategia Tit-For-Tat poate totuși fi totuși bătută. Un astfel de context presupune ca strategiile cu care concurează să aleagă ca la fiecare pas să repete aceeași mișcare, asemeni strategiilor Always Defect și Always Cooperate. Motivul eliminării ar fi că la scoruri egale, când se dorește eliminarea unui singur jucător din 2 candidați, alegerea se face la întâmplare. Acest scenariu presupune schimbarea structurii populației de test. Observația este prezentată în exemplul de mai jos: 
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[	
-		width=16cm,
-		height=7.5cm,
-		keepaspectratio
-	]{imagini/chart_from_epoch_1528914497347.png}
-	\caption{\textit{Strategia \textbf{Tit-For-Tat} pierde.}}
-	\label{fig:tit_for_tat_pierde}
-\end{figure}
-
-Dacă vrem ca în exemplu să includem un cromozom și facem astfel încât strategia \textbf{Tit-For-Tat} să câștige, trebuie să defavorizam cromozomul lăsând numărul de runde la o valoare mică, cum ar fi 5. Dacă ar fi o valoare mai mare, în prima instanță s-ar elimina strategia care repetă aceeași mișcare, ca mai apoi să fie eliminate copiile cromozomilor. 
 
 \subsection{Strategia \textbf{Random}}
+
+\begin{center}
+	\underline{\textit{Experimentele 3 și 4}}
+\end{center}
+
+\textit{Configurația algoritmului genetic și cea a turneului cu eliminare este trecută în \textbf{Anexa numărul 3}}.\\
  
 Strategia \textbf{Random} nu reprezintă o problemă pentru strategiile oferite de algoritmul genetic.
 
 Am antrenat o populație de dimensiune mică (15 indivizi) într-un număr de 1000 de generații, lansând valori mari ale mutației și încrucișării (50\% pentru ambii operatori genetici). Populația de antrenament este dată de un singur individ de tip \textbf{Random}. Am rulat două experimente în urma cărora am obținut două strategii: într-un experiment numărul de runde ale turneului clasic a fost mic (5 runde) iar în celălalt a avut o valoare mai mare (100 de runde).
+
+Pentru prima strategie obtinuta, numarul de runde al tuneului clasic este mai mic (5 runde). Pentru celalalt experiment, numarul de runde al tuneului clasic este 100.
 
 În cele mai nefavorabile cazuri s-a ajuns la remiză.
 
@@ -182,6 +154,7 @@ Am antrenat o populație de dimensiune mică (15 indivizi) într-un număr de 10
 	height=7.5cm,
 	keepaspectratio
 	]{imagini/chart_from_epoch_1529164104597.png}
+	\caption{}
 \end{figure}
 
 \begin{figure}[H]
@@ -191,18 +164,33 @@ Am antrenat o populație de dimensiune mică (15 indivizi) într-un număr de 10
 	height=7.5cm,
 	keepaspectratio
 	]{imagini/chart_from_epoch_1529164689818.png}
+	\caption{}
 \end{figure}
 
+\subsection{Relevanța populației de antrenament când populația de testare e diversificată}
 
+Consider că \textbf{o populație diversificată de antrenament} poate simula condițiile din faza de testare. Din acest motiv am optat pentru ca aceasta să cuprindă fiecare strategie deterministă prezentată la secțiunea de strategii standard (am omis strategia \textbf{Random}). Prezența strategiei \textbf{Random} în faza de antrenament nu ajută la interpretarea calității soluției. Sunt șanse ca acestă strategie nedeterministă să obțină un scor bun în faza de antrenament, însă să nu facă față în faza de testare. 
 
+Am pus câte un individ din fiecare strategie.
 
+Am încercat să antrenez strategiile în contextul în care populația de antrenament era alcătuită doar din \textbf{Always Cooperate}, sau doar din \textbf{Always Defect}, sau doar din Tit-For-Tat, însă aceste strategii nu s-au comportat într-un mod notabil în faza de testare cand .
 
+Un lucru ce se observă ușor este că strategia \textbf{Tit-For-Tat} reușește să câștige aproape de fiecare dată când la initiaizarea turneului cu eliminare toate strategiile au ponderi egale si numarul de runde este mare.
 
+Strategia Tit-For-Tat poate totuși fi totuși bătută. Un astfel de context presupune ca strategiile cu care concurează să aleagă ca la fiecare pas să repete aceeași mișcare, asemeni strategiilor Always Defect și Always Cooperate. Motivul eliminării ar fi că la scoruri egale, când se dorește eliminarea unui singur jucător din 2 candidați, alegerea se face la întâmplare. Acest scenariu presupune schimbarea structurii populației de test. Observația este prezentată în exemplul de mai jos: 
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[	
+	width=16cm,
+	height=7.5cm,
+	keepaspectratio
+	]{imagini/chart_from_epoch_1528914497347.png}
+	\caption{\textit{Strategia \textbf{Tit-For-Tat} pierde.}}
+	\label{fig:tit_for_tat_pierde}
+\end{figure}
 
-
-
-
+Dacă vrem ca în exemplu să includem un cromozom și facem astfel încât strategia \textbf{Tit-For-Tat} să câștige, trebuie să defavorizam cromozomul lăsând numărul de runde la o valoare mică, cum ar fi 5. Dacă ar fi o valoare mai mare, în prima instanță s-ar elimina strategia care repetă aceeași mișcare, ca mai apoi să fie eliminate copiile cromozomilor. 
 
 
 

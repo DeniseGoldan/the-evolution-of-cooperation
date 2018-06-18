@@ -15,7 +15,6 @@ import javafx.stage.Stage;
 import org.json.simple.parser.ParseException;
 import player.Player;
 import strategies.genetic.Chromosome;
-import strategies.genetic.InvestigatedChromosome;
 
 import javax.imageio.ImageIO;
 import java.io.File;
@@ -24,7 +23,7 @@ import java.util.List;
 import java.util.Map;
 
 import static factory.StrategyReader.getChromosomeWithStrategyFromJsonFile;
-import static strategies.genetic.InvestigatedChromosome.CHROMOSOME_UNDER_TEST_FILE_PATH;
+import static charts.InvestigatedChromosome.CHROMOSOME_UNDER_TEST_FILE_PATH;
 
 /**
  * Each chart corresponds to a scenario in which a population of players compete
@@ -134,7 +133,7 @@ public class TournamentEvolutionLineChart extends Application {
 
     private static class LineChartConfigurator {
 
-        static final int NUMBER_OF_ROUNDS_PER_MATCH = 1000;
+        static final int NUMBER_OF_ROUNDS_PER_MATCH = 100;
 
         static final String APPLICATION_TITLE = "Evoluţia turneului cu eliminare";
 
@@ -147,9 +146,9 @@ public class TournamentEvolutionLineChart extends Application {
         static final int WIDTH = 720;
         static final int HEIGHT = 400;
         static final int PERCENT_OF_PLAYERS_TO_ELIMINATE = 25;
-        static final int X_AXIS_UPPER_BOUND = 15;
+        static final int X_AXIS_UPPER_BOUND = 7;
         static final int Y_AXIS_UPPER_BOUND = 30;
-        static final int X_AXIS_TICK_UNIT = 5;
+        static final int X_AXIS_TICK_UNIT = 1;
         static final int Y_AXIS_TICK_UNIT = 5;
 
         /**

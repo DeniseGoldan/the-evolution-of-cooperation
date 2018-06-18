@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import static strategies.genetic.InvestigatedChromosome.CHROMOSOME_UNDER_TEST_FILE_PATH;
+import static charts.InvestigatedChromosome.CHROMOSOME_UNDER_TEST_FILE_PATH;
 
 public abstract class Player {
 

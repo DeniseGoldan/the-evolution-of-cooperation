@@ -32,17 +32,17 @@
         <entry file="file://$PROJECT_DIR$/src/factory/testing.config.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
-              <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+              <caret line="5" column="1" lean-forward="false" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="InvestigatedChromosome.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/strategies/genetic/InvestigatedChromosome.java">
+        <entry file="file://$PROJECT_DIR$/src/charts/InvestigatedChromosome.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63">
-              <caret line="4" column="78" lean-forward="false" selection-start-line="4" selection-start-column="78" selection-end-line="4" selection-end-column="78" />
+            <state relative-caret-position="180">
+              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -61,11 +61,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ChromosomeStrategyFactory.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ChromosomeStrategyFactory.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/factory/ChromosomeStrategyFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="18" column="38" lean-forward="false" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
+            <state relative-caret-position="144">
+              <caret line="16" column="44" lean-forward="true" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -74,18 +74,28 @@
       <file leaf-file-name="training.config.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/factory/training.config.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+            <state relative-caret-position="90">
+              <caret line="5" column="19" lean-forward="false" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TournamentEvolutionLineChart.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TournamentEvolutionLineChart.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/charts/TournamentEvolutionLineChart.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-90">
-              <caret line="136" column="57" lean-forward="false" selection-start-line="136" selection-start-column="57" selection-end-line="136" selection-end-column="57" />
+            <state relative-caret-position="120">
+              <caret line="135" column="57" lean-forward="false" selection-start-line="135" selection-start-column="57" selection-end-line="135" selection-end-column="57" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="strategy.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/resources/from.epoch.1529309949939/strategy.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="280">
+              <caret line="79" column="20" lean-forward="false" selection-start-line="79" selection-start-column="20" selection-end-line="79" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -95,7 +105,7 @@
         <entry file="file://$PROJECT_DIR$/src/resources/from.epoch.1529303072346/strategy.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-1062">
-              <caret line="11" column="13" lean-forward="true" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+              <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -116,7 +126,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>action ind</find>
       <find>mutat</find>
       <find>private static final String APPLICATION_TITLE = &quot;Line Chart&quot;;</find>
       <find>Scores</find>
@@ -146,6 +155,7 @@
       <find>investiga</find>
       <find>`</find>
       <find>CCCCCC</find>
+      <find>1000</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/src/resources/from.epoch.1529168343168</dir>
@@ -159,8 +169,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/strategies/standard/GrudgerPlayer.java" />
-        <option value="$PROJECT_DIR$/src/competitions/Match.java" />
         <option value="$PROJECT_DIR$/src/strategies/genetic/Chromosome.java" />
         <option value="$PROJECT_DIR$/src/player/Player.java" />
         <option value="$PROJECT_DIR$/src/resources/from.epoch.1527750842866/strategy.json" />
@@ -203,13 +211,15 @@
         <option value="$PROJECT_DIR$/src/resources/from.epoch.1529163099203/strategy.json" />
         <option value="$PROJECT_DIR$/src/resources/from.epoch.1529164331031/strategy.json" />
         <option value="$PROJECT_DIR$/src/resources/from.epoch.1529167547783/strategy.json" />
-        <option value="$PROJECT_DIR$/src/factory/training.config.json" />
         <option value="$PROJECT_DIR$/src/resources/from.epoch.1529168343168/strategy.json" />
         <option value="$PROJECT_DIR$/src/factory/testing.config.json" />
-        <option value="$PROJECT_DIR$/src/factory/ChromosomeStrategyFactory.java" />
-        <option value="$PROJECT_DIR$/src/strategies/genetic/InvestigatedChromosome.java" />
-        <option value="$PROJECT_DIR$/src/charts/TournamentEvolutionLineChart.java" />
         <option value="$PROJECT_DIR$/src/resources/from.epoch.1529303072346/strategy.json" />
+        <option value="$PROJECT_DIR$/src/factory/training.config.json" />
+        <option value="$PROJECT_DIR$/src/strategies/genetic/InvestigatedChromosome.java" />
+        <option value="$PROJECT_DIR$/src/charts/InvestigatedChromosome.java" />
+        <option value="$PROJECT_DIR$/src/resources/from.epoch.1529309949939/strategy.json" />
+        <option value="$PROJECT_DIR$/src/charts/TournamentEvolutionLineChart.java" />
+        <option value="$PROJECT_DIR$/src/factory/ChromosomeStrategyFactory.java" />
       </list>
     </option>
   </component>
@@ -276,7 +286,7 @@
               <item name="TheEvolutionOfCooperation" type="b2602c69:ProjectViewProjectNode" />
               <item name="TheEvolutionOfCooperation" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="from.epoch.1529303072346" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TheEvolutionOfCooperation" type="b2602c69:ProjectViewProjectNode" />
@@ -358,7 +368,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.TournamentEvolutionLineChart">
+  <component name="RunManager" selected="Application.ChromosomeStrategyFactory">
     <configuration name="ChromosomeStrategyFactory" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -563,8 +573,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.TournamentEvolutionLineChart" />
-        <item index="1" class="java.lang.String" itemvalue="Application.ChromosomeStrategyFactory" />
+        <item index="0" class="java.lang.String" itemvalue="Application.ChromosomeStrategyFactory" />
+        <item index="1" class="java.lang.String" itemvalue="Application.TournamentEvolutionLineChart" />
         <item index="2" class="java.lang.String" itemvalue="Application.TournamentWithElimination" />
         <item index="3" class="java.lang.String" itemvalue="Application.Dummy" />
         <item index="4" class="java.lang.String" itemvalue="Application.StrategyWriter" />
@@ -618,7 +628,7 @@
       <workItem from="1528033817799" duration="3764000" />
       <workItem from="1528794600574" duration="21845000" />
       <workItem from="1528897355425" duration="4483000" />
-      <workItem from="1528913736816" duration="26979000" />
+      <workItem from="1528913736816" duration="31252000" />
     </task>
     <servers />
   </component>
@@ -655,7 +665,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="244498000" />
+    <option name="totallyTimeSpent" value="248771000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="63" y="-4" width="1305" height="780" extended-state="6" />
@@ -713,14 +723,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/resources/from.epoch.1528034622667/strategy.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1314">
-          <caret line="73" column="4" lean-forward="false" selection-start-line="73" selection-start-column="4" selection-end-line="73" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/from.epoch.1528814175473/strategy.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -982,37 +984,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/player/Action.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="39" lean-forward="false" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
-          <folding>
-            <element signature="e#308#309#0" expanded="true" />
-            <element signature="e#354#355#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/from.epoch.1529168343168/strategy.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-990">
           <caret line="13" column="16" lean-forward="true" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/factory/training.config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/strategies/genetic/InvestigatedChromosome.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="4" column="78" lean-forward="false" selection-start-line="4" selection-start-column="78" selection-end-line="4" selection-end-column="78" />
           <folding />
         </state>
       </provider>
@@ -1025,7 +1000,7 @@
     <entry file="file://$PROJECT_DIR$/src/resources/from.epoch.1529303072346/strategy.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1062">
-          <caret line="11" column="13" lean-forward="true" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1033,23 +1008,58 @@
     <entry file="file://$PROJECT_DIR$/src/factory/testing.config.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
-          <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+          <caret line="5" column="1" lean-forward="false" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/factory/ChromosomeStrategyFactory.java">
+    <entry file="file://$PROJECT_DIR$/src/player/Action.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="18" column="38" lean-forward="false" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
+        <state relative-caret-position="342">
+          <caret line="19" column="39" lean-forward="false" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
+          <folding>
+            <element signature="e#308#309#0" expanded="true" />
+            <element signature="e#354#355#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/factory/training.config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="19" lean-forward="false" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/from.epoch.1529309949939/strategy.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="79" column="20" lean-forward="false" selection-start-line="79" selection-start-column="20" selection-end-line="79" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/charts/TournamentEvolutionLineChart.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-90">
-          <caret line="136" column="57" lean-forward="false" selection-start-line="136" selection-start-column="57" selection-end-line="136" selection-end-column="57" />
+        <state relative-caret-position="120">
+          <caret line="135" column="57" lean-forward="false" selection-start-line="135" selection-start-column="57" selection-end-line="135" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/charts/InvestigatedChromosome.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/factory/ChromosomeStrategyFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="16" column="44" lean-forward="true" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
           <folding />
         </state>
       </provider>

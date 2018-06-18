@@ -21,8 +21,8 @@
 \contentsline {chapter}{Turnee eliminatorii \IeC {\^\i }ntre strategii}{27}
 \contentsline {section}{\numberline {1}Termeni \IeC {\^\i }nt\IeC {\^a}lni\IeC {\c t}i}{27}
 \contentsline {section}{\numberline {2}Cum este modelat un turneu cu eliminare}{28}
-\contentsline {section}{\numberline {3}Concluzii trase in urma finalizarii turneelor}{28}
+\contentsline {section}{\numberline {3}Concluzii trase \IeC {\^\i }n urma finaliz\IeC {\u a}rii turneelor}{28}
 \contentsline {subsection}{\numberline {3.1}Explorarea redus\IeC {\u a} a spa\IeC {\textcommabelow t}iului de c\IeC {\u a}utare}{29}
-\contentsline {subsection}{\numberline {3.2}Modul in care num\IeC {\u a}rul de runde al meciurilor din turneul cu eliminare poate avantaja anumite strategii}{31}
-\contentsline {subsection}{\numberline {3.3}Relevan\IeC {\textcommabelow t}a popula\IeC {\textcommabelow t}iei de antrenament c\IeC {\^a}nd popula\IeC {\textcommabelow t}ia de testare e diversificat\IeC {\u a}}{34}
-\contentsline {subsection}{\numberline {3.4}Strategia \textbf {Random}}{35}
+\contentsline {subsection}{\numberline {3.2}Num\IeC {\u a}rul de runde al meciurilor din turneul cu eliminare}{31}
+\contentsline {subsection}{\numberline {3.3}Strategia \textbf {Random}}{33}
+\contentsline {subsection}{\numberline {3.4}Relevan\IeC {\textcommabelow t}a popula\IeC {\textcommabelow t}iei de antrenament c\IeC {\^a}nd popula\IeC {\textcommabelow t}ia de testare e diversificat\IeC {\u a}}{36}

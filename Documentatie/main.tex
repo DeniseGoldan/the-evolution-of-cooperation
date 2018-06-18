@@ -7,6 +7,7 @@
 \usepackage{float}
 \usepackage{listings, xcolor}	% pentru a da ca exemplu json-uri
 \usepackage{afterpage}			% pentru a adauga o pagina goala
+\usepackage[labelsep=" "]{caption} % pentru a scapa de ":" atunci cand figura nu are descriere ("Figura 1:" versus "Figura 1")
 
 \newcommand\blankpage{   
 	\null
@@ -20,7 +21,7 @@
 \renewcommand{\indent}{\hspace*{\tindent}}
 \setlength{\parskip}{0.6em}
 
-\definecolor{background}{HTML}{EEEEEE}
+\definecolor{background}{HTML}{F8F8F8}
 
 \lstset{
 	string=[s]{"}{"},
@@ -79,7 +80,9 @@
 \addcontentsline{toc}{chapter}{Turnee eliminatorii între strategii}
 \input{capitole/turnee_eliminatorii_intre_strategii.tex}
 
-\input{capitole/anexa_1.tex}
+\clearpage
+
+\input{capitole/anexe.tex}
 
 % Bibliografie 
 
