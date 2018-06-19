@@ -129,11 +129,7 @@ Mărind cu 1 numărul de runde din fiecare meci, observăm că strategia propus�
  
 Strategia \textbf{Random} nu reprezintă o problemă pentru strategiile oferite de algoritmul genetic.
 
-Am antrenat o populație de dimensiune mică (15 indivizi) într-un număr de 1000 de generații, lansând valori mari ale mutației și încrucișării (50\% pentru ambii operatori genetici). Populația de antrenament este dată de un singur individ de tip \textbf{Random}. Am rulat două experimente în urma cărora am obținut două strategii: într-un experiment numărul de runde ale turneului clasic a fost mic (5 runde) iar în celălalt a avut o valoare mai mare (100 de runde).
-
-Pentru prima strategie obtinuta, numarul de runde al tuneului clasic este mai mic (5 runde). Pentru celalalt experiment, numarul de runde al tuneului clasic este 100.
-
-În cele mai nefavorabile cazuri s-a ajuns la remiză.
+Am antrenat o populație de dimensiune mică într-un număr mare de generații, lansând valori mari ale mutației și încrucișării. Populația de antrenament este dată de un singur individ de tip \textbf{Random}. Am rulat două experimente în urma cărora am obținut două strategii: pentru prima strategie obținută, cea din experimentul numărul 3, numărul de runde al tuneului clasic este mai mic (5 runde). Pentru celălalt experiment, numărul de runde al turneului clasic este 100.
 
 \begin{figure}[H]
 	\centering
@@ -141,20 +137,8 @@ Pentru prima strategie obtinuta, numarul de runde al tuneului clasic este mai mi
 	width=16cm,
 	height=7.5cm,
 	keepaspectratio
-	]{imagini/chart_from_epoch_1529163979087.png}
-	\caption{\textit{Exemplu de remiză.}}
-\end{figure}
-
-În rest se remarcă cum populația de cromozomi, în mare parte din evoluția sa, este în creștere și, la final, domină turneul cu eliminare.  
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[	
-	width=16cm,
-	height=7.5cm,
-	keepaspectratio
-	]{imagini/chart_from_epoch_1529164104597.png}
-	\caption{}
+	]{imagini/experiment_3_epoch_1529321586156/chart_from_epoch_1529323404815.png}
+	\caption{Cromozomii au strategia de la experimentul 3}
 \end{figure}
 
 \begin{figure}[H]
@@ -163,37 +147,43 @@ Pentru prima strategie obtinuta, numarul de runde al tuneului clasic este mai mi
 	width=16cm,
 	height=7.5cm,
 	keepaspectratio
-	]{imagini/chart_from_epoch_1529164689818.png}
-	\caption{}
+	]{imagini/experiment_3_epoch_1529321586156/chart_from_epoch_1529323424012.png}
+	\caption{Cromozomii au strategia de la experimentul 3}
+	\label{pierde_cromozomul_castiga_random}
 \end{figure}
 
-\subsection{Relevanța populației de antrenament când populația de testare e diversificată}
+În Figura \ref{pierde_cromozomul_castiga_random}, se observă cum strategia propusă de algoritmul genetic pierde, întrucât nu este optimizată pentru a câștiga în contextul unui turneu cu număr mare de runde. 
 
-Consider că \textbf{o populație diversificată de antrenament} poate simula condițiile din faza de testare. Din acest motiv am optat pentru ca aceasta să cuprindă fiecare strategie deterministă prezentată la secțiunea de strategii standard (am omis strategia \textbf{Random}). Prezența strategiei \textbf{Random} în faza de antrenament nu ajută la interpretarea calității soluției. Sunt șanse ca acestă strategie nedeterministă să obțină un scor bun în faza de antrenament, însă să nu facă față în faza de testare. 
+\begin{figure}[H]
+	\centering
+	\includegraphics[	
+	width=16cm,
+	height=7.5cm,
+	keepaspectratio
+	]{imagini/experiment_4_epoch_1529323027289/chart_from_epoch_1529323309315.png}
+	\caption{Cromozomii au strategia de la experimentul 4}
+\end{figure}
 
-Am pus câte un individ din fiecare strategie.
+\begin{figure}[H]
+	\centering
+	\includegraphics[	
+	width=16cm,
+	height=7.5cm,
+	keepaspectratio
+	]{imagini/experiment_4_epoch_1529323027289/chart_from_epoch_1529323321406.png}
+	\caption{Cromozomii au strategia de la experimentul 4}
+\end{figure}
 
-Am încercat să antrenez strategiile în contextul în care populația de antrenament era alcătuită doar din \textbf{Always Cooperate}, sau doar din \textbf{Always Defect}, sau doar din Tit-For-Tat, însă aceste strategii nu s-au comportat într-un mod notabil în faza de testare cand .
+Strategia din experimentul cu numărul 4 va face față și la un număr de runde mai mic, dar și la un număr de runde mai mare în turneele cu eliminare în fața strategiei \textbf{Random}. În fața acestei configurații a turneului eliminatoriu, putem trage concluzia că experimentul numărul 4 oferă o soluție mai bună. 
+
+\subsection{Strategia Tit-For-Tat}
 
 Un lucru ce se observă ușor este că strategia \textbf{Tit-For-Tat} reușește să câștige aproape de fiecare dată când la initiaizarea turneului cu eliminare toate strategiile au ponderi egale si numarul de runde este mare.
 
-Strategia Tit-For-Tat poate totuși fi totuși bătută. Un astfel de context presupune ca strategiile cu care concurează să aleagă ca la fiecare pas să repete aceeași mișcare, asemeni strategiilor Always Defect și Always Cooperate. Motivul eliminării ar fi că la scoruri egale, când se dorește eliminarea unui singur jucător din 2 candidați, alegerea se face la întâmplare. Acest scenariu presupune schimbarea structurii populației de test. Observația este prezentată în exemplul de mai jos: 
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[	
-	width=16cm,
-	height=7.5cm,
-	keepaspectratio
-	]{imagini/chart_from_epoch_1528914497347.png}
-	\caption{\textit{Strategia \textbf{Tit-For-Tat} pierde.}}
-	\label{fig:tit_for_tat_pierde}
-\end{figure}
-
-Dacă vrem ca în exemplu să includem un cromozom și facem astfel încât strategia \textbf{Tit-For-Tat} să câștige, trebuie să defavorizam cromozomul lăsând numărul de runde la o valoare mică, cum ar fi 5. Dacă ar fi o valoare mai mare, în prima instanță s-ar elimina strategia care repetă aceeași mișcare, ca mai apoi să fie eliminate copiile cromozomilor. 
-
-
-
+Se observa o limitare in ceea ce priveste cautarea unei configuratii a agoritmului genetic care sa ofere un oponent bun pentru Tit-For-Tat. Am facut un experiment in care populatia de antrenament este data de un individ cu strategia Tit-For-Tat, insa nu am obtinut rezultate bune. Cand concurau doar copii ale cromozomilor si copii ale strategiei Tit-For-Tat in proportii agele, de fiecare data, la pasii eliminatorii, se eliminau cromozomii.
+ 
+  
+Strategia Tit-For-Tat poate fi batuta doar daca schimbam configuratia turneului cu eliminare. Avem nevoie de un numar mic de runde si de o str
 
 
 

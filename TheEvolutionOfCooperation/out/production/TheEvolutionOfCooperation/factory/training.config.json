@@ -1,9 +1,3 @@
 {
-  "Always Cooperate": 1,
-  "Always Defect": 1,
-  "Grudger": 1,
-  "Pavlov": 1,
-  "Tit-For-Tat": 1,
-  "Suspicious Tit-For-Tat": 1,
-  "Tit-For-Two-Tats": 1
+  "Always Defect": 1
 }

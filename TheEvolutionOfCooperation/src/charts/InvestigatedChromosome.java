@@ -2,7 +2,7 @@ package charts;
 
 public class InvestigatedChromosome {
 
-    public static final String STRATEGY_CREATION_EPOCH_STRING = "1529309949939";
+    public static final String STRATEGY_CREATION_EPOCH_STRING = "1529323027289";
 
     public static final String CHROMOSOME_UNDER_TEST_FILE_PATH =
             "src/resources/"
