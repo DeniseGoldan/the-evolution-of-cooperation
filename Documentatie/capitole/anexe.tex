@@ -1,14 +1,13 @@
 \begin{center}
-	\textbf{Anexa numarul 1}
+	\textbf{Anexa numarul 1} - Experimentul numărul 1
 \end{center}
 
 \textbf{Configurația algoritmului genetic pentru primul experiment este următoarea: }
-
 - numărul de runde jucate în fiecare meci: 10;\\
 - numărul de generații: 100;\\
 - dimensiunea populației antrenate: 10;\\
-- probabilitatea de încrucișare: 0.1;\\
-- probabilitatea de mutație: 0.1;\\
+- probabilitatea de încrucișare: 0.10;\\
+- probabilitatea de mutație: 0.10;\\
 - configurația populației de antrenament:\\
 \begin{center}
 	\begin{lstlisting}
@@ -44,16 +43,15 @@
 \clearpage
 
 \begin{center}
-	\textbf{Anexa numarul 2}
+	\textbf{Anexa numarul 2} - Experimentul numărul 2
 \end{center}
 
 \textbf{Configurația algoritmului genetic pentru cel de al doilea experiment este următoarea: }
-
 - numărul de runde jucate în fiecare meci: 20;\\
 - numărul de generații: 500;\\
 - dimensiunea populației antrenate: 25;\\
-- probabilitatea de încrucișare: 0.1;\\
-- probabilitatea de mutație: 0.2;\\
+- probabilitatea de încrucișare: 0.10;\\
+- probabilitatea de mutație: 0.20;\\
 - configurația populației de antrenament:\\
 \begin{center}
 	\begin{lstlisting}
@@ -76,11 +74,10 @@ Este aceeași configurație ca cea prezentată în \textbf{Anexa numarul 1}.
 \clearpage
 
 \begin{center}
-	\textbf{Anexa numarul 3}
+	\textbf{Anexa numarul 3} - Experimentul numărul 3
 \end{center}
 
 \textbf{Configurația algoritmului genetic pentru cel de al treilea experiment este următoarea: }
-
 - numărul de runde jucate în fiecare meci: 5;\\
 - numărul de generații: 1000;\\
 - dimensiunea populației antrenate: 15;\\
@@ -95,23 +92,7 @@ Este aceeași configurație ca cea prezentată în \textbf{Anexa numarul 1}.
 	\end{lstlisting}
 \end{center}
 
-\textbf{Configurația algoritmului genetic pentru cel de al treilea experiment este următoarea: }
-
-- numărul de runde jucate în fiecare meci: 100;\\
-- numărul de generații: 1000;\\
-- dimensiunea populației antrenate: 15;\\
-- probabilitatea de încrucișare: 0.50;\\
-- probabilitatea de mutație: 0.50;\\
-- configurația populației de antrenament:\\
-\begin{center}
-	\begin{lstlisting}
-	{
-		"Random": 1
-	}
-	\end{lstlisting}
-\end{center}
-
-\textbf{Configurația turneului cu eliminare pentru experimentele trei si patru: }
+\textbf{Configurația turneului cu eliminare: }
 
 În turneul cu eliminare au participat 20 de indivizi, dintre care 10 sunt copii după cromozomul obținut de algoritmul genetic. 
 
@@ -126,3 +107,106 @@ Este aceeași configurație ca cea prezentată în \textbf{Anexa numarul 1}.
 \end{center}
 
 \clearpage
+
+\begin{center}
+	\textbf{Anexa numarul 4} - Experimentul numărul 4
+\end{center}
+
+\textbf{Configurația algoritmului genetic pentru cel de al patrulea experiment este următoarea: }
+- numărul de runde jucate în fiecare meci: 100;\\
+- numărul de generații: 1000;\\
+- dimensiunea populației antrenate: 15;\\
+- probabilitatea de încrucișare: 0.50;\\
+- probabilitatea de mutație: 0.50;\\
+- configurația populației de antrenament:\\
+\begin{center}
+	\begin{lstlisting}
+	{
+		"Random": 1
+	}
+	\end{lstlisting}
+\end{center}
+
+\textbf{Configurația turneului cu eliminare: }
+
+În turneul cu eliminare au participat 20 de indivizi, dintre care 10 sunt copii după cromozomul obținut de algoritmul genetic. 
+
+- procentul de jucători care se elimină (și, implicit, procentul de jucători care se duplică) este de 25\%;\\
+- configurația populației de testare:\\
+\begin{center}
+	\begin{lstlisting}
+	{
+		"Random": 10
+	}
+	\end{lstlisting}
+\end{center}
+
+\clearpage
+
+\begin{center}
+	\textbf{Anexa numarul 5} - Experimentul 5
+\end{center}
+
+\textbf{Configurația algoritmului genetic pentru cel de al cincilea experiment este următoarea: }
+- numărul de runde jucate în fiecare meci: 100;\\
+- numărul de generații: 1000;\\
+- dimensiunea populației antrenate: 15;\\
+- probabilitatea de încrucișare: 0.50;\\
+- probabilitatea de mutație: 0.50;\\
+- configurația populației de antrenament:\\
+\begin{center}
+	\begin{lstlisting}
+	{
+		"Always Defect": 1
+	}
+	\end{lstlisting}
+\end{center}
+
+\textbf{Configurația turneului cu eliminare pentru experimentul numarul 5: }
+
+În turneul cu eliminare au participat 20 de indivizi, dintre care 10 sunt copii după cromozomul obținut de algoritmul genetic. 
+
+- procentul de jucători care se elimină (și, implicit, procentul de jucători care se duplică) este de 25\%;\\
+- configurația populației de testare:\\
+\begin{center}
+	\begin{lstlisting}
+	{
+		"Tit-For-Tat": 10
+	}
+	\end{lstlisting}
+\end{center}
+
+\clearpage
+
+\begin{center}
+	\textbf{Anexa numarul 6} - Experimentul 6
+\end{center}
+
+\textbf{Configurația algoritmului genetic pentru cel de al șaselea experiment este următoarea: }
+- numărul de runde jucate în fiecare meci: 100;\\
+- numărul de generații: 1000;\\
+- dimensiunea populației antrenate: 15;\\
+- probabilitatea de încrucișare: 0.50;\\
+- probabilitatea de mutație: 0.50;\\
+- configurația populației de antrenament:\\
+\begin{center}
+	\begin{lstlisting}
+	{
+		"Tit-For-Tat": 1
+	}
+	\end{lstlisting}
+\end{center}
+
+\textbf{Configurația turneului cu eliminare pentru experimentul numarul 6: }
+
+În turneul cu eliminare au participat 10 indivizi, dintre care 5 sunt copii după cromozomul obținut de algoritmul genetic. 
+
+- procentul de jucători care se elimină (și, implicit, procentul de jucători care se duplică) este de 25\%;\\
+- configurația populației de testare:\\
+\begin{center}
+	\begin{lstlisting}
+	{
+		"Tit-For-Tat": 5
+	}
+	\end{lstlisting}
+\end{center}

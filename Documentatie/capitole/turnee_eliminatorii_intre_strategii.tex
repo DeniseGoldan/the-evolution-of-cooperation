@@ -13,7 +13,7 @@ Un \textbf{meci} este jucat de către doi jucători. Este alcătuit dintr-un num
  
 Un turneu cu eliminare pornește de la o populație de strategii în care, la fiecare iterație, fiecare individ joacă câte un meci cu ceilalți indivizi. Pe parcursul meciurilor, câștigurile individuale se însumează într-un scor total. După ce se joacă toate combinările de doi jucători (se ajunge la finalul iterației), se elimină un procent din cei mai slabi jucători.  Pentru a mai reduce din numărul parametrilor ale căror valori pot varia, am stabilit că procentul să fie de 25\%. În caz de egalitate a scorurilor între doi jucători, se elimină la întâmplare unul din cei doi. Se completează locurile eliberate cu stategii care au obținut printre cele mai bune scoruri. Se resetează scorul total al indivizilor și se repetă acești pași până când în turneu a rămas un singur tip de strategie, ori până când am atins un număr maxim de iterații.  
 \\\\
-\textit{Observație}: Când într-un turneu cu eliminare concurează doi indivizi ce au aceeași strategie deterministă, la finalul unei iterații, cei doi indivizi vor avea exact același scor. Nu putem spune același lucru despre doi indivizi care folosesc strategia \textbf{Random}.
+Observație: \textit{Când într-un turneu cu eliminare concurează doi indivizi ce au aceeași strategie deterministă, la finalul unei iterații, cei doi indivizi vor avea exact același scor. Nu putem spune același lucru despre doi indivizi care folosesc strategia \textbf{Random}.}
 \\\\
 Pentru a vedea clar modul în care evoluează strategiile în contextul acestui tip de turneu, am implementat o metodă grafică de vizualizare a datelor. Am ales să folosesc \textbf{line chart}-uri. Axa absciselor are drept legendă numărul de indivizi din fiecare strategie. Axa ordonatelor reprezintă indexul rundei turneului.
 
@@ -122,7 +122,7 @@ Mărind cu 1 numărul de runde din fiecare meci, observăm că strategia propus�
 \subsection{Strategia \textbf{Random}}
 
 \begin{center}
-	\underline{\textit{Experimentele 3 și 4}}
+	\underline{\textit{Experimentul 3}}
 \end{center}
 
 \textit{Configurația algoritmului genetic și cea a turneului cu eliminare este trecută în \textbf{Anexa numărul 3}}.\\
@@ -152,6 +152,12 @@ Am antrenat o populație de dimensiune mică într-un număr mare de generații,
 	\label{pierde_cromozomul_castiga_random}
 \end{figure}
 
+\begin{center}
+	\underline{\textit{Experimentul 4}}
+\end{center}
+
+\textit{Configurația algoritmului genetic și cea a turneului cu eliminare este trecută în \textbf{Anexa numărul 4}}.\\
+
 În Figura \ref{pierde_cromozomul_castiga_random}, se observă cum strategia propusă de algoritmul genetic pierde, întrucât nu este optimizată pentru a câștiga în contextul unui turneu cu număr mare de runde. 
 
 \begin{figure}[H]
@@ -176,23 +182,71 @@ Am antrenat o populație de dimensiune mică într-un număr mare de generații,
 
 Strategia din experimentul cu numărul 4 va face față și la un număr de runde mai mic, dar și la un număr de runde mai mare în turneele cu eliminare în fața strategiei \textbf{Random}. În fața acestei configurații a turneului eliminatoriu, putem trage concluzia că experimentul numărul 4 oferă o soluție mai bună. 
 
-\subsection{Strategia Tit-For-Tat}
+\subsection{Strategia \textbf{Tit-For-Tat}}
+
+\begin{center}
+	\underline{\textit{Experimentul numărul 5}}
+\end{center}
+
+\textit{Configurația algoritmului genetic și cea a turneului cu eliminare este trecută în \textbf{Anexa numărul 5}}.\\
 
 Un lucru ce se observă ușor este că strategia \textbf{Tit-For-Tat} reușește să câștige aproape de fiecare dată când la initiaizarea turneului cu eliminare toate strategiile au ponderi egale si numarul de runde este mare.
-
-Se observa o limitare in ceea ce priveste cautarea unei configuratii a agoritmului genetic care sa ofere un oponent bun pentru Tit-For-Tat. Am facut un experiment in care populatia de antrenament este data de un individ cu strategia Tit-For-Tat, insa nu am obtinut rezultate bune. Cand concurau doar copii ale cromozomilor si copii ale strategiei Tit-For-Tat in proportii agele, de fiecare data, la pasii eliminatorii, se eliminau cromozomii.
  
+Pentru a bate strategia \textbf{Tit-For-Tat} este necesar un număr mic de runde, fiindcă știm că un meci între doi astefel de indivizi le va crește substanțial scorul, întrucât cooperează la fiecare pas. De asemenea, trebuie să ne folosim de faptul că știm că va coopera la prima mișcare. Strategia inamică se va folosi de faptul că atunci când unul cooperează și celălalt trădează, cel care trădează este mai bine răsplătit decât cel ce a cooperat. În alte cuvinte, strategie inamică trebuie să impersoneze strategia Always Defect.  
+ 
+Cromozomul, cu eleganța reprezentării sale, poate mima toate strategiile standard descrise în capitolele anterioare. Pentru a imita \textbf{Always Defect}, am lăsat ca populația de antrenament să fie dată de un singur individ al acestei strategii, am ales un număr mare de generații (1000), procente mare pentru mutație și încrucișare(50\%), o populație de dimensiuni reduse(15). 
   
-Strategia Tit-For-Tat poate fi batuta doar daca schimbam configuratia turneului cu eliminare. Avem nevoie de un numar mic de runde si de o str
+\begin{figure}[H]
+	\centering
+	\includegraphics[	
+		width=16cm,
+		height=7.5cm,
+		keepaspectratio
+	]{imagini/experiment_5_epoch_1529329866051/chart_from_epoch_1529413867604.png}
+	\caption{\textit{Cromozomii câștigă turneul cu eliminare în cadrul unui număr mic de runde, câte 4 runde la fiecare meci al turneului cu eliminare.}}
+\end{figure}
 
+Atunci când doi indivizi ce urmează startegia \textbf{Tit-For-Tat} concurează într-un meci, vor coopera la fiecare rundă iar cooperarea mutuală este cea mai bine răsplătită, oferind un punctaj pe măsură. Din acest motiv, la un turneu cu eliminare unde numărul de runde este mai mare (decât 5 runde la fiecare meci), va depăși strategiile care trădează în majoritatea rundelor. 
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[	
+		width=16cm,
+		height=7.5cm,
+		keepaspectratio
+	]{imagini/experiment_5_epoch_1529329866051/chart_from_epoch_1529413879261.png}
+	\caption{\textit{Strategia \textbf{Tit-For-Tat} câștigă când numărul de runde este 10.}}
+\end{figure}
 
+\begin{center}
+	\underline{\textit{Experimentul numărul 6}}
+\end{center}
 
+\textit{Configurația algoritmului genetic și cea a turneului cu eliminare este trecută în \textbf{Anexa numărul 6}}.\\
 
+Mai există o altă variantă pentru a învinge o populație dată de copii după Tit-For-Tat. 
+ 
+Am făcut un experiment în care populația de antrenament este dată de un individ cu strategia \textbf{Tit-For-Tat}. Acest lucru a făcut ca strategia oferită de algoritmul genetic să imite strategia \textbf{Tit-For-Tat}. În aceste cazuri, cromozii și copiile după \textbf{Tit-For-Tat} vor avea același scor și, la rundele eliminatorii, se vor elimina (și apoi duplica) la întâmplare câteva strategii dintre cele două tipuri. Sunt șanse egale de câştig între cele două tipuri de strategii.
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[	
+		width=16cm,
+		height=7.5cm,
+		keepaspectratio
+	]{imagini/experiment_6_epoch_1529327580314/chart_from_epoch_1529416356254.png}
+	\caption{\textit{Populația ce folosește strategia \textbf{Tit-For-Tat} câștigă.}}
+\end{figure}
 
-
-
+\begin{figure}[H]
+	\centering
+	\includegraphics[	
+		width=16cm,
+		height=7.5cm,
+		keepaspectratio
+	]{imagini/experiment_6_epoch_1529327580314/chart_from_epoch_1529416343328.png}
+	\caption{\textit{Cromozomii câștigă.}}
+\end{figure} 
 
 
 

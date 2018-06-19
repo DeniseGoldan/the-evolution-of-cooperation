@@ -87,7 +87,7 @@ public class TournamentEvolutionLineChart extends Application {
         List<Player> players = PopulationConfigReader.getPlayersFromConfigFile(FilePath.TestingPhase.getPath());
 
         Chromosome chromosomeForTournament;
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 5; i++) {
             chromosomeForTournament = getChromosomeWithStrategyFromJsonFile(CHROMOSOME_UNDER_TEST_FILE_PATH);
             players.add(chromosomeForTournament);
         }
@@ -133,7 +133,7 @@ public class TournamentEvolutionLineChart extends Application {
 
     private static class LineChartConfigurator {
 
-        static final int NUMBER_OF_ROUNDS_PER_MATCH = 3;
+        static final int NUMBER_OF_ROUNDS_PER_MATCH = 10;
 
         static final String APPLICATION_TITLE = "Evoluţia turneului cu eliminare";
 
@@ -146,9 +146,9 @@ public class TournamentEvolutionLineChart extends Application {
         static final int WIDTH = 720;
         static final int HEIGHT = 400;
         static final int PERCENT_OF_PLAYERS_TO_ELIMINATE = 25;
-        static final int X_AXIS_UPPER_BOUND = 10;
-        static final int Y_AXIS_UPPER_BOUND = 25;
-        static final int X_AXIS_TICK_UNIT = 1;
+        static final int X_AXIS_UPPER_BOUND = 30;
+        static final int Y_AXIS_UPPER_BOUND = 15;
+        static final int X_AXIS_TICK_UNIT = 5;
         static final int Y_AXIS_TICK_UNIT = 5;
 
         /**

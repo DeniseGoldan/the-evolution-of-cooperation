@@ -2,15 +2,15 @@
 
 Ca și limbaj de programare, am ales să implementez soluția problemei folosind limbajul \textbf{Java}, care are o suită performantă de biblioteci. 
 
-Pentru ca procesul de obținere a unei noi strategii să fie vizibil prin loguri, am apelat la biblioteca \textbf{SLF4J}\cite{slf4j}\footnote{Abrevierea provine de la Simple Logging Facade for Java.}. 
+Pentru ca procesul de obținere a unei noi strategii să fie vizibil prin loguri, am apelat la biblioteca \textbf{SLF4J} \cite{slf4j}\footnote{Abrevierea provine de la Simple Logging Facade for Java.}. 
 
-Pentru partea de vizualizarea a datelor, pentru a vedea cum evoluează strategiile pe parcursul unui turneu cu eliminare, am apelat la biblioteca integrată \textbf{JavaFX}\cite{javaFX}. 
+Pentru partea de vizualizarea a datelor, pentru a vedea cum evoluează strategiile pe parcursul unui turneu cu eliminare, am apelat la biblioteca integrată \textbf{JavaFX} \cite{javaFX}. 
 
-Pentru manipulatea fișierelor json, am folosit biblioteca \textbf{json-simple}\cite{json-simple}.  
+Pentru manipulatea fișierelor json, am folosit biblioteca \textbf{json-simple} \cite{json-simple}.  
 
 \section{Reprezentarea soluției}
 
-În urma organizării celor două turnee, Axelrod\cite{the_evolution_of_cooperation_axelrod} a decis să cerceteze dezvoltarea unei strategii pentru problema iterata a prizonierului, folosindu-se de algoritmii genetici introduși de Holland. 
+În urma organizării celor două turnee, Axelrod \cite{the_evolution_of_cooperation_axelrod} a decis să cerceteze dezvoltarea unei strategii pentru problema iterata a prizonierului, folosindu-se de algoritmii genetici introduși de Holland. 
 
 Unul din cei mai importanți pași din acest proces a fost stabilirea unei modalități de a reprezenta o strategie în forma unui cromozom. Descriem concluziile lui Axelrod în rândurile următoare.
 
@@ -93,7 +93,7 @@ Spațiul de căutare este, în concluzie, mult prea mare pentru a caută exhaust
 
 Axelrod a alcătuit un set de opt strategii cu care să concureze fiecare strategie a algoritmului genetic, în vederea calculării unei funcții de optimizat. Acest set de strategii nu include strategia \textbf{Tit-for-Tat}. Valoarea funcției de optimizat este dată de media scorurilor obținute în urma meciurilor jucate cu fiecare dintre ele opt strategii.
 
-În implementare, am considerat că \textbf{Temptation} payoff are valoarea 5, \textbf{Reward} are valoarea 3, \textbf{Punishment} are valoarea 1 iar \textbf{Sucker's payoff} are valoarea 0\cite{optimal_strategies}. 
+În implementare, am considerat că \textbf{Temptation} payoff are valoarea 5, \textbf{Reward} are valoarea 3, \textbf{Punishment} are valoarea 1 iar \textbf{Sucker's payoff} are valoarea 0 \cite{optimal_strategies}. 
 
 \section {Parametrii algoritmului genetic}
 
@@ -149,7 +149,7 @@ Timp de un număr de generații, cromozomii sunt supuși unor transformări:
 	\item se aplică mutația.
 \end{itemize} 
 
-Procesul de selecție pe care am decis să îl implementez este selecția de tip ruletă (engl. roulette wheel). Această selecție este un algoritm stocastic, în care indivizii sunt distribuiți pe niște segmente contigue. Lungimea segmentelor este direct proportională cu cât de bine este adaptat la mediu individul. Fiecare segment determină un interval. Se generează pe rând câte un număr aleator și este ales intervalul (care corespunde unui unic individ-practic se alege individul) la care aparține numărul. Individul selectat se adaugă în mulțimea ce va înlocui, la finalul selecției, generația actuală. Procesul seamănă cu învârtirea ruletei, unde fiecare felie a ruletei are mărimea direct proportională cu gradul de adecvare\cite{curs_prof_gabriel_oltean_cluj}.  
+Procesul de selecție pe care am decis să îl implementez este selecția de tip ruletă (engl. roulette wheel). Această selecție este un algoritm stocastic, în care indivizii sunt distribuiți pe niște segmente contigue. Lungimea segmentelor este direct proportională cu cât de bine este adaptat la mediu individul. Fiecare segment determină un interval. Se generează pe rând câte un număr aleator și este ales intervalul (care corespunde unui unic individ-practic se alege individul) la care aparține numărul. Individul selectat se adaugă în mulțimea ce va înlocui, la finalul selecției, generația actuală. Procesul seamănă cu învârtirea ruletei, unde fiecare felie a ruletei are mărimea direct proportională cu gradul de adecvare \cite{curs_prof_gabriel_oltean_cluj}.  
 
 \begin{figure}[H]
 	\centering
@@ -162,7 +162,7 @@ Procesul de selecție pe care am decis să îl implementez este selecția de tip
 	\label{fig:probabilitati_selectie_ruleta}
 \end{figure}
 		
-Figura \ref{fig:probabilitati_selectie_ruleta} reprezinta un exemplu de ruletă divizată în patru sectoare de arii proporționale cu probabilitățile de selecție\cite{curs_daniela_zaharie}. Elementul numărul 1 are 10\% șanse de a fi selectat. Elementul numărul 2 are șanse de 20\%, numărul 3 de 30\% iar numărul 4 de 40\%.
+Figura \ref{fig:probabilitati_selectie_ruleta} reprezinta un exemplu de ruletă divizată în patru sectoare de arii proporționale cu probabilitățile de selecție \cite{curs_daniela_zaharie}. Elementul numărul 1 are 10\% șanse de a fi selectat. Elementul numărul 2 are șanse de 20\%, numărul 3 de 30\% iar numărul 4 de 40\%.
 
 \begin{figure}[H]
 	\centering

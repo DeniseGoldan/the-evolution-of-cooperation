@@ -26,4 +26,4 @@
 \contentsline {subsection}{\numberline {3.1}Explorarea redus\IeC {\u a} a spa\IeC {\textcommabelow t}iului de c\IeC {\u a}utare}{26}
 \contentsline {subsection}{\numberline {3.2}Num\IeC {\u a}rul de runde al meciurilor din turneul cu eliminare}{29}
 \contentsline {subsection}{\numberline {3.3}Strategia \textbf {Random}}{31}
-\contentsline {subsection}{\numberline {3.4}Strategia Tit-For-Tat}{34}
+\contentsline {subsection}{\numberline {3.4}Strategia \textbf {Tit-For-Tat}}{34}

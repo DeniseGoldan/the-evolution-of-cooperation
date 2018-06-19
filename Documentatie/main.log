@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.6.19)  19 JUN 2018 14:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.6.19)  19 JUN 2018 17:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -611,7 +611,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 20--21
 
 [3
 
-]) (./capitole/declaratie_standard_consintamant.tex
+]) (./capitole/declaratie_standard_consimtamant.tex
 Underfull \hbox (badness 10000) in paragraph at lines 1--3
 
  []
@@ -681,23 +681,23 @@ Overfull \hbox (14.65533pt too wide) in paragraph at lines 20--20
 [7
 
 ] [8 <./imagini/matrice.png (PNG copy)>]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 49.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 48.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 49.
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 60.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 48.
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 59.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 60.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 59.
  [9]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 77.
+(Font)              <5> on input line 76.
  [10] [11])
 [12
 
@@ -936,19 +936,24 @@ Package pdftex.def Info: imagini/experiment_3_epoch_1529321586156/chart_from_ep
 och_1529323424012.png used on input line 150.
 (pdftex.def)             Requested size: 384.1209pt x 213.40048pt.
 
+Underfull \hbox (badness 10000) in paragraph at lines 159--160
+
+ []
+
+[32 <./imagini/experiment_3_epoch_1529321586156/chart_from_epoch_1529323404815.
+png> <./imagini/experiment_3_epoch_1529321586156/chart_from_epoch_1529323424012
+.png>]
 <imagini/experiment_4_epoch_1529323027289/chart_from_epoch_1529323309315.png, i
-d=150, 722.7pt x 401.5pt>
+d=155, 722.7pt x 401.5pt>
 File: imagini/experiment_4_epoch_1529323027289/chart_from_epoch_1529323309315.p
 ng Graphic file (type png)
 
 <use imagini/experiment_4_epoch_1529323027289/chart_from_epoch_1529323309315.pn
 g>
 Package pdftex.def Info: imagini/experiment_4_epoch_1529323027289/chart_from_ep
-och_1529323309315.png used on input line 163.
+och_1529323309315.png used on input line 169.
 (pdftex.def)             Requested size: 384.1209pt x 213.40048pt.
- [32 <./imagini/experiment_3_epoch_1529321586156/chart_from_epoch_1529323404815
-.png> <./imagini/experiment_3_epoch_1529321586156/chart_from_epoch_152932342401
-2.png>]
+
 <imagini/experiment_4_epoch_1529323027289/chart_from_epoch_1529323321406.png, i
 d=156, 722.7pt x 401.5pt>
 File: imagini/experiment_4_epoch_1529323027289/chart_from_epoch_1529323321406.p
@@ -957,65 +962,148 @@ ng Graphic file (type png)
 <use imagini/experiment_4_epoch_1529323027289/chart_from_epoch_1529323321406.pn
 g>
 Package pdftex.def Info: imagini/experiment_4_epoch_1529323027289/chart_from_ep
-och_1529323321406.png used on input line 173.
+och_1529323321406.png used on input line 179.
 (pdftex.def)             Requested size: 384.1209pt x 213.40048pt.
  [33 <./imagini/experiment_4_epoch_1529323027289/chart_from_epoch_1529323309315
-.png> <./imagini/experiment_4_epoch_1529323027289/chart_from_epoch_152932332140
-6.png>]) [34] (./capitole/anexe.tex
-Overfull \hbox (27.11775pt too wide) in paragraph at lines 5--6
+.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 191--192
+
+ []
+
+[34 <./imagini/experiment_4_epoch_1529323027289/chart_from_epoch_1529323321406.
+png>]
+<imagini/experiment_5_epoch_1529329866051/chart_from_epoch_1529413867604.png, i
+d=165, 722.7pt x 401.5pt>
+File: imagini/experiment_5_epoch_1529329866051/chart_from_epoch_1529413867604.p
+ng Graphic file (type png)
+
+<use imagini/experiment_5_epoch_1529329866051/chart_from_epoch_1529413867604.pn
+g>
+Package pdftex.def Info: imagini/experiment_5_epoch_1529329866051/chart_from_ep
+och_1529413867604.png used on input line 205.
+(pdftex.def)             Requested size: 384.1209pt x 213.40048pt.
+
+<imagini/experiment_5_epoch_1529329866051/chart_from_epoch_1529413879261.png, i
+d=166, 722.7pt x 401.5pt>
+File: imagini/experiment_5_epoch_1529329866051/chart_from_epoch_1529413879261.p
+ng Graphic file (type png)
+
+<use imagini/experiment_5_epoch_1529329866051/chart_from_epoch_1529413879261.pn
+g>
+Package pdftex.def Info: imagini/experiment_5_epoch_1529329866051/chart_from_ep
+och_1529413879261.png used on input line 217.
+(pdftex.def)             Requested size: 384.1209pt x 213.40048pt.
+ [35 <./imagini/experiment_5_epoch_1529329866051/chart_from_epoch_1529413867604
+.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 225--226
+
+ []
+
+
+<imagini/experiment_6_epoch_1529327580314/chart_from_epoch_1529416356254.png, i
+d=171, 722.7pt x 401.5pt>
+File: imagini/experiment_6_epoch_1529327580314/chart_from_epoch_1529416356254.p
+ng Graphic file (type png)
+
+<use imagini/experiment_6_epoch_1529327580314/chart_from_epoch_1529416356254.pn
+g>
+Package pdftex.def Info: imagini/experiment_6_epoch_1529327580314/chart_from_ep
+och_1529416356254.png used on input line 237.
+(pdftex.def)             Requested size: 384.1209pt x 213.40048pt.
+ [36 <./imagini/experiment_5_epoch_1529329866051/chart_from_epoch_1529413879261
+.png>]
+<imagini/experiment_6_epoch_1529327580314/chart_from_epoch_1529416343328.png, i
+d=176, 722.7pt x 401.5pt>
+File: imagini/experiment_6_epoch_1529327580314/chart_from_epoch_1529416343328.p
+ng Graphic file (type png)
+
+<use imagini/experiment_6_epoch_1529327580314/chart_from_epoch_1529416343328.pn
+g>
+Package pdftex.def Info: imagini/experiment_6_epoch_1529327580314/chart_from_ep
+och_1529416343328.png used on input line 247.
+(pdftex.def)             Requested size: 384.1209pt x 213.40048pt.
+) [37 <./imagini/experiment_6_epoch_1529327580314/chart_from_epoch_152941635625
+4.png> <./imagini/experiment_6_epoch_1529327580314/chart_from_epoch_15294163433
+28.png>] (./capitole/anexe.tex
+Overfull \hbox (27.11775pt too wide) in paragraph at lines 5--12
 []\OT1/cmr/bx/n/10.95 Configura[]ia al-go-rit-mu-lui ge-ne-tic pen-tru pri-mul 
 ex-pe-ri-ment este urm^^Uatoarea:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5--6
+Underfull \hbox (badness 10000) in paragraph at lines 5--12
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7--13
+Underfull \hbox (badness 10000) in paragraph at lines 30--32
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 31--33
-
- []
-
-[35
+[38
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 52--58
+Underfull \hbox (badness 10000) in paragraph at lines 49--56
 
  []
 
-[36
+[39
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 84--90
+Underfull \hbox (badness 10000) in paragraph at lines 80--87
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 100--106
+Underfull \hbox (badness 10000) in paragraph at lines 99--101
+
+ []
+
+[40
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 115--122
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 118--120
+Underfull \hbox (badness 10000) in paragraph at lines 134--136
 
  []
 
-[37
+[41
 
-] [38]) (./capitole/bibliografie.tex
+]
+Underfull \hbox (badness 10000) in paragraph at lines 150--157
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 169--171
+
+ []
+
+[42
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 185--192
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 204--206
+
+ []
+
+) (./capitole/bibliografie.tex [43
+
+]
 Overfull \hbox (33.7068pt too wide) in paragraph at lines 33--38
 \OT1/cmtt/m/n/10.95 http://www.bel.utcluj.ro/rom/dce/goltean/tice/10[]Algoritmi
 Genetici.pdf 
  []
 
-[39
-
+[44
 
 ]
 Overfull \hbox (66.49321pt too wide) in paragraph at lines 77--79
@@ -1023,15 +1111,15 @@ Overfull \hbox (66.49321pt too wide) in paragraph at lines 77--79
 hange.com/questions 
  []
 
-) [40] (./main.aux) ) 
+) [45] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 5733 strings out of 494374
- 84417 string characters out of 6164954
- 153765 words of memory out of 5000000
- 8927 multiletter control sequences out of 15000+600000
- 14894 words of font info for 51 fonts, out of 8000000 for 9000
+ 5756 strings out of 494374
+ 85927 string characters out of 6164954
+ 154765 words of memory out of 5000000
+ 8944 multiletter control sequences out of 15000+600000
+ 15253 words of font info for 52 fonts, out of 8000000 for 9000
  350 hyphenation exceptions out of 8191
- 38i,14n,39p,984b,1599s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,14n,39p,984b,1540s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 bx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pf
@@ -1050,10 +1138,10 @@ m/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10
 hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb></usr/share/te
 xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on main.pdf (40 pages, 912887 bytes).
+Output written on main.pdf (45 pages, 1016483 bytes).
 PDF statistics:
- 247 PDF objects out of 1000 (max. 8388607)
- 149 compressed objects within 2 object streams
+ 271 PDF objects out of 1000 (max. 8388607)
+ 160 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 91 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 111 words of extra memory for PDF output out of 10000 (max. 10000000)
 
