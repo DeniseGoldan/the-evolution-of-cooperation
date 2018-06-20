@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.6.19)  19 JUN 2018 17:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.6.19)  20 JUN 2018 14:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -660,15 +660,30 @@ Underfull \hbox (badness 10000) in paragraph at lines 20--21
 
 [4
 
-]) (./main.toc [5
+]) (./capitole/introducere_si_contributii.tex
+Overfull \hbox (6.78595pt too wide) in paragraph at lines 5--6
+[]\OT1/cmr/m/n/10.95 Dilema pri-zo-ni-e-ru-lui este o pro-blem^^Ua ana-li-zat^^
+Ua ^^^Pn te-o-ria jo-cu-ri-lor ^^^Pn care participan[]ii
+ []
 
+[5
+
+
+]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <24.88> on input line 11.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <17.28> on input line 11.
+) [6
+
+] (./main.toc [7
 
 ])
 \tf@toc=\write3
 \openout3 = `main.toc'.
 
- [6] (./capitole/descriere_problema_iterata.tex
-<imagini/matrice.png, id=36, 1284.8pt x 722.7pt>
+ [8] (./capitole/descriere_problema_iterata.tex
+<imagini/matrice.png, id=43, 1284.8pt x 722.7pt>
 File: imagini/matrice.png Graphic file (type png)
  <use imagini/matrice.png>
 Package pdftex.def Info: imagini/matrice.png used on input line 20.
@@ -678,9 +693,9 @@ Overfull \hbox (14.65533pt too wide) in paragraph at lines 20--20
  [][] 
  []
 
-[7
+[9
 
-] [8 <./imagini/matrice.png (PNG copy)>]
+] [10 <./imagini/matrice.png (PNG copy)>]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 48.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
@@ -695,26 +710,23 @@ File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 59.
- [9]
+ [11]
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 76.
- [10] [11])
-[12
+ [12] [13])
+[14
 
-] (./capitole/algoritm_genetic.tex
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <17.28> on input line 1.
- [13
+] (./capitole/algoritm_genetic.tex [15
 
 ]
-<imagini/schema_algoritm_genetic.png, id=65, 1284.8pt x 722.7pt>
+<imagini/schema_algoritm_genetic.png, id=71, 1284.8pt x 722.7pt>
 File: imagini/schema_algoritm_genetic.png Graphic file (type png)
 
 <use imagini/schema_algoritm_genetic.png>
 Package pdftex.def Info: imagini/schema_algoritm_genetic.png used on input line
  28.
 (pdftex.def)             Requested size: 284.5193pt x 160.0421pt.
- [14
+ [16
 
  <./imagini/schema_algoritm_genetic.png>]
 Overfull \hbox (6.65945pt too wide) in paragraph at lines 45--45
@@ -741,22 +753,22 @@ Overfull \hbox (21.08945pt too wide) in paragraph at lines 67--68
 0.95 mo[]tenitori\OT1/cmr/m/n/10.95 .
  []
 
-[15
+[17
 
-] <imagini/incrucisare.png, id=75, 1284.8pt x 722.7pt>
+] <imagini/incrucisare.png, id=81, 1284.8pt x 722.7pt>
 File: imagini/incrucisare.png Graphic file (type png)
 
 <use imagini/incrucisare.png>
 Package pdftex.def Info: imagini/incrucisare.png used on input line 75.
 (pdftex.def)             Requested size: 227.60759pt x 128.02927pt.
- <imagini/mutatie.png, id=76, 1284.8pt x 722.7pt>
+ <imagini/mutatie.png, id=82, 1284.8pt x 722.7pt>
 File: imagini/mutatie.png Graphic file (type png)
 
 <use imagini/mutatie.png>
 Package pdftex.def Info: imagini/mutatie.png used on input line 88.
 (pdftex.def)             Requested size: 227.60759pt x 128.02927pt.
- [16 <./imagini/incrucisare.png> <./imagini/mutatie.png>]) (./capitole/dezvolta
-re_strategie_algoritm_genetic.tex [17
+ [18 <./imagini/incrucisare.png> <./imagini/mutatie.png>]) (./capitole/dezvolta
+re_strategie_algoritm_genetic.tex [19
 
 
 ]
@@ -769,19 +781,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 44--45
 
  []
 
-[18]
+[20]
 Underfull \hbox (badness 10000) in paragraph at lines 65--66
 
  []
 
-[19] [20]
+[21] [22]
 Overfull \hbox (7.78963pt too wide) in paragraph at lines 108--109
 []\OT1/cmr/m/n/10.95 Parametrii des-pre care dis-cut^^Uam sunt: di-men-siu-nea 
 popula[]iei de an-tre-nare, num^^Uarul
  []
 
-[21] [22]
-<imagini/probabilitati_selectie_ruleta.png, id=101, 1284.8pt x 722.7pt>
+[23] [24]
+<imagini/probabilitati_selectie_ruleta.png, id=107, 1284.8pt x 722.7pt>
 File: imagini/probabilitati_selectie_ruleta.png Graphic file (type png)
 
 <use imagini/probabilitati_selectie_ruleta.png>
@@ -794,13 +806,13 @@ Overfull \hbox (20.19974pt too wide) in paragraph at lines 165--166
 t^^Ua ^^^Pn pa-tru sec-toare de arii propor[]ionale
  []
 
-<imagini/invartire_ruleta.png, id=102, 1284.8pt x 722.7pt>
+<imagini/invartire_ruleta.png, id=108, 1284.8pt x 722.7pt>
 File: imagini/invartire_ruleta.png Graphic file (type png)
 
 <use imagini/invartire_ruleta.png>
 Package pdftex.def Info: imagini/invartire_ruleta.png used on input line 173.
 (pdftex.def)             Requested size: 303.4964pt x 170.71672pt.
- [23 <./imagini/probabilitati_selectie_ruleta.png>]) [24 <./imagini/invartire_r
+ [25 <./imagini/probabilitati_selectie_ruleta.png>]) [26 <./imagini/invartire_r
 uleta.png>]
 (./capitole/turnee_eliminatorii_intre_strategii.tex
 Underfull \hbox (badness 10000) in paragraph at lines 14--19
@@ -812,16 +824,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 14--19
 
  []
 
-[25
+[27
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 34--35
 
  []
 
-[26]
+[28]
 <imagini/experiment_1_epoch_1529303072346/chart_from_epoch_1529303304972.png, i
-d=118, 722.7pt x 401.5pt>
+d=124, 722.7pt x 401.5pt>
 File: imagini/experiment_1_epoch_1529303072346/chart_from_epoch_1529303304972.p
 ng Graphic file (type png)
 
@@ -832,7 +844,7 @@ och_1529303304972.png used on input line 46.
 (pdftex.def)             Requested size: 384.1209pt x 213.40048pt.
 
 <imagini/experiment_1_epoch_1529303072346/chart_from_epoch_1529303340019.png, i
-d=119, 722.7pt x 401.5pt>
+d=125, 722.7pt x 401.5pt>
 File: imagini/experiment_1_epoch_1529303072346/chart_from_epoch_1529303340019.p
 ng Graphic file (type png)
 
@@ -841,10 +853,10 @@ g>
 Package pdftex.def Info: imagini/experiment_1_epoch_1529303072346/chart_from_ep
 och_1529303340019.png used on input line 56.
 (pdftex.def)             Requested size: 384.1209pt x 213.40048pt.
- [27 <./imagini/experiment_1_epoch_1529303072346/chart_from_epoch_1529303304972
+ [29 <./imagini/experiment_1_epoch_1529303072346/chart_from_epoch_1529303304972
 .png>]
 <imagini/experiment_1_epoch_1529303072346/chart_from_epoch_1529303352244.png, i
-d=124, 722.7pt x 401.5pt>
+d=130, 722.7pt x 401.5pt>
 File: imagini/experiment_1_epoch_1529303072346/chart_from_epoch_1529303352244.p
 ng Graphic file (type png)
 
@@ -855,7 +867,7 @@ och_1529303352244.png used on input line 66.
 (pdftex.def)             Requested size: 384.1209pt x 213.40048pt.
 
 <imagini/experiment_1_epoch_1529303072346/chart_from_epoch_1529303371162.png, i
-d=125, 722.7pt x 401.5pt>
+d=131, 722.7pt x 401.5pt>
 File: imagini/experiment_1_epoch_1529303072346/chart_from_epoch_1529303371162.p
 ng Graphic file (type png)
 
@@ -864,7 +876,7 @@ g>
 Package pdftex.def Info: imagini/experiment_1_epoch_1529303072346/chart_from_ep
 och_1529303371162.png used on input line 76.
 (pdftex.def)             Requested size: 384.1209pt x 213.40048pt.
- [28 <./imagini/experiment_1_epoch_1529303072346/chart_from_epoch_1529303340019
+ [30 <./imagini/experiment_1_epoch_1529303072346/chart_from_epoch_1529303340019
 .png> <./imagini/experiment_1_epoch_1529303072346/chart_from_epoch_152930335224
 4.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 86--87
@@ -873,7 +885,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 86--87
 
 
 <imagini/experiment_2_epoch_1529309949939/chart_from_epoch_1529310422567.png, i
-d=131, 722.7pt x 401.5pt>
+d=137, 722.7pt x 401.5pt>
 File: imagini/experiment_2_epoch_1529309949939/chart_from_epoch_1529310422567.p
 ng Graphic file (type png)
 
@@ -882,10 +894,10 @@ g>
 Package pdftex.def Info: imagini/experiment_2_epoch_1529309949939/chart_from_ep
 och_1529310422567.png used on input line 96.
 (pdftex.def)             Requested size: 384.1209pt x 213.40048pt.
- [29 <./imagini/experiment_1_epoch_1529303072346/chart_from_epoch_1529303371162
+ [31 <./imagini/experiment_1_epoch_1529303072346/chart_from_epoch_1529303371162
 .png>]
 <imagini/experiment_2_epoch_1529309949939/chart_from_epoch_1529310399495.png, i
-d=136, 722.7pt x 401.5pt>
+d=143, 722.7pt x 401.5pt>
 File: imagini/experiment_2_epoch_1529309949939/chart_from_epoch_1529310399495.p
 ng Graphic file (type png)
 
@@ -896,7 +908,7 @@ och_1529310399495.png used on input line 106.
 (pdftex.def)             Requested size: 384.1209pt x 213.40048pt.
 
 <imagini/experiment_2_epoch_1529309949939/chart_from_epoch_1529310386663.png, i
-d=137, 722.7pt x 401.5pt>
+d=144, 722.7pt x 401.5pt>
 File: imagini/experiment_2_epoch_1529309949939/chart_from_epoch_1529310386663.p
 ng Graphic file (type png)
 
@@ -905,7 +917,7 @@ g>
 Package pdftex.def Info: imagini/experiment_2_epoch_1529309949939/chart_from_ep
 och_1529310386663.png used on input line 118.
 (pdftex.def)             Requested size: 384.1209pt x 213.40048pt.
- [30 <./imagini/experiment_2_epoch_1529309949939/chart_from_epoch_1529310422567
+ [32 <./imagini/experiment_2_epoch_1529309949939/chart_from_epoch_1529310422567
 .png> <./imagini/experiment_2_epoch_1529309949939/chart_from_epoch_152931039949
 5.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 128--129
@@ -914,7 +926,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 128--129
 
 
 <imagini/experiment_3_epoch_1529321586156/chart_from_epoch_1529323404815.png, i
-d=143, 722.7pt x 401.5pt>
+d=150, 722.7pt x 401.5pt>
 File: imagini/experiment_3_epoch_1529321586156/chart_from_epoch_1529323404815.p
 ng Graphic file (type png)
 
@@ -923,10 +935,10 @@ g>
 Package pdftex.def Info: imagini/experiment_3_epoch_1529321586156/chart_from_ep
 och_1529323404815.png used on input line 140.
 (pdftex.def)             Requested size: 384.1209pt x 213.40048pt.
- [31 <./imagini/experiment_2_epoch_1529309949939/chart_from_epoch_1529310386663
+ [33 <./imagini/experiment_2_epoch_1529309949939/chart_from_epoch_1529310386663
 .png>]
 <imagini/experiment_3_epoch_1529321586156/chart_from_epoch_1529323424012.png, i
-d=149, 722.7pt x 401.5pt>
+d=155, 722.7pt x 401.5pt>
 File: imagini/experiment_3_epoch_1529321586156/chart_from_epoch_1529323424012.p
 ng Graphic file (type png)
 
@@ -940,11 +952,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 159--160
 
  []
 
-[32 <./imagini/experiment_3_epoch_1529321586156/chart_from_epoch_1529323404815.
+[34 <./imagini/experiment_3_epoch_1529321586156/chart_from_epoch_1529323404815.
 png> <./imagini/experiment_3_epoch_1529321586156/chart_from_epoch_1529323424012
 .png>]
 <imagini/experiment_4_epoch_1529323027289/chart_from_epoch_1529323309315.png, i
-d=155, 722.7pt x 401.5pt>
+d=161, 722.7pt x 401.5pt>
 File: imagini/experiment_4_epoch_1529323027289/chart_from_epoch_1529323309315.p
 ng Graphic file (type png)
 
@@ -955,7 +967,7 @@ och_1529323309315.png used on input line 169.
 (pdftex.def)             Requested size: 384.1209pt x 213.40048pt.
 
 <imagini/experiment_4_epoch_1529323027289/chart_from_epoch_1529323321406.png, i
-d=156, 722.7pt x 401.5pt>
+d=162, 722.7pt x 401.5pt>
 File: imagini/experiment_4_epoch_1529323027289/chart_from_epoch_1529323321406.p
 ng Graphic file (type png)
 
@@ -964,16 +976,16 @@ g>
 Package pdftex.def Info: imagini/experiment_4_epoch_1529323027289/chart_from_ep
 och_1529323321406.png used on input line 179.
 (pdftex.def)             Requested size: 384.1209pt x 213.40048pt.
- [33 <./imagini/experiment_4_epoch_1529323027289/chart_from_epoch_1529323309315
+ [35 <./imagini/experiment_4_epoch_1529323027289/chart_from_epoch_1529323309315
 .png>]
 Underfull \hbox (badness 10000) in paragraph at lines 191--192
 
  []
 
-[34 <./imagini/experiment_4_epoch_1529323027289/chart_from_epoch_1529323321406.
+[36 <./imagini/experiment_4_epoch_1529323027289/chart_from_epoch_1529323321406.
 png>]
 <imagini/experiment_5_epoch_1529329866051/chart_from_epoch_1529413867604.png, i
-d=165, 722.7pt x 401.5pt>
+d=171, 722.7pt x 401.5pt>
 File: imagini/experiment_5_epoch_1529329866051/chart_from_epoch_1529413867604.p
 ng Graphic file (type png)
 
@@ -984,7 +996,7 @@ och_1529413867604.png used on input line 205.
 (pdftex.def)             Requested size: 384.1209pt x 213.40048pt.
 
 <imagini/experiment_5_epoch_1529329866051/chart_from_epoch_1529413879261.png, i
-d=166, 722.7pt x 401.5pt>
+d=172, 722.7pt x 401.5pt>
 File: imagini/experiment_5_epoch_1529329866051/chart_from_epoch_1529413879261.p
 ng Graphic file (type png)
 
@@ -993,7 +1005,7 @@ g>
 Package pdftex.def Info: imagini/experiment_5_epoch_1529329866051/chart_from_ep
 och_1529413879261.png used on input line 217.
 (pdftex.def)             Requested size: 384.1209pt x 213.40048pt.
- [35 <./imagini/experiment_5_epoch_1529329866051/chart_from_epoch_1529413867604
+ [37 <./imagini/experiment_5_epoch_1529329866051/chart_from_epoch_1529413867604
 .png>]
 Underfull \hbox (badness 10000) in paragraph at lines 225--226
 
@@ -1001,7 +1013,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 225--226
 
 
 <imagini/experiment_6_epoch_1529327580314/chart_from_epoch_1529416356254.png, i
-d=171, 722.7pt x 401.5pt>
+d=178, 722.7pt x 401.5pt>
 File: imagini/experiment_6_epoch_1529327580314/chart_from_epoch_1529416356254.p
 ng Graphic file (type png)
 
@@ -1010,10 +1022,10 @@ g>
 Package pdftex.def Info: imagini/experiment_6_epoch_1529327580314/chart_from_ep
 och_1529416356254.png used on input line 237.
 (pdftex.def)             Requested size: 384.1209pt x 213.40048pt.
- [36 <./imagini/experiment_5_epoch_1529329866051/chart_from_epoch_1529413879261
+ [38 <./imagini/experiment_5_epoch_1529329866051/chart_from_epoch_1529413879261
 .png>]
 <imagini/experiment_6_epoch_1529327580314/chart_from_epoch_1529416343328.png, i
-d=176, 722.7pt x 401.5pt>
+d=183, 722.7pt x 401.5pt>
 File: imagini/experiment_6_epoch_1529327580314/chart_from_epoch_1529416343328.p
 ng Graphic file (type png)
 
@@ -1022,7 +1034,7 @@ g>
 Package pdftex.def Info: imagini/experiment_6_epoch_1529327580314/chart_from_ep
 och_1529416343328.png used on input line 247.
 (pdftex.def)             Requested size: 384.1209pt x 213.40048pt.
-) [37 <./imagini/experiment_6_epoch_1529327580314/chart_from_epoch_152941635625
+) [39 <./imagini/experiment_6_epoch_1529327580314/chart_from_epoch_152941635625
 4.png> <./imagini/experiment_6_epoch_1529327580314/chart_from_epoch_15294163433
 28.png>] (./capitole/anexe.tex
 Overfull \hbox (27.11775pt too wide) in paragraph at lines 5--12
@@ -1040,14 +1052,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 30--32
 
  []
 
-[38
+[40
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 49--56
 
  []
 
-[39
+[41
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 80--87
@@ -1059,7 +1071,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 99--101
 
  []
 
-[40
+[42
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 115--122
@@ -1071,7 +1083,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 134--136
 
  []
 
-[41
+[43
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 150--157
@@ -1083,7 +1095,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 169--171
 
  []
 
-[42
+[44
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 185--192
@@ -1095,15 +1107,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 204--206
 
  []
 
-) (./capitole/bibliografie.tex [43
+) (./capitole/concluziile_lucrarii.tex [45
 
-]
+] [46
+
+]) (./capitole/bibliografie.tex
 Overfull \hbox (33.7068pt too wide) in paragraph at lines 33--38
 \OT1/cmtt/m/n/10.95 http://www.bel.utcluj.ro/rom/dce/goltean/tice/10[]Algoritmi
 Genetici.pdf 
  []
 
-[44
+[47
+
 
 ]
 Overfull \hbox (66.49321pt too wide) in paragraph at lines 77--79
@@ -1111,13 +1126,13 @@ Overfull \hbox (66.49321pt too wide) in paragraph at lines 77--79
 hange.com/questions 
  []
 
-) [45] (./main.aux) ) 
+) [48] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 5756 strings out of 494374
- 85927 string characters out of 6164954
- 154765 words of memory out of 5000000
- 8944 multiletter control sequences out of 15000+600000
- 15253 words of font info for 52 fonts, out of 8000000 for 9000
+ 5765 strings out of 494374
+ 86175 string characters out of 6164954
+ 154767 words of memory out of 5000000
+ 8947 multiletter control sequences out of 15000+600000
+ 15868 words of font info for 54 fonts, out of 8000000 for 9000
  350 hyphenation exceptions out of 8191
  38i,14n,39p,984b,1540s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
@@ -1138,10 +1153,10 @@ m/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10
 hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb></usr/share/te
 xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on main.pdf (45 pages, 1016483 bytes).
+Output written on main.pdf (48 pages, 1035759 bytes).
 PDF statistics:
- 271 PDF objects out of 1000 (max. 8388607)
- 160 compressed objects within 2 object streams
+ 280 PDF objects out of 1000 (max. 8388607)
+ 166 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  111 words of extra memory for PDF output out of 10000 (max. 10000000)
 
