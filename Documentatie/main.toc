@@ -8,7 +8,7 @@
 \contentsline {subsubsection}{Strategii analizate}{14}
 \contentsline {chapter}{Algoritm genetic}{15}
 \contentsline {section}{\numberline {1}Apari\IeC {\textcommabelow t}ia no\IeC {\textcommabelow t}iunii de algoritm genetic}{15}
-\contentsline {section}{\numberline {2}Schema generala a unui algoritm genetic}{16}
+\contentsline {section}{\numberline {2}Schema general\IeC {\u a} a unui algoritm genetic}{16}
 \contentsline {section}{\numberline {3}Pseudocod}{17}
 \contentsline {section}{\numberline {4}Terminologie}{17}
 \contentsline {chapter}{Dezvoltarea unei strategii pentru problema iterat\IeC {\u a} a prizonierului folosind un algoritm genetic}{19}
@@ -16,14 +16,16 @@
 \contentsline {section}{\numberline {2}Reprezentarea solu\IeC {\textcommabelow t}iei}{19}
 \contentsline {section}{\numberline {3}Dimensiunea spa\IeC {\textcommabelow t}iului de c\IeC {\u a}utare}{22}
 \contentsline {section}{\numberline {4}Func\IeC {\textcommabelow t}ia de optimizat}{22}
+\contentsline {subsection}{\numberline {4.1}Valoarea recompenselor}{22}
 \contentsline {section}{\numberline {5}Parametrii algoritmului genetic}{22}
 \contentsline {section}{\numberline {6}Configura\IeC {\textcommabelow t}ia unui algoritm genetic}{23}
 \contentsline {section}{\numberline {7}Popula\IeC {\textcommabelow t}ia de antrenament \IeC {\textcommabelow s}i de test}{23}
 \contentsline {chapter}{Turnee eliminatorii \IeC {\^\i }ntre strategii}{27}
 \contentsline {section}{\numberline {1}Termeni \IeC {\^\i }nt\IeC {\^a}lni\IeC {\c t}i}{27}
 \contentsline {section}{\numberline {2}Cum este modelat un turneu cu eliminare}{27}
-\contentsline {section}{\numberline {3}Concluzii trase \IeC {\^\i }n urma finaliz\IeC {\u a}rii turneelor}{28}
-\contentsline {subsection}{\numberline {3.1}Explorarea redus\IeC {\u a} a spa\IeC {\textcommabelow t}iului de c\IeC {\u a}utare}{28}
-\contentsline {subsection}{\numberline {3.2}Num\IeC {\u a}rul de runde al meciurilor din turneul cu eliminare}{31}
-\contentsline {subsection}{\numberline {3.3}Strategia \textbf {Random}}{33}
-\contentsline {subsection}{\numberline {3.4}Strategia \textbf {Tit-For-Tat}}{36}
+\contentsline {section}{\numberline {3}Configura\IeC {\textcommabelow t}ia unui turneu cu eliminare}{28}
+\contentsline {section}{\numberline {4}Concluzii trase \IeC {\^\i }n urma finaliz\IeC {\u a}rii turneelor}{29}
+\contentsline {subsection}{\numberline {4.1}Explorarea redus\IeC {\u a} a spa\IeC {\textcommabelow t}iului de c\IeC {\u a}utare}{29}
+\contentsline {subsection}{\numberline {4.2}Num\IeC {\u a}rul de runde al meciurilor din turneul cu eliminare}{32}
+\contentsline {subsection}{\numberline {4.3}Strategia \textbf {Random}}{34}
+\contentsline {subsection}{\numberline {4.4}Strategia \textbf {Tit-For-Tat}}{37}

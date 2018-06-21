@@ -2,7 +2,7 @@
 
 Dilema prizonierului \cite{prisoner_s_dilemma_game_theory} reprezintă o problemă tratată în teoria jocurilor.
 
-A fost formulată în anul 1950 de către Merrill Flood și Melvin Dresher, angajați ai companiei RAND Corporation \cite{rand_org}. Denumirea (dilema prizonierului) este meritul lui Albert W. Tucker, de la Universitatea Princeton, care a formalizat jocul și a introdus noțiunea de \textbf{răsplată} (engl. payoff).
+A fost formulată în anul 1950 de către Merrill Flood și Melvin Dresher, angajați ai companiei RAND Corporation \cite{rand_org}. Denumirea (\textit{dilema prizonierului}) este meritul lui Albert W. Tucker, de la Universitatea Princeton, care a formalizat jocul și a introdus noțiunea de \textbf{răsplată} (engl. payoff).
  
 Enunțul clasic al problemei este prezentat în paragraful următor: 
 
@@ -22,9 +22,9 @@ Enunțul clasic al problemei este prezentat în paragraful următor:
 	\label{fig:matrice_prezentare_scenarii}
 \end{figure}
 
-Observaţie: \textit{Considerăm că atunci când un suspect mărturisește, mărturia să îl incriminează pe celălalt suspect. Tăinuirea faptelor reprezintă decizia suspectului de a nu spune nimic anchetatorilor.}
+Observaţie: \textit{Considerăm că atunci când un suspect mărturisește, mărturia sa îl incriminează pe celălalt suspect. Tăinuirea faptelor reprezintă decizia suspectului de a nu spune nimic anchetatorilor.}
 
-Putem formaliza aceast paragraf prin următorul tabel al recompenselor, unde cei doi suspecți sunt numiți \textbf{A} și \textbf{B} \cite{plato_stanford}. Se prezintă rezultatele obținute pentru fiecare combinație dintre tăinuire și marturisire:  
+Putem formaliza aceast paragraf prin următorul tabel al recompenselor, unde cei doi suspecți sunt numiți \textbf{A} și \textbf{B} \cite{plato_stanford}. Se prezintă rezultatele obținute pentru fiecare combinație dintre tăinuire și mărturisire:  
 
 \begin{table}[H]
 	\centering
@@ -38,7 +38,7 @@ Putem formaliza aceast paragraf prin următorul tabel al recompenselor, unde cei
 		mărturiseşte & tăinuiește & \textbf{Temptation} & \textbf{Sucker's payoff} \\ \hline
 		mărturiseşte & mărturiseşte & \textbf{Punishment} & \textbf{Punishment} \\ \hline
 	\end{tabular}
-	\caption{\textit{Adaptare după matricea recompenselor pentru dilema prizonierului}}
+	\caption{\textit{Adaptare după matricea recompenselor pentru dilema prizonierului.}}
 	\label{matricea_recompenselor}
 \end{table}
 
@@ -46,7 +46,7 @@ Termenii care apar în tabel sunt următorii:
  
 \begin{itemize} 
 	\item \textbf{Temptation}: recompensa obținută de jucatorul ce mărturisește atunci când celalalt tăinuiește faptele 
-	\item \textbf{Reward}: recompensa pentru când cei doi suspecți, A și B, aleg să tăinuiască 
+	\item \textbf{Reward}: recompensa pentru când cei doi suspecți, \textbf{A} și \textbf{B}, aleg să tăinuiască 
 	\item \textbf{Punishment}: pedeapsa obținută de fiecare dintre cei doi suspecți atunci când se trădează reciproc 
 	\item \textbf{Sucker's payoff}: pedeapsa pentru cel care a tăinuit atunci când celălalt l-a trădat 
 \end{itemize} 
@@ -61,7 +61,7 @@ Pentru a face trecerea de la pedeapsa cu închisoarea la ideea de joc, consider�
 
 \subsection{Strategii pentru dilema prizonierului}
 
-Dacă suspectăm că celălalt reținut va tăinui faptele, suntem mai avantajați dacă mărturisim (vom fi "răsplătiți" cu \textbf{Temptation}, despre care știm că are o valoare mai mare decât \textbf{Sucker's payoff}- scorul pe care îl va obține celălalt suspect), decât dacă tainuim (caz în care toți primesc \textbf{Reward}; \textbf{Temptation} \textgreater \textbf{Reward}).
+Dacă suspectăm că celălalt reținut va tăinui faptele, suntem mai avantajați dacă mărturisim (vom fi \ghilimele{răsplătiți} cu \textbf{Temptation}, despre care știm că are o valoare mai mare decât \textbf{Sucker's payoff}- scorul pe care îl va obține celălalt suspect), decât dacă tainuim (caz în care toți primesc \textbf{Reward}; \textbf{Temptation} \textgreater \textbf{Reward}).
 
 Dacă suspectăm că celălalt va mărturisi împotriva noastră, suntem mai avantajați dacă mărturisim și noi (vom primi amândoi \textbf{Punishment}), decât dacă tainuim (caz în care primim \textbf{Sucker's payoff}, însă celalt va primi un scor mai bun, \textbf{Temptation}).
 
@@ -71,23 +71,25 @@ Dilema este dată de faptul că ambii suspecți ar fi obținut un scor mult mai 
 
 \section {Varianta iterată a dilemei prizonierului} 
 
-Dacă s-ar juca mai multe runde, în care ambii jucători ar alege să se trădeze reciproc la fiecare rundă, scorul pe care l-ar obține ar fi mult mai mic decât dacă ar alege să tainuiasca faptele în fiecare rundă. 
+Dacă s-ar juca mai multe runde, în care ambii jucători ar alege să se trădeze reciproc la fiecare rundă, scorul pe care l-ar obține ar fi mult mai mic decât dacă ar alege să tăinuiască faptele în fiecare rundă. 
 
 În teoria jocurilor, problema iterată a prizonierului este catalogată drept joc cu suma nenulă \footnote{Numim joc de sumă nenulă jocul în care suma câstigurilor este diferită de zero.} (engl. non-zero-sum game).
 
 Un meci între doi jucători este reprezentat de un număr de runde, care nu este cunoscut de catre participanți.
 
-În fiecare rundă, cei doi jucatarori aleg independent, în secret, ce mișcare vor face: vor tăinui sau vor mărturisi. La final de rundă, cei doi își expun alegerea. În funcție de ce mișcare au ales cei doi, fiecare este răsplătit cu un anumit câștig, care se adaugă la scorul total individual al jucătorilor. 
+În fiecare rundă, cei doi jucători aleg independent, în secret, ce mișcare vor face: vor tăinui sau vor mărturisi. La final de rundă, cei doi își expun alegerea. În funcție de ce mișcare au ales cei doi, fiecare este răsplătit cu un anumit câștig, care se adaugă la scorul total individual al jucătorilor. 
 
 Dacă la o anumită rundă ambii au cooperat, scorul ambilor jucători va crește cu o valoare ce poartă denumirea de \textbf{Reward}. 
 
-Dacă ambii trădează, vor primi \textbf{Punishment payoff}. 
+Dacă ambii trădează, vor primi \textbf{Punishment} payoff. 
 
 Dacă unul cooperează, dar celălalt trădează, cel care a cooperat primește \textbf{Sucker's payoff} și celălalt este răsplătit cu \textbf{Temptation}. 
 
 \subsection {Strategii pentru problema iterată a prizonierului}
 
-Considerând acest scenariu drept un joc, folosim termenul de \textbf{cooperare} (engl. cooperation) pentru a descrie situația când unul dintre suspecți \textbf{tăinuiește} faptele. \textbf{Mărturisirea} faptelor de către un suspect pentru incriminarea celuilalt suspect va fi numită \textbf{trădare} (engl. defection). 
+Considerând acest scenariu drept un joc, folosim termenul de \textbf{cooperare} (engl. cooperation) pentru a descrie situația când unul dintre suspecți \textbf{tăinuiește} faptele. 
+
+\textbf{Mărturisirea} faptelor de către un suspect pentru incriminarea celuilalt suspect va fi numită \textbf{trădare} (engl. defection). 
 
 \subsubsection{Turneele lui Axelrod}
 
@@ -95,7 +97,7 @@ Printre studiile pofesorului Robert Axelrod, care predă științe politice și 
 
 Interesul său de a afla o strategie potrivită l-a determinat să organizeze două turnee de tip \textit{fiecare cu fiecare} (engl. round-robin). În aceste turnee, fiecare participant joacă pe rând împotriva tuturor celorlalți \cite{round_robin_dictionary}. Primul turneu a inclus 14 programe ce furnizează strategii de joc, iar cel de al doilea a avut un număr de 63 de programe. Observațiile sale sunt trecute în lucrarea \textit{The Evolution of Cooperation}, scrisă în 1984 \cite{article_by_melanie_mitchell}. Axelrod a solicitat participanților strategii sub formă unor programe care cunosc istoricul ultimelor trei runde.
 
-Câștigătorul ambelor turnee a fost strategia \textbf{Tit-for-Tat}. Această strategie cooperează la prima rundă, apoi, în următoarele runde, utilizează mișcarea făcută de oponent în runda anterioară. În alte formă de idei, cooperează de fiecare dată când celălalt cooperează și trădează când este trădată, dar nu inițiază trădarea.
+Câștigătorul ambelor turnee a fost strategia \textbf{Tit-for-Tat}. Această strategie cooperează la prima rundă, apoi, în următoarele runde, utilizează mișcarea făcută de oponent în runda anterioară. În altă formă de idei, cooperează de fiecare dată când celălalt cooperează și trădează când este trădată, dar nu inițiază trădarea.
 
 \clearpage
 
@@ -107,9 +109,9 @@ Câștigătorul ambelor turnee a fost strategia \textbf{Tit-for-Tat}. Această s
 	\item \textbf{Always cooperate}: Jucătorul cooperează la fiecare rundă a jocului, indiferent de strategia aplicată de celălalt jucător. 
 	\item \textbf{Always defect}: Jucătorul trădează la fiecare rundă a jocului. 
 	\item \textbf{Grudger}: Această strategie presupune cooperarea la fiecare rundă, până la prima trădare din partea celuilalt jucător. Așadar, adoptând această strategie, dacă oponentul trădează chiar și o singură dată, următoarele mișcări, până la final de joc, vor fi de trădare. 
-	\item \textbf{Pavlov}: Se alege cooperarea la prima rundă. Dacă la runda anterioară jucătorul a fost recompensat cu \textbf{Temptation}\footnote{\textbf{Temptation} este recompensa obținută de jucatorul ce trădează atunci când oponentul cooperează.} sau \textbf{Reward}\footnote{\textbf{Reward} reprezintă recompensa primită de ambii jucători atunci când cooperează.}, acesta repetă ultima mișcare. În celălalt caz, alege mișcarea opusă. 
+	\item \textbf{Pavlov}: Se alege cooperarea la prima rundă. Dacă la runda anterioară jucătorul a fost recompensat cu \textbf{Temptation} \footnote{\textbf{Temptation} este recompensa obținută de jucatorul ce trădează atunci când oponentul cooperează.} sau \textbf{Reward} \footnote{\textbf{Reward} reprezintă recompensa primită de ambii jucători atunci când cooperează.}, acesta repetă ultima mișcare. În celălalt caz, alege mișcarea opusă. 
 	\item \textbf{Random}: Se alege la întâmplare următoarea acțiune. 
-	\item \textbf{Tit-For-Tat}: Se alege cooperarea la prima rundă. De la runda a doua, jocuatorul ce alege această strategie repetă ultima mișcare a oponentului. 
+	\item \textbf{Tit-For-Tat}: Se alege cooperarea la prima rundă. De la runda a doua, jucătorul ce alege această strategie repetă ultima mișcare a oponentului. 
 	\item \textbf{Suspicious Tit-For-Tat}: Diferența dintre această strategie și \textbf{Tit-For-Tat} este că la prima mișcare se alege trădarea. 
 	\item \textbf{Tit-For-Two-Tats}:  Jucătorul cooperează de fiecare dată, făcând excepție acele cazuri în care jucătorul este trădat de două ori consecutiv. 
 \end{itemize}  

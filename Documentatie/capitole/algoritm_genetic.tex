@@ -2,7 +2,7 @@
  
 Algorimii genetici \cite{article_by_melanie_mitchell} au fost introduși de către John Holland în 1960 și dezvoltați, ulterior, alături de colegii de la Universitatea din Michigan, între anii 1960 și 1970. Holland urmărea înțelegerea fenomenului de adaptare întâlnit în natură și implementarea unor mecanisme adaptive care să fie utilizate în practică, în contextul programării. Cartea publicată de acesta în 1975, \textit{Adaptation în Natural and Artificial Systems} (Holland, 1975/1992) prezintă algoritmii genetici drept abstractizări ale evoluției biologice și oferă un cadru teoretic pentru dezvoltarea acestora.
 
-Algoritmii genetici ai lui Holland sunt metode de a trece de la o populație de cromozomi (e.g., șiruri de biți care reprezintă soluții candidat pentu o problemă) la o nouă populație, prin folosirea selecției, alături de operatorii inspirați din genetică: încrucișare, mutație, inversiune. Cea din urmă este rar folosită în practică.
+Algoritmii genetici ai lui Holland sunt metode de a trece de la o populație de cromozomi (șiruri de caractere sau numere care reprezintă soluții candidat pentu o problemă) la o nouă populație, prin folosirea selecției, alături de operatorii inspirați din genetică: încrucișare, mutație, inversiune. Cea din urmă este rar folosită în practică.
 
 \begin{quote} 
 	\textit{Computer programs that "evolve" in ways that resemble natural selection can solve complex problems even their creators do not fully understand.}
@@ -15,9 +15,9 @@ Algoritmii genetici ai lui Holland sunt metode de a trece de la o populație de 
 
 Algoritmii genetici au fost creați în încercarea de a imita procese specifice evoluției naturale, cum ar fi lupta pentru supraviețuire și moștenirea materialului genetic. Putem privi evoluția drept strategia abordată de speciile biologice pentru a căuta soluții cât mai potrivite, adaptate condițiilor schimbătoare, într-un număr foarte mare de posibilități. Această abordare poate fi utilizată în rezolvarea problemelor de optimizare, atunci când metodele clasice exhaustive nu se dovedesc eficiente. 
  
-Noțiunea de algoritm genetic nu este definită în mod riguros\cite{introduction_by_melanie_mitchell}, însă toate metodele ce poartă această denumire au în comun următoarele: populația este formată din cromozomi, selecţia este făcută pe baza rezultatelor funcției de optimizat, încrucișarea a doi \textit{cromozomi părinți} produce doi \textit{cromozomi copii}, mutația se aplică \textit{cromozomilor copii}. 
+Noțiunea de algoritm genetic nu este definită în mod riguros \cite{introduction_by_melanie_mitchell}, însă toate metodele ce poartă această denumire au în comun următoarele: populația este formată din cromozomi, selecţia este făcută pe baza rezultatelor funcției de optimizat, încrucișarea a doi \textit{cromozomi părinți} produce doi \textit{cromozomi copii}, mutația se aplică \textit{cromozomilor copii}. 
 
-\section{Schema generala a unui algoritm genetic}
+\section{Schema generală a unui algoritm genetic}
 
 \begin{figure}[H]
 	\centering
@@ -26,7 +26,7 @@ Noțiunea de algoritm genetic nu este definită în mod riguros\cite{introductio
 	height=6cm,
 	keepaspectratio
 	]{imagini/schema_algoritm_genetic.png}\\
-	\caption{\textit{ Schema prezintă componentele de bază ale unui algoritm genetic și legăturile dintre acestea} \cite{schita_algoritm_genetic}.}
+	\caption{\textit{Schema prezintă componentele de bază ale unui algoritm genetic și legăturile dintre acestea} \cite{schita_algoritm_genetic}.}
 	\label{fig:schema_algoritm_genetic}
 \end{figure}
 
@@ -44,7 +44,7 @@ cât timp nu s-a îndeplinit condiția de oprire
      calculează valoarea funcției de optimizat pentru indivizii populației 
 \end{verbatim}
 
-Condiția de oprire poate fi atingerea unui număr de iterații stabilit inițial. De asemenea, se poate stabili ca algoritmul să se oprească atunci când nu se mai înregistrează îmbunătățiri în ceea ce privește calitatea soluțiilor furnizate.  
+Condiția de oprire poate fi atingerea unui număr maxim de iterații stabilit inițial. De asemenea, se poate stabili ca algoritmul să se oprească atunci când nu se mai înregistrează îmbunătățiri în ceea ce privește calitatea soluțiilor furnizate.  
 
 Soluția returnată de un algoritm genetic reprezintă cel mai bun individ întâlnit în evoluția populației.  
 
@@ -54,7 +54,7 @@ Soluția returnată de un algoritm genetic reprezintă cel mai bun individ înt�
 	
 	 \item Soluțiile candidat sunt adesea codificate în forma unor șiruri de biți și se mai numesc \textbf{cromozomi} sau \textbf{indivizi} ai populației. Fiecare bit este echivalentul unei gene. 
 	 
-	 \item Genele sunt informațiile stocate de către cromozomi. 
+	 \item \textbf{Genele} sunt informațiile stocate de către cromozomi. 
 	 
 	 \item \textbf{Populația}, care va fi urmărită în procesul său evolutiv, este alcătuită din mai mulți cromozomi. 
 	 
@@ -86,7 +86,7 @@ Soluția returnată de un algoritm genetic reprezintă cel mai bun individ înt�
 			height=6cm,
 			keepaspectratio
 			]{imagini/mutatie.png}
-			\caption{\textit{Mutaţia are loc la poziţia cu indexul cinci din cromozomul părinte.}}
+			\caption{\textit{Mutaţia are loc la poziţia cu indexul patru din cromozomul părinte.}}
 			\label{fig:mutatie}
 		\end{figure}
 
