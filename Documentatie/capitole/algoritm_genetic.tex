@@ -1,6 +1,6 @@
 \section{Apariția noțiunii de algoritm genetic} 
  
-Algorimii genetici \cite{article_by_melanie_mitchell} au fost introduși de către John Holland în 1960 și dezvoltați, ulterior, alături de colegii de la Universitatea din Michigan, între anii 1960 și 1970. Holland urmărea înțelegerea fenomenului de adaptare întâlnit în natură și implementarea unor mecanisme adaptive care să fie utilizate în practică, în contextul programării. Cartea publicată de acesta în 1975, \textit{Adaptation în Natural and Artificial Systems} (Holland, 1975/1992) prezintă algoritmii genetici drept abstractizări ale evoluției biologice și oferă un cadru teoretic pentru dezvoltarea acestora.
+Algorimii genetici \cite{article_by_melanie_mitchell} au fost introduși de către John Holland în 1960 și dezvoltați, ulterior, alături de colegii de la Universitatea din Michigan, între anii 1960 și 1970. Holland urmărea înțelegerea fenomenului de adaptare întâlnit în natură și implementarea unor mecanisme adaptive care să fie utilizate în practică, în contextul programării. Cartea publicată de acesta în 1975, \textit{Adaptation in Natural and Artificial Systems} (Holland, 1975/1992) prezintă algoritmii genetici drept abstractizări ale evoluției biologice și oferă un cadru teoretic pentru dezvoltarea acestora.
 
 Algoritmii genetici ai lui Holland sunt metode de a trece de la o populație de cromozomi (șiruri de caractere sau numere care reprezintă soluții candidat pentu o problemă) la o nouă populație, prin folosirea selecției, alături de operatorii inspirați din genetică: încrucișare, mutație, inversiune. Cea din urmă este rar folosită în practică.
 
@@ -35,7 +35,7 @@ Noțiunea de algoritm genetic nu este definită în mod riguros \cite{introducti
 \section{Pseudocod}
 
 \begin{verbatim}
-inițializează cu valori aleatorii populația inițială 
+inițializează cu valori aleatorii populația
 calculează valoarea funcției de optimizat pentru indivizii populației  
 cât timp nu s-a îndeplinit condiția de oprire 
      aplică o metodă de selecție, pentru a crea populația 
@@ -64,7 +64,7 @@ Soluția returnată de un algoritm genetic reprezintă cel mai bun individ înt�
 	 
 	 \item Pentru explorarea spațiului de soluții, indivizii selectați suferă modificări. Sunt supuși \textbf{încrucișărilor} și \textbf{mutațiilor}. 
 	 
-	 \item Încrucișarea combină genele a doi \textit{cromozomi părinți}, rezultând doi \textbf{moștenitori}. Există mai multe variante: cu un punct de tăiere, ales aleator (în care un moștenitor este alcătuit dintr-o porțiune de cromozom de la primul părinte și o porțiune de la al doilea), cu mai multe puncte de tăiere și uniformă (unde fiecare genă este selectată probabilist de la unul din cei 2 \textit{cromozomi părinți}). 
+	 \item Încrucișarea combină genele a doi \textit{cromozomi părinți}, rezultând doi \textbf{moștenitori}. Există mai multe variante: cu un punct de tăiere, ales aleator (în care un moștenitor este alcătuit dintr-o porțiune de cromozom de la primul părinte și o porțiune de la al doilea), cu mai multe puncte de tăiere și uniformă (unde fiecare genă este selectată probabilist de la unul din cei doi \textit{cromozomi părinți}). 
 	 
 		\begin{figure}[H]
 		 	\centering
@@ -73,7 +73,7 @@ Soluția returnată de un algoritm genetic reprezintă cel mai bun individ înt�
 			 	height=6cm,
 			 	keepaspectratio
 		 	]{imagini/incrucisare.png}\\
-		 	\caption{\textit{Exemplu de încrucișare cu un singur punct de tăiere. Punctul de tăiere este marcat prin linia verticală punctată, între elementele de la indexul trei și patru din crmozomi.}}
+		 	\caption{\textit{Exemplu de încrucișare cu un singur punct de tăiere. Punctul de tăiere este marcat prin linia verticală punctată, între elementele de la indexul trei și indexul patru din crmozomi.}}
 		 	\label{fig:incrucisare}
 		\end{figure}
 	 

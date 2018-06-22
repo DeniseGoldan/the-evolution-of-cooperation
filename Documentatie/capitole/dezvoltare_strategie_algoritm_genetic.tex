@@ -4,7 +4,7 @@ Ca și limbaj de programare, am ales să implementez soluția problemei folosind
 
 Pentru ca procesul de obținere a unei noi strategii să fie vizibil prin loguri, am apelat la biblioteca de jurnalizare \textbf{SLF4J} \cite{slf4j} \footnote{Abrevierea provine de la Simple Logging Facade for Java.}. 
 
-Pentru partea de vizualizarea a datelor, pentru a vedea cum evoluează strategiile pe parcursul unui turneu cu eliminare, am apelat la biblioteca integrată \textbf{JavaFX} \cite{javaFX}. 
+Pentru a vedea cum evoluează strategiile pe parcursul unui turneu cu eliminare, am apelat la biblioteca integrată \textbf{JavaFX} \cite{javaFX}. 
 
 Pentru manipularea fișierelor de tip json, am folosit biblioteca \textbf{json-simple} \cite{json-simple}.  
 
@@ -12,17 +12,16 @@ Pentru manipularea fișierelor de tip json, am folosit biblioteca \textbf{json-s
 
 În urma organizării celor două turnee, Axelrod \cite{the_evolution_of_cooperation_axelrod} a decis să cerceteze dezvoltarea unei strategii pentru problema iterată a prizonierului folosindu-se de algoritmii genetici introduși de Holland. 
 
+\clearpage
+
 Unul din cei mai importanți pași din acest proces a fost stabilirea unei modalități de a reprezenta o strategie în forma unui cromozom. Concluziile lui Axelrod sunt prezentate în rândurile următoare.
 
 Presupunem că fiecare jucător are capacitatea de a memora mișcările ultimei runde sub forma unei perechi: primul element reprezintă mișcarea proprie, iar cel de al doilea element reprezintă mișcarea oponentului. Ne vom folosi de următoarea notație:
-
 \begin{center}
 	\textbf{C} reprezintă \textbf{cooperarea cu oponentul}\\
 	\textbf{T} reprezintă \textbf{trădarea oponentului}  
 \end{center}
-
-Există patru perechi (sau cazuri) posibile:\\
-
+Există patru perechi (sau cazuri) posibile:
 \begin{center}
 	Cazul 1: \textbf{CC}\\
 	Cazul 2: \textbf{CT}\\
@@ -33,15 +32,13 @@ Există patru perechi (sau cazuri) posibile:\\
 Pentru acest scenariu, strategia reprezintă ce mișcare vom alege la următoarea rundă, cunoscând mișcarea oponentului din runda anterioară.
 
 Strategia \textbf{Tit-for-Tat} este reprezentată în felul următor: 
-
 \begin{center}
 	dacă \textbf{CC} atunci \textbf{C}\\
 	dacă \textbf{CT} atunci \textbf{T}\\
 	dacă \textbf{TC} atunci \textbf{C}\\
 	dacă \textbf{TT} atunci \textbf{T}\\
 \end{center}
-
-Dacă impunem ca aceste patru cazuri să respecte ordinea lexicografică, putem codifica strategia drept șirul de caractere \textbf{CTCT}. Ca să utilizăm această reprezentare a strategiei:\\
+Dacă impunem ca aceste patru cazuri să respecte ordinea lexicografică, putem codifica strategia drept șirul de caractere \textbf{CTCT}. Ca să utilizăm această reprezentare a strategiei:
 \begin{enumerate}
 	\item Observăm ce a ales oponentul în runda anterioară.
 	\item Formăm perechea compusă din mișcarea noastră, împreună cu cea a oponentului.
@@ -49,8 +46,7 @@ Dacă impunem ca aceste patru cazuri să respecte ordinea lexicografică, putem 
 	\item Alegem mișcarea pe care o găsim la indexul respectiv.
 \end{enumerate}
 
-Strategiile lui Axelrod se bazau pe istoricul ultimelor trei runde. Pentru acestea, există 64 \footnote{Numărul de șiruri unice de caractere pe care le putem genera folosind doar caracterele \textbf{C} și \textbf{T} este 64, sau $2^6$.} de posibile scenarii pentru utlimele trei runde: 
-
+Strategiile lui Axelrod se bazau pe istoricul ultimelor trei runde. Pentru acestea, există 64 \footnote{Numărul de șiruri unice de caractere de lungime șase pe care le putem genera folosind doar caracterele \textbf{C} și \textbf{T} este 64, sau $2^6$.} de posibile scenarii pentru utlimele trei runde: 
 \begin{center}
 	Cazul 1: \textbf{CC CC CC}\\
 	Cazul 2: \textbf{CC CC CT}\\
@@ -62,24 +58,23 @@ Strategiile lui Axelrod se bazau pe istoricul ultimelor trei runde. Pentru acest
 	Cazul 64: \textbf{TT TT TT}\\
 \end{center}
 
-Ca și în  ipoteza în care jucătorii memorează doar istoricul ultimei runde, putem reprezenta aceste cazuri într-un șir de caractere de lungime 64. Vom folosi un șir de caractere de lungime 71, pentru a reține și ce mișcări ar trebui făcute în primele runde, când încă nu există un istoric care să cuprindă ultimele trei runde. Cele 7 poziții de la începutul șirului de caractere au următoarele semnificații:\\
-
+Ca și în  ipoteza în care jucătorii memorează doar istoricul ultimei runde, putem reprezenta aceste cazuri într-un șir de caractere de lungime 64. Vom folosi un șir de caractere de lungime 71, pentru a reține și ce mișcări ar trebui făcute în primele runde, când încă nu există un istoric care să cuprindă ultimele trei runde. Cele șapte poziții de la începutul șirului de caractere au următoarele semnificații:
 \begin{itemize}
 	
 	\item La \textbf{poziția numărul 1} se găsește mișcarea aleasă pentru prima rundă a jocului;
 	
-	\item \textbf{Poziția numărul 2}: mișcarea pentru cea de a doua rundă, dacă la rundă anterioară oponentul a cooperat (în istoricul oponentului se găsește doar mișcarea notată cu 
+	\item \textbf{Poziția numărul 2}: mișcarea pentru cea de a doua rundă, dacă, la rundă anterioară, oponentul a cooperat (în istoricul oponentului se găsește doar mișcarea notată cu 
 	\textbf{C});
 	
-	\item \textbf{Poziția numărul 3}: mișcarea pe care o vom face la cea de a două rundă, dacă la rundă anterioară oponentul a trădat (în istoricul oponentului se găsește doar mișcarea notată cu \textbf{T});
+	\item \textbf{Poziția numărul 3}: mișcarea pe care o vom face la cea de a două rundă, dacă, la rundă anterioară, oponentul a trădat (în istoricul oponentului se găsește doar mișcarea notată cu \textbf{T});
 	
-	\item \textbf{Poziția numărul 4}: mișcarea pe care o vom face la cea de a treia rundă, dacă pentru primele două runde, istoricul oponentului este \textbf{CC};
+	\item \textbf{Poziția numărul 4}: mișcarea pe care o vom face la cea de a treia rundă, dacă, pentru primele două runde, istoricul oponentului este \textbf{CC};
 	
-	\item \textbf{Poziția numărul 5}: mișcarea pentru cea de a treia rundă, dacă pentru primele două runde, istoricul oponentului este \textbf{CT};
+	\item \textbf{Poziția numărul 5}: mișcarea pentru cea de a treia rundă, dacă, pentru primele două runde, istoricul oponentului este \textbf{CT};
 	
-	\item \textbf{Poziția numărul 6}: mișcarea pentru cea de a treia rundă, dacă pentru primele două runde, istoricul oponentului este \textbf{TC};
+	\item \textbf{Poziția numărul 6}: mișcarea pentru cea de a treia rundă, dacă, pentru primele două runde, istoricul oponentului este \textbf{TC};
 	
-	\item \textbf{Poziția numărul 7}: mișcarea pentru cea de a treia rundă, dacă la primele două runde oponentul a avut mișcările \textbf{TT}.
+	\item \textbf{Poziția numărul 7}: mișcarea pentru cea de a treia rundă, dacă, la primele două runde, oponentul a avut mișcările \textbf{TT}.
 	
 \end{itemize}
 
@@ -107,13 +102,15 @@ Pentru crearea acestui individ, este nevoie de ajustarea mai multor parametri ș
 
 Numim \textbf{configurație a algorimului genetic} un cumul de perechi cheie-valoare, unde cheia reprezintă numele unui parametru, iar valoarea reprezintă valoarea pe care alegem să o atribuim parametrului.
 
-Parametrii despre care discutăm sunt: dimensiunea populației de antrenare, numărul de generații, rata mutației, rata încrucișării, configurația populației de antrenament, numărul de runde jucate în fiecare meci \footnote{Pentru a calcula valoarea funcției de cost pentru un cromozom, acesta va participa într-un \textbf{turneu clasic} alături de o populație de antrenament, definită în fișierul\\ \textbf{training.config.json}, alcătuită din diverse strategii standard. Cromozomul va juca un meci format dintr-un număr de runde cu fiecare din membrii populației de antrenament. Valoarea funcției de cost va fi dată de scorul obținut la final de turneu și este calculată drept suma scoruruilor obținute de cromozom la fiecare meci.}.  
+Parametrii despre care discutăm sunt: dimensiunea populației de antrenare, numărul de generații, rata mutației, rata încrucișării, configurația populației de antrenament, numărul de runde jucate în fiecare meci \footnote{Pentru a calcula valoarea funcției de cost pentru un cromozom, acesta va participa într-un \textbf{turneu clasic} alături de o populație de antrenament, definită în fișierul\\ \textbf{training.config.json}, alcătuită din diverse strategii standard. Cromozomul va juca un meci format dintr-un număr de runde cu fiecare din membrii populației de antrenament. Valoarea funcției de cost va fi dată de scorul obținut la final de turneu și este calculată drept suma scorurilor obținute de cromozom la fiecare meci.}.  
 
 \section{Populația de antrenament și de test}
 
-Avem nevoie de două fișiere de configurare pentru stabilirea populației de antrenament și de test. În cadrul proiectului, se regăsesc sub denumirea de \textbf{testing.config.json} și \textbf{training.config.json}. Fișierele pot fi ușor manipulate prin clase specializate în citirea și scrierea lor. În fiecare dintre aceste două fișiere se vor găsi numele unor strategii standard, alături de numărul de indivizi din acel tip de strategie. 
+Avem nevoie de două fișiere de configurare pentru stabilirea populației de antrenament și de test. În cadrul proiectului, se regăsesc sub denumirea de \textbf{training.config.json} și \textbf{testing.config.json}. Fișierele pot fi ușor manipulate prin clase specializate în citirea și scrierea lor. În fiecare dintre aceste două fișiere se vor găsi numele unor strategii standard, alături de numărul de indivizi din acel tip de strategie. 
 
 Exemplul de mai jos conține definiția unei populații formate din câte un jucător din umatoarele strategii: \textbf{Always Cooperate}, \textbf{Always Defect}, \textbf{Grudger}, \textbf{Pavlov}, \textbf{Tit-For-Tat}, \textbf{Suspicious Tit-For-Tat}, \textbf{Tit-For-Two-Tats}.
+
+\clearpage
 
 Exemplu: 
 
@@ -129,8 +126,7 @@ Exemplu:
 	}
 \end{lstlisting}
 
- 
-Toate strategiile dezvoltate prin intermediul algoritmului genetic sunt salvate într-un director de resurse, în fișiere în format json, alături de datele relevante pentru dezvoltarea cromozomilor: 
+Toate strategiile dezvoltate prin intermediul algoritmului genetic sunt salvate într-un dosar de resurse, în fișiere în format json, alături de datele relevante pentru dezvoltarea cromozomilor: 
 \begin{itemize}
 	 \item[\textasteriskcentered] strategia rezultată;
   	 \item[\textasteriskcentered] o medie a scorului din turneul clasic; 
@@ -142,7 +138,7 @@ Toate strategiile dezvoltate prin intermediul algoritmului genetic sunt salvate 
   	 \item[\textasteriskcentered] probabilitatea de mutație. 
 \end{itemize} 
 
-Odată stabilite valorile parametrilor, se poate trece la inițializarea în mod aleator a cromozomilor și antrenarea lor. În final, vrem să obținem într-un fișier strategia cea mai bine adaptată la condițiile de antrenament. Procesul de inițializare și antrenare se repetă de un număr de ori pentru aceeasi configurație a algoritmului genetic. Experimental, se poate observa că \textbf{restartarea algoritmului} poate duce la reținerea unor rezultate mai bune decât dacă am lăsa algoritmul să ruleze o singură dată. Numărul de restartari l-am fixat la valoarea 1000.
+Odată stabilite valorile parametrilor, se poate trece la inițializarea în mod aleator a cromozomilor și antrenarea lor. În final, vrem să obținem într-un fișier strategia cea mai bine adaptată la condițiile de antrenament. Procesul de inițializare și antrenare se repetă de un număr de ori pentru aceeași configurație a algoritmului genetic. Experimental, se poate observa că \textbf{restartarea algoritmului} poate duce la reținerea unor rezultate mai bune decât dacă am lăsa algoritmul să ruleze o singură dată. Numărul de restartări este fixat la valoarea 1000.
 
 \clearpage
 

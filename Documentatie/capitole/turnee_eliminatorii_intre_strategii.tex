@@ -11,7 +11,7 @@ Un \textbf{meci} este jucat de către doi jucători. Este alcătuit dintr-un num
 
 \section {Cum este modelat un turneu cu eliminare}
  
-Un turneu cu eliminare pornește de la o populație de strategii în care, la fiecare iterație, fiecare individ joacă câte un meci cu ceilalți indivizi. Pe parcursul meciurilor, câștigurile individuale se însumează într-un scor total. După ce se joacă toate combinările de doi jucători (se ajunge la finalul iterației), se elimină un procent din cei mai slabi jucători.  Pentru a mai reduce din numărul parametrilor ale căror valori pot varia, am stabilit că procentul să fie de 25\%. În caz de egalitate a scorurilor între doi jucători, se elimină la întâmplare unul din cei doi. Se completează locurile eliberate cu stategii care au obținut printre cele mai bune scoruri. Se resetează scorul total al indivizilor și se repetă acești pași până când în turneu a rămas un singur tip de strategie, ori până când am atins un număr maxim de iterații.  
+Un turneu cu eliminare pornește de la o populație de strategii în care, la fiecare iterație, fiecare individ joacă câte un meci cu ceilalți indivizi. Pe parcursul meciurilor, câștigurile individuale se însumează într-un scor total. După ce se joacă toate combinările de doi jucători (se ajunge la finalul iterației), se elimină un procent din cei mai slabi jucători.  Pentru a mai reduce din numărul parametrilor ale căror valori pot varia, am stabilit ca procentul să fie de 25\%. În caz de egalitate a scorurilor între doi jucători, se elimină la întâmplare unul din cei doi. Se completează locurile eliberate cu stategii care au obținut printre cele mai bune scoruri. Se resetează scorul total al indivizilor și se repetă acești pași până când în turneu a rămas un singur tip de strategie, ori până când am atins un număr maxim de iterații.  
 \\\\
 Observație: \textit{Când într-un turneu cu eliminare concurează doi indivizi ce au aceeași strategie deterministă, la finalul unei iterații, cei doi indivizi vor avea exact același scor. Nu putem spune același lucru despre doi indivizi care folosesc strategia \textbf{Random}.}
 \\\\
@@ -19,7 +19,7 @@ Pentru a vedea clar modul în care evoluează strategiile în contextul acestui 
 
 \section{Configurația unui turneu cu eliminare}
 
-Așa cum am stabilit parametrii mediului de antrenare (parametrii algoritmului genetic), va trebui să stabilim și în ce condiții vom testa cromozomii obținuți. Vom impune condiții legate de procentul de jucatori care sunt eliminați, respectiv duplicați la final de iterație. De asemenea, vom stabili configurația populației de testare și câte copii după o anumită strategie a algoritmului genetic vor participa la turneul eliminatoriu. În ultimă instanță, vom alege numărul de runde ce va alcătui un meci dintre doi jucători. 
+Așa cum am stabilit parametrii mediului de antrenare (parametrii algoritmului genetic), va trebui să stabilim și în ce condiții vom testa cromozomii obținuți. Vom impune condiții legate de procentul de jucători care sunt eliminați, respectiv duplicați la final de iterație. De asemenea, vom stabili configurația populației de testare și câte copii după o anumită strategie a algoritmului genetic vor participa la turneul eliminatoriu. În ultimă instanță, vom alege numărul de runde ce va alcătui un meci dintre doi jucători. 
  
 Cum s-a discutat în capitolul anterior, populația de testare va putea fi definită în fișierul \textbf{testing.config.json}.
 
@@ -43,7 +43,7 @@ Fiecare experiment este dat de stabilirea parametrilor configurației algoritmul
 
 Am făcut un prim experiment în care configurația algoritmului genetic a dus la o explorare redusă a spațiului de căutare. Pentru aceasta, am ales valori mici pentru numărul de generații (100), pentru numărul de runde din turneul clasic (10) și pentru probabilitățile operatorilor genetici (10\%).
  
-Diagramele de mai jos atestă calitatea redusă a soluției obținute în urma experimentului. 
+Diagramele de mai jos atestă calitatea redusă a soluției obținute în urma rulării algoritmului genetic. 
 
 \begin{figure}[H]
 	\centering
@@ -93,7 +93,7 @@ Diagramele de mai jos atestă calitatea redusă a soluției obținute în urma e
 
 \textit{Configurația algoritmului genetic și cea a turneului cu eliminare este trecută în \textbf{Anexa numărul 2}}.\\
 
-Într-un alt experiment, am surpins cum numărul de runde, odată modificat cu o valoare foarte mică, a avantajat una din strategiile algoritmului genetic. 
+Într-un alt experiment, am surpins cum numărul de runde al meciurilor din turneul cu eliminare, odată modificat cu o valoare foarte mică, a avantajat una din strategiile algoritmului genetic. 
 
 \begin{figure}[H]
 	\centering
@@ -131,7 +131,7 @@ Mărind cu 1 numărul de runde din fiecare meci, observăm că strategia propus�
 
 Strategia \textbf{Random} nu reprezintă o problemă pentru strategiile oferite de algoritmul genetic.
 
-Am antrenat o populație de dimensiune mică (5 cromozomi) într-un număr mare de generații (1000), lansând valori mari ale mutației și încrucișării (50\% pentru ambii operatori). Populația de antrenament este dată de un singur individ de tip \textbf{Random}. Am rulat două experimente în urma cărora am obținut două strategii: pentru prima strategie obținută, cea din experimentul numărul 3, numărul de runde al tuneului clasic este mai mic (5 runde). Pentru celălalt experiment, numărul de runde al turneului clasic este 100.
+Am antrenat o populație de dimensiune mică (5 cromozomi) într-un număr mare de generații (1000), lansând valori mari ale mutației și încrucișării (50\% pentru ambii operatori). Populația de antrenament este dată de un singur individ de tip \textbf{Random}. Am rulat două experimente, în urma cărora am obținut două strategii: pentru prima strategie obținută, cea din experimentul numărul 3, numărul de runde al meciurilor tuneului clasic este mai mic (5 runde); pentru celălalt experiment numărul de runde al meciurilor din turneului clasic este 100.
 
 \begin{center}
 	\underline{\textit{Experimentul 3}}
@@ -186,7 +186,7 @@ Am antrenat o populație de dimensiune mică (5 cromozomi) într-un număr mare 
 	\caption{\textit{Cromozomii câștigă în turneul cu eliminare cu 100 runde/meci.}}
 \end{figure}
 
-Strategia din experimentul cu numărul 4 va face față și la un număr de runde mai mic, dar și la un număr de runde mai mare în turneele cu eliminare în fața strategiei \textbf{Random}. În fața acestei configurații a turneului eliminatoriu, putem trage concluzia că experimentul numărul 4 oferă o soluție mai bună. 
+Strategia din experimentul cu numărul 4 va face față și la un număr de runde mai mic, dar și la un număr de runde mai mare în turneele cu eliminare în fața strategiei \textbf{Random}. Pentru această configurație a turneului eliminatoriu, putem trage concluzia că experimentul numărul 4 oferă o soluție mai bună. 
 
 \subsection{Strategia \textbf{Tit-For-Tat}}
 

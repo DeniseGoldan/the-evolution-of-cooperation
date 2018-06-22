@@ -45,13 +45,13 @@ Putem formaliza aceast paragraf prin următorul tabel al recompenselor, unde cei
 Termenii care apar în tabel sunt următorii: 
  
 \begin{itemize} 
-	\item \textbf{Temptation}: recompensa obținută de jucatorul ce mărturisește atunci când celalalt tăinuiește faptele 
-	\item \textbf{Reward}: recompensa pentru când cei doi suspecți, \textbf{A} și \textbf{B}, aleg să tăinuiască 
-	\item \textbf{Punishment}: pedeapsa obținută de fiecare dintre cei doi suspecți atunci când se trădează reciproc 
-	\item \textbf{Sucker's payoff}: pedeapsa pentru cel care a tăinuit atunci când celălalt l-a trădat 
+	\item \textbf{Temptation}: recompensa obținută de jucătorul ce mărturisește atunci când celalalt tăinuiește faptele;
+	\item \textbf{Reward}: recompensa pentru când cei doi suspecți, \textbf{A} și \textbf{B}, aleg să tăinuiască; 
+	\item \textbf{Punishment}: pedeapsa obținută de fiecare dintre cei doi suspecți atunci când se trădează reciproc; 
+	\item \textbf{Sucker's payoff}: pedeapsa pentru cel care a tăinuit atunci când celălalt l-a trădat. 
 \end{itemize} 
  
-Pentru a face trecerea de la pedeapsa cu închisoarea la ideea de joc, considerăm că cei 4 termeni reprezintă scoruri de valoare pozitivă și că scopul suspecților este să obțină un număr cât mai mare de puncte. 
+Pentru a face trecerea de la pedeapsa cu închisoarea la ideea de joc, considerăm că cei patru termeni reprezintă scoruri de valoare pozitivă și că scopul suspecților este să obțină un număr cât mai mare de puncte. 
 
 Între acești termeni ce reprezintă recompensele, se respectă următorul lanț de inegalități: 
 
@@ -95,7 +95,7 @@ Considerând acest scenariu drept un joc, folosim termenul de \textbf{cooperare}
 
 Printre studiile pofesorului Robert Axelrod, care predă științe politice și politici publice la Universitatea din Michigan, se află și problema iterată a prizonierului.
 
-Interesul său de a afla o strategie potrivită l-a determinat să organizeze două turnee de tip \textit{fiecare cu fiecare} (engl. round-robin). În aceste turnee, fiecare participant joacă pe rând împotriva tuturor celorlalți \cite{round_robin_dictionary}. Primul turneu a inclus 14 programe ce furnizează strategii de joc, iar cel de al doilea a avut un număr de 63 de programe. Observațiile sale sunt trecute în lucrarea \textit{The Evolution of Cooperation}, scrisă în 1984 \cite{article_by_melanie_mitchell}. Axelrod a solicitat participanților strategii sub formă unor programe care cunosc istoricul ultimelor trei runde.
+Interesul său de a afla o strategie potrivită l-a determinat să organizeze două turnee de tip \textit{fiecare cu fiecare} (engl. round-robin tournament). În aceste turnee, fiecare participant joacă pe rând împotriva tuturor celorlalți \cite{round_robin_dictionary}. Primul turneu a inclus 14 programe ce furnizează strategii de joc, iar cel de al doilea a avut un număr de 63 de programe. Observațiile sale sunt trecute în lucrarea \textit{The Evolution of Cooperation}, scrisă în 1984 \cite{article_by_melanie_mitchell}. Axelrod a solicitat participanților strategii sub forma unor programe care cunosc istoricul ultimelor trei runde.
 
 Câștigătorul ambelor turnee a fost strategia \textbf{Tit-for-Tat}. Această strategie cooperează la prima rundă, apoi, în următoarele runde, utilizează mișcarea făcută de oponent în runda anterioară. În altă formă de idei, cooperează de fiecare dată când celălalt cooperează și trădează când este trădată, dar nu inițiază trădarea.
 
@@ -103,13 +103,13 @@ Câștigătorul ambelor turnee a fost strategia \textbf{Tit-for-Tat}. Această s
 
 \subsubsection{Strategii analizate}
 
-În următoarele rânduri, sunt enumerate câteva strategii analizate:
+În următoarele rânduri sunt enumerate câteva strategii analizate:
 
 \begin{itemize}  
 	\item \textbf{Always cooperate}: Jucătorul cooperează la fiecare rundă a jocului, indiferent de strategia aplicată de celălalt jucător. 
 	\item \textbf{Always defect}: Jucătorul trădează la fiecare rundă a jocului. 
 	\item \textbf{Grudger}: Această strategie presupune cooperarea la fiecare rundă, până la prima trădare din partea celuilalt jucător. Așadar, adoptând această strategie, dacă oponentul trădează chiar și o singură dată, următoarele mișcări, până la final de joc, vor fi de trădare. 
-	\item \textbf{Pavlov}: Se alege cooperarea la prima rundă. Dacă la runda anterioară jucătorul a fost recompensat cu \textbf{Temptation} \footnote{\textbf{Temptation} este recompensa obținută de jucatorul ce trădează atunci când oponentul cooperează.} sau \textbf{Reward} \footnote{\textbf{Reward} reprezintă recompensa primită de ambii jucători atunci când cooperează.}, acesta repetă ultima mișcare. În celălalt caz, alege mișcarea opusă. 
+	\item \textbf{Pavlov}: Se alege cooperarea la prima rundă. Dacă la runda anterioară jucătorul a fost recompensat cu \textbf{Temptation} \footnote{\textbf{Temptation} este recompensa obținută de jucatorul ce trădează atunci când oponentul cooperează.} sau \textbf{Reward} \footnote{\textbf{Reward} reprezintă recompensa primită de ambii jucători atunci când cooperează.}, acesta repetă ultima mișcare. În celălalte două cazuri, alege mișcarea opusă. 
 	\item \textbf{Random}: Se alege la întâmplare următoarea acțiune. 
 	\item \textbf{Tit-For-Tat}: Se alege cooperarea la prima rundă. De la runda a doua, jucătorul ce alege această strategie repetă ultima mișcare a oponentului. 
 	\item \textbf{Suspicious Tit-For-Tat}: Diferența dintre această strategie și \textbf{Tit-For-Tat} este că la prima mișcare se alege trădarea. 
