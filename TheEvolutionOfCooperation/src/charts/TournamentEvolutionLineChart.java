@@ -133,7 +133,7 @@ public class TournamentEvolutionLineChart extends Application {
 
     private static class LineChartConfigurator {
 
-        static final int NUMBER_OF_ROUNDS_PER_MATCH = 10;
+        static final int NUMBER_OF_ROUNDS_PER_MATCH = 4;
 
         static final String APPLICATION_TITLE = "Evoluţia turneului cu eliminare";
 
